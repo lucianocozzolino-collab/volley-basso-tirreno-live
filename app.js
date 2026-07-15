@@ -1,3 +1,5 @@
+alert("APP JS CARICATO")
+
 window.onload = function() {
     caricaHome();
 };

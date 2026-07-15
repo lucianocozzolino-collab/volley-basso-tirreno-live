@@ -1,136 +1,25 @@
-const stagioni = [
-  "2026/2027",
-  "2025/2026",
-  "2024/2025",
-  "2023/2024"
-];
+window.onload = function() {
 
-let stagioneSelezionata = "2025/2026";
+  document.getElementById("app").innerHTML = `
 
-const campionati = [
-  "Under 12 Femminile",
-  "Under 13 Femminile",
-  "Under 14 Femminile",
-  "Under 16 Femminile",
-  "Under 18 Femminile",
-  "Serie D",
-  "Volley S3"
-];
+    <div style="background:white;padding:20px;border-radius:10px">
 
-caricaHome();
+      <button onclick="alert('Aggiornamento eseguito')">
+        🔄 Aggiorna Ora
+      </button>
 
-function caricaHome() {
+      <h2>🏐 Campionati</h2>
 
-    let html = `
+      <button>Under 12 Femminile</button><br><br>
+      <button>Under 13 Femminile</button><br><br>
+      <button>Under 14 Femminile</button><br><br>
+      <button>Under 16 Femminile</button><br><br>
+      <button>Under 18 Femminile</button><br><br>
+      <button>Serie D</button><br><br>
+      <button>Volley S3</button>
 
-        <div class="card">
+    </div>
 
-            <button onclick="aggiornaDati()">
-                🔄 Aggiorna Ora
-            </button>
+  `;
 
-            <h3>📅 Stagione</h3>
-
-            <select
-                id="stagione"
-                onchange="cambiaStagione()">
-
-                ${stagioni.map(s => `
-                    <option
-                        value="${s}"
-                        ${s === stagioneSelezionata ? "selected" : ""}>
-                        ${s}
-                    </option>
-                `).join("")}
-
-            </select>
-
-        </div>
-
-        <div class="card">
-
-            <h2>🏐 Campionati</h2>
-
-    `;
-
-    campionati.forEach(c => {
-
-        html += `
-            <button onclick="apriCampionato('${c}')">
-                ${c}
-            </button><br>
-        `;
-    });
-
-    html += `</div>`;
-
-    document.getElementById("app").innerHTML = html;
-}
-
-function cambiaStagione() {
-
-    stagioneSelezionata =
-        document.getElementById("stagione").value;
-
-    document.getElementById("lastUpdate").innerHTML =
-        "📅 Stagione selezionata: " +
-        stagioneSelezionata;
-}
-
-function apriCampionato(nome){
-
-    document.getElementById("app").innerHTML = `
-
-        <button onclick="caricaHome()">
-            ⬅ Torna ai campionati
-        </button>
-
-        <div class="card">
-
-            <h2>${nome}</h2>
-
-            <p>
-              📅 Stagione:
-              <strong>${stagioneSelezionata}</strong>
-            </p>
-
-            <h3>📊 Classifica</h3>
-            <p>Dati FIPAV in caricamento...</p>
-
-            <h3>🏆 Risultati</h3>
-            <p>Dati FIPAV in caricamento...</p>
-
-            <h3>📅 Calendario</h3>
-            <p>Dati FIPAV in caricamento...</p>
-
-            <h3>👥 Squadre</h3>
-            <p>Dati FIPAV in caricamento...</p>
-
-        </div>
-    `;
-}
-
-function aggiornaDati() {
-
-    document.getElementById("lastUpdate").innerHTML =
-        "🕒 Aggiornato: " +
-        new Date().toLocaleString("it-IT");
-
-    location.reload();
-}
-
-fetch("data/status.json")
-.then(r => r.json())
-.then(data => {
-
-    document.getElementById("lastUpdate").innerHTML =
-        "🕒 Ultimo aggiornamento: " +
-        data.ultimoAggiornamento;
-
-})
-.catch(() => {
-
-    document.getElementById("lastUpdate").innerHTML =
-        "🕒 Ultimo aggiornamento non disponibile";
-
-});
+};

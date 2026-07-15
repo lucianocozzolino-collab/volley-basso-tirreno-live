@@ -40,32 +40,50 @@ function caricaHome() {
 
 function apriCampionato(nome){
 
-  document.getElementById("app").innerHTML = `
+ fetch("data/campionati.json")
+ .then(r => r.json())
+ .then(data => {
 
-    <button onclick="caricaHome()">
-      ⬅ Torna ai campionati
-    </button>
+    const campionato = data[nome];
 
-    <div class="card">
+    let classifica = "";
 
-      <h2>${nome}</h2>
+    if(campionato){
 
-      <h3>📊 Classifica</h3>
-      <p>Dati in arrivo da FIPAV...</p>
+      campionato.classifica.forEach(s => {
 
-      <h3>🏆 Risultati</h3>
-      <p>Dati in arrivo da FIPAV...</p>
+        classifica += `
+          <p>
+            ${s.squadra} - ${s.punti} punti
+          </p>
+        `;
 
-      <h3>📅 Calendario</h3>
-      <p>Dati in arrivo da FIPAV...</p>
+      });
 
-      <h3>👥 Squadre</h3>
-      <p>Dati in arrivo da FIPAV...</p>
+    }
 
-    </div>
+    document.getElementById("app").innerHTML = `
 
-  `;
+      <button onclick="caricaHome()">
+        ⬅ Torna ai campionati
+      </button>
+
+      <div class="card">
+
+        <h2>${nome}</h2>
+
+        <h3>📊 Classifica</h3>
+
+        ${classifica}
+
+      </div>
+
+    `;
+
+ });
+
 }
+
 
 function aggiornaDati() {
 

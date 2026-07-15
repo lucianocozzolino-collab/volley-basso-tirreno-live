@@ -1,8 +1,12 @@
 window.onload = function () {
 
-    document.getElementById("lastUpdate").innerHTML =
-        "🕒 Ultimo aggiornamento: " +
-        new Date().toLocaleString("it-IT");
+    const lastUpdate = document.getElementById("lastUpdate");
+
+    if (lastUpdate) {
+        lastUpdate.innerHTML =
+            "🕒 Ultimo aggiornamento: " +
+            new Date().toLocaleString("it-IT");
+    }
 
     caricaHome();
 };
@@ -11,53 +15,48 @@ function caricaHome() {
 
     document.getElementById("app").innerHTML = `
 
-    <div class="card">
+        <div class="card">
 
-        <button onclick="aggiornaDati()">
-            🔄 Aggiorna Ora
-        </button>
+            <button onclick="aggiornaDati()">
+                🔄 Aggiorna Ora
+            </button>
 
-        <h2>🏐 Campionati</h2>
+            <h2>🏐 Campionati</h2>
 
-        <button onclick="apriCampionato('Under 12 Femminile')">
-            Under 12 Femminile
-        </button><br><br>
+            <button onclick="apriCampionato('Under 12 Femminile')">
+                Under 12 Femminile
+            </button><br><br>
 
-        <button onclick="apriCampionato('Under 13 Femminile')">
-            Under 13 Femminile
-        </button><br><br>
+            <button onclick="apriCampionato('Under 13 Femminile')">
+                Under 13 Femminile
+            </button><br><br>
 
-        <button onclick="apriCampionato('Under 14 Femminile')">
-            Under 14 Femminile
-        </button><br><br>
+            <button onclick="apriCampionato('Under 14 Femminile')">
+                Under 14 Femminile
+            </button><br><br>
 
-        <button onclick="apriCampionato('Under 16 Femminile')">
-            Under 16 Femminile
-        </button><br><br>
+            <button onclick="apriCampionato('Under 16 Femminile')">
+                Under 16 Femminile
+            </button><br><br>
 
-        <button onclick="apriCampionato('Under 18 Femminile')">
-            Under 18 Femminile
-        </button><br><br>
+            <button onclick="apriCampionato('Under 18 Femminile')">
+                Under 18 Femminile
+            </button><br><br>
 
-        <button onclick="apriCampionato('Serie D')">
-            Serie D
-        </button><br><br>
+            <button onclick="apriCampionato('Serie D')">
+                Serie D
+            </button><br><br>
 
-        <button onclick="apriCampionato('Volley S3')">
-            Volley S3
-        </button>
+            <button onclick="apriCampionato('Volley S3')">
+                Volley S3
+            </button>
 
-    </div>
+        </div>
+
     `;
 }
 
 function apriCampionato(nome) {
-
-    let linkFipav = "";
-
-    if (nome === "Under 12 Femminile") {
-        linkFipav = "https://fipavonline.it/main/gare_girone/53943/1";
-    }
 
     document.getElementById("app").innerHTML = `
 
@@ -74,7 +73,7 @@ function apriCampionato(nome) {
             </p>
 
             <p>
-                linkFipav}" target="_blank">
+                /main/gare_girone/53943/1" target="_blank">
                     🌐 Apri pagina ufficiale FIPAV
                 </a>
             </p>
@@ -88,20 +87,11 @@ function apriCampionato(nome) {
             <h3>📅 Calendario</h3>
             <p>In caricamento...</p>
 
-            <h3>👥 Squadre</h3>
-            <p>In caricamento...</p>
-
         </div>
 
     `;
 }
 
 function aggiornaDati() {
-
-    document.getElementById("lastUpdate").innerHTML =
-        "🕒 Aggiornato: " +
-        new Date().toLocaleString("it-IT");
-
-    alert("Aggiornamento completato");
-
+    alert("Aggiornamento richiesto");
 }

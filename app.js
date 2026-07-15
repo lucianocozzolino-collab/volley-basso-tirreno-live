@@ -13,21 +13,27 @@ caricaHome();
 function caricaHome() {
 
   let html = `
-    <button onclick="aggiornaDati()">
-      🔄 Aggiorna Ora
-    </button>
+    <div class="card">
 
-    <h2>🏐 Campionati</h2>
+      <button onclick="aggiornaDati()">
+        🔄 Aggiorna Ora
+      </button>
+
+      <h2>🏐 Campionati</h2>
+
   `;
 
   campionati.forEach(c => {
+
     html += `
       <button onclick="apriCampionato('${c}')">
         ${c}
-      </button>
-      <br>
+      </button><br>
     `;
+
   });
+
+  html += `</div>`;
 
   document.getElementById("app").innerHTML = html;
 }
@@ -35,6 +41,7 @@ function caricaHome() {
 function apriCampionato(nome){
 
   document.getElementById("app").innerHTML = `
+
     <button onclick="caricaHome()">
       ⬅ Torna ai campionati
     </button>
@@ -52,22 +59,35 @@ function apriCampionato(nome){
       <h3>📅 Calendario</h3>
       <p>Dati in arrivo da FIPAV...</p>
 
+      <h3>👥 Squadre</h3>
+      <p>Dati in arrivo da FIPAV...</p>
+
     </div>
+
   `;
 }
 
 function aggiornaDati() {
+
+  document.getElementById("lastUpdate").innerHTML =
+    "🕒 Aggiornamento eseguito: " +
+    new Date().toLocaleString("it-IT");
+
   location.reload();
 }
 
 fetch("data/status.json")
 .then(r => r.json())
 .then(data => {
+
   document.getElementById("lastUpdate").innerHTML =
   "🕒 Ultimo aggiornamento: " +
   data.ultimoAggiornamento;
+
 })
 .catch(() => {
+
   document.getElementById("lastUpdate").innerHTML =
-  "🕒 Aggiornamento non disponibile";
+  "🕒 Ultimo aggiornamento non disponibile";
+
 });

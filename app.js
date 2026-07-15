@@ -8,37 +8,76 @@ const campionati = [
   "Volley S3"
 ];
 
-let html = "<h2>🏐 Campionati</h2>";
+caricaHome();
 
-campionati.forEach(c => {
-  html += `
-    <button onclick="apriCampionato('${c}')">
-      ${c}
-    </button><br><br>
+function caricaHome() {
+
+  let html = `
+    <button onclick="aggiornaDati()">
+      🔄 Aggiorna Ora
+    </button>
+
+    <h2>🏐 Campionati</h2>
   `;
-});
 
-document.getElementById("app").innerHTML = html;
+  campionati.forEach(c => {
+    html += `
+      <button onclick="apriCampionato('${c}')">
+        ${c}
+      </button>
+      <br><br>
+    `;
+  });
 
-function apriCampionato(nome) {
+  document.getElementById("app").innerHTML = html;
+
+}
+
+function apriCampionato(nome){
 
   document.getElementById("app").innerHTML = `
-    <h2>${nome}</h2>
 
-    <button onclick="location.reload()">
+    <button onclick="caricaHome()">
       ⬅ Torna ai campionati
     </button>
 
-    <h3>📊 Classifica</h3>
+    <div class="card">
 
-    <p>Dati in arrivo da FIPAV...</p>
+      <h2>${nome}</h2>
 
-    <h3>🏆 Risultati</h3>
+      <h3>📊 Classifica</h3>
+      <p>Dati in arrivo da FIPAV...</p>
 
-    <p>Dati in arrivo da FIPAV...</p>
+      <h3>🏆 Risultati</h3>
+      <p>Dati in arrivo da FIPAV...</p>
 
-    <h3>📅 Calendario</h3>
+      <h3>📅 Calendario</h3>
+      <p>Dati in arrivo da FIPAV...</p>
 
-    <p>Dati in arrivo da FIPAV...</p>
+    </div>
   `;
 }
+
+function aggiornaDati(){
+
+  alert("Aggiornamento richiesto");
+
+  location.reload();
+
+}
+
+fetch("data/status.json")
+.then(r => r.json())
+.then(data => {
+
+  document.getElementById("lastUpdate").innerHTML =
+  "🕒 Ultimo aggiornamento: " +
+  data.ultimoAggiornamento;
+
+})
+.catch(() => {
+
+  document.getElementById("lastUpdate").innerHTML =
+  "🕒 Ultimo aggiornamento non disponibile";
+
+});

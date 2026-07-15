@@ -1,0 +1,20 @@
+{
+  "Under 12 Femminile": {
+    "classifica": [
+      {"squadra":"Invicta Volley","punti":12},
+      {"squadra":"Grosseto Volley","punti":10}
+    ],
+    "risultati": [
+      {"gara":"Invicta Volley - Grosseto Volley","risultato":"3-1"}
+    ]
+  },
+
+  "Volley S3": {
+    "classifica": [
+      {"squadra":"Volley S3 A","punti":8}
+    ],
+    "risultati": [
+      {"gara":"Volley S3 A - Volley S3 B","risultato":"2-1"}
+    ]
+  }
+}

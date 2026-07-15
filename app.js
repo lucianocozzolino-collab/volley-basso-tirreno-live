@@ -25,18 +25,16 @@ function caricaHome() {
       <button onclick="apriCampionato('${c}')">
         ${c}
       </button>
-      <br><br>
+      <br>
     `;
   });
 
   document.getElementById("app").innerHTML = html;
-
 }
 
 function apriCampionato(nome){
 
   document.getElementById("app").innerHTML = `
-
     <button onclick="caricaHome()">
       ⬅ Torna ai campionati
     </button>
@@ -58,26 +56,18 @@ function apriCampionato(nome){
   `;
 }
 
-function aggiornaDati(){
-
-  alert("Aggiornamento richiesto");
-
+function aggiornaDati() {
   location.reload();
-
 }
 
 fetch("data/status.json")
 .then(r => r.json())
 .then(data => {
-
   document.getElementById("lastUpdate").innerHTML =
   "🕒 Ultimo aggiornamento: " +
   data.ultimoAggiornamento;
-
 })
 .catch(() => {
-
   document.getElementById("lastUpdate").innerHTML =
-  "🕒 Ultimo aggiornamento non disponibile";
-
+  "🕒 Aggiornamento non disponibile";
 });

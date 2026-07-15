@@ -14,7 +14,7 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 120px;
     height: auto;
 }
 
@@ -24,6 +24,12 @@ h1 {
 }
 
 .subtitle {
+    margin-top: 5px;
+    color: #666;
+}
+
+#lastUpdate {
+    margin-bottom: 15px;
     color: #666;
 }
 
@@ -37,6 +43,17 @@ button {
     margin: 5px 0;
 }
 
+button:hover {
+    background: #004494;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
 .bottom-nav {
     position: fixed;
     left: 0;
@@ -47,10 +64,4 @@ button {
     justify-content: space-around;
     padding: 10px;
     box-shadow: 0 -2px 10px rgba(0,0,0,.15);
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
 }

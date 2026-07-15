@@ -1,5 +1,4 @@
 document.getElementById("app").innerHTML = `
-
 <h2>🏐 Campionati</h2>
 
 <ul>
@@ -11,5 +10,4 @@ document.getElementById("app").innerHTML = `
   <li>Serie D</li>
   <li>Volley S3</li>
 </ul>
-
 `;

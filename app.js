@@ -7,31 +7,92 @@ window.onload = function () {
     caricaHome();
 };
 
+const stagioni = [
+    "2026/2027",
+    "2025/2026",
+    "2024/2025",
+    "2023/2024"
+];
+
+let stagioneCorrente = "2025/2026";
+
+const campionati = [
+    "Under 12 Femminile",
+    "Under 13 Femminile",
+    "Under 14 Femminile",
+    "Under 16 Femminile",
+    "Under 18 Femminile",
+    "Prima Divisione",
+    "Seconda Divisione",
+    "Serie D",
+    "Volley S3 3x3 Femminile",
+    "Volley S3 3x3 Maschile",
+    "Volley S3 3x3 Misto",
+    "Volley S3 2x2 Femminile",
+    "Volley S3 2x2 Maschile",
+    "Volley S3 2x2 Misto"
+];
+
 function caricaHome() {
 
-    document.getElementById("app").innerHTML = `
+    let html = `
 
-        <div class="card">
+    <div class="card">
 
-            <button onclick="aggiornaDati()">
-                🔄 Aggiorna Ora
-            </button>
+        <button onclick="aggiornaDati()">
+            🔄 Aggiorna Ora
+        </button>
 
-            <h2>🏐 Campionati</h2>
+        <br><br>
 
-            <button onclick="apriCampionato('Under 12 Femminile')">
-                Under 12 Femminile
+        <label><strong>📅 Stagione</strong></label>
+
+        <br><br>
+
+        <select id="stagione" onchange="cambiaStagione()">
+
+            ${stagioni.map(s => `
+                <option
+                    value="${s}"
+                    ${s === stagioneCorrente ? "selected" : ""}>
+                    ${s}
+                </option>
+            `).join("")}
+
+        </select>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🏐 Campionati</h2>
+    `;
+
+    campionati.forEach(c => {
+
+        html += `
+            <button
+                onclick="apriCampionato('${c}')">
+                ${c}
             </button>
 
             <br><br>
+        `;
+    });
 
-            <button onclick="apriCampionato('Under 13 Femminile')">
-                Under 13 Femminile
-            </button>
+    html += `</div>`;
 
-        </div>
+    document.getElementById("app").innerHTML = html;
+}
 
-    `;
+function cambiaStagione() {
+
+    stagioneCorrente =
+        document.getElementById("stagione").value;
+
+    document.getElementById("lastUpdate").innerHTML =
+        "📅 Stagione selezionata: " +
+        stagioneCorrente;
 }
 
 function apriCampionato(nome) {
@@ -39,7 +100,7 @@ function apriCampionato(nome) {
     document.getElementById("app").innerHTML = `
 
         <button onclick="caricaHome()">
-            ⬅ Torna
+            ⬅ Torna ai campionati
         </button>
 
         <div class="card">
@@ -47,9 +108,15 @@ function apriCampionato(nome) {
             <h2>${nome}</h2>
 
             <p>
-                🌐 <a href="https://fipavonline.it/main/gare_girone/53943/1"
+                📅 Stagione:
+                <strong>${stagioneCorrente}</strong>
+            </p>
+
+            <p>
+                🌐 <a
+                href="https://fipavonline.it/main/gare_girone/53943/1"
                 target="_blank">
-                Apri pagina ufficiale FIPAV
+                Apri dati ufficiali FIPAV
                 </a>
             </p>
 
@@ -62,11 +129,17 @@ function apriCampionato(nome) {
             <h3>📅 Calendario</h3>
             <p>In caricamento...</p>
 
-        </div>
+            <h3>👥 Squadre</h3>
+            <p>In caricamento...</p>
 
+        </div>
     `;
 }
 
 function aggiornaDati() {
-    location.reload();
+
+    document.getElementById("lastUpdate").innerHTML =
+        "🕒 Aggiornato: " +
+        new Date().toLocaleString("it-IT");
+
 }

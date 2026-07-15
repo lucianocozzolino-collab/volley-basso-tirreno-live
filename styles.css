@@ -1,15 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    padding: 20px;
+button{
+    background:#0057B8;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
 }
 
-h1 {
-    color: #0057B8;
-}
-
-ul {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+button:hover{
+    background:#004494;
 }

@@ -21,7 +21,7 @@ async function caricaHome() {
           👥 ${girone.squadre.length} squadre
         </p>
 
-        <button onclick="apriCampionato('${girone.nome}')">
+        <button onclick="apriGirone(${girone.id})">
           Apri
         </button>
 
@@ -40,7 +40,7 @@ async function caricaHome() {
 
 }
 
-async function apriCampionato(nome) {
+async function apriGirone(id) {
 
   const response =
     await fetch("data/gironi.json");
@@ -50,22 +50,15 @@ async function apriCampionato(nome) {
 
   const girone =
     dati.gironi.find(
-      g => g.nome === nome
+      g => g.id === id
     );
 
-  if (!girone) {
-
-    document.getElementById("app").innerHTML =
-      "<p>Campionato non trovato</p>";
-
-    return;
-
-  }
+  if (!girone) return;
 
   let html = `
 
     <button onclick="caricaHome()">
-      ⬅ Torna
+      ⬅ Home
     </button>
 
     <div class="card">
@@ -73,48 +66,118 @@ async function apriCampionato(nome) {
       <h2>${girone.nome}</h2>
 
       <p>
-        👥 ${girone.squadre.length} squadre
-      </p>
 
-      <p>
-        ${girone.url}="_blank">
-          🌐 Apri dati ufficiali FIPAV
+        ${girone.url}
+
+          🌐 Apri su FIPAV
+
         </a>
+
       </p>
 
-      <h3>Squadre</h3>
-
-      <ul>
+      <h3>👕 Seleziona squadra</h3>
 
   `;
 
   girone.squadre.forEach(squadra => {
 
     html += `
-      <li>${squadra}</li>
+
+      <button
+        style="margin:5px"
+        onclick="
+          apriSquadra(
+            ${id},
+            '${squadra.replace(/'/g, "\\'")}'
+          )
+        ">
+
+        ${squadra}
+
+      </button>
+
     `;
 
   });
 
   html += `
-      </ul>
-
-      <h3>Calendario</h3>
+    </div>
   `;
 
-  girone.calendario.forEach(gara => {
+  document.getElementById("app").innerHTML =
+    html;
+
+}
+
+async function apriSquadra(idGirone, nomeSquadra) {
+
+  const response =
+    await fetch("data/gironi.json");
+
+  const dati =
+    await response.json();
+
+  const girone =
+    dati.gironi.find(
+      g => g.id === idGirone
+    );
+
+  if (!girone) return;
+
+  const gare =
+    girone.calendario.filter(g =>
+
+      g.casa === nomeSquadra ||
+      g.ospite === nomeSquadra
+
+    );
+
+  let html = `
+
+    <button onclick="apriGirone(${idGirone})">
+      ⬅ Girone
+    </button>
+
+    <div class="card">
+
+      <h2>🏐 ${nomeSquadra}</h2>
+
+      <p>
+        Girone:
+        ${girone.nome}
+      </p>
+
+    </div>
+
+    <h3>📅 Calendario</h3>
+
+  `;
+
+  gare.forEach(gara => {
 
     html += `
 
       <div class="card">
 
-        <b>${gara.gara}</b><br>
+        <b>${gara.gara}</b>
 
-        📅 ${gara.data}<br>
+        <br>
 
-        🏐 ${gara.casa}<br>
+        📅 ${gara.data}
 
-        🆚 ${gara.ospite}<br>
+        <br><br>
+
+        🏠 ${gara.casa}
+
+        <br>
+
+        🆚
+
+        <br>
+
+        🚍 ${gara.ospite}
+
+        <br><br>
 
         ✅ ${gara.risultato}
 

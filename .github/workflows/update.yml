@@ -10,10 +10,13 @@ permissions:
   contents: write
 
 jobs:
+
   update:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -22,18 +25,20 @@ jobs:
 
       - run: npm install
 
-      - name: Installa Playwright
-        run: npx playwright install --with-deps
+      - run: npx playwright install --with-deps
 
-      - run: node scripts/update.js
+      - run: node scripts/scanCampionati.js
 
-      - name: Commit
-        run: |
+      - run: node scripts/extractGirone.js
+
+      - run: node scripts/buildJson.js
+
+      - run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
           git add .
 
-          git diff --staged --quiet || git commit -m "Aggiornamento automatico"
+          git diff --staged --quiet || git commit -m "Aggiornamento FIPAV"
 
           git push

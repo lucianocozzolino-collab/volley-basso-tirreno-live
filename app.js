@@ -1,125 +1,181 @@
+let datiGlobali = null;
+
 async function caricaHome() {
 
   const response =
     await fetch("data/gironi.json");
 
-  const dati =
+  datiGlobali =
     await response.json();
 
-  let html =
-    "<h2>🏐 Campionati disponibili</h2>";
+  document.getElementById("lastUpdate").innerHTML =
+    "🕒 Aggiornamento: " +
+    datiGlobali.aggiornamento;
 
-  dati.gironi.forEach(girone => {
+  let html = `
 
-    html += `
+    <div class="card">
 
-      <div class="card">
+      <h2>🏐 Ricerca Campionato</h2>
 
-        <h3>${girone.nome}</h3>
+      <p>📅 Anno</p>
 
-        <p>
-          👥 ${girone.squadre.length} squadre
-        </p>
+      <select id="anno" onchange="aggiornaCampionati()">
+        <option value="2025-2026">
+          2025-2026
+        </option>
+      </select>
 
-        <button onclick="apriGirone(${girone.id})">
-          Apri
-        </button>
+      <p>🏆 Campionato</p>
 
-      </div>
+      <select id="campionato"
+              onchange="aggiornaGironi()">
 
+        <option value="">
+          Seleziona
+        </option>
+
+      </select>
+
+      <p>📂 Girone</p>
+
+      <select id="girone"
+              onchange="aggiornaSquadre()">
+
+        <option value="">
+          Seleziona
+        </option>
+
+      </select>
+
+      <p>👕 Squadra</p>
+
+      <select id="squadra"
+              onchange="visualizzaSquadra()">
+
+        <option value="">
+          Seleziona
+        </option>
+
+      </select>
+
+    </div>
+
+    <div id="risultati"></div>
+
+  `;
+
+  document.getElementById("app").innerHTML = html;
+
+  aggiornaCampionati();
+
+}
+
+function aggiornaCampionati() {
+
+  const campionati =
+    [...new Set(
+      datiGlobali.gironi.map(g =>
+        g.nome.split(" - Girone")[0].trim()
+      )
+    )];
+
+  const select =
+    document.getElementById("campionato");
+
+  select.innerHTML =
+    '<option value="">Seleziona</option>';
+
+  campionati.forEach(c => {
+
+    select.innerHTML += `
+      <option value="${c}">
+        ${c}
+      </option>
     `;
 
   });
 
-  document.getElementById("app").innerHTML =
-    html;
-
-  document.getElementById("lastUpdate").innerHTML =
-    "🕒 Aggiornamento: " +
-    dati.aggiornamento;
+  aggiornaGironi();
 
 }
 
-async function apriGirone(id) {
+function aggiornaGironi() {
 
-  const response =
-    await fetch("data/gironi.json");
+  const campionato =
+    document.getElementById("campionato").value;
 
-  const dati =
-    await response.json();
+  const select =
+    document.getElementById("girone");
+
+  select.innerHTML =
+    '<option value="">Seleziona</option>';
+
+  datiGlobali.gironi
+    .filter(g =>
+      g.nome.includes(campionato)
+    )
+    .forEach(g => {
+
+      select.innerHTML += `
+        <option value="${g.id}">
+          ${g.nome}
+        </option>
+      `;
+
+    });
+
+  aggiornaSquadre();
+
+}
+
+function aggiornaSquadre() {
+
+  const id =
+    parseInt(
+      document.getElementById("girone").value
+    );
+
+  const select =
+    document.getElementById("squadra");
+
+  select.innerHTML =
+    '<option value="">Seleziona</option>';
 
   const girone =
-    dati.gironi.find(
+    datiGlobali.gironi.find(
       g => g.id === id
     );
 
   if (!girone) return;
 
-  let html = `
+  girone.squadre.forEach(s => {
 
-    <button onclick="caricaHome()">
-      ⬅ Home
-    </button>
-
-    <div class="card">
-
-      <h2>${girone.nome}</h2>
-
-      <p>
-
-        ${girone.url}
-
-          🌐 Apri su FIPAV
-
-        </a>
-
-      </p>
-
-      <h3>👕 Seleziona squadra</h3>
-
-  `;
-
-  girone.squadre.forEach(squadra => {
-
-    html += `
-
-      <button
-        style="margin:5px"
-        onclick="
-          apriSquadra(
-            ${id},
-            '${squadra.replace(/'/g, "\\'")}'
-          )
-        ">
-
-        ${squadra}
-
-      </button>
-
+    select.innerHTML += `
+      <option value="${s}">
+        ${s}
+      </option>
     `;
 
   });
 
-  html += `
-    </div>
-  `;
-
-  document.getElementById("app").innerHTML =
-    html;
-
 }
 
-async function apriSquadra(idGirone, nomeSquadra) {
+function visualizzaSquadra() {
 
-  const response =
-    await fetch("data/gironi.json");
+  const id =
+    parseInt(
+      document.getElementById("girone").value
+    );
 
-  const dati =
-    await response.json();
+  const squadra =
+    document.getElementById("squadra").value;
+
+  if (!squadra) return;
 
   const girone =
-    dati.gironi.find(
-      g => g.id === idGirone
+    datiGlobali.gironi.find(
+      g => g.id === id
     );
 
   if (!girone) return;
@@ -127,24 +183,29 @@ async function apriSquadra(idGirone, nomeSquadra) {
   const gare =
     girone.calendario.filter(g =>
 
-      g.casa === nomeSquadra ||
-      g.ospite === nomeSquadra
+      g.casa === squadra ||
+      g.ospite === squadra
 
     );
 
   let html = `
 
-    <button onclick="apriGirone(${idGirone})">
-      ⬅ Girone
-    </button>
-
     <div class="card">
 
-      <h2>🏐 ${nomeSquadra}</h2>
+      <h2>🏐 ${squadra}</h2>
 
       <p>
-        Girone:
         ${girone.nome}
+      </p>
+
+      <p>
+
+        ${girone.url}
+
+          🌐 Apri FIPAV
+
+        </a>
+
       </p>
 
     </div>
@@ -153,21 +214,21 @@ async function apriSquadra(idGirone, nomeSquadra) {
 
   `;
 
-  gare.forEach(gara => {
+  gare.forEach(g => {
 
     html += `
 
       <div class="card">
 
-        <b>${gara.gara}</b>
+        <b>${g.gara}</b>
 
         <br>
 
-        📅 ${gara.data}
+        📅 ${g.data}
 
         <br><br>
 
-        🏠 ${gara.casa}
+        🏠 ${g.casa}
 
         <br>
 
@@ -175,11 +236,11 @@ async function apriSquadra(idGirone, nomeSquadra) {
 
         <br>
 
-        🚍 ${gara.ospite}
+        🚍 ${g.ospite}
 
         <br><br>
 
-        ✅ ${gara.risultato}
+        ✅ ${g.risultato}
 
       </div>
 
@@ -187,7 +248,7 @@ async function apriSquadra(idGirone, nomeSquadra) {
 
   });
 
-  document.getElementById("app").innerHTML =
+  document.getElementById("risultati").innerHTML =
     html;
 
 }

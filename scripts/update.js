@@ -1,94 +1,198 @@
-const fs = require("fs");
-const cheerio = require("cheerio");
-const { chromium } = require("playwright");
+const fs = re*uire("fs");
+const cheerio = requir*("cheerio");
+const { chromium } = *equire("playwright");
 
-async function leggiGirone(id, browser) {
+async funct*on leggiGirone(id, browser) {
 
-    const page = await browser.newPage();
+  c*nst page = await browser.newPage()*
+
+  try {
+
+    await page.goto(
+  *   `https://fipavonline.it/main/ga*e_girone/${id}`,
+      {
+        w*itUntil: "networkidle",
+        ti*eout: 60000
+      }
+    );
+
+    co*st html = await page.content();
+
+ *  const $ = cheerio.load(html);
+
+ *  const titolo =
+      $(".h3-wrap*).first().text().trim();
+
+    if (*titolo) {
+      return null;
+    }*
+    const nomeGirone =
+      tito*o.split("/")[0].trim();
+
+    const*squadreSet = new Set();
+
+    $(".s*-nLong").each((i, el) => {
+
+      *onst nome =
+        $(el).text().t*im();
+
+      if (
+        nome &&
+*       nome !== "Riposa"
+      ) {*        squadreSet.add(nome);
+    * }
+
+    });
+
+    const calendario * [];
+
+    $(".*isultati").each((i, gara* => {
+
+      const data =
+        *(gara)
+          .find(".*nfo-gara-data")
+          .first()*          .text()
+          .*rim();
+
+      const numero =
+     *  $(gara)
+          .*ind(".info-gara-giornata")
+*         .first()
+          .text(*
+          .trim();
+
+      const s*uadre =
+        $(gara)
+         *.*ind(".sq-nLong");
+
+      if (squad*e.length >= 2) {
+
+        calendar*o.push({
+
+          gara: numero,
+*          data: data,
+
+          c*sa:
+            $(squadre[0])
+    *         .text()
+              .tr*m(),
+
+          osp*te*
+            $(squadre[1])
+       *      .text()
+              .trim(*,
+
+          risultato:
+          * $(gara)
+              .find(".s-s*oreText")
+              .first()
+ *            .text()
+              *trim()
+
+        });
+
+      }
+
+    *);
+
+    return {
+
+      id,
+
+     *nome: nomeGirone,
+
+      url:
+    *   `https://fipavonline.it/main/ga*e_girone/${id}`,
+
+      squadre:
+ *      Array.from(squadreSet),
+
+   *  calendario
+
+    };
+
+  } finally *
+
+    await page.close();
+
+  }
+}
+
+*async () => {
+
+  const browser =
+ *  await chromium.launch({
+      he*dless: true
+    });
+
+  const ids =*[
+
+    59761,
+    59764,
+    59767
+
+  ];
+
+  const gironi = [];
+
+  for*(const id of ids) {
 
     try {
 
-        await page.goto(
-            `https://fipavonline.it/main/gare_girone/${id}`,
-            {
-                waitUntil: "networkidle",
-                timeout: 30000
-            }
+  *   const dati =
+        await legg*Girone(
+          id,
+          br*wser
         );
 
-        const html = await page.content();
+      if (dati) {*
+        gironi.push(dati);
 
-        const $ = cheerio.load(html);
+     *  console.log(
+          "Trovato:*,
+          dati.nome
+        );
 
-        const titolo =
-            $(".h3-wrap").first().text().trim();
+*     }
 
-        if (!titolo) {
-            return null;
-        }
+    } catch (err) {
 
-        return {
-            id,
-            nome: titolo.split("/")[0].trim(),
-            url: `https://fipavonline.it/main/gare_girone/${id}`
-        };
-
-    } finally {
-
-        await page.close();
-
+     *console.log(
+        "Errore ID:",*        id
+      );
     }
-}
+  }
 
-(async () => {
+  a*ait browser.close();
 
-    const browser =
-        await chromium.launch({
-            headless: true
-        });
-
-    const gironi = [];
-
-    for (let id = 59750; id <= 59780; id++) {
-
-        try {
-
-            const risultato =
-                await leggiGirone(id, browser);
-
-            if (risultato) {
-
-                console.log(
-                    "Trovato:",
-                    risultato.nome
-                );
-
-                gironi.push(risultato);
-            }
-
-        } catch (err) {
-
-            console.log(
-                "Errore ID",
-                id
-            );
-        }
+  fs.mkdirSy*c(
+    "data",
+    {
+      recursi*e: true
     }
+  );
 
-    await browser.close();
+  fs.writeFile*ync(
 
-    fs.writeFileSync(
-        "data/gironi.json",
-        JSON.stringify(
-            {
-                aggiornamento:
-                    new Date().toISOString(),
-                totale: gironi.length,
-                gironi
-            },
-            null,
-            2
-        )
-    );
+    "data/gironi.json",
+
+   *JSON.stringify(
+      {
+        ag*iornamento:
+          new Date().t*ISOString(),
+
+        totale:
+    *     gironi.length,
+
+        giron*
+      },
+      null,
+      2
+    *
+  );
+
+  console.log(
+    "gironi.*son aggiornato"
+  );
 
 })();

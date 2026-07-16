@@ -105,32 +105,13 @@ async function leggiGirone(id, browser) {
 
     });
 
-    const risultato = {
-
+    return {
       id: id,
-
       nome: nomeGirone,
-
-      url:
-        "https://fipavonline.it/main/gare_girone/" + id,
-
-      squadre:
-        Array.from(squadreSet),
-
-      calendario:
-        calendario
-
+      url: `https://fipavonline.it/main/gare_girone/${id}`,
+      squadre: Array.from(squadreSet),
+      calendario: calendario
     };
-
-    console.log(
-      JSON.stringify(
-        risultato,
-        null,
-        2
-      )
-    );
-
-    return risultato;
 
   } catch (err) {
 
@@ -194,15 +175,9 @@ async function leggiGirone(id, browser) {
   );
 
   const output = {
-
-    aggiornamento:
-      new Date().toISOString(),
-
-    totale:
-      gironi.length,
-
-    gironi
-
+    aggiornamento: new Date().toISOString(),
+    totale: gironi.length,
+    gironi: gironi
   };
 
   fs.writeFileSync(

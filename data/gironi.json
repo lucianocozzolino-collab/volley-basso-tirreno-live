@@ -1,8 +1,11 @@
 {
-  "aggiornamento": "2026-07-16T09:02:52.773Z",
+  "aggiornamento": "2026-07-16T09:49:29.970Z",
   "totale": 3,
   "gironi": [
     {
+      "stagione": "2025-2026",
+      "campionato": "Prima Divisione Maschile",
+      "girone": "Girone A",
       "id": 59761,
       "nome": "Prima Divisione Maschile  - Girone A",
       "url": "https://fipavonline.it/main/gare_girone/59761",
@@ -16,17 +19,6 @@
         "Montorio Volley",
         "Abba Pineto Volley"
       ],
-      "classifica": [],
-      "risultatiUltimaGiornata": [
-        {
-          "gara": "Gara 10037",
-          "data": "Ven 06/03/2026 21.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "2-3"
-        }
-      ],
-      "prossimeGare": [],
       "calendario": [
         {
           "gara": "Gara 10000",
@@ -423,6 +415,9 @@
       ]
     },
     {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone A",
       "id": 59764,
       "nome": "VOLLEY S3 Under 12 6x6 F  - Girone A",
       "url": "https://fipavonline.it/main/gare_girone/59764",
@@ -432,88 +427,6 @@
         "Pallavolo Follonica Blu",
         "New Volley 2019",
         "Deep Chic Grosseto"
-      ],
-      "classifica": [],
-      "risultatiUltimaGiornata": [
-        {
-          "gara": "Gara 6058",
-          "data": "Ven 20/02/2026 17.00",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "0-3"
-        }
-      ],
-      "prossimeGare": [
-        {
-          "gara": "Gara 6032",
-          "data": "-",
-          "casa": "Deep Chic Grosseto",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6035",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Pallavolo Follonica Blu",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6036",
-          "data": "-",
-          "casa": "Invicta Volleyball",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6041",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6044",
-          "data": "-",
-          "casa": "New Volley 2019",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6047",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Deep Chic Grosseto",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6050",
-          "data": "-",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6051",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Invicta Volleyball",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6056",
-          "data": "-",
-          "casa": "Unionvolley Piombino",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6059",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "New Volley 2019",
-          "risultato": "-"
-        }
       ],
       "calendario": [
         {
@@ -729,6 +642,9 @@
       ]
     },
     {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone D",
       "id": 59767,
       "nome": "VOLLEY S3 Under 12 6x6 F  - Girone D",
       "url": "https://fipavonline.it/main/gare_girone/59767",
@@ -740,17 +656,6 @@
         "Asd Etrusca Volley",
         "Elsavolley"
       ],
-      "classifica": [],
-      "risultatiUltimaGiornata": [
-        {
-          "gara": "Gara 6133",
-          "data": "Ven 16/01/2026 18.45",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Lupi Santa Croce Volleyball Bianca",
-          "risultato": "0-3"
-        }
-      ],
-      "prossimeGare": [],
       "calendario": [
         {
           "gara": "Gara 6120",

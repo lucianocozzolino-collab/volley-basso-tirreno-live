@@ -65,13 +65,9 @@ async function leggiGirone(id, browser) {
           .text()
           .trim();
 
-      if (!numero) {
-        return;
-      }
+      if (!numero) return;
 
-      if (gareViste.has(numero)) {
-        return;
-      }
+      if (gareViste.has(numero)) return;
 
       gareViste.add(numero);
 
@@ -86,9 +82,7 @@ async function leggiGirone(id, browser) {
         $(gara)
           .find(".sq-nLong");
 
-      if (squadre.length < 2) {
-        return;
-      }
+      if (squadre.length < 2) return;
 
       calendario.push({
         gara: numero,
@@ -105,12 +99,85 @@ async function leggiGirone(id, browser) {
 
     });
 
+    const classifica = [];
+
+    $(".classifica tbody tr").each((i, riga) => {
+
+      const td = $(riga).find("td");
+
+      if (td.length >= 4) {
+
+        classifica.push({
+          posizione: $(td[0]).text().trim(),
+          squadra: $(td[1]).text().trim(),
+          punti: $(td[2]).text().trim(),
+          gare: $(td[3]).text().trim()
+        });
+
+      }
+
+    });
+
+    const risultatiUltimaGiornata = [];
+
+    if (calendario.length > 0) {
+
+      const ultimaData =
+        [...new Set(calendario.map(g => g.data))]
+          .sort()
+          .pop();
+
+      calendario.forEach(gara => {
+
+        if (gara.data === ultimaData) {
+
+          risultatiUltimaGiornata.push(gara);
+
+        }
+
+      });
+
+    }
+
+    const prossimeGare = [];
+
+    calendario.forEach(gara => {
+
+      if (
+        gara.risultato === "-" ||
+        gara.risultato === ""
+      ) {
+
+        prossimeGare.push(gara);
+
+      }
+
+    });
+
     return {
+
       id: id,
+
       nome: nomeGirone,
-      url: `https://fipavonline.it/main/gare_girone/${id}`,
-      squadre: Array.from(squadreSet),
-      calendario: calendario
+
+      url:
+        `https://fipavonline.it/main/gare_girone/${id}`,
+
+      squadre:
+        Array.from(squadreSet),
+
+      classifica:
+        classifica,
+
+      risultatiUltimaGiornata:
+        risultatiUltimaGiornata,
+
+      prossimeGare:
+        prossimeGare,
+
+      calendario:
+        calendario
+
     };
 
   } catch (err) {
@@ -174,16 +241,18 @@ async function leggiGirone(id, browser) {
     }
   );
 
-  const output = {
-    aggiornamento: new Date().toISOString(),
-    totale: gironi.length,
-    gironi: gironi
-  };
-
   fs.writeFileSync(
     "data/gironi.json",
     JSON.stringify(
-      output,
+      {
+        aggiornamento:
+          new Date().toISOString(),
+
+        totale:
+          gironi.length,
+
+        gironi
+      },
       null,
       2
     ),
@@ -191,7 +260,7 @@ async function leggiGirone(id, browser) {
   );
 
   console.log(
-    "data/gironi.json aggiornato"
+    "gironi.json aggiornato"
   );
 
 })();

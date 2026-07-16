@@ -12,7 +12,7 @@ async function caricaHome() {
     "🕒 Aggiornamento: " +
     datiGlobali.aggiornamento;
 
-  let html = `
+  document.getElementById("app").innerHTML = `
 
     <div class="card">
 
@@ -28,35 +28,17 @@ async function caricaHome() {
 
       <p>🏆 Campionato</p>
 
-      <select id="campionato"
-              onchange="aggiornaGironi()">
-
-        <option value="">
-          Seleziona
-        </option>
-
+      <select id="campionato" onchange="aggiornaGironi()">
       </select>
 
       <p>📂 Girone</p>
 
-      <select id="girone"
-              onchange="aggiornaSquadre()">
-
-        <option value="">
-          Seleziona
-        </option>
-
+      <select id="girone" onchange="aggiornaSquadre()">
       </select>
 
       <p>👕 Squadra</p>
 
-      <select id="squadra"
-              onchange="visualizzaSquadra()">
-
-        <option value="">
-          Seleziona
-        </option>
-
+      <select id="squadra" onchange="visualizzaSquadra()">
       </select>
 
     </div>
@@ -65,26 +47,33 @@ async function caricaHome() {
 
   `;
 
-  document.getElementById("app").innerHTML = html;
-
   aggiornaCampionati();
 
 }
 
 function aggiornaCampionati() {
 
-  const campionati =
-    [...new Set(
+  const campionati = [
+
+    ...new Set(
+
       datiGlobali.gironi.map(g =>
-        g.nome.split(" - Girone")[0].trim()
+
+        g.nome.replace(
+          /\s*-\s*Girone\s+[A-Z0-9]+.*/,
+          ""
+        ).trim()
+
       )
-    )];
+
+    )
+
+  ];
 
   const select =
     document.getElementById("campionato");
 
-  select.innerHTML =
-    '<option value="">Seleziona</option>';
+  select.innerHTML = "";
 
   campionati.forEach(c => {
 
@@ -108,18 +97,30 @@ function aggiornaGironi() {
   const select =
     document.getElementById("girone");
 
-  select.innerHTML =
-    '<option value="">Seleziona</option>';
+  select.innerHTML = "";
 
   datiGlobali.gironi
+
     .filter(g =>
-      g.nome.includes(campionato)
+      g.nome.startsWith(campionato)
     )
+
     .forEach(g => {
+
+      let nomeGirone = "Girone";
+
+      const match =
+        g.nome.match(/Girone\s+[A-Z0-9]+/i);
+
+      if (match) {
+
+        nomeGirone = match[0];
+
+      }
 
       select.innerHTML += `
         <option value="${g.id}">
-          ${g.nome}
+          ${nomeGirone}
         </option>
       `;
 
@@ -139,8 +140,7 @@ function aggiornaSquadre() {
   const select =
     document.getElementById("squadra");
 
-  select.innerHTML =
-    '<option value="">Seleziona</option>';
+  select.innerHTML = "";
 
   const girone =
     datiGlobali.gironi.find(
@@ -159,6 +159,8 @@ function aggiornaSquadre() {
 
   });
 
+  visualizzaSquadra();
+
 }
 
 function visualizzaSquadra() {
@@ -171,16 +173,15 @@ function visualizzaSquadra() {
   const squadra =
     document.getElementById("squadra").value;
 
-  if (!squadra) return;
-
   const girone =
     datiGlobali.gironi.find(
       g => g.id === id
     );
 
-  if (!girone) return;
+  if (!girone || !squadra) return;
 
   const gare =
+
     girone.calendario.filter(g =>
 
       g.casa === squadra ||
@@ -220,9 +221,9 @@ function visualizzaSquadra() {
 
       <div class="card">
 
-        <b>${g.gara}</b>
+        <strong>${g.gara}</strong>
 
-        <br>
+        <br><br>
 
         📅 ${g.data}
 

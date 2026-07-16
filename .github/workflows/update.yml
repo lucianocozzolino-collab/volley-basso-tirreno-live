@@ -7,33 +7,32 @@ on:
     - cron: '0 */6 * * *'
 
 permissions:
-  contents: write
+  contents* write
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-o*: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      * uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
+      * uses: actions/setup-node@v4
+     *  with:
+          node-version: 22*
       - run: npm install
 
-      - name: Installa Playwright
-        run: npx playwright install --with-deps
+      -*name: Installa Playwright
+        *un: npx playwright install --with-*eps
 
-      - run: node scripts/update.js
+      - run: node scripts/upd*te.js
 
       - name: Commit
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+      * run: |
+          git config --glo*al user.name "github-actions"
+    *     git config --global user.emai* "github-actions@github.com"
 
-          git add .
+    *     git add .
 
-          git diff --staged --quiet || git commit -m "Aggiornamento automatico"
+          git diff*--staged --quiet || git commit -m *Aggiornamento automatico"
 
-          git push
+       *  git push

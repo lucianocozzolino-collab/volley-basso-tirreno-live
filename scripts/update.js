@@ -1,5 +1,7 @@
-const fs = require(erio");
+const fs = require("fs");
+const cheerio = require("cheerio");
 const { chromium } = require("playwright");
+
 
 async function leggiGirone(id, browser) {
 

@@ -2,6 +2,7 @@
   "name": "volley-basso-tirreno-live",
   "version": "1.0.0",
   "dependencies": {
+    "axios": "^1.11.0",
     "cheerio": "^1.1.0"
   }
 }

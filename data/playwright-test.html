@@ -1,0 +1,2799 @@
+<!DOCTYPE html><html><head>
+		<title>Main</title>
+                    <meta name="apple-itunes-app" content="app-id=500653920">
+        		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001">
+
+		<!--  custom  -->
+		<style type="text/css">
+			.content .span3 {
+		    	margin-left:28px;
+		    }
+		</style>
+		<!-- Bootstrap -->
+		<style>.file-input-wrapper { overflow: hidden; position: relative; cursor: pointer; z-index: 1; }.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover { position: absolute; top: 0; left: 0; cursor: pointer; opacity: 0; filter: alpha(opacity=0); z-index: 99; outline: 0; }.file-input-name { margin-left: 8px; }</style><link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- Bootstrap responsive -->
+		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/css/docs.css?v=2.17062026" rel="stylesheet">
+        <link href="/css/chosen.css" rel="stylesheet">
+        <link href="/css/sphinix.css" rel="stylesheet">
+        
+            <link href="https://fipavonline.it/live/css/copyright.css?v=2.17062026" rel="stylesheet">
+                <link href="/css/theme.css?v=2.17062026" rel="stylesheet">
+        <link href="/css/jquery.datetimepicker.css" rel="stylesheet">
+        
+        
+
+
+
+</head>
+<!--	<body>-->
+
+<body data-spy="scroll" data-offset="40" data-target="#follow-scroll" class="no-navbar" style="">
+<!--<div class="loader"></div>-->
+        <div class="container">
+            <div class="content header-logo">
+                <div>
+                                                <a href="https://www.bassotirreno.federvolley.it/web/attivit%C3%A0-sportiva-e-norme/progetto-s3-fipav.html" target="_blank"><img src="/img/loghi/mvbt2.png" class="official-logo"></a>
+                                            <div class="desc-comitato">
+                        <p class="text-info text-right"><label><strong>Minivolley BASSO TIRRENO</strong></label></p>
+                        <p class="text-info text-right mb1"><label class="mb1"><em>Via Malagoli n. 12 56124 Pisa</em></label></p>
+                        <p class="text-info text-right mb1"><label class="mb1"><em>0586863040</em></label></p>
+                        <p class="text-info text-right mb1"><label class="mb1"><em>e-mail: volleys3.bassotirreno@federvolley.it</em></label></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="container-fluid public-nav-wrap affix-top" data-spy="affix" data-offset-top="110">
+    <div class="barra-benvenuto no-mobile" style="margin-bottom: 0px">
+        <div class="container">
+            <span class="span4 pull-left desc-txt-comitato">Minivolley BASSO TIRRENO</span>
+            <span class="span4 pull-left"><a style="color:white" href="https://corsi.fipavonline.it">CORSI ALLENATORI</a></span>
+
+<!--                    <span class="span4 pull-left"><a style="color:white" href="--><!--">CORSI ALLENATORI</a></span>-->
+
+
+
+            <span class="span3 pull-right" style="padding-right:25px !important;">
+                <a class="pull-right login-btn" href="/login/">LOGIN</a>
+<!--                <a class="pull-right login-btn" href="/home/"><span class="icon-white icon-th"></span> </a>-->
+                <a class="pull-right login-btn" href="/home.html"><span class="icon-white icon-th"></span> </a>
+            </span>
+        </div>
+    </div>
+    <div class="barra-benvenuto nav-mobile solo-mobile ">
+        <ul class="nav nav-pills" style="margin-bottom: 1px">
+            <li><a class="blue" href="/home/"><span class="glyphicon glyphicon-th"></span> </a></li>
+            <li class="dropdown pull-right" role="menu">
+                <a class="dropdown-toggle blue" data-toggle="dropdown" href="#">
+                    U12F6x6A <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                        <li><a href="/live/">Gare di oggi</a></li>
+
+                                        <li><a href="/main/classifica/59764">Classifica</a></li>
+
+                                        <li><a href="/gironi/stampa_calendario/59764">Stampa</a></li>
+
+                                            <li class="divider"></li>
+                                                    <li><a href="/main/tutti_i_campionati">Tutti i campionati</a></li>
+                                            <li><a href="https://fipavonline.it//login">LOGIN</a></li>
+                    
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="container barra-date-gare no-mobile" id="follow-scroll">
+        <ul class="nav nav-pills" style="padding-left:25px;padding-right: 25px !important;">
+                            <li><a href="/live/">Gare di oggi</a></li>
+
+                            <li><a href="/main/classifica/59764">Classifica</a></li>
+
+                            <li><a href="/gironi/stampa_calendario/59764">Stampa</a></li>
+
+                            <li class="pull-right"><a href="/main/tutti_i_campionati">Tutti i campionati</a></li>
+                    </ul>
+
+    </div>
+
+</div>
+
+
+<div class="container calendario-grafico" style="padding-bottom: 130px">
+<input type="hidden" id="scroll_to" value="g_1">
+<!--<input type="hidden" id="last_ts" name="last_ts" value="--><!--">-->
+<input type="hidden" id="next_result" name="next_result" value="60000">
+
+            <div class="gare-wrap" id="g_1">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 1</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788320">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 10/01/2026 18.00</div>
+                                <div class="info-gara-giornata">Gara 6030</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto</div>
+                    <div class="info-gara-campo-loc">GROSSETO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 10/01/2026 18.00<strong> Gara 6030</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto - GROSSETO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/21 25/15 25/10                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788320"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788321">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Mer 07/01/2026 18.00</div>
+                                <div class="info-gara-giornata">Gara 6031</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAGOLFO-PALESTRA A - SANZIO 2</div>
+                    <div class="info-gara-campo-loc">FOLLONICA</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Mer 07/01/2026 18.00<strong> Gara 6031</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAGOLFO-PALESTRA A - SANZIO 2 - FOLLONICA</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/5 25/16 25/19                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788321"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788322">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6032</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT</div>
+                    <div class="info-gara-campo-loc">GROSSETO PIAZZA AZZURRI D</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6032</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT - GROSSETO PIAZZA AZZURRI D</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788322"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_2">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 2</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788323">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 06/12/2025 17.30</div>
+                                <div class="info-gara-giornata">Gara 6033</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65</div>
+                    <div class="info-gara-campo-loc">PIOMBINO  </div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 06/12/2025 17.30<strong> Gara 6033</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65 - PIOMBINO  </div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/17 25/17 25/15                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788323"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788324">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Dom 07/12/2025 09.00</div>
+                                <div class="info-gara-giornata">Gara 6034</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALESTRA RODARI - PIAZZA GIOVANNI XXIII</div>
+                    <div class="info-gara-campo-loc">SAN VINCENZO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Dom 07/12/2025 09.00<strong> Gara 6034</strong>
+                                            </div>
+                    <div class="info-gara-data">PALESTRA RODARI - PIAZZA GIOVANNI XXIII - SAN VINCENZO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">0-3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        5/25 11/25 8/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788324"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788325">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6035</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAMODIGLIANI - Via FRIDA MISUL 2</div>
+                    <div class="info-gara-campo-loc">LIVORNO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6035</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAMODIGLIANI - Via FRIDA MISUL 2 - LIVORNO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788325"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_3">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 3</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788326">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6036</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto</div>
+                    <div class="info-gara-campo-loc">GROSSETO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6036</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto - GROSSETO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788326"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788327">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Gio 18/12/2025 17.15</div>
+                                <div class="info-gara-giornata">Gara 6037</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT</div>
+                    <div class="info-gara-campo-loc">GROSSETO PIAZZA AZZURRI D</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Gio 18/12/2025 17.15<strong> Gara 6037</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT - GROSSETO PIAZZA AZZURRI D</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/21 25/14 25/18                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788327"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788328">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Dom 14/12/2025 15.30</div>
+                                <div class="info-gara-giornata">Gara 6038</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALESTRA RODARI - PIAZZA GIOVANNI XXIII</div>
+                    <div class="info-gara-campo-loc">SAN VINCENZO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Dom 14/12/2025 15.30<strong> Gara 6038</strong>
+                                            </div>
+                    <div class="info-gara-data">PALESTRA RODARI - PIAZZA GIOVANNI XXIII - SAN VINCENZO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">0-3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        6/25 18/25 5/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788328"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_4">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 4</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788329">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Dom 08/02/2026 12.00</div>
+                                <div class="info-gara-giornata">Gara 6039</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAGOLFO-PALESTRA A - SANZIO 2</div>
+                    <div class="info-gara-campo-loc">FOLLONICA</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Dom 08/02/2026 12.00<strong> Gara 6039</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAGOLFO-PALESTRA A - SANZIO 2 - FOLLONICA</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">0-3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        9/25 13/25 23/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788329"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788330">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 17/01/2026 15.00</div>
+                                <div class="info-gara-giornata">Gara 6040</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT</div>
+                    <div class="info-gara-campo-loc">GROSSETO PIAZZA AZZURRI D</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 17/01/2026 15.00<strong> Gara 6040</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT - GROSSETO PIAZZA AZZURRI D</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/8 25/15 25/14                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788330"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788331">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6041</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAMODIGLIANI - Via FRIDA MISUL 2</div>
+                    <div class="info-gara-campo-loc">LIVORNO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6041</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAMODIGLIANI - Via FRIDA MISUL 2 - LIVORNO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788331"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_5">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 5</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788332">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Mer 21/01/2026 16.30</div>
+                                <div class="info-gara-giornata">Gara 6042</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto</div>
+                    <div class="info-gara-campo-loc">GROSSETO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Mer 21/01/2026 16.30<strong> Gara 6042</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto - GROSSETO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">2-1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        24/25 25/19 25/14                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788332"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788333">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Dom 18/01/2026 11.00</div>
+                                <div class="info-gara-giornata">Gara 6043</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65</div>
+                    <div class="info-gara-campo-loc">PIOMBINO  </div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Dom 18/01/2026 11.00<strong> Gara 6043</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65 - PIOMBINO  </div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/8 25/3 25/6                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788333"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788334">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6044</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALESTRA RODARI - PIAZZA GIOVANNI XXIII</div>
+                    <div class="info-gara-campo-loc">SAN VINCENZO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6044</strong>
+                                            </div>
+                    <div class="info-gara-data">PALESTRA RODARI - PIAZZA GIOVANNI XXIII - SAN VINCENZO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788334"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_6">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 6</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788335">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Dom 25/01/2026 15.00</div>
+                                <div class="info-gara-giornata">Gara 6045</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65</div>
+                    <div class="info-gara-campo-loc">PIOMBINO  </div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Dom 25/01/2026 15.00<strong> Gara 6045</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65 - PIOMBINO  </div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">1-2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/22 14/25 19/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788335"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788336">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Mer 21/01/2026 17.00</div>
+                                <div class="info-gara-giornata">Gara 6046</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALESTRA RODARI - PIAZZA GIOVANNI XXIII</div>
+                    <div class="info-gara-campo-loc">SAN VINCENZO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Mer 21/01/2026 17.00<strong> Gara 6046</strong>
+                                            </div>
+                    <div class="info-gara-data">PALESTRA RODARI - PIAZZA GIOVANNI XXIII - SAN VINCENZO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">2-1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/17 25/14 17/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788336"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788337">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6047</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAMODIGLIANI - Via FRIDA MISUL 2</div>
+                    <div class="info-gara-campo-loc">LIVORNO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6047</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAMODIGLIANI - Via FRIDA MISUL 2 - LIVORNO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788337"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_7">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 7</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788338">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 31/01/2026 15.00</div>
+                                <div class="info-gara-giornata">Gara 6048</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT</div>
+                    <div class="info-gara-campo-loc">GROSSETO PIAZZA AZZURRI D</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 31/01/2026 15.00<strong> Gara 6048</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT - GROSSETO PIAZZA AZZURRI D</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">2-1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/15 22/25 25/22                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788338"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788339">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 07/02/2026 17.00</div>
+                                <div class="info-gara-giornata">Gara 6049</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto</div>
+                    <div class="info-gara-campo-loc">GROSSETO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 07/02/2026 17.00<strong> Gara 6049</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto - GROSSETO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/9 25/6 25/7                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788339"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788340">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6050</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAGOLFO-PALESTRA A - SANZIO 2</div>
+                    <div class="info-gara-campo-loc">FOLLONICA</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6050</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAGOLFO-PALESTRA A - SANZIO 2 - FOLLONICA</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788340"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_8">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 8</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788341">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6051</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAMODIGLIANI - Via FRIDA MISUL 2</div>
+                    <div class="info-gara-campo-loc">LIVORNO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6051</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAMODIGLIANI - Via FRIDA MISUL 2 - LIVORNO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788341"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788342">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Mar 10/02/2026 17.00</div>
+                                <div class="info-gara-giornata">Gara 6052</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAGOLFO-PALESTRA A - SANZIO 2</div>
+                    <div class="info-gara-campo-loc">FOLLONICA</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Mar 10/02/2026 17.00<strong> Gara 6052</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAGOLFO-PALESTRA A - SANZIO 2 - FOLLONICA</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">0-3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        17/25 23/25 23/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788342"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788343">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Ven 06/02/2026 18.00</div>
+                                <div class="info-gara-giornata">Gara 6053</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65</div>
+                    <div class="info-gara-campo-loc">PIOMBINO  </div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Ven 06/02/2026 18.00<strong> Gara 6053</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65 - PIOMBINO  </div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/8 25/2 25/13                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788343"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_9">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 9</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788344">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 20/12/2025 17.30</div>
+                                <div class="info-gara-giornata">Gara 6054</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto</div>
+                    <div class="info-gara-campo-loc">GROSSETO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 20/12/2025 17.30<strong> Gara 6054</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT MARINA DI GROSSETO - VIA MARONCELLI - marina di grosseto - GROSSETO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">3-0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        25/18 25/11 25/16                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788344"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788345">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 14/02/2026 15.30</div>
+                                <div class="info-gara-giornata">Gara 6055</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALESTRA RODARI - PIAZZA GIOVANNI XXIII</div>
+                    <div class="info-gara-campo-loc">SAN VINCENZO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 14/02/2026 15.30<strong> Gara 6055</strong>
+                                            </div>
+                    <div class="info-gara-data">PALESTRA RODARI - PIAZZA GIOVANNI XXIII - SAN VINCENZO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">0-3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        2/25 7/25 6/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788345"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788346">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6056</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65</div>
+                    <div class="info-gara-campo-loc">PIOMBINO  </div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6056</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO M. FALCI - VIA Francesco FERRER, 65 - PIOMBINO  </div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788346"></div>
+
+    </div>
+
+
+</div>            </div>
+                <div class="gare-wrap" id="g_10">
+            <h3>
+                <span class="h3-wrap">VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 10</span>
+            </h3>
+            <div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788347">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Sab 21/02/2026 15.00</div>
+                                <div class="info-gara-giornata">Gara 6057</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAZZETTO DELLO SPORT</div>
+                    <div class="info-gara-campo-loc">GROSSETO PIAZZA AZZURRI D</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Sab 21/02/2026 15.00<strong> Gara 6057</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAZZETTO DELLO SPORT - GROSSETO PIAZZA AZZURRI D</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480063/logo.png" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Deep Chic Grosseto</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480021/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Invicta Volleyball </span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">1-2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        13/25 25/21 16/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788347"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788348">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">Ven 20/02/2026 17.00</div>
+                                <div class="info-gara-giornata">Gara 6058</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAGOLFO-PALESTRA A - SANZIO 2</div>
+                    <div class="info-gara-campo-loc">FOLLONICA</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">Ven 20/02/2026 17.00<strong> Gara 6058</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAGOLFO-PALESTRA A - SANZIO 2 - FOLLONICA</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100480022/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Pallavolo Follonica Blu</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490037/logo.png" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Unionvolley Piombino</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText risultato-ufficiale" style="cursor: default;">0-3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        20/25 12/25 21/25                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788348"></div>
+
+    </div>
+
+
+</div><div class="gara-big-wrap">
+
+    <div class="risultati" id="gara_12788349">
+        <a href="#" class="risultati risultati-r-link">
+            <div class="info-gara">
+                <div class="info-gara-data">-</div>
+                                <div class="info-gara-giornata">Gara 6059</div>
+                <div class="info-gara-campo">
+                    <div class="info-gara-campo-desc">PALAMODIGLIANI - Via FRIDA MISUL 2</div>
+                    <div class="info-gara-campo-loc">LIVORNO</div>
+                </div>
+                <div style="position: absolute; bottom: 0">
+                                    </div>
+
+            </div>
+            <div class="dati-gara">
+
+                <div class="info-gara-mobile">
+                    <div class="info-gara-data">-<strong> Gara 6059</strong>
+                                            </div>
+                    <div class="info-gara-data">PALAMODIGLIANI - Via FRIDA MISUL 2 - LIVORNO</div>
+
+                </div>
+
+                <div class="sq casa" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490001/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                            
+
+                        </span>
+
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">Riposa</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="sq fuori" data-id_s="">
+                    <div class="sq-i">
+                        <span class="sq-i-wrap">
+                            <img src="/img/loghi_societa/100490114/logo.jpg" alt="" class="i-sq-logo sq-logo">
+                                                    </span>
+                    </div>
+                    <div class="sq-n">
+                        <span class="sq-nLong">New Volley 2019</span>
+                        <span class="sq-nShort"></span>
+                    </div>
+                </div>
+                <div class="s">
+                    <div class="s-fixture">
+                        <div class="s-status"></div>
+                        <div class="s-status-abbr"></div>
+                        <div class="s-score">
+                            <span class="s-scoreText" style="cursor: default;"> - </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-parziali" style="cursor: default;">
+
+                    <span class="text-parziali">
+                        &nbsp;                    </span>
+                                        <div id="aggiornamento_in_corso" class="progress progress-striped active hidden">
+                        <div class="bar" style="width: 100%;">Aggiornamento in corso...</div>
+                    </div>
+                    
+                        <span class="text-i_arb"></span>
+                    <!--                    <span >-->
+<!--                        <button class="btn-mini  btn_mostra_camp3 risultato-ufficiale" type="button" data-idx="--><!--">-->
+<!--                            <i class="icon-chevron-down icon-white"></i>&nbsp;&nbsp;&nbsp;Mostra formazioni&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down icon-white"></i>-->
+<!--                        </button>-->
+<!--                    </span>-->
+
+
+                </div>
+
+            </div>
+
+
+        </a>
+        <div class="dati-gara camp3 hide" id="camp3_12788349"></div>
+
+    </div>
+
+
+</div>            </div>
+    
+</div>
+<!--<div class="container calendario-grafico">-->
+
+
+<!-- loading dialog -->
+<div id="alert_loading" class="modal hide " tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-body">
+        <div id="alert_loading_label"></div>
+        <div class="progress progress-striped active">
+            <div class="bar" style="width: 100%;"></div>
+        </div>
+    </div>
+
+</div>
+
+<div id="modal_edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="me_lbl_intesta" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="me_lbl_intesta"></h4>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-danger hidden">Elimina</button>
+        <button class="btn pull-left" data-dismiss="modal" aria-hidden="true">Chiudi</button>
+        <button class="btn btn-primary">Applica</button>
+    </div>
+</div>
+
+
+<div id="alert_modal" class="modal hide " tabindex="-1" role="dialog" aria-labelledby="ma_lbl_intesta" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="ma_lbl_intesta">ATTENZIONE</h3>
+    </div>
+    <div class="modal-body">
+        <p></p>
+    </div>
+    <div class="modal-footer">
+        <input type="hidden" id="url_ok">
+        <input type="hidden" id="url_annulla">
+        <button id="btn_dismiss_modal" class="btn pull-left" data-dismiss="modal" aria-hidden="true">Annulla</button>
+        <button id="btn_url_annulla" class="btn btn-primary">Avanti</button>
+
+        <button id="btn_forza_elaborazione" class="btn btn-danger">Elabora</button>
+    </div>
+</div>
+
+
+    <div class="wrapper">
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="text">
+                    <p style="margin-bottom: 0px;">© Copyright Manufacturing Point Software s.r.l. PIVA: 02888940786 - tutti i diritti riservati  -  <strong><a target="_blank" href="/infoPrivacy.html">Privacy &amp; Cookie</a></strong></p>
+                    <p style="margin-bottom: 0px;">Manufacturing Point software e la Federazione Italiana Pallavolo si impegnano attivamente a proteggere i propri dati dall'accesso non autorizzato attraverso il web scraping. </p>
+                    <p style="margin-bottom: 0px;">Qualsiasi tentativo di acquisire informazioni senza autorizzazione sarà considerato una violazione delle politiche di tutela dei dati e dei dati personali e sarà perseguito legalmente.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+
+
+        <script src="/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+                        var base_url    = 'https://fipavonline.it/';
+            var userToken   = '';
+            sessionStorage.userToken = userToken;
+                    </script>
+
+        <script src="/js/common.js?v=2.17062026"></script>
+        <script src="/js/GMapsObj.js?v=2.17062026"></script>
+        
+                    <script src="/js/main_view.js?v=2.17062026"></script>
+                    <script src="/js/bootstrap.file-input.js?v=2.17062026"></script>
+        
+
+
+
+	
+</body></html>

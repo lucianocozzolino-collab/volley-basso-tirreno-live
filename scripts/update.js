@@ -1,95 +1,22 @@
 const fs = require("fs");
-const cheerio = require("cheerio");
 
-async function scarica(url) {
-    const res = await fetch(url);
-    return await res.text();
-}
+const dati = {
+  aggiornamento: new Date().toLocaleString("it-IT"),
 
-async function main() {
-
-    const html = await scarica(
-        "https://fipavonline.it/main/tutti_i_campionati"
-    );
-
-    const $ = cheerio.load(html);
-
-    const gironi = [];
-
-    $("a").each((i, el) => {
-
-        const href = $(el).attr("href") || "";
-
-        if (href.includes("gare_girone")) {
-
-            const match =
-                href.match(/gare_girone\/(\d+)/);
-
-            if (!match) return;
-
-            const id = match[1];
-
-            gironi.push({
-                id,
-                url: href.startsWith("http")
-                    ? href
-                    : `https://fipavonline.it${href}`
-            });
-        }
-    });
-
-    const risultato = [];
-
-    for (const g of gironi) {
-
-        try {
-
-            const pagina =
-                await scarica(g.url);
-
-            const $$ =
-                cheerio.load(pagina);
-
-            const titolo =
-                $("h1").first().text().trim() ||
-                $("title").text().trim();
-
-            risultato.push({
-                nome: titolo,
-                girone: g.id,
-                url: g.url
-            });
-
-        } catch (err) {
-
-            console.log(
-                "Errore girone",
-                g.id
-            );
-        }
+  gironi: [
+    {
+      nome: "VOLLEY S3 Under 12 6x6 F - Girone D",
+      id: "59767",
+      url: "https://fipavonline.it/main/gare_girone/59767"
     }
+  ]
+};
 
-    fs.mkdirSync(
-        "data",
-        { recursive: true }
-    );
+fs.mkdirSync("data", { recursive: true });
 
-    fs.writeFileSync(
-        "data/gironi.json",
-        JSON.stringify(
-            {
-                aggiornamento:
-                    new Date().toISOString(),
-                gironi: risultato
-            },
-            null,
-            2
-        )
-    );
+fs.writeFileSync(
+  "data/gironi.json",
+  JSON.stringify(dati, null, 2)
+);
 
-    console.log(
-        `Trovati ${risultato.length} gironi`
-    );
-}
-
-main();
+console.log("gironi.json aggiornato");

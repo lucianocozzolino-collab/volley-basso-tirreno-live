@@ -54,15 +54,9 @@ async function leggiGirone(id, browser) {
     });
 
     const calendario = [];
+    const gareViste = new Set();
 
     $(".risultati").each((i, gara) => {
-
-      const data =
-        $(gara)
-          .find(".info-gara-data")
-          .first()
-          .text()
-          .trim();
 
       const numero =
         $(gara)
@@ -71,38 +65,55 @@ async function leggiGirone(id, browser) {
           .text()
           .trim();
 
+      if (!numero) {
+        return;
+      }
+
+      if (gareViste.has(numero)) {
+        return;
+      }
+
+      gareViste.add(numero);
+
+      const data =
+        $(gara)
+          .find(".info-gara-data")
+          .first()
+          .text()
+          .trim();
+
       const squadre =
         $(gara)
           .find(".sq-nLong");
 
-      if (squadre.length >= 2) {
-
-        calendario.push({
-
-          gara: numero,
-
-          data: data,
-
-          casa:
-            $(squadre[0])
-              .text()
-              .trim(),
-
-          ospite:
-            $(squadre[1])
-              .text()
-              .trim(),
-
-          risultato:
-            $(gara)
-              .find(".s-scoreText")
-              .first()
-              .text()
-              .trim()
-
-        });
-
+      if (squadre.length < 2) {
+        return;
       }
+
+      calendario.push({
+
+        gara: numero,
+
+        data: data,
+
+        casa:
+          $(squadre[0])
+            .text()
+            .trim(),
+
+        ospite:
+          $(squadre[1])
+            .text()
+            .trim(),
+
+        risultato:
+          $(gara)
+            .find(".s-scoreText")
+            .first()
+            .text()
+            .trim()
+
+      });
 
     });
 
@@ -112,8 +123,7 @@ async function leggiGirone(id, browser) {
 
       nome: nomeGirone,
 
-      url:
-        `https://fipavonline.it/main/gare_girone/${id}`,
+      url: `https://fipavonline.it/main/gare_girone/${id}`,
 
       squadre:
         Array.from(squadreSet),
@@ -125,6 +135,7 @@ async function leggiGirone(id, browser) {
   } catch (err) {
 
     console.log(`Errore girone ${id}`);
+    console.log(err.message);
 
     return null;
 
@@ -197,8 +208,6 @@ async function leggiGirone(id, browser) {
     )
   );
 
-  console.log(
-    "gironi.json aggiornato"
-  );
+  console.log("gironi.json aggiornato");
 
 })();

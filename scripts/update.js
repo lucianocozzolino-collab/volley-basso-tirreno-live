@@ -1,29 +1,28 @@
-const axios = require("axios");
 const fs = require("fs");
+const { chromium } = require("playwright");
 
-async function main() {
+(async () => {
 
-    const response = await axios.get(
-        "https://fipavonline.it/main/gare_girone/59764",
-        {
-            maxRedirects: 20,
-            headers: {
-                "User-Agent":
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-            }
-        }
-    );
+  const browser = await chromium.launch({
+    headless: true
+  });
 
-    fs.mkdirSync("data", {
-        recursive: true
-    });
+  const page = await browser.newPage();
 
-    fs.writeFileSync(
-        "data/girone-59764.html",
-        response.data
-    );
+  await page.goto(
+    "https://fipavonline.it/main/gare_girone/59764",
+    {
+      waitUntil: "networkidle"
+    }
+  );
 
-    console.log("HTML salvato");
-}
+  const html = await page.content();
 
-main();
+  fs.writeFileSync(
+    "data/playwright-test.html",
+    html
+  );
+
+  await browser.close();
+
+})();

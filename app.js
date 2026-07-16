@@ -1,38 +1,43 @@
-async function apriCampionato(nome* {
+async function apriCampionato(nome) {
 
   const response =
-    await f*tch("data/gironi.json");
+    await fetch("data/gironi.json");
 
-  const *ati =
+  const dati =
     await response.json();
 
-* const stagione =
-    stagioneCorr*nte;
+  const girone =
+    dati.gironi.find(g => g.nome === nome);
 
-  const campionato =
-    dat*.stagioni[stagione][nome];
+  if (!girone) {
 
-  cons* url =
-    campionato.url;
+    document.getElementById("app").innerHTML =
+      "<p>Campionato non trovato</p>";
 
-  docu*ent.getElementById("app").innerHTM* = `
+    return;
+  }
 
-    <button onclick="caricaH*me()">
+  const url = girone.url;
+
+  document.getElementById("app").innerHTML = `
+
+    <button onclick="caricaHome()">
       ⬅ Torna
-    </button>*
+    </button>
+
     <div class="card">
 
-      <h2*${nome}</h2>
+      <h2>${girone.nome}</h2>
 
       <p>
-        📅*${stagione}
+        👥 Squadre: ${girone.squadre.length}
       </p>
 
       <p>
-*       ${url}
-           🌐 Apri d*ti ufficiali FIPAV
+        ${url}
+          🌐 Apri dati ufficiali FIPAV
         </a>
-  *   </p>
+      </p>
 
     </div>
 

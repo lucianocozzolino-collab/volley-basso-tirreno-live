@@ -1,19 +1,61 @@
 const fs = require("fs");
 
-const gironi = [];
+async function controlla(id) {
 
-for (let id = 59750; id <= 59780; id++) {
+    const url =
+        `https://fipavonline.it/main/gare_girone/${id}`;
 
-    gironi.push({
-        id: id.toString(),
-        url: `https://fipavonline.it/main/gare_girone/${id}`
-    });
+    try {
 
+        const response =
+            await fetch(url);
+
+        const html =
+            await response.text();
+
+        if (
+            html.includes("Girone") ||
+            html.includes("VOLLEY")
+        ) {
+
+            return {
+                id,
+                url
+            };
+        }
+
+    } catch {}
+
+    return null;
 }
 
-fs.writeFileSync(
-    "data/test-gironi.json",
-    JSON.stringify(gironi, null, 2)
-);
+(async () => {
 
-console.log("Test completato");
+    const validi = [];
+
+    for (let id = 59750; id <= 59800; id++) {
+
+        const risultato =
+            await controlla(id);
+
+        if (risultato) {
+
+            validi.push(risultato);
+
+            console.log(
+                "Trovato",
+                id
+            );
+        }
+    }
+
+    fs.writeFileSync(
+        "data/gironi-validi.json",
+        JSON.stringify(
+            validi,
+            null,
+            2
+        )
+    );
+
+})();

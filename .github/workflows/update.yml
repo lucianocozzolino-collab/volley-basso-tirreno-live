@@ -1,39 +1,40 @@
 name: Aggiorna Volley
 
 on:
+
   workflow_dispatch:
 
   schedule:
     - cron: '0 */6 * * *'
 
 permissions:
-  contents: write
+  contents* write
 
 jobs:
+
   update:
 
-    runs-on: ubuntu-latest
+    runs*on: ubuntu-latest
 
     steps:
 
-      - name: Checkout repository
-        uses: actions/checkout@v4
+   *  - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+*     - uses: actions/setup*node@v4
         with:
-          node-version: 22
+          no*e-version: 22
 
-      - name: Esegui aggiornamento
-        run: node scripts/update.js
+      - run: npm in*tall
 
-      - name: Commit modifiche
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+      - run: node scripts/up*ate.js
+
+      - name: Commit
+     *  run: |
+
+          git config --g*obal user.name "github-actions"
+  *       git*config*--global user.email "github-action*@github.com"
 
           git add .
-
-          git diff --staged --quiet || git commit -m "Aggiornamento automatico"
+*          git diff --staged --quie* || git commit -m "Aggiornamento a*tomatico"
 
           git push

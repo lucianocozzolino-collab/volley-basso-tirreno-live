@@ -2,78 +2,80 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-async function leggiGirone(id) {
+async function leggiGirone(id, browser) {
+
+    const page = await browser.newPage();
+
+    try {
+
+        await page.goto(
+            `https://fipavonline.it/main/gare_girone/${id}`,
+            {
+                waitUntil: "networkidle",
+                timeout: 30000
+            }
+        );
+
+        const html = await page.content();
+
+        const $ = cheerio.load(html);
+
+        const titolo =
+            $(".h3-wrap").first().text().trim();
+
+        if (!titolo) {
+            return null;
+        }
+
+        return {
+            id,
+            nome: titolo.split("/")[0].trim(),
+            url: `https://fipavonline.it/main/gare_girone/${id}`
+        };
+
+    } finally {
+
+        await page.close();
+
+    }
+}
+
+(async () => {
 
     const browser =
         await chromium.launch({
             headless: true
         });
 
-    const page =
-        await browser.newPage();
-
-    await page.goto(
-        `https://fipavonline.it/main/gare_girone/${id}`,
-        {
-            waitUntil: "networkidle",
-            timeout: 60000
-        }
-    );
-
-    const html =
-        await page.content();
-
-    await browser.close();
-
-    const $ =
-        cheerio.load(html);
-
-    const titolo =
-        $(".h3-wrap")
-        .first()
-        .text()
-        .trim();
-
-    return {
-        id,
-        nome: titolo,
-        url:
-          `https://fipavonline.it/main/gare_girone/${id}`
-    };
-}
-
-(async () => {
-
-    const ids = [
-        59761,
-        59764,
-        59767
-    ];
-
     const gironi = [];
 
-    for (const id of ids) {
+    for (let id = 59750; id <= 59780; id++) {
 
         try {
 
-            const dati =
-                await leggiGirone(id);
+            const risultato =
+                await leggiGirone(id, browser);
 
-            gironi.push(dati);
+            if (risultato) {
 
-            console.log(
-                "OK",
-                dati.nome
-            );
+                console.log(
+                    "Trovato:",
+                    risultato.nome
+                );
+
+                gironi.push(risultato);
+            }
 
         } catch (err) {
 
             console.log(
-                "Errore",
+                "Errore ID",
                 id
             );
         }
     }
+
+    await browser.close();
 
     fs.writeFileSync(
         "data/gironi.json",
@@ -81,6 +83,7 @@ async function leggiGirone(id) {
             {
                 aggiornamento:
                     new Date().toISOString(),
+                totale: gironi.length,
                 gironi
             },
             null,

@@ -236,16 +236,8 @@ function visualizzaSquadra() {
 
       <h2>🏐 ${squadra}</h2>
 
-      <p>${girone.nome}</p>
-
       <p>
-
-        ${girone.url} target="_blank">
-
-          🌐 Apri FIPAV
-
-        </a>
-
+        ${girone.nome}
       </p>
 
     </div>
@@ -292,5 +284,3 @@ function visualizzaSquadra() {
     html;
 
 }
-
-window.onload = caricaHome;

@@ -1,27 +1,19 @@
 const fs = require("fs");
 
-const dati = {
-  aggiornamento: new Date().toLocaleString("it-IT"),
+const gironi = [];
 
-  gironi: [
-    {
-      nome: "VOLLEY S3 Under 12 6x6 F - Girone D",
-      id: "59767",
-      url: "https://fipavonline.it/main/gare_girone/59767"
-    },
-    {
-      nome: "VOLLEY S3 Under 12 6x6 F - Girone A",
-      id: "59764",
-      url: "https://fipavonline.it/main/gare_girone/59764"
-    }
-  ]
-};
+for (let id = 59750; id <= 59780; id++) {
 
-fs.mkdirSync("data", { recursive: true });
+    gironi.push({
+        id: id.toString(),
+        url: `https://fipavonline.it/main/gare_girone/${id}`
+    });
+
+}
 
 fs.writeFileSync(
-  "data/gironi.json",
-  JSON.stringify(dati, null, 2)
+    "data/test-gironi.json",
+    JSON.stringify(gironi, null, 2)
 );
 
-console.log("gironi.json aggiornato");
+console.log("Test completato");

@@ -20,25 +20,26 @@ async function caricaHome() {
 
       <p>📅 Anno</p>
 
-      <select id="anno" onchange="aggiornaCampionati()">
-        <option value="2025-2026">
-          2025-2026
-        </option>
+      <select id="anno"
+              onchange="aggiornaCampionati()">
       </select>
 
       <p>🏆 Campionato</p>
 
-      <select id="campionato" onchange="aggiornaGironi()">
+      <select id="campionato"
+              onchange="aggiornaGironi()">
       </select>
 
       <p>📂 Girone</p>
 
-      <select id="girone" onchange="aggiornaSquadre()">
+      <select id="girone"
+              onchange="aggiornaSquadre()">
       </select>
 
       <p>👕 Squadra</p>
 
-      <select id="squadra" onchange="visualizzaSquadra()">
+      <select id="squadra"
+              onchange="visualizzaSquadra()">
       </select>
 
     </div>
@@ -47,39 +48,76 @@ async function caricaHome() {
 
   `;
 
+  caricaAnni();
+
+}
+
+function caricaAnni() {
+
+  const anni = [
+
+    ...new Set(
+
+      datiGlobali.gironi.map(
+        g => g.stagione
+      )
+
+    )
+
+  ].sort();
+
+  const select =
+    document.getElementById("anno");
+
+  select.innerHTML = "";
+
+  anni.forEach(anno => {
+
+    select.innerHTML += `
+      <option value="${anno}">
+        ${anno}
+      </option>
+    `;
+
+  });
+
   aggiornaCampionati();
 
 }
 
 function aggiornaCampionati() {
 
+  const anno =
+    document.getElementById("anno").value;
+
   const campionati = [
 
     ...new Set(
 
-      datiGlobali.gironi.map(g =>
+      datiGlobali.gironi
 
-        g.nome.replace(
-          /\s*-\s*Girone\s+[A-Z0-9]+.*/,
-          ""
-        ).trim()
+        .filter(
+          g => g.stagione === anno
+        )
 
-      )
+        .map(
+          g => g.campionato
+        )
 
     )
 
-  ];
+  ].sort();
 
   const select =
     document.getElementById("campionato");
 
   select.innerHTML = "";
 
-  campionati.forEach(c => {
+  campionati.forEach(campionato => {
 
     select.innerHTML += `
-      <option value="${c}">
-        ${c}
+      <option value="${campionato}">
+        ${campionato}
       </option>
     `;
 
@@ -90,6 +128,9 @@ function aggiornaCampionati() {
 }
 
 function aggiornaGironi() {
+
+  const anno =
+    document.getElementById("anno").value;
 
   const campionato =
     document.getElementById("campionato").value;
@@ -102,25 +143,21 @@ function aggiornaGironi() {
   datiGlobali.gironi
 
     .filter(g =>
-      g.nome.startsWith(campionato)
+
+      g.stagione === anno &&
+      g.campionato === campionato
+
+    )
+
+    .sort((a, b) =>
+      a.girone.localeCompare(b.girone)
     )
 
     .forEach(g => {
 
-      let nomeGirone = "Girone";
-
-      const match =
-        g.nome.match(/Girone\s+[A-Z0-9]+/i);
-
-      if (match) {
-
-        nomeGirone = match[0];
-
-      }
-
       select.innerHTML += `
         <option value="${g.id}">
-          ${nomeGirone}
+          ${g.girone}
         </option>
       `;
 
@@ -149,15 +186,17 @@ function aggiornaSquadre() {
 
   if (!girone) return;
 
-  girone.squadre.forEach(s => {
+  girone.squadre
+    .sort()
+    .forEach(squadra => {
 
-    select.innerHTML += `
-      <option value="${s}">
-        ${s}
-      </option>
-    `;
+      select.innerHTML += `
+        <option value="${squadra}">
+          ${squadra}
+        </option>
+      `;
 
-  });
+    });
 
   visualizzaSquadra();
 
@@ -178,7 +217,9 @@ function visualizzaSquadra() {
       g => g.id === id
     );
 
-  if (!girone || !squadra) return;
+  if (!girone || !squadra) {
+    return;
+  }
 
   const gare =
 
@@ -195,13 +236,11 @@ function visualizzaSquadra() {
 
       <h2>🏐 ${squadra}</h2>
 
-      <p>
-        ${girone.nome}
-      </p>
+      <p>${girone.nome}</p>
 
       <p>
 
-        ${girone.url}
+        ${girone.url} target="_blank">
 
           🌐 Apri FIPAV
 

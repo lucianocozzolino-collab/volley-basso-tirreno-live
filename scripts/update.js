@@ -1,39 +1,95 @@
 const fs = require("fs");
+const cheerio = require("cheerio");
 
-const gironi = {
+async function scarica(url) {
+    const res = await fetch(url);
+    return await res.text();
+}
 
-  aggiornamento: new Date().toLocaleString("it-IT"),
+async function main() {
 
-  stagioni: {
+    const html = await scarica(
+        "https://fipavonline.it/main/tutti_i_campionati"
+    );
 
-    "2025/2026": {
+    const $ = cheerio.load(html);
 
-      "VOLLEY S3 Under 12 6x6 F - Girone D": {
-        id: "59767",
-        url: "https://fipavonline.it/main/gare_girone/59767"
-      },
+    const gironi = [];
 
-      "VOLLEY S3 Under 12 6x6 F - Girone A": {
-        id: "59764",
-        url: "https://fipavonline.it/main/gare_girone/59764"
-      },
+    $("a").each((i, el) => {
 
-      "Prima Divisione Maschile - Girone A": {
-        id: "59761",
-        url: "https://fipavonline.it/main/gare_girone/59761"
-      }
+        const href = $(el).attr("href") || "";
 
+        if (href.includes("gare_girone")) {
+
+            const match =
+                href.match(/gare_girone\/(\d+)/);
+
+            if (!match) return;
+
+            const id = match[1];
+
+            gironi.push({
+                id,
+                url: href.startsWith("http")
+                    ? href
+                    : `https://fipavonline.it${href}`
+            });
+        }
+    });
+
+    const risultato = [];
+
+    for (const g of gironi) {
+
+        try {
+
+            const pagina =
+                await scarica(g.url);
+
+            const $$ =
+                cheerio.load(pagina);
+
+            const titolo =
+                $("h1").first().text().trim() ||
+                $("title").text().trim();
+
+            risultato.push({
+                nome: titolo,
+                girone: g.id,
+                url: g.url
+            });
+
+        } catch (err) {
+
+            console.log(
+                "Errore girone",
+                g.id
+            );
+        }
     }
 
-  }
+    fs.mkdirSync(
+        "data",
+        { recursive: true }
+    );
 
-};
+    fs.writeFileSync(
+        "data/gironi.json",
+        JSON.stringify(
+            {
+                aggiornamento:
+                    new Date().toISOString(),
+                gironi: risultato
+            },
+            null,
+            2
+        )
+    );
 
-fs.mkdirSync("data", { recursive: true });
+    console.log(
+        `Trovati ${risultato.length} gironi`
+    );
+}
 
-fs.writeFileSync(
-  "data/gironi.json",
-  JSON.stringify(gironi, null, 2)
-);
-
-console.log("gironi.json aggiornato");
+main();

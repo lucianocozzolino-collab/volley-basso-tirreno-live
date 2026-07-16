@@ -1,20 +1,15 @@
 {
-  "Under 12 Femminile": {
-    "classifica": [
-      {"squadra":"Invicta Volley","punti":12},
-      {"squadra":"Grosseto Volley","punti":10}
-    ],
-    "risultati": [
-      {"gara":"Invicta Volley - Grosseto Volley","risultato":"3-1"}
-    ]
-  },
-
-  "Volley S3": {
-    "classifica": [
-      {"squadra":"Volley S3 A","punti":8}
-    ],
-    "risultati": [
-      {"gara":"Volley S3 A - Volley S3 B","risultato":"2-1"}
-    ]
-  }
+  "ultimoAggiornamento": "16/07/2026, 06:31:53",
+  "campionati": [
+    {
+      "nome": "Volley S3 Under 12 6x6 F",
+      "girone": "59764",
+      "url": "https://fipavonline.it/main/gare_girone/59764"
+    },
+    {
+      "nome": "Prima Divisione Maschile",
+      "girone": "59761",
+      "url": "https://fipavonline.it/main/gare_girone/59761/1"
+    }
+  ]
 }

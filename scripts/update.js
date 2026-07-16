@@ -1,29 +1,29 @@
+const axios = require("axios");
 const fs = require("fs");
 
 async function main() {
 
-  const response = await fetch(
-    "https://fipavonline.it/main/tutti_i_campionati",
-    {
-      redirect: "manual",
-      headers: {
-        "User-Agent": "Mozilla/5.0"
-      }
-    }
-  );
+    const response = await axios.get(
+        "https://fipavonline.it/main/gare_girone/59764",
+        {
+            maxRedirects: 20,
+            headers: {
+                "User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+            }
+        }
+    );
 
-  const html = await response.text();
+    fs.mkdirSync("data", {
+        recursive: true
+    });
 
-  fs.mkdirSync("data", {
-    recursive: true
-  });
+    fs.writeFileSync(
+        "data/girone-59764.html",
+        response.data
+    );
 
-  fs.writeFileSync(
-    "data/tutti_i_campionati.html",
-    html
-  );
-
-  console.log("Pagina salvata");
+    console.log("HTML salvato");
 }
 
-main().catch(console.error);
+main();

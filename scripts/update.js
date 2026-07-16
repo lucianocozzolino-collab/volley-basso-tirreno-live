@@ -117,20 +117,21 @@ async function leggiGirone(id, browser) {
 
     });
 
-    return {
 
-      id,
+return {
 
-      nome: nomeGirone,
+  id,
 
-      url: `https://fipavonline.it/main/gare_girone/${id}`,
+  nome: nomeGirone,
 
-      squadre:
-        Array.from(squadreSet),
+  url: `https://fipavonline.it/main/gare_girone/${id}`,
 
-      calendario
+  squadre: Array.from(squadreSet),
 
-    };
+  calendario
+
+};
+
 
   } catch (err) {
 

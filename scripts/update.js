@@ -11,8 +11,8 @@ async function leggiGirone(id, browser) {
     await page.goto(
       `https://fipavonline.it/main/gare_girone/${id}`,
       {
-        waitUntil: "networkidle",
-        timeout: 60000
+        waitUntil: "domcontentloaded",
+        timeout: 30000
       }
     );
 
@@ -27,6 +27,12 @@ async function leggiGirone(id, browser) {
         .trim();
 
     if (!titoloCompleto) {
+      return null;
+    }
+
+    if (
+      titoloCompleto.includes("Pagina non trovata")
+    ) {
       return null;
     }
 
@@ -52,28 +58,27 @@ async function leggiGirone(id, browser) {
         ? gironeMatch[0]
         : "";
 
-    const squadreSet = new Set();
+    const squadreSet =
+      new Set();
 
     $(".sq-nLong").each((i, el) => {
 
-      const s =
+      const squadra =
         $(el)
           .text()
           .trim();
 
       if (
-        s &&
-        s !== "Riposa"
+        squadra &&
+        squadra !== "Riposa"
       ) {
-        squadreSet.add(s);
+        squadreSet.add(squadra);
       }
 
     });
 
     const calendario = [];
-
-    const gareViste =
-      new Set();
+    const gareViste = new Set();
 
     $(".risultati").each((i, gara) => {
 
@@ -86,9 +91,8 @@ async function leggiGirone(id, browser) {
 
       if (!numero) return;
 
-      if (
-        gareViste.has(numero)
-      ) return;
+      if (gareViste.has(numero))
+        return;
 
       gareViste.add(numero);
 
@@ -96,9 +100,8 @@ async function leggiGirone(id, browser) {
         $(gara)
           .find(".sq-nLong");
 
-      if (
-        squadre.length < 2
-      ) return;
+      if (squadre.length < 2)
+        return;
 
       calendario.push({
 
@@ -158,7 +161,11 @@ async function leggiGirone(id, browser) {
 
     };
 
-  } catch {
+  } catch (err) {
+
+    console.log(
+      `ID ${id} non valido`
+    );
 
     return null;
 
@@ -177,13 +184,17 @@ async function leggiGirone(id, browser) {
       headless: true
     });
 
-  const ids = [
-    59761,
-    59764,
-    59767
-  ];
-
   const gironi = [];
+
+  const ids = [];
+
+  for (
+    let id = 59000;
+    id <= 60000;
+    id++
+  ) {
+    ids.push(id);
+  }
 
   for (const id of ids) {
 
@@ -198,7 +209,7 @@ async function leggiGirone(id, browser) {
       gironi.push(dati);
 
       console.log(
-        dati.nome
+        `Trovato ${id} - ${dati.nome}`
       );
 
     }
@@ -215,14 +226,11 @@ async function leggiGirone(id, browser) {
   );
 
   fs.writeFileSync(
-
     "data/gironi.json",
-
     JSON.stringify(
       {
         aggiornamento:
-          new Date()
-            .toISOString(),
+          new Date().toISOString(),
 
         totale:
           gironi.length,
@@ -231,8 +239,12 @@ async function leggiGirone(id, browser) {
       },
       null,
       2
-    )
+    ),
+    "utf8"
+  );
 
+  console.log(
+    `Salvati ${gironi.length} gironi`
   );
 
 })();

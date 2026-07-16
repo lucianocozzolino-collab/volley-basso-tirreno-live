@@ -1,13 +1,29 @@
 const fs = require("fs");
 
-const test = {
-  data: new Date().toISOString(),
-  messaggio: "Workflow funzionante"
-};
+async function main() {
 
-fs.writeFileSync(
-  "data/test.json",
-  JSON.stringify(test, null, 2)
-);
+  const response = await fetch(
+    "https://fipavonline.it/main/tutti_i_campionati",
+    {
+      redirect: "manual",
+      headers: {
+        "User-Agent": "Mozilla/5.0"
+      }
+    }
+  );
 
-console.log("OK");
+  const html = await response.text();
+
+  fs.mkdirSync("data", {
+    recursive: true
+  });
+
+  fs.writeFileSync(
+    "data/tutti_i_campionati.html",
+    html
+  );
+
+  console.log("Pagina salvata");
+}
+
+main().catch(console.error);

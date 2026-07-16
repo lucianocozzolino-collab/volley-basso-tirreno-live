@@ -1,3 +1,45 @@
+async function caricaHome() {
+
+  const response =
+    await fetch("data/gironi.json");
+
+  const dati =
+    await response.json();
+
+  let html =
+    "<h2>🏐 Campionati disponibili</h2>";
+
+  dati.gironi.forEach(girone => {
+
+    html += `
+
+      <div class="card">
+
+        <h3>${girone.nome}</h3>
+
+        <p>
+          👥 ${girone.squadre.length} squadre
+        </p>
+
+        <button onclick="apriCampionato('${girone.nome}')">
+          Apri
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+  document.getElementById("app").innerHTML =
+    html;
+
+  document.getElementById("lastUpdate").innerHTML =
+    "🕒 Aggiornamento: " +
+    dati.aggiornamento;
+
+}
+
 async function apriCampionato(nome) {
 
   const response =
@@ -7,7 +49,9 @@ async function apriCampionato(nome) {
     await response.json();
 
   const girone =
-    dati.gironi.find(g => g.nome === nome);
+    dati.gironi.find(
+      g => g.nome === nome
+    );
 
   if (!girone) {
 
@@ -15,11 +59,10 @@ async function apriCampionato(nome) {
       "<p>Campionato non trovato</p>";
 
     return;
+
   }
 
-  const url = girone.url;
-
-  document.getElementById("app").innerHTML = `
+  let html = `
 
     <button onclick="caricaHome()">
       ⬅ Torna
@@ -30,16 +73,60 @@ async function apriCampionato(nome) {
       <h2>${girone.nome}</h2>
 
       <p>
-        👥 Squadre: ${girone.squadre.length}
+        👥 ${girone.squadre.length} squadre
       </p>
 
       <p>
-        ${url}
+        ${girone.url}="_blank">
           🌐 Apri dati ufficiali FIPAV
         </a>
       </p>
 
-    </div>
+      <h3>Squadre</h3>
+
+      <ul>
 
   `;
+
+  girone.squadre.forEach(squadra => {
+
+    html += `
+      <li>${squadra}</li>
+    `;
+
+  });
+
+  html += `
+      </ul>
+
+      <h3>Calendario</h3>
+  `;
+
+  girone.calendario.forEach(gara => {
+
+    html += `
+
+      <div class="card">
+
+        <b>${gara.gara}</b><br>
+
+        📅 ${gara.data}<br>
+
+        🏐 ${gara.casa}<br>
+
+        🆚 ${gara.ospite}<br>
+
+        ✅ ${gara.risultato}
+
+      </div>
+
+    `;
+
+  });
+
+  document.getElementById("app").innerHTML =
+    html;
+
 }
+
+window.onload = caricaHome;

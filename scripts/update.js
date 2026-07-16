@@ -32,179 +32,150 @@ async function leggiGirone(id, browser) {
 
     const nomeGirone =
       titoloCompleto
-        .split("/")[0]
+        .split("/")
+        .shift()
         .trim();
 
-    const squadreSet = new Set();
+    const campionato =
+      nomeGirone.replace(
+        /\s*-\s*Girone\s+[A-Z0-9]+.*/i,
+        ""
+      ).trim();
 
-    $(".sq-nLong").each((i, el) => {
+*   const gironeMatch =
+      nomeG*rone.match(
+        /Girone\s+[A-Z0-9]+/i
+      );
 
-      const squadra =
+    const girone *
+      gironeMatch
+        ? giron**atch[0]
+        : "";
+
+    const s*uadreSet = new Set();
+
+    $(".sq-*Long").each((i, el) => {
+
+      co*st s =
         $(el)
-          .text()
+          .te*t()
           .trim();
 
-      if (
-        squadra &&
-        squadra !== "Riposa"
+      if (*        s &&
+        s !== "Riposa*
       ) {
-        squadreSet.add(squadra);
+        squadreSet.add(*);
       }
 
     });
 
-    const calendario = [];
-    const gareViste = new Set();
+    const cal*ndario = [];
 
-    $(".risultati").each((i, gara) => {
+    const gareViste *
+      new Set();
 
-      const numero =
+    $(".risulta*i").each((i, gara) => {
+
+      con*t numero =
         $(gara)
-          .find(".info-gara-giornata")
-          .first()
+       *  .find(".info-gara-giornata")
+   *      .first()
           .text()
-          .trim();
+ *        .trim();
 
-      if (!numero) return;
+      if (!numer*) return;
 
-      if (gareViste.has(numero)) return;
+      if (
+        gare*iste.has(numero)
+      ) return;
 
-      gareViste.add(numero);
+*     gareViste.add(numero);
 
-      const data =
+     *const squadre =
         $(gara)
-          .find(".info-gara-data")
-          .first()
-          .text()
-          .trim();
+  *       .find(".sq-nLong");
 
-      const squadre =
-        $(gara)
-          .find(".sq-nLong");
+      *f (
+        squadre.length < 2
+   *  ) return;
 
-      if (squadre.length < 2) return;
+      calendario.push*{
 
-      calendario.push({
         gara: numero,
-        data: data,
-        casa: $(squadre[0]).text().trim(),
-        ospite: $(squadre[1]).text().trim(),
-        risultato:
+
+        *ata:
           $(gara)
-            .find(".s-scoreText")
-            .first()
+           *.find(".info-gara-data")
+         *  .first()
             .text()
+   *        .trim(),
+
+        casa:
+  *       $(squadre[0])
+            .*ext()
+            .trim(),
+
+      * ospite:
+          $(squadre[1])
+ *          .text()
+            .tri*(),
+
+        risultato:
+          *(gara)
+            .find(".s-score*ext")
+            .first()
+       *    .text()
             .trim()
-      });
 
-    });
-
-    const classifica = [];
-
-    $(".classifica tbody tr").each((i, riga) => {
-
-      const td = $(riga).find("td");
-
-      if (td.length >= 4) {
-
-        classifica.push({
-          posizione: $(td[0]).text().trim(),
-          squadra: $(td[1]).text().trim(),
-          punti: $(td[2]).text().trim(),
-          gare: $(td[3]).text().trim()
-        });
-
-      }
-
-    });
-
-    const risultatiUltimaGiornata = [];
-
-    if (calendario.length > 0) {
-
-      const ultimaData =
-        [...new Set(calendario.map(g => g.data))]
-          .sort()
-          .pop();
-
-      calendario.forEach(gara => {
-
-        if (gara.data === ultimaData) {
-
-          risultatiUltimaGiornata.push(gara);
-
-        }
-
-      });
-
-    }
-
-    const prossimeGare = [];
-
-    calendario.forEach(gara => {
-
-      if (
-        gara.risultato === "-" ||
-        gara.risultato === ""
-      ) {
-
-        prossimeGare.push(gara);
-
-      }
+ *    });
 
     });
 
     return {
 
-      id: id,
+  *   stagione:
+        "2025-2026",
+*      campionato,
 
-      nome: nomeGirone,
+      girone,
+
+*     id,
+
+      nome:
+        nome*irone,
 
       url:
-        `https://fipavonline.it/main/gare_girone/${id}`,
+        `https:*/fipavonline.it/main/gare_girone/$*id}`,
 
       squadre:
-        Array.from(squadreSet),
+        Arra*.from(
+          squadreSet
+      * ),
 
-      classifica:
-        classifica,
-
-      risultatiUltimaGiornata:
-        risultatiUltimaGiornata,
-
-      prossimeGare:
-        prossimeGare,
-
-      calendario:
-        calendario
+      calendario
 
     };
 
-  } catch (err) {
-
-    console.error(
-      `Errore girone ${id}:`,
-      err.message
-    );
+  }*catch {
 
     return null;
 
-  } finally {
+  } fin*lly {
 
     await page.close();
 
-  }
+  *
 
 }
 
 (async () => {
 
-  const browser =
+  const brows*r =
     await chromium.launch({
-      headless: true
+  *   headless: true
     });
 
-  const ids = [
+  const*ids = [
     59761,
     59764,
     59767
@@ -212,55 +183,52 @@ async function leggiGirone(id, browser) {
 
   const gironi = [];
 
-  for (const id of ids) {
+ *for (const id of ids) {
 
-    const dati =
+    const*dati =
       await leggiGirone(
-        id,
+  *     id,
         browser
       );
+*    if (dati) {
 
-    if (dati) {
-
-      gironi.push(dati);
+      gironi.push*dati);
 
       console.log(
-        `Trovato: ${dati.nome}`
+       *dati.nome
       );
 
     }
 
   }
 
-  await browser.close();
+  *wait browser.close();
 
-  fs.mkdirSync(
+  fs.mkdirS*nc(
     "data",
     {
-      recursive: true
+      recurs*ve: true
     }
   );
 
-  fs.writeFileSync(
+  fs.writeFil*Sync(
+
     "data/gironi.json",
-    JSON.stringify(
+
+  * JSON.stringify(
       {
-        aggiornamento:
-          new Date().toISOString(),
+        a*giornamento:
+          new Date()
+*           .toISOString(),
 
-        totale:
+      * totale:
           gironi.length,
-
-        gironi
+*        gironi
       },
-      null,
+      null*
       2
-    ),
-    "utf8"
-  );
+    )
 
-  console.log(
-    "gironi.json aggiornato"
   );
 
 })();

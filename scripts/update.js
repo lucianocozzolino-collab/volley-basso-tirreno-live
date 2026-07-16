@@ -1,29 +1,39 @@
 const fs = require("fs");
 
-const dati = {
-  ultimoAggiornamento: new Date().toLocaleString("it-IT"),
+const gironi = {
 
-  campionati: [
-    {
-      nome: "Volley S3 Under 12 6x6 F",
-      girone: "59764",
-      url: "https://fipavonline.it/main/gare_girone/59764"
-    },
-    {
-      nome: "Prima Divisione Maschile",
-      girone: "59761",
-      url: "https://fipavonline.it/main/gare_girone/59761/1"
+  aggiornamento: new Date().toLocaleString("it-IT"),
+
+  stagioni: {
+
+    "2025/2026": {
+
+      "VOLLEY S3 Under 12 6x6 F - Girone D": {
+        id: "59767",
+        url: "https://fipavonline.it/main/gare_girone/59767"
+      },
+
+      "VOLLEY S3 Under 12 6x6 F - Girone A": {
+        id: "59764",
+        url: "https://fipavonline.it/main/gare_girone/59764"
+      },
+
+      "Prima Divisione Maschile - Girone A": {
+        id: "59761",
+        url: "https://fipavonline.it/main/gare_girone/59761"
+      }
+
     }
-  ]
+
+  }
+
 };
 
-if (!fs.existsSync("data")) {
-  fs.mkdirSync("data");
-}
+fs.mkdirSync("data", { recursive: true });
 
 fs.writeFileSync(
-  "data/campionati.json",
-  JSON.stringify(dati, null, 2)
+  "data/gironi.json",
+  JSON.stringify(gironi, null, 2)
 );
 
-console.log("Aggiornamento completato.");
+console.log("gironi.json aggiornato");

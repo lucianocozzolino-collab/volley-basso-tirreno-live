@@ -1,15 +1,20 @@
 {
-  "aggiornamento": "16/07/2026, 06:59:55",
+  "aggiornamento": "2026-07-16T08:07:54.388Z",
   "gironi": [
     {
-      "nome": "VOLLEY S3 Under 12 6x6 F - Girone D",
-      "id": "59767",
-      "url": "https://fipavonline.it/main/gare_girone/59767"
+      "id": 59761,
+      "nome": "Prima Divisione Maschile  - Girone A / Giornata 1",
+      "url": "https://fipavonline.it/main/gare_girone/59761"
     },
     {
-      "nome": "VOLLEY S3 Under 12 6x6 F - Girone A",
-      "id": "59764",
+      "id": 59764,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone A / Giornata 1",
       "url": "https://fipavonline.it/main/gare_girone/59764"
+    },
+    {
+      "id": 59767,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone D / Giornata 1",
+      "url": "https://fipavonline.it/main/gare_girone/59767"
     }
   ]
 }

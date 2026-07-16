@@ -39,16 +39,16 @@ async function leggiGirone(id, browser) {
 
     $(".sq-nLong").each((i, el) => {
 
-      const nome =
+      const squadra =
         $(el)
           .text()
           .trim();
 
       if (
-        nome &&
-        nome !== "Riposa"
+        squadra &&
+        squadra !== "Riposa"
       ) {
-        squadreSet.add(nome);
+        squadreSet.add(squadra);
       }
 
     });
@@ -91,52 +91,53 @@ async function leggiGirone(id, browser) {
       }
 
       calendario.push({
-
         gara: numero,
-
         data: data,
-
-        casa:
-          $(squadre[0])
-            .text()
-            .trim(),
-
-        ospite:
-          $(squadre[1])
-            .text()
-            .trim(),
-
+        casa: $(squadre[0]).text().trim(),
+        ospite: $(squadre[1]).text().trim(),
         risultato:
           $(gara)
             .find(".s-scoreText")
             .first()
             .text()
             .trim()
-
       });
 
     });
 
+    const risultato = {
 
-return {
+      id: id,
 
-  id,
+      nome: nomeGirone,
 
-  nome: nomeGirone,
+      url:
+        "https://fipavonline.it/main/gare_girone/" + id,
 
-  url: `https://fipavonline.it/main/gare_girone/${id}`,
+      squadre:
+        Array.from(squadreSet),
 
-  squadre: Array.from(squadreSet),
+      calendario:
+        calendario
 
-  calendario
+    };
 
-};
+    console.log(
+      JSON.stringify(
+        risultato,
+        null,
+        2
+      )
+    );
 
+    return risultato;
 
   } catch (err) {
 
-    console.log(`Errore girone ${id}`);
-    console.log(err.message);
+    console.error(
+      `Errore girone ${id}:`,
+      err.message
+    );
 
     return null;
 
@@ -192,23 +193,30 @@ return {
     }
   );
 
+  const output = {
+
+    aggiornamento:
+      new Date().toISOString(),
+
+    totale:
+      gironi.length,
+
+    gironi
+
+  };
+
   fs.writeFileSync(
     "data/gironi.json",
     JSON.stringify(
-      {
-        aggiornamento:
-          new Date().toISOString(),
-
-        totale:
-          gironi.length,
-
-        gironi
-      },
+      output,
       null,
       2
-    )
+    ),
+    "utf8"
   );
 
-  console.log("gironi.json aggiornato");
+  console.log(
+    "data/gironi.json aggiornato"
+  );
 
 })();

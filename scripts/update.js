@@ -1,28 +1,91 @@
 const fs = require("fs");
+const cheerio = require("cheerio");
 const { chromium } = require("playwright");
+
+async function leggiGirone(id) {
+
+    const browser =
+        await chromium.launch({
+            headless: true
+        });
+
+    const page =
+        await browser.newPage();
+
+    await page.goto(
+        `https://fipavonline.it/main/gare_girone/${id}`,
+        {
+            waitUntil: "networkidle",
+            timeout: 60000
+        }
+    );
+
+    const html =
+        await page.content();
+
+    await browser.close();
+
+    const $ =
+        cheerio.load(html);
+
+    const titolo =
+        $(".h3-wrap")
+        .first()
+        .text()
+        .trim();
+
+    return {
+        id,
+        nome: titolo,
+        url:
+          `https://fipavonline.it/main/gare_girone/${id}`
+    };
+}
 
 (async () => {
 
-  const browser = await chromium.launch({
-    headless: true
-  });
+    const ids = [
+        59761,
+        59764,
+        59767
+    ];
 
-  const page = await browser.newPage();
+    const gironi = [];
 
-  await page.goto(
-    "https://fipavonline.it/main/gare_girone/59764",
-    {
-      waitUntil: "networkidle"
+    for (const id of ids) {
+
+        try {
+
+            const dati =
+                await leggiGirone(id);
+
+            gironi.push(dati);
+
+            console.log(
+                "OK",
+                dati.nome
+            );
+
+        } catch (err) {
+
+            console.log(
+                "Errore",
+                id
+            );
+        }
     }
-  );
 
-  const html = await page.content();
-
-  fs.writeFileSync(
-    "data/playwright-test.html",
-    html
-  );
-
-  await browser.close();
+    fs.writeFileSync(
+        "data/gironi.json",
+        JSON.stringify(
+            {
+                aggiornamento:
+                    new Date().toISOString(),
+                gironi
+            },
+            null,
+            2
+        )
+    );
 
 })();

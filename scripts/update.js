@@ -42,140 +42,142 @@ async function leggiGirone(id, browser) {
         ""
       ).trim();
 
-*   const gironeMatch =
-      nomeG*rone.match(
+    const gironeMatch =
+      nomeGirone.match(
         /Girone\s+[A-Z0-9]+/i
       );
 
-    const girone *
+    const girone =
       gironeMatch
-        ? giron**atch[0]
+        ? gironeMatch[0]
         : "";
 
-    const s*uadreSet = new Set();
+    const squadreSet = new Set();
 
-    $(".sq-*Long").each((i, el) => {
+    $(".sq-nLong").each((i, el) => {
 
-      co*st s =
+      const s =
         $(el)
-          .te*t()
+          .text()
           .trim();
 
-      if (*        s &&
-        s !== "Riposa*
+      if (
+        s &&
+        s !== "Riposa"
       ) {
-        squadreSet.add(*);
+        squadreSet.add(s);
       }
 
     });
 
-    const cal*ndario = [];
+    const calendario = [];
 
-    const gareViste *
+    const gareViste =
       new Set();
 
-    $(".risulta*i").each((i, gara) => {
+    $(".risultati").each((i, gara) => {
 
-      con*t numero =
+      const numero =
         $(gara)
-       *  .find(".info-gara-giornata")
-   *      .first()
+          .find(".info-gara-giornata")
+          .first()
           .text()
- *        .trim();
+          .trim();
 
-      if (!numer*) return;
+      if (!numero) return;
 
       if (
-        gare*iste.has(numero)
+        gareViste.has(numero)
       ) return;
 
-*     gareViste.add(numero);
+      gareViste.add(numero);
 
-     *const squadre =
+      const squadre =
         $(gara)
-  *       .find(".sq-nLong");
+          .find(".sq-nLong");
 
-      *f (
+      if (
         squadre.length < 2
-   *  ) return;
+      ) return;
 
-      calendario.push*{
+      calendario.push({
 
         gara: numero,
 
-        *ata:
+        data:
           $(gara)
-           *.find(".info-gara-data")
-         *  .first()
+            .find(".info-gara-data")
+            .first()
             .text()
-   *        .trim(),
-
-        casa:
-  *       $(squadre[0])
-            .*ext()
             .trim(),
 
-      * ospite:
+        casa:
+          $(squadre[0])
+            .text()
+            .trim(),
+
+        ospite:
           $(squadre[1])
- *          .text()
-            .tri*(),
+            .text()
+            .trim(),
 
         risultato:
-          *(gara)
-            .find(".s-score*ext")
+          $(gara)
+            .find(".s-scoreText")
             .first()
-       *    .text()
+            .text()
             .trim()
 
- *    });
+      });
 
     });
 
     return {
 
-  *   stagione:
+      stagione:
         "2025-2026",
-*      campionato,
+
+      campionato,
 
       girone,
 
-*     id,
+      id,
 
       nome:
-        nome*irone,
+        nomeGirone,
 
       url:
-        `https:*/fipavonline.it/main/gare_girone/$*id}`,
+        `https://fipavonline.it/main/gare_girone/${id}`,
 
       squadre:
-        Arra*.from(
+        Array.from(
           squadreSet
-      * ),
+        ),
 
       calendario
 
     };
 
-  }*catch {
+  } catch {
 
     return null;
 
-  } fin*lly {
+  } finally {
 
     await page.close();
 
-  *
+  }
 
 }
 
 (async () => {
 
-  const brows*r =
+  const browser =
     await chromium.launch({
-  *   headless: true
+      headless: true
     });
 
-  const*ids = [
+  const ids = [
     59761,
     59764,
     59767
@@ -183,49 +185,51 @@ async function leggiGirone(id, browser) {
 
   const gironi = [];
 
- *for (const id of ids) {
+  for (const id of ids) {
 
-    const*dati =
+    const dati =
       await leggiGirone(
-  *     id,
+        id,
         browser
       );
-*    if (dati) {
 
-      gironi.push*dati);
+    if (dati) {
+
+      gironi.push(dati);
 
       console.log(
-       *dati.nome
+        dati.nome
       );
 
     }
 
   }
 
-  *wait browser.close();
+  await browser.close();
 
-  fs.mkdirS*nc(
+  fs.mkdirSync(
     "data",
     {
-      recurs*ve: true
+      recursive: true
     }
   );
 
-  fs.writeFil*Sync(
+  fs.writeFileSync(
 
     "data/gironi.json",
 
-  * JSON.stringify(
+    JSON.stringify(
       {
-        a*giornamento:
+        aggiornamento:
           new Date()
-*           .toISOString(),
+            .toISOString(),
 
-      * totale:
+        totale:
           gironi.length,
-*        gironi
+
+        gironi
       },
-      null*
+      null,
       2
     )
 

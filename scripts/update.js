@@ -1,5 +1,4 @@
-const fs = require("fs");
-const cheerio = require("cheerio");
+const fs = require(erio");
 const { chromium } = require("playwright");
 
 async function leggiGirone(id, browser) {
@@ -27,12 +26,6 @@ async function leggiGirone(id, browser) {
         .trim();
 
     if (!titoloCompleto) {
-      return null;
-    }
-
-    if (
-      titoloCompleto.includes("Pagina non trovata")
-    ) {
       return null;
     }
 
@@ -130,15 +123,13 @@ async function leggiGirone(id, browser) {
             .first()
             .text()
             .trim()
-
       });
 
     });
 
     return {
 
-      stagione:
-        "2025-2026",
+      stagione: "2025-2026",
 
       campionato,
 
@@ -146,26 +137,19 @@ async function leggiGirone(id, browser) {
 
       id,
 
-      nome:
-        nomeGirone,
+      nome: nomeGirone,
 
       url:
         `https://fipavonline.it/main/gare_girone/${id}`,
 
       squadre:
-        Array.from(
-          squadreSet
-        ),
+        Array.from(squadreSet),
 
       calendario
 
     };
 
   } catch (err) {
-
-    console.log(
-      `ID ${id} non valido`
-    );
 
     return null;
 
@@ -193,7 +177,9 @@ async function leggiGirone(id, browser) {
     id <= 60000;
     id++
   ) {
+
     ids.push(id);
+
   }
 
   for (const id of ids) {

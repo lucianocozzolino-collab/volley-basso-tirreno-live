@@ -1,5 +1,5 @@
 {
-  "aggiornamento": "2026-07-16T08:32:20.300Z",
+  "aggiornamento": "2026-07-16T08:37:30.314Z",
   "totale": 3,
   "gironi": [
     {
@@ -25,32 +25,11 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10000",
-          "data": "Sab 22/11/2025 17.00",
-          "casa": "Asd Torrione Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 10001",
           "data": "Mar 10/02/2026 21.00",
           "casa": "Us Colonnella Volley",
           "ospite": "Atotis Isola Volley",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10001",
-          "data": "Mar 10/02/2026 21.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Atotis Isola Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10002",
-          "data": "Dom 23/11/2025 18.00",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-2"
         },
         {
           "gara": "Gara 10002",
@@ -67,20 +46,6 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10003",
-          "data": "Dom 23/11/2025 19.00",
-          "casa": "Montorio Volley",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10004",
-          "data": "Dom 30/11/2025 20.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Asd Torrione Volley",
-          "risultato": "1-3"
-        },
-        {
           "gara": "Gara 10004",
           "data": "Dom 30/11/2025 20.00",
           "casa": "Atotis Isola Volley",
@@ -92,20 +57,6 @@
           "data": "Dom 30/11/2025 17.00",
           "casa": "Montorio Volley",
           "ospite": "Illevon Scoppito Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10005",
-          "data": "Dom 30/11/2025 17.00",
-          "casa": "Montorio Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10006",
-          "data": "Sab 29/11/2025 18.00",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Us Colonnella Volley",
           "risultato": "0-3"
         },
         {
@@ -123,20 +74,6 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10007",
-          "data": "Sab 29/11/2025 19.00",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Novelli Scoppito Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10008",
-          "data": "Sab 13/12/2025 20.00",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Asd Torrione Volley",
-          "risultato": "2-3"
-        },
-        {
           "gara": "Gara 10008",
           "data": "Sab 13/12/2025 20.00",
           "casa": "Fortitudo Volley Teramo",
@@ -151,31 +88,10 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10009",
-          "data": "Dom 14/12/2025 20.00",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Atotis Isola Volley",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 10010",
           "data": "Dom 14/12/2025 17.00",
           "casa": "Us Colonnella Volley",
           "ospite": "Abba Pineto Volley",
-          "risultato": "3-1"
-        },
-        {
-          "gara": "Gara 10010",
-          "data": "Dom 14/12/2025 17.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "3-1"
-        },
-        {
-          "gara": "Gara 10011",
-          "data": "Sab 24/01/2026 17.00",
-          "casa": "Montorio Volley",
-          "ospite": "Novelli Scoppito Volley",
           "risultato": "3-1"
         },
         {
@@ -193,32 +109,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10012",
-          "data": "Sab 10/01/2026 18.00",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Asd Torrione Volley",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 10013",
           "data": "Mer 07/01/2026 18.30",
           "casa": "Fortitudo Volley Teramo",
           "ospite": "Illevon Scoppito Volley",
           "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10013",
-          "data": "Mer 07/01/2026 18.30",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10014",
-          "data": "Sab 10/01/2026 20.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Montorio Volley",
-          "risultato": "3-0"
         },
         {
           "gara": "Gara 10014",
@@ -235,32 +130,11 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10015",
-          "data": "Dom 11/01/2026 19.30",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Us Colonnella Volley",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 10016",
           "data": "Sab 17/01/2026 19.30",
           "casa": "Asd Torrione Volley",
           "ospite": "Novelli Scoppito Volley",
           "risultato": "3-1"
-        },
-        {
-          "gara": "Gara 10016",
-          "data": "Sab 17/01/2026 19.30",
-          "casa": "Asd Torrione Volley",
-          "ospite": "Novelli Scoppito Volley",
-          "risultato": "3-1"
-        },
-        {
-          "gara": "Gara 10017",
-          "data": "Dom 18/01/2026 19.30",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "0-3"
         },
         {
           "gara": "Gara 10017",
@@ -277,31 +151,10 @@
           "risultato": "3-1"
         },
         {
-          "gara": "Gara 10018",
-          "data": "Sab 17/01/2026 20.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-1"
-        },
-        {
           "gara": "Gara 10019",
           "data": "Dom 18/01/2026 17.00",
           "casa": "Us Colonnella Volley",
           "ospite": "Montorio Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10019",
-          "data": "Dom 18/01/2026 17.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Montorio Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10020",
-          "data": "Mer 18/02/2026 21.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Asd Torrione Volley",
           "risultato": "3-0"
         },
         {
@@ -319,31 +172,10 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10021",
-          "data": "Dom 25/01/2026 18.00",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 10022",
           "data": "Sab 31/01/2026 18.30",
           "casa": "Abba Pineto Volley",
           "ospite": "Atotis Isola Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10022",
-          "data": "Sab 31/01/2026 18.30",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Atotis Isola Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10023",
-          "data": "Dom 01/02/2026 17.00",
-          "casa": "Montorio Volley",
-          "ospite": "Fortitudo Volley Teramo",
           "risultato": "3-0"
         },
         {
@@ -361,31 +193,10 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10024",
-          "data": "Dom 08/02/2026 17.00",
-          "casa": "Asd Torrione Volley",
-          "ospite": "Montorio Volley",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 10025",
           "data": "Dom 08/02/2026 19.00",
           "casa": "Illevon Scoppito Volley",
           "ospite": "Us Colonnella Volley",
-          "risultato": "2-3"
-        },
-        {
-          "gara": "Gara 10025",
-          "data": "Dom 08/02/2026 19.00",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Us Colonnella Volley",
-          "risultato": "2-3"
-        },
-        {
-          "gara": "Gara 10026",
-          "data": "Sab 07/02/2026 20.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Novelli Scoppito Volley",
           "risultato": "2-3"
         },
         {
@@ -403,32 +214,11 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10027",
-          "data": "Dom 08/02/2026 18.00",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 10028",
           "data": "Dom 15/02/2026 20.00",
           "casa": "Illevon Scoppito Volley",
           "ospite": "Asd Torrione Volley",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10028",
-          "data": "Dom 15/02/2026 20.00",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Asd Torrione Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10029",
-          "data": "Dom 15/02/2026 16.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Us Colonnella Volley",
-          "risultato": "1-3"
         },
         {
           "gara": "Gara 10029",
@@ -445,32 +235,11 @@
           "risultato": "3-2"
         },
         {
-          "gara": "Gara 10030",
-          "data": "Mer 18/02/2026 18.30",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Novelli Scoppito Volley",
-          "risultato": "3-2"
-        },
-        {
           "gara": "Gara 10031",
           "data": "Gio 12/02/2026 20.30",
           "casa": "Abba Pineto Volley",
           "ospite": "Montorio Volley",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10031",
-          "data": "Gio 12/02/2026 20.30",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Montorio Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10032",
-          "data": "Sab 21/02/2026 19.30",
-          "casa": "Asd Torrione Volley",
-          "ospite": "Atotis Isola Volley",
-          "risultato": "0-3"
         },
         {
           "gara": "Gara 10032",
@@ -487,32 +256,11 @@
           "risultato": "3-1"
         },
         {
-          "gara": "Gara 10033",
-          "data": "Sab 21/02/2026 18.00",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Montorio Volley",
-          "risultato": "3-1"
-        },
-        {
           "gara": "Gara 10034",
           "data": "Dom 22/02/2026 17.00",
           "casa": "Us Colonnella Volley",
           "ospite": "Fortitudo Volley Teramo",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10034",
-          "data": "Dom 22/02/2026 17.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10035",
-          "data": "Gio 09/04/2026 21.00",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "0-3"
         },
         {
           "gara": "Gara 10035",
@@ -529,32 +277,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10036",
-          "data": "Sab 28/02/2026 17.00",
-          "casa": "Asd Torrione Volley",
-          "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 10037",
           "data": "Ven 06/03/2026 21.00",
           "casa": "Atotis Isola Volley",
           "ospite": "Illevon Scoppito Volley",
           "risultato": "2-3"
-        },
-        {
-          "gara": "Gara 10037",
-          "data": "Ven 06/03/2026 21.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "2-3"
-        },
-        {
-          "gara": "Gara 10038",
-          "data": "Dom 01/03/2026 16.00",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Us Colonnella Volley",
-          "risultato": "3-2"
         },
         {
           "gara": "Gara 10038",
@@ -571,20 +298,6 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10039",
-          "data": "Dom 01/03/2026 19.30",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Montorio Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10040",
-          "data": "Sab 07/03/2026 19.30",
-          "casa": "Asd Torrione Volley",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "1-3"
-        },
-        {
           "gara": "Gara 10040",
           "data": "Sab 07/03/2026 19.30",
           "casa": "Asd Torrione Volley",
@@ -596,20 +309,6 @@
           "data": "Sab 07/03/2026 17.00",
           "casa": "Illevon Scoppito Volley",
           "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10041",
-          "data": "Sab 07/03/2026 17.00",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 10042",
-          "data": "Dom 08/03/2026 20.00",
-          "casa": "Montorio Volley",
-          "ospite": "Atotis Isola Volley",
           "risultato": "3-0"
         },
         {
@@ -627,32 +326,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10043",
-          "data": "Dom 08/03/2026 17.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Novelli Scoppito Volley",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 10044",
           "data": "Mer 25/03/2026 21.00",
           "casa": "Novelli Scoppito Volley",
           "ospite": "Asd Torrione Volley",
           "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10044",
-          "data": "Mer 25/03/2026 21.00",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Asd Torrione Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10045",
-          "data": "Sab 21/03/2026 18.00",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "3-1"
         },
         {
           "gara": "Gara 10045",
@@ -669,30 +347,9 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 10046",
-          "data": "Sab 21/03/2026 18.00",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Atotis Isola Volley",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 10047",
           "data": "Dom 22/03/2026 19.00",
           "casa": "Montorio Volley",
-          "ospite": "Us Colonnella Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10047",
-          "data": "Dom 22/03/2026 19.00",
-          "casa": "Montorio Volley",
-          "ospite": "Us Colonnella Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10048",
-          "data": "Sab 28/03/2026 19.30",
-          "casa": "Asd Torrione Volley",
           "ospite": "Us Colonnella Volley",
           "risultato": "0-3"
         },
@@ -711,31 +368,10 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 10049",
-          "data": "Dom 29/03/2026 20.00",
-          "casa": "Illevon Scoppito Volley",
-          "ospite": "Novelli Scoppito Volley",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 10050",
           "data": "Ven 03/04/2026 21.00",
           "casa": "Atotis Isola Volley",
           "ospite": "Abba Pineto Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10050",
-          "data": "Ven 03/04/2026 21.00",
-          "casa": "Atotis Isola Volley",
-          "ospite": "Abba Pineto Volley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 10051",
-          "data": "Sab 28/03/2026 18.00",
-          "casa": "Fortitudo Volley Teramo",
-          "ospite": "Montorio Volley",
           "risultato": "0-3"
         },
         {
@@ -753,20 +389,6 @@
           "risultato": "3-2"
         },
         {
-          "gara": "Gara 10052",
-          "data": "Dom 12/04/2026 19.00",
-          "casa": "Montorio Volley",
-          "ospite": "Asd Torrione Volley",
-          "risultato": "3-2"
-        },
-        {
-          "gara": "Gara 10053",
-          "data": "Dom 12/04/2026 20.00",
-          "casa": "Us Colonnella Volley",
-          "ospite": "Illevon Scoppito Volley",
-          "risultato": "3-2"
-        },
-        {
           "gara": "Gara 10053",
           "data": "Dom 12/04/2026 20.00",
           "casa": "Us Colonnella Volley",
@@ -779,20 +401,6 @@
           "casa": "Novelli Scoppito Volley",
           "ospite": "Atotis Isola Volley",
           "risultato": "3-1"
-        },
-        {
-          "gara": "Gara 10054",
-          "data": "Sab 11/04/2026 19.30",
-          "casa": "Novelli Scoppito Volley",
-          "ospite": "Atotis Isola Volley",
-          "risultato": "3-1"
-        },
-        {
-          "gara": "Gara 10055",
-          "data": "Sab 11/04/2026 16.30",
-          "casa": "Abba Pineto Volley",
-          "ospite": "Fortitudo Volley Teramo",
-          "risultato": "3-0"
         },
         {
           "gara": "Gara 10055",
@@ -823,32 +431,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6030",
-          "data": "Sab 10/01/2026 18.00",
-          "casa": "Invicta Volleyball",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6031",
           "data": "Mer 07/01/2026 18.00",
           "casa": "Pallavolo Follonica Blu",
           "ospite": "New Volley 2019",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6031",
-          "data": "Mer 07/01/2026 18.00",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "New Volley 2019",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6032",
-          "data": "-",
-          "casa": "Deep Chic Grosseto",
-          "ospite": "Riposa",
-          "risultato": "-"
         },
         {
           "gara": "Gara 6032",
@@ -865,20 +452,6 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6033",
-          "data": "Sab 06/12/2025 17.30",
-          "casa": "Unionvolley Piombino",
-          "ospite": "Deep Chic Grosseto",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6034",
-          "data": "Dom 07/12/2025 09.00",
-          "casa": "New Volley 2019",
-          "ospite": "Invicta Volleyball",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 6034",
           "data": "Dom 07/12/2025 09.00",
           "casa": "New Volley 2019",
@@ -890,20 +463,6 @@
           "data": "-",
           "casa": "Riposa",
           "ospite": "Pallavolo Follonica Blu",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6035",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Pallavolo Follonica Blu",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6036",
-          "data": "-",
-          "casa": "Invicta Volleyball",
-          "ospite": "Riposa",
           "risultato": "-"
         },
         {
@@ -921,31 +480,10 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6037",
-          "data": "Gio 18/12/2025 17.15",
-          "casa": "Deep Chic Grosseto",
-          "ospite": "Pallavolo Follonica Blu",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6038",
           "data": "Dom 14/12/2025 15.30",
           "casa": "New Volley 2019",
           "ospite": "Unionvolley Piombino",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6038",
-          "data": "Dom 14/12/2025 15.30",
-          "casa": "New Volley 2019",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6039",
-          "data": "Dom 08/02/2026 12.00",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "Invicta Volleyball",
           "risultato": "0-3"
         },
         {
@@ -963,32 +501,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6040",
-          "data": "Sab 17/01/2026 15.00",
-          "casa": "Deep Chic Grosseto",
-          "ospite": "New Volley 2019",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6041",
           "data": "-",
           "casa": "Riposa",
           "ospite": "Unionvolley Piombino",
           "risultato": "-"
-        },
-        {
-          "gara": "Gara 6041",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6042",
-          "data": "Mer 21/01/2026 16.30",
-          "casa": "Invicta Volleyball",
-          "ospite": "Deep Chic Grosseto",
-          "risultato": "2-1"
         },
         {
           "gara": "Gara 6042",
@@ -1005,32 +522,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6043",
-          "data": "Dom 18/01/2026 11.00",
-          "casa": "Unionvolley Piombino",
-          "ospite": "Pallavolo Follonica Blu",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6044",
           "data": "-",
           "casa": "New Volley 2019",
           "ospite": "Riposa",
           "risultato": "-"
-        },
-        {
-          "gara": "Gara 6044",
-          "data": "-",
-          "casa": "New Volley 2019",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6045",
-          "data": "Dom 25/01/2026 15.00",
-          "casa": "Unionvolley Piombino",
-          "ospite": "Invicta Volleyball",
-          "risultato": "1-2"
         },
         {
           "gara": "Gara 6045",
@@ -1047,32 +543,11 @@
           "risultato": "2-1"
         },
         {
-          "gara": "Gara 6046",
-          "data": "Mer 21/01/2026 17.00",
-          "casa": "New Volley 2019",
-          "ospite": "Pallavolo Follonica Blu",
-          "risultato": "2-1"
-        },
-        {
           "gara": "Gara 6047",
           "data": "-",
           "casa": "Riposa",
           "ospite": "Deep Chic Grosseto",
           "risultato": "-"
-        },
-        {
-          "gara": "Gara 6047",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Deep Chic Grosseto",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6048",
-          "data": "Sab 31/01/2026 15.00",
-          "casa": "Deep Chic Grosseto",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "2-1"
         },
         {
           "gara": "Gara 6048",
@@ -1089,31 +564,10 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6049",
-          "data": "Sab 07/02/2026 17.00",
-          "casa": "Invicta Volleyball",
-          "ospite": "New Volley 2019",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6050",
           "data": "-",
           "casa": "Pallavolo Follonica Blu",
           "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6050",
-          "data": "-",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
-          "gara": "Gara 6051",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "Invicta Volleyball",
           "risultato": "-"
         },
         {
@@ -1131,31 +585,10 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 6052",
-          "data": "Mar 10/02/2026 17.00",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "Deep Chic Grosseto",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 6053",
           "data": "Ven 06/02/2026 18.00",
           "casa": "Unionvolley Piombino",
           "ospite": "New Volley 2019",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6053",
-          "data": "Ven 06/02/2026 18.00",
-          "casa": "Unionvolley Piombino",
-          "ospite": "New Volley 2019",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6054",
-          "data": "Sab 20/12/2025 17.30",
-          "casa": "Invicta Volleyball",
-          "ospite": "Pallavolo Follonica Blu",
           "risultato": "3-0"
         },
         {
@@ -1173,20 +606,6 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 6055",
-          "data": "Sab 14/02/2026 15.30",
-          "casa": "New Volley 2019",
-          "ospite": "Deep Chic Grosseto",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6056",
-          "data": "-",
-          "casa": "Unionvolley Piombino",
-          "ospite": "Riposa",
-          "risultato": "-"
-        },
-        {
           "gara": "Gara 6056",
           "data": "-",
           "casa": "Unionvolley Piombino",
@@ -1201,32 +620,11 @@
           "risultato": "1-2"
         },
         {
-          "gara": "Gara 6057",
-          "data": "Sab 21/02/2026 15.00",
-          "casa": "Deep Chic Grosseto",
-          "ospite": "Invicta Volleyball",
-          "risultato": "1-2"
-        },
-        {
           "gara": "Gara 6058",
           "data": "Ven 20/02/2026 17.00",
           "casa": "Pallavolo Follonica Blu",
           "ospite": "Unionvolley Piombino",
           "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6058",
-          "data": "Ven 20/02/2026 17.00",
-          "casa": "Pallavolo Follonica Blu",
-          "ospite": "Unionvolley Piombino",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6059",
-          "data": "-",
-          "casa": "Riposa",
-          "ospite": "New Volley 2019",
-          "risultato": "-"
         },
         {
           "gara": "Gara 6059",
@@ -1258,20 +656,6 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6120",
-          "data": "Dom 30/11/2025 09.30",
-          "casa": "Folgore San Miniato",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6121",
-          "data": "Mer 03/12/2025 19.00",
-          "casa": "Lupi Santa Croce Volleyball Bianca",
-          "ospite": "Pallavolo Castelfranco Giovanile B",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6121",
           "data": "Mer 03/12/2025 19.00",
           "casa": "Lupi Santa Croce Volleyball Bianca",
@@ -1283,20 +667,6 @@
           "data": "Sab 29/11/2025 16.00",
           "casa": "Asd Etrusca Volley",
           "ospite": "Elsavolley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6122",
-          "data": "Sab 29/11/2025 16.00",
-          "casa": "Asd Etrusca Volley",
-          "ospite": "Elsavolley",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6123",
-          "data": "Dom 07/12/2025 09.30",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Asd Etrusca Volley",
           "risultato": "0-3"
         },
         {
@@ -1314,32 +684,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6124",
-          "data": "Dom 07/12/2025 09.30",
-          "casa": "Pallavolo Castelfranco Giovanile B",
-          "ospite": "Folgore San Miniato",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6125",
           "data": "Sab 06/12/2025 16.00",
           "casa": "Elsavolley",
           "ospite": "Lupi Santa Croce Volleyball Bianca",
           "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6125",
-          "data": "Sab 06/12/2025 16.00",
-          "casa": "Elsavolley",
-          "ospite": "Lupi Santa Croce Volleyball Bianca",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6126",
-          "data": "Gio 18/12/2025 17.00",
-          "casa": "Folgore San Miniato",
-          "ospite": "Elsavolley",
-          "risultato": "2-1"
         },
         {
           "gara": "Gara 6126",
@@ -1356,31 +705,10 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 6127",
-          "data": "Dom 14/12/2025 09.30",
-          "casa": "Asd Etrusca Volley",
-          "ospite": "Lupi Santa Croce Volleyball Bianca",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 6128",
           "data": "Dom 14/12/2025 09.30",
           "casa": "Pallavolo Castelfranco Giovanile B",
           "ospite": "Polisportiva Monteserra",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6128",
-          "data": "Dom 14/12/2025 09.30",
-          "casa": "Pallavolo Castelfranco Giovanile B",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6129",
-          "data": "Dom 11/01/2026 15.30",
-          "casa": "Lupi Santa Croce Volleyball Bianca",
-          "ospite": "Folgore San Miniato",
           "risultato": "3-0"
         },
         {
@@ -1398,32 +726,11 @@
           "risultato": "1-2"
         },
         {
-          "gara": "Gara 6130",
-          "data": "Dom 11/01/2026 09.30",
-          "casa": "Asd Etrusca Volley",
-          "ospite": "Pallavolo Castelfranco Giovanile B",
-          "risultato": "1-2"
-        },
-        {
           "gara": "Gara 6131",
           "data": "Sab 10/01/2026 16.00",
           "casa": "Elsavolley",
           "ospite": "Polisportiva Monteserra",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6131",
-          "data": "Sab 10/01/2026 16.00",
-          "casa": "Elsavolley",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6132",
-          "data": "Dom 18/01/2026 09.30",
-          "casa": "Folgore San Miniato",
-          "ospite": "Asd Etrusca Volley",
-          "risultato": "2-1"
         },
         {
           "gara": "Gara 6132",
@@ -1440,32 +747,11 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 6133",
-          "data": "Ven 16/01/2026 18.45",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Lupi Santa Croce Volleyball Bianca",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 6134",
           "data": "Dom 18/01/2026 16.00",
           "casa": "Pallavolo Castelfranco Giovanile B",
           "ospite": "Elsavolley",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6134",
-          "data": "Dom 18/01/2026 16.00",
-          "casa": "Pallavolo Castelfranco Giovanile B",
-          "ospite": "Elsavolley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6135",
-          "data": "Sab 24/01/2026 17.30",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Folgore San Miniato",
-          "risultato": "0-3"
         },
         {
           "gara": "Gara 6135",
@@ -1482,32 +768,11 @@
           "risultato": "1-2"
         },
         {
-          "gara": "Gara 6136",
-          "data": "Dom 25/01/2026 09.30",
-          "casa": "Pallavolo Castelfranco Giovanile B",
-          "ospite": "Lupi Santa Croce Volleyball Bianca",
-          "risultato": "1-2"
-        },
-        {
           "gara": "Gara 6137",
           "data": "Sab 24/01/2026 16.00",
           "casa": "Elsavolley",
           "ospite": "Asd Etrusca Volley",
           "risultato": "2-1"
-        },
-        {
-          "gara": "Gara 6137",
-          "data": "Sab 24/01/2026 16.00",
-          "casa": "Elsavolley",
-          "ospite": "Asd Etrusca Volley",
-          "risultato": "2-1"
-        },
-        {
-          "gara": "Gara 6138",
-          "data": "Dom 01/02/2026 09.30",
-          "casa": "Asd Etrusca Volley",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "3-0"
         },
         {
           "gara": "Gara 6138",
@@ -1524,32 +789,11 @@
           "risultato": "0-3"
         },
         {
-          "gara": "Gara 6139",
-          "data": "Dom 01/02/2026 09.30",
-          "casa": "Folgore San Miniato",
-          "ospite": "Pallavolo Castelfranco Giovanile B",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 6140",
           "data": "Dom 01/02/2026 15.30",
           "casa": "Lupi Santa Croce Volleyball Bianca",
           "ospite": "Elsavolley",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6140",
-          "data": "Dom 01/02/2026 15.30",
-          "casa": "Lupi Santa Croce Volleyball Bianca",
-          "ospite": "Elsavolley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6141",
-          "data": "Sab 07/02/2026 16.00",
-          "casa": "Elsavolley",
-          "ospite": "Folgore San Miniato",
-          "risultato": "1-2"
         },
         {
           "gara": "Gara 6141",
@@ -1566,31 +810,10 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6142",
-          "data": "Sab 07/02/2026 18.30",
-          "casa": "Lupi Santa Croce Volleyball Bianca",
-          "ospite": "Asd Etrusca Volley",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6143",
           "data": "Dom 08/02/2026 10.30",
           "casa": "Polisportiva Monteserra",
           "ospite": "Pallavolo Castelfranco Giovanile B",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6143",
-          "data": "Dom 08/02/2026 10.30",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Pallavolo Castelfranco Giovanile B",
-          "risultato": "0-3"
-        },
-        {
-          "gara": "Gara 6144",
-          "data": "Gio 12/02/2026 16.45",
-          "casa": "Folgore San Miniato",
-          "ospite": "Lupi Santa Croce Volleyball Bianca",
           "risultato": "0-3"
         },
         {
@@ -1608,20 +831,6 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6145",
-          "data": "Dom 15/02/2026 09.30",
-          "casa": "Pallavolo Castelfranco Giovanile B",
-          "ospite": "Asd Etrusca Volley",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6146",
-          "data": "Sab 14/02/2026 16.00",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Elsavolley",
-          "risultato": "0-3"
-        },
-        {
           "gara": "Gara 6146",
           "data": "Sab 14/02/2026 16.00",
           "casa": "Polisportiva Monteserra",
@@ -1636,32 +845,11 @@
           "risultato": "3-0"
         },
         {
-          "gara": "Gara 6147",
-          "data": "Dom 22/02/2026 09.30",
-          "casa": "Asd Etrusca Volley",
-          "ospite": "Folgore San Miniato",
-          "risultato": "3-0"
-        },
-        {
           "gara": "Gara 6148",
           "data": "Dom 22/02/2026 15.30",
           "casa": "Lupi Santa Croce Volleyball Bianca",
           "ospite": "Polisportiva Monteserra",
           "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6148",
-          "data": "Dom 22/02/2026 15.30",
-          "casa": "Lupi Santa Croce Volleyball Bianca",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "3-0"
-        },
-        {
-          "gara": "Gara 6149",
-          "data": "Sab 21/02/2026 16.00",
-          "casa": "Elsavolley",
-          "ospite": "Pallavolo Castelfranco Giovanile B",
-          "risultato": "0-3"
         },
         {
           "gara": "Gara 6149",

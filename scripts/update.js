@@ -2,7 +2,7 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const FULL_SCAN = false;
+const FULL_SCAN = true;
 
 function determinaStagione(id) {
 

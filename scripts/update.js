@@ -2,19 +2,19 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const FULL_SCAN = true;
+const FULL_SCAN = false;
 
 function determinaStagione(id) {
 
   if (id < 53000) {
-    return "2023-2024";
-  }
-
-  if (id < 59000) {
     return "2024-2025";
   }
 
-  return "2025-2026";
+  if (id < 59000) {
+    return "2025-2026";
+  }
+
+  return "2026-2027";
 
 }
 
@@ -70,7 +70,8 @@ async function leggiGirone(id, browser) {
         ? gironeMatch[0]
         : "";
 
-    const squadreSet = new Set();
+    const squadreSet =
+      new Set();
 
     $(".sq-nLong").each((i, el) => {
 
@@ -99,7 +100,8 @@ async function leggiGirone(id, browser) {
           .text()
           .trim();
 
-      if (!numero) return;
+      if (!numero)
+        return;
 
       const squadre =
         $(gara)
@@ -145,7 +147,9 @@ async function leggiGirone(id, browser) {
       !girone ||
       squadreSet.size === 0
     ) {
+
       return null;
+
     }
 
     return {

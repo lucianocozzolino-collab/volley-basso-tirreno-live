@@ -2,7 +2,6 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-
 async function leggiGirone(id, browser) {
 
   const page = await browser.newPage();
@@ -13,7 +12,7 @@ async function leggiGirone(id, browser) {
       `https://fipavonline.it/main/gare_girone/${id}`,
       {
         waitUntil: "domcontentloaded",
-        timeout: 30000
+        timeout: 15000
       }
     );
 
@@ -38,10 +37,12 @@ async function leggiGirone(id, browser) {
         .trim();
 
     const campionato =
-      nomeGirone.replace(
-        /\s*-\s*Girone\s+[A-Z0-9]+.*/i,
-        ""
-      ).trim();
+      nomeGirone
+        .replace(
+          /\s*-\s*Girone\s+[A-Z0-9]+.*/i,
+          ""
+        )
+        .trim();
 
     const gironeMatch =
       nomeGirone.match(
@@ -73,7 +74,6 @@ async function leggiGirone(id, browser) {
     });
 
     const calendario = [];
-    const gareViste = new Set();
 
     $(".risultati").each((i, gara) => {
 
@@ -85,11 +85,6 @@ async function leggiGirone(id, browser) {
           .trim();
 
       if (!numero) return;
-
-      if (gareViste.has(numero))
-        return;
-
-      gareViste.add(numero);
 
       const squadre =
         $(gara)
@@ -125,6 +120,7 @@ async function leggiGirone(id, browser) {
             .first()
             .text()
             .trim()
+
       });
 
     });
@@ -151,7 +147,7 @@ async function leggiGirone(id, browser) {
 
     };
 
-  } catch (err) {
+  } catch {
 
     return null;
 
@@ -170,19 +166,19 @@ async function leggiGirone(id, browser) {
       headless: true
     });
 
-  const gironi = [];
-
   const ids = [];
 
   for (
     let id = 59000;
-    id <= 60000;
+    id <= 59200;
     id++
   ) {
 
     ids.push(id);
 
   }
+
+  const gironi = [];
 
   for (const id of ids) {
 

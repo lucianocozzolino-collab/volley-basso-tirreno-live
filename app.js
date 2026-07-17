@@ -2,73 +2,41 @@ let datiGlobali = null;
 
 async function caricaHome() {
 
-  try {
+  const response =
+    await fetch("data/gironi.json");
 
-    const response =
-      await fetch("data/gironi.json");
+  datiGlobali =
+    await response.json();
 
-    datiGlobali =
-      await response.json();
+  document.getElementById("lastUpdate").innerHTML =
+    "🕒 Aggiornamento: " +
+    datiGlobali.aggiornamento;
 
-    console.log(
-      "Totale gironi:",
-      datiGlobali.totale
-    );
+  document.getElementById("app").innerHTML = `
 
-    document.getElementById("lastUpdate").innerHTML =
-      "🕒 Aggiornamento: " +
-      datiGlobali.aggiornamento;
+    <div class="card">
 
-    document.getElementById("app").innerHTML = `
+      <h2>🏐 Ricerca Campionato</h2>
 
-      <div class="card">
+      <p>📅 Anno</p>
+      <select id="anno" onchange="aggiornaCampionati()"></select>
 
-        <h2>🏐 Ricerca Campionato</h2>
+      <p>🏆 Campionato</p>
+      <select id="campionato" onchange="aggiornaGironi()"></select>
 
-        <p>📅 Anno</p>
+      <p>📂 Girone</p>
+      <select id="girone" onchange="aggiornaSquadre()"></select>
 
-        <select id="anno"
-                onchange="aggiornaCampionati()">
-        </select>
+      <p>👕 Squadra</p>
+      <select id="squadra" onchange="visualizzaSquadra()"></select>
 
-        <p>🏆 Campionato</p>
+    </div>
 
-        <select id="campionato"
-                onchange="aggiornaGironi()">
-        </select>
+    <div id="risultati"></div>
 
-        <p>📂 Girone</p>
+  `;
 
-        <select id="girone"
-                onchange="aggiornaSquadre()">
-        </select>
-
-        <p>👕 Squadra</p>
-
-        <select id="squadra"
-                onchange="visualizzaSquadra()">
-        </select>
-
-      </div>
-
-      <div id="risultati"></div>
-
-    `;
-
-    caricaAnni();
-
-  } catch (err) {
-
-    console.error(err);
-
-    document.getElementById("app").innerHTML = `
-      <div class="card">
-        <h2>Errore caricamento dati</h2>
-        <p>${err.message}</p>
-      </div>
-    `;
-
-  }
+  caricaAnni();
 
 }
 
@@ -77,11 +45,9 @@ function caricaAnni() {
   const anni = [
 
     ...new Set(
-
-      datiGlobali.gironi
-        .filter(g => g && g.stagione)
-        .map(g => g.stagione)
-
+      datiGlobali.gironi.map(
+        g => g.stagione
+      )
     )
 
   ].sort();
@@ -116,15 +82,13 @@ function aggiornaCampionati() {
 
       datiGlobali.gironi
 
-        .filter(g =>
-
-          g &&
-          g.stagione === anno &&
-          g.campionato
-
+        .filter(
+          g => g.stagione === anno
         )
 
-        .map(g => g.campionato)
+        .map(
+          g => g.campionato
+        )
 
     )
 
@@ -135,11 +99,11 @@ function aggiornaCampionati() {
 
   select.innerHTML = "";
 
-  campionati.forEach(campionato => {
+  campionati.forEach(c => {
 
     select.innerHTML += `
-      <option value="${campionato}">
-        ${campionato}
+      <option value="${c}">
+        ${c}
       </option>
     `;
 
@@ -166,26 +130,23 @@ function aggiornaGironi() {
 
     .filter(g =>
 
-      g &&
       g.stagione === anno &&
       g.campionato === campionato
 
     )
 
-    .sort((a, b) =>
-
+    .sort((a,b) =>
       (a.girone || "")
-        .localeCompare(
-          b.girone || ""
-        )
-
+      .localeCompare(
+        b.girone || ""
+      )
     )
 
     .forEach(g => {
 
       select.innerHTML += `
         <option value="${g.id}">
-          ${g.girone || g.nome}
+          ${g.girone}
         </option>
       `;
 
@@ -202,31 +163,25 @@ function aggiornaSquadre() {
       document.getElementById("girone").value
     );
 
-  const select =
-    document.getElementById("squadra");
-
-  select.innerHTML = "";
-
   const girone =
     datiGlobali.gironi.find(
       g => g.id === id
     );
 
+  const select =
+    document.getElementById("squadra");
+
+  select.innerHTML = "";
+
   if (!girone) return;
 
-  const squadre =
-
-    Array.isArray(girone.squadre)
-      ? girone.squadre
-      : [];
-
-  squadre
+  girone.squadre
     .sort()
-    .forEach(squadra => {
+    .forEach(s => {
 
       select.innerHTML += `
-        <option value="${squadra}">
-          ${squadra}
+        <option value="${s}">
+          ${s}
         </option>
       `;
 
@@ -251,19 +206,11 @@ function visualizzaSquadra() {
       g => g.id === id
     );
 
-  if (!girone || !squadra) {
-    return;
-  }
-
-  const calendario =
-
-    Array.isArray(girone.calendario)
-      ? girone.calendario
-      : [];
+  if (!girone) return;
 
   const gare =
 
-    calendario.filter(g =>
+    girone.calendario.filter(g =>
 
       g.casa === squadra ||
       g.ospite === squadra
@@ -274,10 +221,10 @@ function visualizzaSquadra() {
 
     <div class="card">
 
-      <h2>🏐 ${squadra}</h2>
+      <h2>${squadra}</h2>
 
       <p>
-        ${girone.nome || ""}
+        ${girone.nome}
       </p>
 
     </div>
@@ -292,15 +239,15 @@ function visualizzaSquadra() {
 
       <div class="card">
 
-        <strong>${g.gara || ""}</strong>
+        <strong>${g.gara}</strong>
 
-        <br><br>
+        <br>
 
-        📅 ${g.data || ""}
+        📅 ${g.data}
 
-        <br><br>
+        <br>
 
-        🏠 ${g.casa || ""}
+        🏠 ${g.casa}
 
         <br>
 
@@ -308,11 +255,11 @@ function visualizzaSquadra() {
 
         <br>
 
-        🚍 ${g.ospite || ""}
+        🚍 ${g.ospite}
 
-        <br><br>
+        <br>
 
-        ✅ ${g.risultato || ""}
+        ✅ ${g.risultato}
 
       </div>
 

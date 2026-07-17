@@ -2,6 +2,22 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
+const FULL_SCAN = false;
+
+function determinaStagione(id) {
+
+  if (id < 53000) {
+    return "2023-2024";
+  }
+
+  if (id < 59000) {
+    return "2024-2025";
+  }
+
+  return "2025-2026";
+
+}
+
 async function leggiGirone(id, browser) {
 
   const page = await browser.newPage();
@@ -54,8 +70,7 @@ async function leggiGirone(id, browser) {
         ? gironeMatch[0]
         : "";
 
-    const squadreSet =
-      new Set();
+    const squadreSet = new Set();
 
     $(".sq-nLong").each((i, el) => {
 
@@ -125,9 +140,18 @@ async function leggiGirone(id, browser) {
 
     });
 
+    if (
+      !campionato ||
+      !girone ||
+      squadreSet.size === 0
+    ) {
+      return null;
+    }
+
     return {
 
-      stagione: "2025-2026",
+      stagione:
+        determinaStagione(id),
 
       campionato,
 
@@ -135,13 +159,16 @@ async function leggiGirone(id, browser) {
 
       id,
 
-      nome: nomeGirone,
+      nome:
+        nomeGirone,
 
       url:
         `https://fipavonline.it/main/gare_girone/${id}`,
 
       squadre:
-        Array.from(squadreSet),
+        Array.from(
+          squadreSet
+        ),
 
       calendario
 
@@ -168,13 +195,29 @@ async function leggiGirone(id, browser) {
 
   const ids = [];
 
-  for (
-    let id = 59000;
-    id <= 59200;
-    id++
-  ) {
+  if (FULL_SCAN) {
 
-    ids.push(id);
+    for (
+      let id = 50000;
+      id <= 65000;
+      id++
+    ) {
+
+      ids.push(id);
+
+    }
+
+  } else {
+
+    for (
+      let id = 59000;
+      id <= 65000;
+      id++
+    ) {
+
+      ids.push(id);
+
+    }
 
   }
 

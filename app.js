@@ -284,3 +284,5 @@ function visualizzaSquadra() {
     html;
 
 }
+
+window.onload = caricaHome;

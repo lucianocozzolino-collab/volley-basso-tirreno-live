@@ -2,53 +2,73 @@ let datiGlobali = null;
 
 async function caricaHome() {
 
-  const response =
-    await fetch("data/gironi.json");
+  try {
 
-  datiGlobali =
-    await response.json();
+    const response =
+      await fetch("data/gironi.json");
 
-  document.getElementById("lastUpdate").innerHTML =
-    "🕒 Aggiornamento: " +
-    datiGlobali.aggiornamento;
+    datiGlobali =
+      await response.json();
 
-  document.getElementById("app").innerHTML = `
+    console.log(
+      "Totale gironi:",
+      datiGlobali.totale
+    );
 
-    <div class="card">
+    document.getElementById("lastUpdate").innerHTML =
+      "🕒 Aggiornamento: " +
+      datiGlobali.aggiornamento;
 
-      <h2>🏐 Ricerca Campionato</h2>
+    document.getElementById("app").innerHTML = `
 
-      <p>📅 Anno</p>
+      <div class="card">
 
-      <select id="anno"
-              onchange="aggiornaCampionati()">
-      </select>
+        <h2>🏐 Ricerca Campionato</h2>
 
-      <p>🏆 Campionato</p>
+        <p>📅 Anno</p>
 
-      <select id="campionato"
-              onchange="aggiornaGironi()">
-      </select>
+        <select id="anno"
+                onchange="aggiornaCampionati()">
+        </select>
 
-      <p>📂 Girone</p>
+        <p>🏆 Campionato</p>
 
-      <select id="girone"
-              onchange="aggiornaSquadre()">
-      </select>
+        <select id="campionato"
+                onchange="aggiornaGironi()">
+        </select>
 
-      <p>👕 Squadra</p>
+        <p>📂 Girone</p>
 
-      <select id="squadra"
-              onchange="visualizzaSquadra()">
-      </select>
+        <select id="girone"
+                onchange="aggiornaSquadre()">
+        </select>
 
-    </div>
+        <p>👕 Squadra</p>
 
-    <div id="risultati"></div>
+        <select id="squadra"
+                onchange="visualizzaSquadra()">
+        </select>
 
-  `;
+      </div>
 
-  caricaAnni();
+      <div id="risultati"></div>
+
+    `;
+
+    caricaAnni();
+
+  } catch (err) {
+
+    console.error(err);
+
+    document.getElementById("app").innerHTML = `
+      <div class="card">
+        <h2>Errore caricamento dati</h2>
+        <p>${err.message}</p>
+      </div>
+    `;
+
+  }
 
 }
 
@@ -58,9 +78,9 @@ function caricaAnni() {
 
     ...new Set(
 
-      datiGlobali.gironi.map(
-        g => g.stagione
-      )
+      datiGlobali.gironi
+        .filter(g => g && g.stagione)
+        .map(g => g.stagione)
 
     )
 
@@ -96,13 +116,15 @@ function aggiornaCampionati() {
 
       datiGlobali.gironi
 
-        .filter(
-          g => g.stagione === anno
+        .filter(g =>
+
+          g &&
+          g.stagione === anno &&
+          g.campionato
+
         )
 
-        .map(
-          g => g.campionato
-        )
+        .map(g => g.campionato)
 
     )
 
@@ -144,20 +166,26 @@ function aggiornaGironi() {
 
     .filter(g =>
 
+      g &&
       g.stagione === anno &&
       g.campionato === campionato
 
     )
 
     .sort((a, b) =>
-      a.girone.localeCompare(b.girone)
+
+      (a.girone || "")
+        .localeCompare(
+          b.girone || ""
+        )
+
     )
 
     .forEach(g => {
 
       select.innerHTML += `
         <option value="${g.id}">
-          ${g.girone}
+          ${g.girone || g.nome}
         </option>
       `;
 
@@ -186,7 +214,13 @@ function aggiornaSquadre() {
 
   if (!girone) return;
 
-  girone.squadre
+  const squadre =
+
+    Array.isArray(girone.squadre)
+      ? girone.squadre
+      : [];
+
+  squadre
     .sort()
     .forEach(squadra => {
 
@@ -221,9 +255,15 @@ function visualizzaSquadra() {
     return;
   }
 
+  const calendario =
+
+    Array.isArray(girone.calendario)
+      ? girone.calendario
+      : [];
+
   const gare =
 
-    girone.calendario.filter(g =>
+    calendario.filter(g =>
 
       g.casa === squadra ||
       g.ospite === squadra
@@ -237,7 +277,7 @@ function visualizzaSquadra() {
       <h2>🏐 ${squadra}</h2>
 
       <p>
-        ${girone.nome}
+        ${girone.nome || ""}
       </p>
 
     </div>
@@ -252,15 +292,15 @@ function visualizzaSquadra() {
 
       <div class="card">
 
-        <strong>${g.gara}</strong>
+        <strong>${g.gara || ""}</strong>
 
         <br><br>
 
-        📅 ${g.data}
+        📅 ${g.data || ""}
 
         <br><br>
 
-        🏠 ${g.casa}
+        🏠 ${g.casa || ""}
 
         <br>
 
@@ -268,11 +308,11 @@ function visualizzaSquadra() {
 
         <br>
 
-        🚍 ${g.ospite}
+        🚍 ${g.ospite || ""}
 
         <br><br>
 
-        ✅ ${g.risultato}
+        ✅ ${g.risultato || ""}
 
       </div>
 

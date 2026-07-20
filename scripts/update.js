@@ -2,21 +2,7 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const FULL_SCAN = true;
-
-function determinaStagione(id) {
-
-  if (id < 53000) {
-    return "2024-2025";
-  }
-
-  if (id < 59000) {
-    return "2025-2026";
-  }
-
-  return "2026-2027";
-
-}
+const STAGIONE = "2026-2027";
 
 async function leggiGirone(id, browser) {
 
@@ -42,9 +28,8 @@ async function leggiGirone(id, browser) {
         .text()
         .trim();
 
-    if (!titoloCompleto) {
+    if (!titoloCompleto)
       return null;
-    }
 
     const nomeGirone =
       titoloCompleto
@@ -60,14 +45,14 @@ async function leggiGirone(id, browser) {
         )
         .trim();
 
-    const gironeMatch =
+    const match =
       nomeGirone.match(
         /Girone\s+[A-Z0-9]+/i
       );
 
     const girone =
-      gironeMatch
-        ? gironeMatch[0]
+      match
+        ? match[0]
         : "";
 
     const squadreSet =
@@ -84,10 +69,22 @@ async function leggiGirone(id, browser) {
         squadra &&
         squadra !== "Riposa"
       ) {
+
         squadreSet.add(squadra);
+
       }
 
     });
+
+    if (
+      !campionato ||
+      !girone ||
+      squadreSet.size === 0
+    ) {
+
+      return null;
+
+    }
 
     const calendario = [];
 
@@ -142,20 +139,9 @@ async function leggiGirone(id, browser) {
 
     });
 
-    if (
-      !campionato ||
-      !girone ||
-      squadreSet.size === 0
-    ) {
-
-      return null;
-
-    }
-
     return {
 
-      stagione:
-        determinaStagione(id),
+      stagione: STAGIONE,
 
       campionato,
 
@@ -163,8 +149,7 @@ async function leggiGirone(id, browser) {
 
       id,
 
-      nome:
-        nomeGirone,
+      nome: nomeGirone,
 
       url:
         `https://fipavonline.it/main/gare_girone/${id}`,
@@ -199,29 +184,13 @@ async function leggiGirone(id, browser) {
 
   const ids = [];
 
-  if (FULL_SCAN) {
+  for (
+    let id = 59000;
+    id <= 68000;
+    id++
+  ) {
 
-    for (
-      let id = 50000;
-      id <= 65000;
-      id++
-    ) {
-
-      ids.push(id);
-
-    }
-
-  } else {
-
-    for (
-      let id = 59000;
-      id <= 65000;
-      id++
-    ) {
-
-      ids.push(id);
-
-    }
+    ids.push(id);
 
   }
 
@@ -272,10 +241,6 @@ async function leggiGirone(id, browser) {
       2
     ),
     "utf8"
-  );
-
-  console.log(
-    `Salvati ${gironi.length} gironi`
   );
 
 })();

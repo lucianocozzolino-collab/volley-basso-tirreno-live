@@ -259,7 +259,14 @@ function visualizzaSquadra() {
 
         <br>
 
-        ✅ ${g.risultato}
+        
+      ✅ ${g.risultato || ""}
+
+      <br>
+
+      🏐 Set:
+      ${g.set || "-"}
+
 
       </div>
 

@@ -28,8 +28,9 @@ async function leggiGirone(id, browser) {
         .text()
         .trim();
 
-    if (!titoloCompleto)
+    if (!titoloCompleto) {
       return null;
+    }
 
     const nomeGirone =
       titoloCompleto
@@ -107,6 +108,22 @@ async function leggiGirone(id, browser) {
       if (squadre.length < 2)
         return;
 
+      const risultato =
+
+        $(gara)
+          .find(".s-scoreText")
+          .first()
+          .text()
+          .trim();
+
+      const setParziali =
+
+        $(gara)
+          .find(".s-scoreDett")
+          .first()
+          .text()
+          .trim();
+
       calendario.push({
 
         gara: numero,
@@ -128,12 +145,10 @@ async function leggiGirone(id, browser) {
             .text()
             .trim(),
 
-        risultato:
-          $(gara)
-            .find(".s-scoreText")
-            .first()
-            .text()
-            .trim()
+        risultato,
+
+        set:
+          setParziali || ""
 
       });
 
@@ -204,7 +219,14 @@ async function leggiGirone(id, browser) {
         browser
       );
 
-    if (dati) {
+    if (
+      dati &&
+      dati.nome &&
+      dati.campionato &&
+      dati.girone &&
+      dati.squadre &&
+      dati.squadre.length > 0
+    ) {
 
       gironi.push(dati);
 
@@ -241,6 +263,10 @@ async function leggiGirone(id, browser) {
       2
     ),
     "utf8"
+  );
+
+  console.log(
+    `Salvati ${gironi.length} gironi`
   );
 
 })();

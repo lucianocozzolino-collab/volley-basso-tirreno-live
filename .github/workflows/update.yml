@@ -17,19 +17,28 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - run: npm install
+      - name: Installa dipendenze
+        run: npm install
 
-      - run: npx playwright install --with-deps
+      - name: Installa Playwright
+        run: npx playwright install --with-deps
 
-      - run: node scripts/update.js
+      - name: Verifica sintassi update.js
+        run: node --check scripts/update.js
 
-      - run: |
+      - name: Aggiorna dati FIPAV
+        run: node scripts/update.js
+
+      - name: Commit e Push
+        run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 

@@ -2,6 +2,16 @@ name: Aggiorna Volley
 
 on:
   workflow_dispatch:
+    inputs:
+      stagione:
+        description: "Stagione da aggiornare"
+        required: true
+        default: "2026-2027"
+        type: choice
+        options:
+          - 2026-2027
+          - 2025-2026
+          - 2024-2025
 
   schedule:
     - cron: "0 */6 * * *"
@@ -10,13 +20,11 @@ permissions:
   contents: write
 
 jobs:
-
-  update_corrente:
+  update:
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -31,11 +39,22 @@ jobs:
       - name: Installa Playwright
         run: npx playwright install --with-deps
 
-      - name: Verifica sintassi
+      - name: Verifica sintassi update.js
         run: node --check scripts/update.js
 
-      - name: Aggiorna stagione corrente
-        run: node scripts/update.js 2026-2027
+      - name: Determina stagione
+        id: stagione
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "stagione=2026-2027" >> $GITHUB_OUTPUT
+          else
+            echo "stagione=${{ github.event.inputs.stagione }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Aggiorna dati FIPAV
+        run: |
+          echo "Aggiorno stagione ${{ steps.stagione.outputs.stagione }}"
+          node scripts/update.js "${{ steps.stagione.outputs.stagione }}"
 
       - name: Merge archivio
         run: node scripts/merge.js
@@ -47,6 +66,6 @@ jobs:
 
           git add .
 
-          git diff --staged --quiet || git commit -m "Aggiornamento FIPAV"
+          git diff --staged --quiet || git commit -m "Aggiornamento FIPAV ${{ steps.stagione.outputs.stagione }}"
 
           git push

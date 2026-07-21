@@ -1,58 +1,43 @@
 const fs = require("fs");
+const path = require("path");
 
-const files = [
-  "data/2024-2025.json",
-  "data/2025-2026.json",
-  "data/2026-2027.json"
-];
+const DATA_DIR = "data";
 
-const gironi = [];
+const files = fs
+  .readdirSync(DATA_DIR)
+  .filter(f => f.endsWith(".json"));
+
+let tuttiGironi = [];
 
 for (const file of files) {
 
-  if (!fs.existsSync(file)) {
-    console.log(`File mancante: ${file}`);
-    continue;
-  }
-
-  const dati = JSON.parse(
+  const contenuto = JSON.parse(
     fs.readFileSync(
-      file,
+      path.join(DATA_DIR, file),
       "utf8"
     )
   );
 
-  if (
-    dati &&
-    Array.isArray(dati.gironi)
-  ) {
-
-    gironi.push(
-      ...dati.gironi
+  if (contenuto.gironi) {
+    tuttiGironi.push(
+      ...contenuto.gironi
     );
-
-    console.log(
-      `${file}: ${dati.gironi.length} gironi`
-    );
-
   }
 
 }
 
 const output = {
-
-  aggiornamento:
-    new Date().toISOString(),
-
-  totale:
-    gironi.length,
-
-  gironi
-
+  aggiornamento: new Date().toISOString(),
+  totale: tuttiGironi.length,
+  gironi: tuttiGironi
 };
 
+fs.mkdirSync("docs", {
+  recursive: true
+});
+
 fs.writeFileSync(
-  "data/gironi.json",
+  "docs/data.json",
   JSON.stringify(
     output,
     null,
@@ -62,5 +47,5 @@ fs.writeFileSync(
 );
 
 console.log(
-  `Uniti ${gironi.length} gironi totali`
+  `Uniti ${tuttiGironi.length} gironi`
 );

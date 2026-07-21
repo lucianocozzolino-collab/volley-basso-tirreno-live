@@ -70,9 +70,7 @@ async function leggiGirone(id, browser) {
         squadra &&
         squadra !== "Riposa"
       ) {
-
         squadreSet.add(squadra);
-
       }
 
     });
@@ -82,9 +80,7 @@ async function leggiGirone(id, browser) {
       !girone ||
       squadreSet.size === 0
     ) {
-
       return null;
-
     }
 
     const calendario = [];
@@ -109,7 +105,6 @@ async function leggiGirone(id, browser) {
         return;
 
       const risultato =
-
         $(gara)
           .find(".s-scoreText")
           .first()
@@ -117,7 +112,6 @@ async function leggiGirone(id, browser) {
           .trim();
 
       const setParziali =
-
         $(gara)
           .find(".s-scoreDett")
           .first()
@@ -164,7 +158,8 @@ async function leggiGirone(id, browser) {
 
       id,
 
-      nome: nomeGirone,
+      nome:
+        nomeGirone,
 
       url:
         `https://fipavonline.it/main/gare_girone/${id}`,
@@ -247,24 +242,26 @@ async function leggiGirone(id, browser) {
     }
   );
 
-fs.writeFileSync(
-  `data/${STAGIONE}.json`,
-  JSON.stringify(
-    {
-      aggiornamento:
-        new Date().toISOString(),
+  fs.writeFileSync(
+    `data/${STAGIONE}.json`,
+    JSON.stringify(
+      {
+        aggiornamento:
+          new Date().toISOString(),
 
-      totale:
-        gironi.length,
+        totale:
+          gironi.length,
 
-      gironi
-    },
-    null,
-    2
-  ),
-  "utf8"
-);
+        gironi
+      },
+      null,
+      2
+    ),
+    "utf8"
+  );
 
-console.log(
-  `Salvati ${gironi.length} gironi`
-);
+  console.log(
+    `Salvati ${gironi.length} gironi`
+  );
+
+})();

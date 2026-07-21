@@ -247,8 +247,8 @@ async function leggiGirone(id, browser) {
     }
   );
 
-  fs.writeFileSync(
-    "data/gironi.json",
+fs.writeFileSync(
+  `data/${STAGIONE}.json,
     JSON.stringify(
       {
         aggiornamento:
@@ -264,6 +264,8 @@ async function leggiGirone(id, browser) {
     ),
     "utf8"
   );
+
+- run: node scripts/update.js
 
   console.log(
     `Salvati ${gironi.length} gironi`

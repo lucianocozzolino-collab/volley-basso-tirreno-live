@@ -2,69 +2,74 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const STAGIONE = "2026-2027";
+const STAGIONE = process.argv[2] || "2026-2027";
+
+const RANGE = {
+  "2026-2027": {
+    min: 65000,
+    max: 68000
+  },
+
+  "2025-2026": {
+    min: 59000,
+    max: 64999
+  },
+
+  "2024-2025": {
+    min: 52000,
+    max: 58999
+  }
+};
+
+const ID_MIN = RANGE[STAGIONE].min;
+const ID_MAX = RANGE[STAGIONE].max;
 
 async function leggiGirone(id, browser) {
-
   const page = await browser.newPage();
 
   try {
+    const url = `https://fipavonline.it/main/gare_girone/${id}`;
 
-    await page.goto(
-      `https://fipavonline.it/main/gare_girone/${id}`,
-      {
-        waitUntil: "domcontentloaded",
-        timeout: 15000
-      }
-    );
+    await page.goto(url, {
+      waitUntil: "domcontentloaded",
+      timeout: 5000
+    });
 
     const html = await page.content();
-
     const $ = cheerio.load(html);
 
-    const titoloCompleto =
-      $(".h3-wrap")
-        .first()
-        .text()
-        .trim();
+    const titoloCompleto = $(".h3-wrap")
+      .first()
+      .text()
+      .trim();
 
     if (!titoloCompleto) {
       return null;
     }
 
-    const nomeGirone =
-      titoloCompleto
-        .split("/")
-        .shift()
-        .trim();
+    const nomeGirone = titoloCompleto
+      .split("/")
+      .shift()
+      .trim();
 
-    const campionato =
-      nomeGirone
-        .replace(
-          /\s*-\s*Girone\s+[A-Z0-9]+.*/i,
-          ""
-        )
-        .trim();
+    const campionato = nomeGirone
+      .replace(/\s*-\s*Girone\s+[A-Z0-9]+.*/i, "")
+      .trim();
 
-    const match =
-      nomeGirone.match(
-        /Girone\s+[A-Z0-9]+/i
-      );
+    const match = nomeGirone.match(
+      /Girone\s+[A-Z0-9]+/i
+    );
 
-    const girone =
-      match
-        ? match[0]
-        : "";
+    const girone = match
+      ? match[0]
+      : "";
 
-    const squadreSet =
-      new Set();
+    const squadreSet = new Set();
 
     $(".sq-nLong").each((i, el) => {
-
-      const squadra =
-        $(el)
-          .text()
-          .trim();
+      const squadra = $(el)
+        .text()
+        .trim();
 
       if (
         squadra &&
@@ -72,7 +77,6 @@ async function leggiGirone(id, browser) {
       ) {
         squadreSet.add(squadra);
       }
-
     });
 
     if (
@@ -86,161 +90,126 @@ async function leggiGirone(id, browser) {
     const calendario = [];
 
     $(".risultati").each((i, gara) => {
+      const numero = $(gara)
+        .find(".info-gara-giornata")
+        .first()
+        .text()
+        .trim();
 
-      const numero =
-        $(gara)
-          .find(".info-gara-giornata")
-          .first()
-          .text()
-          .trim();
-
-      if (!numero)
+      if (!numero) {
         return;
+      }
 
-      const squadre =
-        $(gara)
-          .find(".sq-nLong");
+      const squadre = $(gara)
+        .find(".sq-nLong");
 
-      if (squadre.length < 2)
+      if (squadre.length < 2) {
         return;
+      }
 
-      const risultato =
-        $(gara)
-          .find(".s-scoreText")
-          .first()
-          .text()
-          .trim();
+      const risultato = $(gara)
+        .find(".s-scoreText")
+        .first()
+        .text()
+        .trim();
 
-      const setParziali =
-        $(gara)
-          .find(".s-scoreDett")
-          .first()
-          .text()
-          .trim();
+      const setParziali = $(gara)
+        .find(".s-scoreDett")
+        .first()
+        .text()
+        .trim();
 
       calendario.push({
-
         gara: numero,
 
-        data:
-          $(gara)
-            .find(".info-gara-data")
-            .first()
-            .text()
-            .trim(),
+        data: $(gara)
+          .find(".info-gara-data")
+          .first()
+          .text()
+          .trim(),
 
-        casa:
-          $(squadre[0])
-            .text()
-            .trim(),
+        casa: $(squadre[0])
+          .text()
+          .trim(),
 
-        ospite:
-          $(squadre[1])
-            .text()
-            .trim(),
+        ospite: $(squadre[1])
+          .text()
+          .trim(),
 
         risultato,
 
-        set:
-          setParziali || ""
-
+        set: setParziali || ""
       });
-
     });
 
     return {
-
       stagione: STAGIONE,
-
       campionato,
-
       girone,
-
       id,
-
-      nome:
-        nomeGirone,
-
-      url:
-        `https://fipavonline.it/main/gare_girone/${id}`,
-
-      squadre:
-        Array.from(
-          squadreSet
-        ),
-
+      nome: nomeGirone,
+      url,
+      squadre: Array.from(squadreSet),
       calendario
-
     };
-
-  } catch {
-
+  } catch (error) {
     return null;
-
   } finally {
-
     await page.close();
-
   }
-
 }
 
 (async () => {
-
-  const browser =
-    await chromium.launch({
-      headless: true
-    });
-
-  const ids = [];
-
-  for (
-    let id = 59000;
-    id <= 68000;
-    id++
-  ) {
-
-    ids.push(id);
-
-  }
+  const browser = await chromium.launch({
+    headless: true
+  });
 
   const gironi = [];
 
-  for (const id of ids) {
+  console.log(
+    `Avvio scansione stagione ${STAGIONE}`
+  );
 
-    const dati =
-      await leggiGirone(
-        id,
-        browser
+  console.log(
+    `Range ID ${ID_MIN}-${ID_MAX}`
+  );
+
+  for (
+    let id = ID_MIN;
+    id <= ID_MAX;
+    id++
+  ) {
+    if (id % 100 === 0) {
+      console.log(
+        `Analizzo ID ${id}`
       );
+    }
+
+    const dati = await leggiGirone(
+      id,
+      browser
+    );
 
     if (
       dati &&
       dati.nome &&
       dati.campionato &&
       dati.girone &&
-      dati.squadre &&
       dati.squadre.length > 0
     ) {
-
       gironi.push(dati);
 
       console.log(
         `Trovato ${id} - ${dati.nome}`
       );
-
     }
-
   }
 
   await browser.close();
 
-  fs.mkdirSync(
-    "data",
-    {
-      recursive: true
-    }
-  );
+  fs.mkdirSync("data", {
+    recursive: true
+  });
 
   fs.writeFileSync(
     `data/${STAGIONE}.json`,
@@ -248,10 +217,8 @@ async function leggiGirone(id, browser) {
       {
         aggiornamento:
           new Date().toISOString(),
-
         totale:
           gironi.length,
-
         gironi
       },
       null,
@@ -261,7 +228,6 @@ async function leggiGirone(id, browser) {
   );
 
   console.log(
-    `Salvati ${gironi.length} gironi`
+    `Salvati ${gironi.length} gironi per ${STAGIONE}`
   );
-
 })();

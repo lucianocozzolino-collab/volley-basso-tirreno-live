@@ -1,53 +1,66 @@
 const fs = require("fs");
 
-const tutteLeStagioni = [];
-
-[
+const files = [
   "data/2024-2025.json",
   "data/2025-2026.json",
   "data/2026-2027.json"
-].forEach(file => {
+];
 
-  if (fs.existsSync(file)) {
+const gironi = [];
 
-    const dati =
-      JSON.parse(
-        fs.readFileSync(
-          file,
-          "utf8"
-        )
-      );
+for (const file of files) {
 
-    tutteLeStagioni.push(
+  if (!fs.existsSync(file)) {
+    console.log(`File mancante: ${file}`);
+    continue;
+  }
+
+  const dati = JSON.parse(
+    fs.readFileSync(
+      file,
+      "utf8"
+    )
+  );
+
+  if (
+    dati &&
+    Array.isArray(dati.gironi)
+  ) {
+
+    gironi.push(
       ...dati.gironi
+    );
+
+    console.log(
+      `${file}: ${dati.gironi.length} gironi`
     );
 
   }
 
-});
+}
+
+const output = {
+
+  aggiornamento:
+    new Date().toISOString(),
+
+  totale:
+    gironi.length,
+
+  gironi
+
+};
 
 fs.writeFileSync(
-
   "data/gironi.json",
-
   JSON.stringify(
-    {
-      aggiornamento:
-        new Date().toISOString(),
-
-      totale:
-        tutteLeStagioni.length,
-
-      gironi:
-        tutteLeStagioni
-    },
+    output,
     null,
     2
   ),
   "utf8"
-
 );
 
 console.log(
-  `Uniti ${tutteLeStagioni.length} gironi`
+  `Uniti ${gironi.length} gironi totali`
 );

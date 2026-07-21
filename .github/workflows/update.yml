@@ -37,6 +37,9 @@ jobs:
       - name: Aggiorna dati FIPAV
         run: node scripts/update.js
 
+      - name: Merge stagioni
+        run: node scripts/merge.js
+
       - name: Commit e Push
         run: |
           git config --global user.name "github-actions"

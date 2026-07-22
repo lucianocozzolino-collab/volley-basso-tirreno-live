@@ -13,9 +13,6 @@ on:
           - 2025-2026
           - 2024-2025
 
-  schedule:
-    - cron: "0 */6 * * *"
-
 permissions:
   contents: write
 

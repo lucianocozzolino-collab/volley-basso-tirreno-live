@@ -6,20 +6,25 @@ const STAGIONE = process.argv[2] || "2026-2027";
 
 const RANGE = {
   "2026-2027": {
-    min: 65000,
+    min: 66500,
     max: 68000
   },
 
   "2025-2026": {
-    min: 59000,
-    max: 64999
+    min: 64000,
+    max: 66500
   },
 
   "2024-2025": {
-    min: 52000,
-    max: 58999
+    min: 61500,
+    max: 64000
   }
 };
+
+if (!RANGE[STAGIONE]) {
+  console.error(`Stagione non supportata: ${STAGIONE}`);
+  process.exit(1);
+}
 
 const ID_MIN = RANGE[STAGIONE].min;
 const ID_MAX = RANGE[STAGIONE].max;
@@ -32,7 +37,7 @@ async function leggiGirone(id, browser) {
 
     await page.goto(url, {
       waitUntil: "domcontentloaded",
-      timeout: 5000
+      timeout: 3000
     });
 
     const html = await page.content();
@@ -166,23 +171,12 @@ async function leggiGirone(id, browser) {
 
   const gironi = [];
 
-  console.log(
-    `Avvio scansione stagione ${STAGIONE}`
-  );
+  console.log(`Avvio scansione stagione ${STAGIONE}`);
+  console.log(`Range ID ${ID_MIN}-${ID_MAX}`);
 
-  console.log(
-    `Range ID ${ID_MIN}-${ID_MAX}`
-  );
-
-  for (
-    let id = ID_MIN;
-    id <= ID_MAX;
-    id++
-  ) {
+  for (let id = ID_MIN; id <= ID_MAX; id++) {
     if (id % 100 === 0) {
-      console.log(
-        `Analizzo ID ${id}`
-      );
+      console.log(`Analizzo ID ${id}`);
     }
 
     const dati = await leggiGirone(
@@ -205,6 +199,18 @@ async function leggiGirone(id, browser) {
     }
   }
 
+  const idsTrovati = gironi.map(g => g.id);
+
+  if (idsTrovati.length > 0) {
+    console.log(
+      `MIN ID TROVATO: ${Math.min(...idsTrovati)}`
+    );
+
+    console.log(
+      `MAX ID TROVATO: ${Math.max(...idsTrovati)}`
+    );
+  }
+
   await browser.close();
 
   fs.mkdirSync("data", {
@@ -215,10 +221,8 @@ async function leggiGirone(id, browser) {
     `data/${STAGIONE}.json`,
     JSON.stringify(
       {
-        aggiornamento:
-          new Date().toISOString(),
-        totale:
-          gironi.length,
+        aggiornamento: new Date().toISOString(),
+        totale: gironi.length,
         gironi
       },
       null,

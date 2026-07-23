@@ -2,17 +2,22 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const STAGIONE = process.argv[2] || "2026-2027";
+const STAGIONE = process.argv[2] || "ALL";
 
 const RANGE = {
+  ALL: {
+    min: 61500,
+    max: 68000
+  },
+
   "2026-2027": {
     min: 66500,
     max: 68000
   },
 
   "2025-2026": {
-    min: 63600,
-    max: 66500
+    min: 61500,
+    max: 68000
   },
 
   "2024-2025": {
@@ -65,9 +70,7 @@ async function leggiGirone(id, browser) {
       /Girone\s+[A-Z0-9]+/i
     );
 
-    const girone = match
-      ? match[0]
-      : "";
+    const girone = match ? match[0] : "";
 
     const squadreSet = new Set();
 
@@ -147,6 +150,24 @@ async function leggiGirone(id, browser) {
       });
     });
 
+    const viste = new Set();
+
+    const calendarioPulito = calendario.filter(g => {
+      const chiave = [
+        g.gara,
+        g.data,
+        g.casa,
+        g.ospite
+      ].join("|");
+
+      if (viste.has(chiave)) {
+        return false;
+      }
+
+      viste.add(chiave);
+      return true;
+    });
+
     return {
       stagione: STAGIONE,
       campionato,
@@ -155,7 +176,7 @@ async function leggiGirone(id, browser) {
       nome: nomeGirone,
       url,
       squadre: Array.from(squadreSet),
-      calendario
+      calendario: calendarioPulito
     };
   } catch (error) {
     return null;

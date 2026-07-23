@@ -6,9 +6,10 @@ on:
       stagione:
         description: "Stagione da aggiornare"
         required: true
-        default: "2026-2027"
+        default: "ALL"
         type: choice
         options:
+          - ALL
           - 2026-2027
           - 2025-2026
           - 2024-2025
@@ -20,7 +21,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
 
-    timeout-minutes: ${{ github.event_name == 'schedule' && 45 || 360 }}
+    timeout-minutes: 360
 
     steps:
       - name: Checkout
@@ -43,11 +44,7 @@ jobs:
       - name: Determina stagione
         id: stagione
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "stagione=2026-2027" >> $GITHUB_OUTPUT
-          else
-            echo "stagione=${{ github.event.inputs.stagione }}" >> $GITHUB_OUTPUT
-          fi
+          echo "stagione=${{ github.event.inputs.stagione }}" >> $GITHUB_OUTPUT
 
       - name: Aggiorna dati FIPAV
         run: |

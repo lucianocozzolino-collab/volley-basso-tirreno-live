@@ -1,0 +1,1143 @@
+{
+  "aggiornamento": "2026-07-23T07:38:31.112Z",
+  "totale": 9,
+  "gironi": [
+    {
+      "stagione": "2025-2026",
+      "campionato": "Categoria WHITE",
+      "girone": "Girone B",
+      "id": 63509,
+      "nome": "Categoria WHITE  - Girone B",
+      "url": "https://fipavonline.it/main/gare_girone/63509",
+      "squadre": [
+        "Tonno Callipo B",
+        "Tonno Callipo  A",
+        "Pizzeria Schiavello Todosport  A",
+        "Pizzeria Schiavello Todosport  B",
+        "Lory Volley Pizzo    A",
+        "Volley Club Nicotera A.s.d."
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1188",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Tonno Callipo B",
+          "ospite": "Tonno Callipo  A",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1188",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Tonno Callipo B",
+          "ospite": "Tonno Callipo  A",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1189",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Pizzeria Schiavello Todosport  A",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1189",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Pizzeria Schiavello Todosport  A",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1190",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Volley Club Nicotera A.s.d.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1190",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Volley Club Nicotera A.s.d.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1191",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Pizzeria Schiavello Todosport  A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1191",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Pizzeria Schiavello Todosport  A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1192",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1192",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1193",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Volley Club Nicotera A.s.d.",
+          "ospite": "Tonno Callipo  A",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1193",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Volley Club Nicotera A.s.d.",
+          "ospite": "Tonno Callipo  A",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1194",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1194",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1195",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Volley Club Nicotera A.s.d.",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1195",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Volley Club Nicotera A.s.d.",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1196",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1196",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1197",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Pizzeria Schiavello Todosport  A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1197",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Pizzeria Schiavello Todosport  A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1198",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Volley Club Nicotera A.s.d.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1198",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Volley Club Nicotera A.s.d.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1199",
+          "data": "Dom 14/06/2026 11.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Pizzeria Schiavello Todosport  A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1199",
+          "data": "Dom 14/06/2026 11.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Pizzeria Schiavello Todosport  A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1200",
+          "data": "Dom 14/06/2026 11.30",
+          "casa": "Pizzeria Schiavello Todosport  A",
+          "ospite": "Volley Club Nicotera A.s.d.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1200",
+          "data": "Dom 14/06/2026 11.30",
+          "casa": "Pizzeria Schiavello Todosport  A",
+          "ospite": "Volley Club Nicotera A.s.d.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1201",
+          "data": "Dom 14/06/2026 11.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1201",
+          "data": "Dom 14/06/2026 11.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1202",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Tonno Callipo B",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1202",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Tonno Callipo B",
+          "ospite": "Pizzeria Schiavello Todosport  B",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Categoria GREEN",
+      "girone": "Girone G",
+      "id": 63510,
+      "nome": "Categoria GREEN  - Girone G",
+      "url": "https://fipavonline.it/main/gare_girone/63510",
+      "squadre": [
+        "Todosport A",
+        "Volley Pianopoli",
+        "Tonno Callipo B",
+        "Volley Club Nicotera   B",
+        "Lory Volley Pizzo    A"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1203",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Todosport A",
+          "ospite": "Volley Pianopoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1203",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Todosport A",
+          "ospite": "Volley Pianopoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1204",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Tonno Callipo B",
+          "ospite": "Volley Club Nicotera   B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1204",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Tonno Callipo B",
+          "ospite": "Volley Club Nicotera   B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1205",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Volley Pianopoli",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1205",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Volley Pianopoli",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1206",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Todosport A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1206",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Todosport A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1207",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Volley Club Nicotera   B",
+          "ospite": "Volley Pianopoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1207",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Volley Club Nicotera   B",
+          "ospite": "Volley Pianopoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1208",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Todosport A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1208",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Todosport A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1209",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Volley Pianopoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1209",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Volley Pianopoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1210",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Volley Club Nicotera   B",
+          "ospite": "Todosport A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1210",
+          "data": "Dom 14/06/2026 10.30",
+          "casa": "Volley Club Nicotera   B",
+          "ospite": "Todosport A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1211",
+          "data": "Dom 14/06/2026 11.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Volley Club Nicotera   B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1211",
+          "data": "Dom 14/06/2026 11.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Volley Club Nicotera   B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1212",
+          "data": "Dom 14/06/2026 11.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1212",
+          "data": "Dom 14/06/2026 11.30",
+          "casa": "Tonno Callipo B",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Categoria GREEN",
+      "girone": "Girone H",
+      "id": 63511,
+      "nome": "Categoria GREEN  - Girone H",
+      "url": "https://fipavonline.it/main/gare_girone/63511",
+      "squadre": [
+        "Tonno Callipo  A",
+        "Lory Volley Pizzo   B",
+        "Volley Club Nicotera    A",
+        "Todosport B"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1213",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Lory Volley Pizzo   B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1213",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Lory Volley Pizzo   B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1214",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Todosport B",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1214",
+          "data": "Dom 14/06/2026 09.00",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Todosport B",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1215",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Lory Volley Pizzo   B",
+          "ospite": "Todosport B",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1215",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Lory Volley Pizzo   B",
+          "ospite": "Todosport B",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1216",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Volley Club Nicotera    A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1216",
+          "data": "Dom 14/06/2026 09.30",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Volley Club Nicotera    A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1217",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Todosport B",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1217",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Tonno Callipo  A",
+          "ospite": "Todosport B",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1218",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Lory Volley Pizzo   B",
+          "ospite": "Volley Club Nicotera    A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1218",
+          "data": "Dom 14/06/2026 10.00",
+          "casa": "Lory Volley Pizzo   B",
+          "ospite": "Volley Club Nicotera    A",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 WHITE MISTO",
+      "girone": "Girone D1",
+      "id": 63519,
+      "nome": "VOLLEY S3 WHITE MISTO  - Girone D1",
+      "url": "https://fipavonline.it/main/gare_girone/63519",
+      "squadre": [
+        "Del Core Volley Academy/1",
+        "Canale Group Rc 1",
+        "Pallavolo S.ilario 2",
+        "Del Core Volley Academy/3",
+        "Del Core Volley Academy/4"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 800",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Canale Group Rc 1",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 800",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Canale Group Rc 1",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 801",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Pallavolo S.ilario 2",
+          "ospite": "Del Core Volley Academy/3",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 801",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Pallavolo S.ilario 2",
+          "ospite": "Del Core Volley Academy/3",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 802",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Canale Group Rc 1",
+          "ospite": "Del Core Volley Academy/4",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 802",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Canale Group Rc 1",
+          "ospite": "Del Core Volley Academy/4",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 803",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Del Core Volley Academy/3",
+          "ospite": "Del Core Volley Academy/1",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 803",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Del Core Volley Academy/3",
+          "ospite": "Del Core Volley Academy/1",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 804",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "Del Core Volley Academy/4",
+          "ospite": "Pallavolo S.ilario 2",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 804",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "Del Core Volley Academy/4",
+          "ospite": "Pallavolo S.ilario 2",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 805",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "Del Core Volley Academy/3",
+          "ospite": "Canale Group Rc 1",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 805",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "Del Core Volley Academy/3",
+          "ospite": "Canale Group Rc 1",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 806",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Pallavolo S.ilario 2",
+          "ospite": "Del Core Volley Academy/1",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 806",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Pallavolo S.ilario 2",
+          "ospite": "Del Core Volley Academy/1",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 807",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Del Core Volley Academy/4",
+          "ospite": "Del Core Volley Academy/3",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 807",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Del Core Volley Academy/4",
+          "ospite": "Del Core Volley Academy/3",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 808",
+          "data": "Ven 26/06/2026 18.00",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Del Core Volley Academy/4",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 808",
+          "data": "Ven 26/06/2026 18.00",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Del Core Volley Academy/4",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 809",
+          "data": "Ven 26/06/2026 18.00",
+          "casa": "Canale Group Rc 1",
+          "ospite": "Pallavolo S.ilario 2",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 809",
+          "data": "Ven 26/06/2026 18.00",
+          "casa": "Canale Group Rc 1",
+          "ospite": "Pallavolo S.ilario 2",
+          "risultato": "2-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 GREEN  MISTO",
+      "girone": "Girone E1",
+      "id": 63520,
+      "nome": "VOLLEY S3 GREEN  MISTO  - Girone E1",
+      "url": "https://fipavonline.it/main/gare_girone/63520",
+      "squadre": [
+        "Del Core Volley Academy/3",
+        "Ssd Pol.d.gi.a.re. Rl/b",
+        "Canale Group Reggio Calabria-3"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 810",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Del Core Volley Academy/3",
+          "ospite": "Ssd Pol.d.gi.a.re. Rl/b",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 810",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Del Core Volley Academy/3",
+          "ospite": "Ssd Pol.d.gi.a.re. Rl/b",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 811",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Canale Group Reggio Calabria-3",
+          "ospite": "Del Core Volley Academy/3",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 811",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Canale Group Reggio Calabria-3",
+          "ospite": "Del Core Volley Academy/3",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 812",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "Ssd Pol.d.gi.a.re. Rl/b",
+          "ospite": "Canale Group Reggio Calabria-3",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 812",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "Ssd Pol.d.gi.a.re. Rl/b",
+          "ospite": "Canale Group Reggio Calabria-3",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 GREEN  MISTO",
+      "girone": "Girone E2",
+      "id": 63521,
+      "nome": "VOLLEY S3 GREEN  MISTO  - Girone E2",
+      "url": "https://fipavonline.it/main/gare_girone/63521",
+      "squadre": [
+        "Ssd Pol.d.gi.a.re. Rl/a",
+        "Cav Gallico",
+        "Del Core Volley Academy/1",
+        "Pallavolo S.ilario 1"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 813",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Ssd Pol.d.gi.a.re. Rl/a",
+          "ospite": "Cav Gallico",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 813",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Ssd Pol.d.gi.a.re. Rl/a",
+          "ospite": "Cav Gallico",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 814",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Pallavolo S.ilario 1",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 814",
+          "data": "Ven 26/06/2026 15.30",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Pallavolo S.ilario 1",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 815",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Ssd Pol.d.gi.a.re. Rl/a",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 815",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Del Core Volley Academy/1",
+          "ospite": "Ssd Pol.d.gi.a.re. Rl/a",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 816",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Cav Gallico",
+          "ospite": "Pallavolo S.ilario 1",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 816",
+          "data": "Ven 26/06/2026 16.00",
+          "casa": "Cav Gallico",
+          "ospite": "Pallavolo S.ilario 1",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 817",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Pallavolo S.ilario 1",
+          "ospite": "Ssd Pol.d.gi.a.re. Rl/a",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 817",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Pallavolo S.ilario 1",
+          "ospite": "Ssd Pol.d.gi.a.re. Rl/a",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 818",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Cav Gallico",
+          "ospite": "Del Core Volley Academy/1",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 818",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Cav Gallico",
+          "ospite": "Del Core Volley Academy/1",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 RED FEMMINILE",
+      "girone": "Girone C1",
+      "id": 63522,
+      "nome": "VOLLEY S3 RED FEMMINILE  - Girone C1",
+      "url": "https://fipavonline.it/main/gare_girone/63522",
+      "squadre": [
+        "A.s.d. Del Core Volley Academy/b",
+        "Volley Frecce Azzurre/1",
+        "Pallavolo S.ilario",
+        "A.s.d. Del Core Volley Academy/a"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 819",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "A.s.d. Del Core Volley Academy/b",
+          "ospite": "Volley Frecce Azzurre/1",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 819",
+          "data": "Ven 26/06/2026 16.30",
+          "casa": "A.s.d. Del Core Volley Academy/b",
+          "ospite": "Volley Frecce Azzurre/1",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 820",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Pallavolo S.ilario",
+          "ospite": "A.s.d. Del Core Volley Academy/a",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 820",
+          "data": "Ven 26/06/2026 17.00",
+          "casa": "Pallavolo S.ilario",
+          "ospite": "A.s.d. Del Core Volley Academy/a",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 821",
+          "data": "Ven 26/06/2026 17.30",
+          "casa": "Pallavolo S.ilario",
+          "ospite": "A.s.d. Del Core Volley Academy/b",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 821",
+          "data": "Ven 26/06/2026 17.30",
+          "casa": "Pallavolo S.ilario",
+          "ospite": "A.s.d. Del Core Volley Academy/b",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 822",
+          "data": "Ven 26/06/2026 18.00",
+          "casa": "Volley Frecce Azzurre/1",
+          "ospite": "A.s.d. Del Core Volley Academy/a",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 822",
+          "data": "Ven 26/06/2026 18.00",
+          "casa": "Volley Frecce Azzurre/1",
+          "ospite": "A.s.d. Del Core Volley Academy/a",
+          "risultato": "2-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 823",
+          "data": "Ven 26/06/2026 18.30",
+          "casa": "A.s.d. Del Core Volley Academy/a",
+          "ospite": "A.s.d. Del Core Volley Academy/b",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 823",
+          "data": "Ven 26/06/2026 18.30",
+          "casa": "A.s.d. Del Core Volley Academy/a",
+          "ospite": "A.s.d. Del Core Volley Academy/b",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 824",
+          "data": "Ven 26/06/2026 19.00",
+          "casa": "Volley Frecce Azzurre/1",
+          "ospite": "Pallavolo S.ilario",
+          "risultato": "0-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 824",
+          "data": "Ven 26/06/2026 19.00",
+          "casa": "Volley Frecce Azzurre/1",
+          "ospite": "Pallavolo S.ilario",
+          "risultato": "0-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Categoria GREEN",
+      "girone": "Girone I",
+      "id": 63526,
+      "nome": "Categoria GREEN  - Girone I",
+      "url": "https://fipavonline.it/main/gare_girone/63526",
+      "squadre": [
+        "Volley Club Nicotera    A",
+        "Lory Volley Pizzo    A",
+        "Fiamma Monterosso A"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1220",
+          "data": "Dom 28/06/2026 09.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1220",
+          "data": "Dom 28/06/2026 09.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Lory Volley Pizzo    A",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1221",
+          "data": "Dom 28/06/2026 10.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Fiamma Monterosso A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1221",
+          "data": "Dom 28/06/2026 10.00",
+          "casa": "Lory Volley Pizzo    A",
+          "ospite": "Fiamma Monterosso A",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1222",
+          "data": "Dom 28/06/2026 10.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Fiamma Monterosso A",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1222",
+          "data": "Dom 28/06/2026 10.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Fiamma Monterosso A",
+          "risultato": "2-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Categoria RED",
+      "girone": "girone C",
+      "id": 63527,
+      "nome": "Categoria RED  - girone C",
+      "url": "https://fipavonline.it/main/gare_girone/63527",
+      "squadre": [
+        "Volley Club Nicotera    A",
+        "Volley Club Nicotera    B",
+        "Fiamma Monterosso"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1223",
+          "data": "Dom 28/06/2026 09.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Volley Club Nicotera    B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1223",
+          "data": "Dom 28/06/2026 09.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Volley Club Nicotera    B",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1224",
+          "data": "Dom 28/06/2026 10.00",
+          "casa": "Volley Club Nicotera    B",
+          "ospite": "Fiamma Monterosso",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1224",
+          "data": "Dom 28/06/2026 10.00",
+          "casa": "Volley Club Nicotera    B",
+          "ospite": "Fiamma Monterosso",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1225",
+          "data": "Dom 28/06/2026 10.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Fiamma Monterosso",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1225",
+          "data": "Dom 28/06/2026 10.30",
+          "casa": "Volley Club Nicotera    A",
+          "ospite": "Fiamma Monterosso",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    }
+  ]
+}

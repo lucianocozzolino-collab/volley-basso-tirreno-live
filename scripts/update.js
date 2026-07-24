@@ -1,61 +1,257 @@
 const fs = require("fs");
+const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const STAGIONE = process.argv[2] || "ALL";
+const STAGIONE = process.argv[2] || "2026-2027";
 
-async function leggiLinkBassoTirreno(browser) {
+const RANGE = {
+  ALL: {
+    min: 59700,
+    max: 61600
+  },
+
+  "2026-2027": {
+    min: 59700,
+    max: 61600
+  },
+
+  "2025-2026": {
+    min: 59700,
+    max: 61600
+  },
+
+  "2024-2025": {
+    min: 59700,
+    max: 61600
+  }
+};
+
+if (!RANGE[STAGIONE]) {
+  console.error(`Stagione non supportata: ${STAGIONE}`);
+  process.exit(1);
+}
+
+const ID_MIN = RANGE[STAGIONE].min;
+const ID_MAX = RANGE[STAGIONE].max;
+
+async function leggiGirone(id, browser) {
 
   const page = await browser.newPage();
 
-  await page.goto(
-    "https://fipavonline.it/main/tutti_i_campionati/10M52#13873",
-    {
-      waitUntil: "domcontentloaded",
-      timeout: 30000
-    }
-  );
+  try {
 
-  console.log(
-    "Pagina caricata, attendo caricamento JS..."
-  );
+    const url =
+      `https://fipavonline.it/main/gare_girone/${id}/1`;
 
-  await page.waitForTimeout(5000);
-
-  const html =
-    await page.content();
-
-  fs.mkdirSync(
-    "data",
-    {
-      recursive: true
-    }
-  );
-
-  fs.writeFileSync(
-    "data/debug.html",
-    html,
-    "utf8"
-  );
-
-  console.log(
-    `HTML salvato: ${html.length} caratteri`
-  );
-
-  const links =
-    await page.$$eval(
-      'a[href*="gare_girone"]',
-      els => els.map(
-        el => el.href
-      )
+    await page.goto(
+      url,
+      {
+        waitUntil: "domcontentloaded",
+        timeout: 10000
+      }
     );
 
-  console.log(
-    `Link trovati: ${links.length}`
-  );
+    const html =
+      await page.content();
 
-  await page.close();
+    const $ =
+      cheerio.load(html);
 
-  return links;
+    const titoloCompleto =
+      $(".h3-wrap")
+        .first()
+        .text()
+        .trim();
+
+    if (!titoloCompleto) {
+      return null;
+    }
+
+    const nomeGirone =
+      titoloCompleto
+        .split("/")
+        .shift()
+        .trim();
+
+    const campionato =
+      nomeGirone
+        .replace(
+          /\s*-\s*Girone\s+[A-Z0-9]+.*/i,
+          ""
+        )
+        .trim();
+
+    const match =
+      nomeGirone.match(
+        /Girone\s+[A-Z0-9]+/i
+      );
+
+    const girone =
+      match
+        ? match[0]
+        : "";
+
+    const squadreSet =
+      new Set();
+
+    $(".sq-nLong").each((i, el) => {
+
+      const squadra =
+        $(el)
+          .text()
+          .trim();
+
+      if (
+        squadra &&
+        squadra !== "Riposa"
+      ) {
+
+        squadreSet.add(
+          squadra
+        );
+
+      }
+
+    });
+
+    if (
+      !campionato ||
+      squadreSet.size === 0
+    ) {
+      return null;
+    }
+
+    const calendario =
+      [];
+
+    $(".risultati").each((i, gara) => {
+
+      const numero =
+        $(gara)
+          .find(".info-gara-giornata")
+          .first()
+          .text()
+          .trim();
+
+      if (!numero) {
+        return;
+      }
+
+      const squadre =
+        $(gara)
+          .find(".sq-nLong");
+
+      if (
+        squadre.length < 2
+      ) {
+        return;
+      }
+
+      const risultato =
+        $(gara)
+          .find(".s-scoreText")
+          .first()
+          .text()
+          .trim();
+
+      const setParziali =
+        $(gara)
+          .find(".s-scoreDett")
+          .first()
+          .text()
+          .trim();
+
+      calendario.push({
+
+        gara: numero,
+
+        data:
+          $(gara)
+            .find(".info-gara-data")
+            .first()
+            .text()
+            .trim(),
+
+        casa:
+          $(squadre[0])
+            .text()
+            .trim(),
+
+        ospite:
+          $(squadre[1])
+            .text()
+            .trim(),
+
+        risultato,
+
+        set:
+          setParziali || ""
+
+      });
+
+    });
+
+    const viste =
+      new Set();
+
+    const calendarioPulito =
+      calendario.filter(g => {
+
+        const chiave =
+          [
+            g.gara,
+            g.data,
+            g.casa,
+            g.ospite
+          ].join("|");
+
+        if (
+          viste.has(chiave)
+        ) {
+          return false;
+        }
+
+        viste.add(chiave);
+
+        return true;
+
+      });
+
+    return {
+
+      stagione:
+        STAGIONE,
+
+      campionato,
+
+      girone,
+
+      id,
+
+      nome:
+        nomeGirone,
+
+      url,
+
+      squadre:
+        Array.from(
+          squadreSet
+        ),
+
+      calendario:
+        calendarioPulito
+
+    };
+
+  } catch {
+
+    return null;
+
+  } finally {
+
+    await page.close();
+
+  }
 
 }
 
@@ -66,28 +262,77 @@ async function leggiLinkBassoTirreno(browser) {
       headless: true
     });
 
+  const gironi = [];
+
   console.log(
-    "Lettura gironi CT Basso Tirreno..."
+    `Range ID ${ID_MIN}-${ID_MAX}`
   );
 
-  const links =
-    await leggiLinkBassoTirreno(
-      browser
+  for (
+    let id = ID_MIN;
+    id <= ID_MAX;
+    id++
+  ) {
+
+    if (id % 50 === 0) {
+
+      console.log(
+        `Analizzo ID ${id}`
+      );
+
+    }
+
+    const dati =
+      await leggiGirone(
+        id,
+        browser
+      );
+
+    if (
+      dati &&
+      dati.nome &&
+      dati.campionato
+    ) {
+
+      gironi.push(
+        dati
+      );
+
+      console.log(
+        `Trovato ${id} - ${dati.nome}`
+      );
+
+    }
+
+  }
+
+  const idsTrovati =
+    gironi.map(
+      g => g.id
     );
 
-  console.log(
-    "Link trovati:"
-  );
+  if (
+    idsTrovati.length > 0
+  ) {
 
-  console.log(
-    JSON.stringify(
-      links,
-      null,
-      2
-    )
-  );
+    console.log(
+      `MIN ID TROVATO: ${Math.min(...idsTrovati)}`
+    );
+
+    console.log(
+      `MAX ID TROVATO: ${Math.max(...idsTrovati)}`
+    );
+
+  }
 
   await browser.close();
+
+  fs.mkdirSync(
+    "data",
+    {
+      recursive: true
+    }
+  );
 
   fs.writeFileSync(
     `data/${STAGIONE}.json`,
@@ -96,8 +341,8 @@ async function leggiLinkBassoTirreno(browser) {
         aggiornamento:
           new Date().toISOString(),
         totale:
-          links.length,
-        links
+          gironi.length,
+        gironi
       },
       null,
       2
@@ -106,7 +351,7 @@ async function leggiLinkBassoTirreno(browser) {
   );
 
   console.log(
-    `Salvati ${links.length} link`
+    `Salvati ${gironi.length} gironi`
   );
 
 })();

@@ -11,14 +11,34 @@ async function leggiLinkBassoTirreno(browser) {
   await page.goto(
     "https://fipavonline.it/main/tutti_i_campionati/10M52#13873",
     {
-      waitUntil: "networkidle",
+      waitUntil: "domcontentloaded",
       timeout: 30000
     }
   );
 
-  const links = await page.$$eval(
-    'a[href*="gare_girone"]',
-    els => els.map(el => el.href)
+  console.log(
+    "Pagina caricata, attendo caricamento JS..."
+  );
+
+  await page.waitForTimeout(5000);
+
+  const html =
+    await page.content();
+
+  fs.writeFileSync(
+    "debug.html",
+    html,
+    "utf8"
+  );
+
+  const links =
+    await page.$$eval(
+      'a[href*="gare_girone"]',
+      els => els.map(el => el.href)
+    );
+
+  console.log(
+    `Link trovati: ${links.length}`
   );
 
   await page.close();
@@ -33,9 +53,11 @@ async function leggiLinkBassoTirreno(browser) {
       );
 
     if (match) {
+
       ids.push(
         Number(match[1])
       );
+
     }
 
   }

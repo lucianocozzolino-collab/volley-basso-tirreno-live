@@ -337,21 +337,22 @@ async function leggiGirone(id, browser) {
     }
   );
 
-  fs.writeFileSync(
-    `data/${STAGIONE}.json`,
-    JSON.stringify(
-      {
-        aggiornamento:
-          new Date().toISOString(),
-        totale:
-          gironi.length,
-        gironi
-      },
-      null,
-      2
-    ),
-    "utf8"
-  );
+fs.mkdirSync(
+  "data",
+  {
+    recursive: true
+  }
+);
+
+fs.writeFileSync(
+  "data/debug.html",
+  html,
+  "utf8"
+);
+
+console.log(
+  `HTML salvato: ${html.length} caratteri`
+);
 
   console.log(
     `Salvati ${gironi.length} gironi`

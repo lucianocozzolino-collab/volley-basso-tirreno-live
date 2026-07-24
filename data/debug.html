@@ -1,0 +1,345 @@
+<!DOCTYPE html><html><head>
+		<title>Main</title>
+                    <meta name="apple-itunes-app" content="app-id=500653920">
+        		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001">
+
+		<!--  custom  -->
+		<style type="text/css">
+			.content .span3 {
+		    	margin-left:28px;
+		    }
+		</style>
+		<!-- Bootstrap -->
+		<style>.file-input-wrapper { overflow: hidden; position: relative; cursor: pointer; z-index: 1; }.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover { position: absolute; top: 0; left: 0; cursor: pointer; opacity: 0; filter: alpha(opacity=0); z-index: 99; outline: 0; }.file-input-name { margin-left: 8px; }</style><link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- Bootstrap responsive -->
+		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/css/docs.css?v=2.17062026" rel="stylesheet">
+        <link href="/css/chosen.css" rel="stylesheet">
+        <link href="/css/sphinix.css" rel="stylesheet">
+        
+            <link href="https://fipavonline.it/live/css/copyright.css?v=2.17062026" rel="stylesheet">
+                <link href="/css/theme.css?v=2.17062026" rel="stylesheet">
+        <link href="/css/jquery.datetimepicker.css" rel="stylesheet">
+        
+        
+
+
+
+</head>
+<!--	<body>-->
+
+<body data-spy="scroll" data-offset="40" data-target="#follow-scroll" class="no-navbar" style="">
+<!--<div class="loader"></div>-->
+        <div class="container">
+            <div class="content header-logo">
+                <div>
+                                                <img src="/img/loghi/mvbt2.png" class="official-logo">
+                                            <div class="desc-comitato">
+                        <p class="text-info text-right"><label><strong>Minivolley BASSO TIRRENO</strong></label></p>
+                        <p class="text-info text-right mb1"><label class="mb1"><em>Via Malagoli n. 12 56124 Pisa</em></label></p>
+                        <p class="text-info text-right mb1"><label class="mb1"><em>0586863040</em></label></p>
+                        <p class="text-info text-right mb1"><label class="mb1"><em>e-mail: volleys3.bassotirreno@federvolley.it</em></label></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="container-fluid public-nav-wrap affix-top" data-spy="affix" data-offset-top="110">
+    <div class="barra-benvenuto no-mobile" style="margin-bottom: 0px">
+        <div class="container">
+            <span class="span4 pull-left desc-txt-comitato">Minivolley BASSO TIRRENO</span>
+            <span class="span4 pull-left"><a style="color:white" href="https://corsi.fipavonline.it">CORSI ALLENATORI</a></span>
+
+<!--                    <span class="span4 pull-left"><a style="color:white" href="--><!--">CORSI ALLENATORI</a></span>-->
+
+
+
+            <span class="span3 pull-right" style="padding-right:25px !important;">
+                <a class="pull-right login-btn" href="/login/">LOGIN</a>
+<!--                <a class="pull-right login-btn" href="/home/"><span class="icon-white icon-th"></span> </a>-->
+                <a class="pull-right login-btn" href="/home.html"><span class="icon-white icon-th"></span> </a>
+            </span>
+        </div>
+    </div>
+    <div class="barra-benvenuto nav-mobile solo-mobile ">
+        <ul class="nav nav-pills" style="margin-bottom: 1px">
+            <li><a class="blue" href="/home/"><span class="glyphicon glyphicon-th"></span> </a></li>
+            <li class="dropdown pull-right" role="menu">
+                <a class="dropdown-toggle blue" data-toggle="dropdown" href="#">
+                    Campionati <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                        <li class="active"><a href="/live/">Gare di oggi</a></li>
+
+                    
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="container barra-date-gare no-mobile" id="follow-scroll">
+        <ul class="nav nav-pills" style="padding-left:25px;padding-right: 25px !important;">
+                            <li class="active"><a href="/live/">Gare di oggi</a></li>
+
+                    </ul>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="span3 bs-docs-sidebar" id="follow-scroll">
+            <ul id="div_elenco_tornei" data-spy="affix" data-offset-top="80px" class="nav nav-list bs-docs-sidenav header-visible affix">
+            <li style="text-align: center;font-weight: bold"><a class="cliccable" id="stampe_per_date"> Filtro gare</a></li>
+    <li class="active dropdown"><a class="dropdown-toggle text-center " data-toggle="dropdown" href="#”"><strong>Stagione 2026/2027</strong></a><ul class="dropdown-menu"><li><a class="cliccable" href="/main/cambia_stagione/21/tutti_i_campionati">Stagione 2026/2027</a></li><li><a class="cliccable" href="/main/cambia_stagione/20/tutti_i_campionati">Stagione 2025/2026</a></li><li><a class="cliccable" href="/main/cambia_stagione/19/tutti_i_campionati">Stagione 2024/2025</a></li><li><a class="cliccable" href="/main/cambia_stagione/18/tutti_i_campionati">Stagione 2023/2024</a></li><li><a class="cliccable" href="/main/cambia_stagione/17/tutti_i_campionati">Stagione 2022/2023</a></li><li><a class="cliccable" href="/main/cambia_stagione/16/tutti_i_campionati">Stagione 2021/2022</a></li><li><a class="cliccable" href="/main/cambia_stagione/15/tutti_i_campionati">Stagione 2020/2021</a></li><li><a class="cliccable" href="/main/cambia_stagione/14/tutti_i_campionati">Stagione 2019/2020</a></li><li><a class="cliccable" href="/main/cambia_stagione/13/tutti_i_campionati">Stagione 2018/2019</a></li><li><a class="cliccable" href="/main/cambia_stagione/12/tutti_i_campionati">Stagione 2017/2018</a></li><li><a class="cliccable" href="/main/cambia_stagione/11/tutti_i_campionati">Stagione 2016/2017</a></li></ul></li>            <li class="cliccable active">
+                <a data-idx="15168" href="#15168"><i class="icon-chevron-right"></i> Volley S3 White Femminile</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15169" href="#15169"><i class="icon-chevron-right"></i> Volley S3 White Maschile</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15170" href="#15170"><i class="icon-chevron-right"></i> Volley S3 White Misto</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15171" href="#15171"><i class="icon-chevron-right"></i> Volley S3 Green Femminile</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15151" href="#15151"><i class="icon-chevron-right"></i> Volley S3 Green Maschile</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15173" href="#15173"><i class="icon-chevron-right"></i> Volley S3 Green Misto</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15160" href="#15160"><i class="icon-chevron-right"></i> Volley S3 RED Femminile</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15174" href="#15174"><i class="icon-chevron-right"></i> Volley S3 RED Maschile</a>
+            </li>
+
+                <li class="cliccable">
+                <a data-idx="15162" href="#15162"><i class="icon-chevron-right"></i> Volley S3 RED Misto</a>
+            </li>
+
+    </ul>
+        </div>
+        <div class="span9">
+                                    <section id="15168">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15168">Volley S3 White Femminile</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15169">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15169">Volley S3 White Maschile</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15170">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15170">Volley S3 White Misto</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15171">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15171">Volley S3 Green Femminile</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15151">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15151">Volley S3 Green Maschile</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15173">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15173">Volley S3 Green Misto</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15160">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15160">Volley S3 RED Femminile</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15174">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15174">Volley S3 RED Maschile</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>                        <section id="15162">
+
+                            <div class="page-header">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h2 class="mb1 " id="edit_torneo" data-idx="15162">Volley S3 RED Misto</h2>
+                                    </div>
+
+                                </div>
+                                                            </div>
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+
+                         </ul></div></section>        </div>
+    </div>
+</div>
+
+
+
+
+<!-- loading dialog -->
+<div id="alert_loading" class="modal hide " tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-body">
+        <div id="alert_loading_label"></div>
+        <div class="progress progress-striped active">
+            <div class="bar" style="width: 100%;"></div>
+        </div>
+    </div>
+
+</div>
+
+<div id="modal_edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="me_lbl_intesta" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="me_lbl_intesta"></h4>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-danger hidden">Elimina</button>
+        <button class="btn pull-left" data-dismiss="modal" aria-hidden="true">Chiudi</button>
+        <button class="btn btn-primary">Applica</button>
+    </div>
+</div>
+
+
+<div id="alert_modal" class="modal hide " tabindex="-1" role="dialog" aria-labelledby="ma_lbl_intesta" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="ma_lbl_intesta">ATTENZIONE</h3>
+    </div>
+    <div class="modal-body">
+        <p></p>
+    </div>
+    <div class="modal-footer">
+        <input type="hidden" id="url_ok">
+        <input type="hidden" id="url_annulla">
+        <button id="btn_dismiss_modal" class="btn pull-left" data-dismiss="modal" aria-hidden="true">Annulla</button>
+        <button id="btn_url_annulla" class="btn btn-primary">Avanti</button>
+
+        <button id="btn_forza_elaborazione" class="btn btn-danger">Elabora</button>
+    </div>
+</div>
+
+
+    <div class="wrapper">
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="text">
+                    <p style="margin-bottom: 0px;">© Copyright Manufacturing Point Software s.r.l. PIVA: 02888940786 - tutti i diritti riservati  -  <strong><a target="_blank" href="/infoPrivacy.html">Privacy &amp; Cookie</a></strong></p>
+                    <p style="margin-bottom: 0px;">Manufacturing Point software e la Federazione Italiana Pallavolo si impegnano attivamente a proteggere i propri dati dall'accesso non autorizzato attraverso il web scraping. </p>
+                    <p style="margin-bottom: 0px;">Qualsiasi tentativo di acquisire informazioni senza autorizzazione sarà considerato una violazione delle politiche di tutela dei dati e dei dati personali e sarà perseguito legalmente.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+
+
+        <script src="/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+                        var base_url    = 'https://fipavonline.it/';
+            var userToken   = '';
+            sessionStorage.userToken = userToken;
+                    </script>
+
+        <script src="/js/common.js?v=2.17062026"></script>
+        <script src="/js/GMapsObj.js?v=2.17062026"></script>
+        
+                    <script src="/js/main_view.js?v=2.17062026"></script>
+                    <script src="/js/bootstrap.file-input.js?v=2.17062026"></script>
+        
+
+
+
+	
+</body></html>

@@ -50,6 +50,12 @@ jobs:
         run: |
           echo "Aggiorno stagione ${{ steps.stagione.outputs.stagione }}"
           node scripts/update.js "${{ steps.stagione.outputs.stagione }}"
+          
+      - name: Carica debug
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-html
+          path: data/debug.html
 
       - name: Merge archivio
         run: node scripts/merge.js

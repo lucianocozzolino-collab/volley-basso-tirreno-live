@@ -60,9 +60,11 @@ function caricaAnni() {
   anni.forEach(anno => {
 
     select.innerHTML += `
+
       <option value="${anno}">
         ${anno}
       </option>
+
     `;
 
   });
@@ -102,9 +104,11 @@ function aggiornaCampionati() {
   campionati.forEach(c => {
 
     select.innerHTML += `
+
       <option value="${c}">
         ${c}
       </option>
+
     `;
 
   });
@@ -128,26 +132,27 @@ function aggiornaGironi() {
 
   datiGlobali.gironi
 
-    .filter(g =>
-
-      g.stagione === anno &&
-      g.campionato === campionato
-
+    .filter(
+      g =>
+        g.stagione === anno &&
+        g.campionato === campionato
     )
 
-    .sort((a,b) =>
-      (a.girone || "")
-      .localeCompare(
-        b.girone || ""
-      )
+    .sort(
+      (a, b) =>
+        (a.girone || "").localeCompare(
+          b.girone || ""
+        )
     )
 
     .forEach(g => {
 
       select.innerHTML += `
+
         <option value="${g.id}">
           ${g.girone}
         </option>
+
       `;
 
     });
@@ -176,13 +181,17 @@ function aggiornaSquadre() {
   if (!girone) return;
 
   girone.squadre
+
     .sort()
+
     .forEach(s => {
 
       select.innerHTML += `
+
         <option value="${s}">
           ${s}
         </option>
+
       `;
 
     });
@@ -209,12 +218,10 @@ function visualizzaSquadra() {
   if (!girone) return;
 
   const gare =
-
-    girone.calendario.filter(g =>
-
-      g.casa === squadra ||
-      g.ospite === squadra
-
+    girone.calendario.filter(
+      g =>
+        g.casa === squadra ||
+        g.ospite === squadra
     );
 
   let html = `
@@ -223,9 +230,7 @@ function visualizzaSquadra() {
 
       <h2>${squadra}</h2>
 
-      <p>
-        ${girone.nome}
-      </p>
+      <p>${girone.nome}</p>
 
     </div>
 
@@ -239,34 +244,95 @@ function visualizzaSquadra() {
 
       <div class="card">
 
-        <strong>${g.gara}</strong>
+        <div style="
+          color:#666;
+          font-size:13px;
+          margin-bottom:10px;
+        ">
+          <strong>${g.gara}</strong><br>
+          ${g.data}
+        </div>
 
-        <br>
+        <div style="
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          gap:15px;
+          flex-wrap:wrap;
+        ">
 
-        📅 ${g.data}
+          <div style="
+            flex:1;
+            display:flex;
+            align-items:center;
+            gap:10px;
+          ">
 
-        <br>
+            img/no-logo.png'}"
+              style="
+                width:50px;
+                height:50px;
+                object-fit:contain;
+                border-radius:50%;
+                background:white;
+              "
+              onerror="this.src='img/no-logo.png'"
+            >
 
-        🏠 ${g.casa}
+            <div>
+              ${g.casa}
+            </div>
 
-        <br>
+          </div>
 
-        🆚
+          <div style="
+            font-size:26px;
+            font-weight:700;
+            color:#0057b8;
+            min-width:80px;
+            text-align:center;
+          ">
 
-        <br>
+            ${g.risultato || "-"}
 
-        🚍 ${g.ospite}
+          </div>
 
-        <br>
+          <div style="
+            flex:1;
+            display:flex;
+            justify-content:flex-end;
+            align-items:center;
+            gap:10px;
+          ">
 
-        
-      ✅ ${g.risultato || ""}
+            <div>
+              ${g.ospite}
+            </div>
 
-      <br>
+            g.logoOspite || 'img/no-logo.png'}"
+              style="
+                width:50px;
+                height:50px;
+                object-fit:contain;
+                border-radius:50%;
+                background:white;
+              "
+              onerror="this.src='img/no-logo.png'"
+            >
 
-      🏐 Set:
-      ${g.set || "-"}
+          </div>
 
+        </div>
+
+        <div style="
+          margin-top:10px;
+          font-size:13px;
+        ">
+
+          🏐 Set:
+          ${g.set || "-"}
+
+        </div>
 
       </div>
 

@@ -19,11 +19,13 @@ permissions:
 
 jobs:
   update:
+
     runs-on: ubuntu-latest
 
     timeout-minutes: 360
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -50,12 +52,13 @@ jobs:
         run: |
           echo "Aggiorno stagione ${{ steps.stagione.outputs.stagione }}"
           node scripts/update.js "${{ steps.stagione.outputs.stagione }}"
-          
+
       - name: Carica debug
         uses: actions/upload-artifact@v4
         with:
           name: debug-html
           path: data/debug.html
+        continue-on-error: true
 
       - name: Merge archivio
         run: node scripts/merge.js
@@ -69,4 +72,6 @@ jobs:
 
           git diff --staged --quiet || git commit -m "Aggiornamento FIPAV ${{ steps.stagione.outputs.stagione }}"
 
-          git push
+          git pull --rebase origin main
+
+          git push origin main

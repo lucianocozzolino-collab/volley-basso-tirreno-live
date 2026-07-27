@@ -34,6 +34,31 @@ if (!RANGE[STAGIONE]) {
 const ID_MIN = RANGE[STAGIONE].min;
 const ID_MAX = RANGE[STAGIONE].max;
 
+function calcolaStagione(dataGara) {
+
+  const match =
+    dataGara.match(
+      /(\d{2})\/(\d{2})\/(\d{4})/
+    );
+
+  if (!match) {
+    return STAGIONE;
+  }
+
+  const mese =
+    parseInt(match[2], 10);
+
+  const anno =
+    parseInt(match[3], 10);
+
+  if (mese >= 7) {
+    return `${anno}-${anno + 1}`;
+  }
+
+  return `${anno - 1}-${anno}`;
+
+}
+
 async function leggiGirone(id, browser) {
 
   const page = await browser.newPage();
@@ -217,10 +242,20 @@ async function leggiGirone(id, browser) {
 
       });
 
-    return {
+const primaData =
+  calendarioPulito.length > 0
+    ? calendarioPulito[0].data
+    : "";
 
-      stagione:
-        STAGIONE,
+const stagioneReale =
+  calcolaStagione(
+    primaData
+  );
+
+return {
+
+  stagione:
+    stagioneReale,
 
       campionato,
 

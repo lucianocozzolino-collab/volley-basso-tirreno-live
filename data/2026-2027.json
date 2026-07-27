@@ -1,7 +1,2503 @@
 {
-  "aggiornamento": "2026-07-27T12:33:20.676Z",
-  "totale": 7,
+  "aggiornamento": "2026-07-27T14:54:12.246Z",
+  "totale": 14,
   "gironi": [
+    {
+      "stagione": "2026-2027",
+      "campionato": "Volley S3 Green",
+      "girone": "Girone D",
+      "id": 60839,
+      "nome": "Volley S3 Green  - Girone D",
+      "url": "https://fipavonline.it/main/gare_girone/60839",
+      "squadre": [
+        "Gt Sporting",
+        "Asd Gioco Sport",
+        "Asd Orion Volley",
+        "Asd Punto Sassari Volley"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1597",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1597",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1598",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Orion Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1598",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Orion Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1599",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Orion Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1599",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Orion Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1600",
+          "data": "Lun 02/03/2026 17.30",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Orion Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1600",
+          "data": "Lun 02/03/2026 17.30",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Orion Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1601",
+          "data": "Lun 02/03/2026 17.30",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1601",
+          "data": "Lun 02/03/2026 17.30",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1602",
+          "data": "Lun 02/03/2026 17.30",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1602",
+          "data": "Lun 02/03/2026 17.30",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1603",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1603",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1604",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1604",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1605",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1605",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1606",
+          "data": "-",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1606",
+          "data": "-",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1607",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1607",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1608",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1608",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1609",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1609",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1610",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1610",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1611",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1611",
+          "data": "-",
+          "casa": "Asd Orion Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1612",
+          "data": "Sab 28/03/2026 16.30",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1612",
+          "data": "Sab 28/03/2026 16.30",
+          "casa": "Asd Orion Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1613",
+          "data": "-",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Orion Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1613",
+          "data": "-",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Orion Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1614",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1614",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1615",
+          "data": "Gio 09/04/2026 16.30",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Orion Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1615",
+          "data": "Gio 09/04/2026 16.30",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Orion Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1616",
+          "data": "Gio 09/04/2026 16.30",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1616",
+          "data": "Gio 09/04/2026 16.30",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Gt Sporting",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1617",
+          "data": "Gio 09/04/2026 16.30",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Orion Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1617",
+          "data": "Gio 09/04/2026 16.30",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Orion Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1618",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1618",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Asd Punto Sassari Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1619",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1619",
+          "data": "-",
+          "casa": "Asd Gioco Sport",
+          "ospite": "Gt Sporting",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1620",
+          "data": "-",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1620",
+          "data": "-",
+          "casa": "Asd Punto Sassari Volley",
+          "ospite": "Asd Gioco Sport",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2026-2027",
+      "campionato": "Volley S3 Red",
+      "girone": "Girone B",
+      "id": 61122,
+      "nome": "Volley S3 Red  - Girone B",
+      "url": "https://fipavonline.it/main/gare_girone/61122",
+      "squadre": [
+        "Gt Sporting",
+        "Esperia Volley Rossa",
+        "Gs Ittiri Volley Giallo",
+        "Gs Ittiri Volley Blu"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1801",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1801",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1802",
+          "data": "-",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1802",
+          "data": "-",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1803",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1803",
+          "data": "-",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1804",
+          "data": "-",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1804",
+          "data": "-",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1805",
+          "data": "-",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1805",
+          "data": "-",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1806",
+          "data": "-",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1806",
+          "data": "-",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1807",
+          "data": "Mar 10/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1807",
+          "data": "Mar 10/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1808",
+          "data": "Mar 10/03/2026 19.00",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1808",
+          "data": "Mar 10/03/2026 19.00",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1809",
+          "data": "Mar 10/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gt Sporting",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1809",
+          "data": "Mar 10/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gt Sporting",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1810",
+          "data": "Gio 12/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gt Sporting",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1810",
+          "data": "Gio 12/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gt Sporting",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1811",
+          "data": "Gio 12/03/2026 19.00",
+          "casa": "Gt Sporting",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1811",
+          "data": "Gio 12/03/2026 19.00",
+          "casa": "Gt Sporting",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1812",
+          "data": "Gio 12/03/2026 19.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1812",
+          "data": "Gio 12/03/2026 19.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1813",
+          "data": "Dom 22/03/2026 11.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gt Sporting",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1813",
+          "data": "Dom 22/03/2026 11.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gt Sporting",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1814",
+          "data": "Dom 22/03/2026 11.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1814",
+          "data": "Dom 22/03/2026 11.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1815",
+          "data": "Dom 22/03/2026 11.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gt Sporting",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1815",
+          "data": "Dom 22/03/2026 11.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Gt Sporting",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1816",
+          "data": "Mar 31/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1816",
+          "data": "Mar 31/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Giallo",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1817",
+          "data": "Mar 31/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1817",
+          "data": "Mar 31/03/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1818",
+          "data": "Mar 31/03/2026 19.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1818",
+          "data": "Mar 31/03/2026 19.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1819",
+          "data": "Gio 09/04/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1819",
+          "data": "Gio 09/04/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1820",
+          "data": "Gio 09/04/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gt Sporting",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1820",
+          "data": "Gio 09/04/2026 19.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Gt Sporting",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1821",
+          "data": "Gio 09/04/2026 19.00",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1821",
+          "data": "Gio 09/04/2026 19.00",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Giallo",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1822",
+          "data": "Sab 11/04/2026 15.00",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1822",
+          "data": "Sab 11/04/2026 15.00",
+          "casa": "Gt Sporting",
+          "ospite": "Gs Ittiri Volley Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1823",
+          "data": "Sab 11/04/2026 15.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gt Sporting",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1823",
+          "data": "Sab 11/04/2026 15.00",
+          "casa": "Esperia Volley Rossa",
+          "ospite": "Gt Sporting",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1824",
+          "data": "Sab 11/04/2026 15.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1824",
+          "data": "Sab 11/04/2026 15.00",
+          "casa": "Gs Ittiri Volley Blu",
+          "ospite": "Esperia Volley Rossa",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2026-2027",
+      "campionato": "Volley S3 Red",
+      "girone": "Girone D",
+      "id": 61123,
+      "nome": "Volley S3 Red  - Girone D",
+      "url": "https://fipavonline.it/main/gare_girone/61123",
+      "squadre": [
+        "Asd Junior Volley",
+        "Asd Sunshine Sassari",
+        "Porto Torres Volley",
+        "Quadrifoglio Nera"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1825",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1825",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1826",
+          "data": "Mar 24/03/2026 16.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Porto Torres Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1826",
+          "data": "Mar 24/03/2026 16.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Porto Torres Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1827",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Porto Torres Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1827",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Porto Torres Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1828",
+          "data": "Mar 03/03/2026 16.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Porto Torres Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1828",
+          "data": "Mar 03/03/2026 16.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Porto Torres Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1829",
+          "data": "Mar 03/03/2026 16.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1829",
+          "data": "Mar 03/03/2026 16.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1830",
+          "data": "Mar 03/03/2026 16.30",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1830",
+          "data": "Mar 03/03/2026 16.30",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1831",
+          "data": "Mar 10/03/2026 17.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1831",
+          "data": "Mar 10/03/2026 17.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1832",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1832",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1833",
+          "data": "-",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1833",
+          "data": "-",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1834",
+          "data": "-",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1834",
+          "data": "-",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1835",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1835",
+          "data": "-",
+          "casa": "Asd Junior Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1836",
+          "data": "-",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1836",
+          "data": "-",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1837",
+          "data": "-",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1837",
+          "data": "-",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1838",
+          "data": "Mar 24/03/2026 16.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1838",
+          "data": "Mar 24/03/2026 16.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1839",
+          "data": "-",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1839",
+          "data": "-",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1840",
+          "data": "Lun 30/03/2026 17.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1840",
+          "data": "Lun 30/03/2026 17.30",
+          "casa": "Porto Torres Volley",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1841",
+          "data": "Lun 30/03/2026 17.30",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Porto Torres Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1841",
+          "data": "Lun 30/03/2026 17.30",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Porto Torres Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1842",
+          "data": "Lun 30/03/2026 17.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1842",
+          "data": "Lun 30/03/2026 17.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1843",
+          "data": "Mar 14/04/2026 17.00",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Porto Torres Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1843",
+          "data": "Mar 14/04/2026 17.00",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Porto Torres Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1844",
+          "data": "Mar 14/04/2026 17.00",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1844",
+          "data": "Mar 14/04/2026 17.00",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1845",
+          "data": "Mar 14/04/2026 17.00",
+          "casa": "Asd Junior Volley",
+          "ospite": "Porto Torres Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1845",
+          "data": "Mar 14/04/2026 17.00",
+          "casa": "Asd Junior Volley",
+          "ospite": "Porto Torres Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1846",
+          "data": "Lun 27/04/2026 18.30",
+          "casa": "Asd Junior Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1846",
+          "data": "Lun 27/04/2026 18.30",
+          "casa": "Asd Junior Volley",
+          "ospite": "Quadrifoglio Nera",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1847",
+          "data": "Lun 27/04/2026 18.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1847",
+          "data": "Lun 27/04/2026 18.30",
+          "casa": "Asd Sunshine Sassari",
+          "ospite": "Asd Junior Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1848",
+          "data": "Lun 27/04/2026 18.30",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1848",
+          "data": "Lun 27/04/2026 18.30",
+          "casa": "Quadrifoglio Nera",
+          "ospite": "Asd Sunshine Sassari",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2026-2027",
+      "campionato": "Under 18 FEMMINILE",
+      "girone": "Girone  DANESI",
+      "id": 61153,
+      "nome": "Under 18 FEMMINILE - Girone  DANESI",
+      "url": "https://fipavonline.it/main/gare_girone/61153",
+      "squadre": [
+        "Volley Bortigali",
+        "Asd Polisportiva Supramonte",
+        "Pvn Nuoro",
+        "Pallavolo Sedilo"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1230",
+          "data": "-",
+          "casa": "Volley Bortigali",
+          "ospite": "Asd Polisportiva Supramonte",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1230",
+          "data": "-",
+          "casa": "Volley Bortigali",
+          "ospite": "Asd Polisportiva Supramonte",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1231",
+          "data": "Ven 10/04/2026 18.00",
+          "casa": "Pvn Nuoro",
+          "ospite": "Pallavolo Sedilo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1231",
+          "data": "Ven 10/04/2026 18.00",
+          "casa": "Pvn Nuoro",
+          "ospite": "Pallavolo Sedilo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1232",
+          "data": "Dom 12/04/2026 18.30",
+          "casa": "Pvn Nuoro",
+          "ospite": "Volley Bortigali",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1232",
+          "data": "Dom 12/04/2026 18.30",
+          "casa": "Pvn Nuoro",
+          "ospite": "Volley Bortigali",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1233",
+          "data": "-",
+          "casa": "Asd Polisportiva Supramonte",
+          "ospite": "Pallavolo Sedilo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1233",
+          "data": "-",
+          "casa": "Asd Polisportiva Supramonte",
+          "ospite": "Pallavolo Sedilo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1234",
+          "data": "Lun 20/04/2026 18.00",
+          "casa": "Pallavolo Sedilo",
+          "ospite": "Volley Bortigali",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1234",
+          "data": "Lun 20/04/2026 18.00",
+          "casa": "Pallavolo Sedilo",
+          "ospite": "Volley Bortigali",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1235",
+          "data": "-",
+          "casa": "Asd Polisportiva Supramonte",
+          "ospite": "Pvn Nuoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1235",
+          "data": "-",
+          "casa": "Asd Polisportiva Supramonte",
+          "ospite": "Pvn Nuoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1236",
+          "data": "-",
+          "casa": "Asd Polisportiva Supramonte",
+          "ospite": "Volley Bortigali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1236",
+          "data": "-",
+          "casa": "Asd Polisportiva Supramonte",
+          "ospite": "Volley Bortigali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1237",
+          "data": "Gio 23/04/2026 19.30",
+          "casa": "Pallavolo Sedilo",
+          "ospite": "Pvn Nuoro",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1237",
+          "data": "Gio 23/04/2026 19.30",
+          "casa": "Pallavolo Sedilo",
+          "ospite": "Pvn Nuoro",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1238",
+          "data": "Dom 03/05/2026 17.00",
+          "casa": "Volley Bortigali",
+          "ospite": "Pvn Nuoro",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1238",
+          "data": "Dom 03/05/2026 17.00",
+          "casa": "Volley Bortigali",
+          "ospite": "Pvn Nuoro",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1239",
+          "data": "-",
+          "casa": "Pallavolo Sedilo",
+          "ospite": "Asd Polisportiva Supramonte",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1239",
+          "data": "-",
+          "casa": "Pallavolo Sedilo",
+          "ospite": "Asd Polisportiva Supramonte",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1240",
+          "data": "Mar 28/04/2026 19.30",
+          "casa": "Volley Bortigali",
+          "ospite": "Pallavolo Sedilo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1240",
+          "data": "Mar 28/04/2026 19.30",
+          "casa": "Volley Bortigali",
+          "ospite": "Pallavolo Sedilo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1241",
+          "data": "-",
+          "casa": "Pvn Nuoro",
+          "ospite": "Asd Polisportiva Supramonte",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1241",
+          "data": "-",
+          "casa": "Pvn Nuoro",
+          "ospite": "Asd Polisportiva Supramonte",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2026-2027",
+      "campionato": "Under 18 Femminile",
+      "girone": "Girone EGONU",
+      "id": 61176,
+      "nome": "Under 18 Femminile  - Girone EGONU",
+      "url": "https://fipavonline.it/main/gare_girone/61176",
+      "squadre": [
+        "Delta Volley",
+        "Club Volley Dorgali",
+        "A2o Water Jerzu",
+        "Us Villanovese"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1242",
+          "data": "-",
+          "casa": "Delta Volley",
+          "ospite": "Club Volley Dorgali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1242",
+          "data": "-",
+          "casa": "Delta Volley",
+          "ospite": "Club Volley Dorgali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1243",
+          "data": "Mer 08/04/2026 18.00",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Us Villanovese",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1243",
+          "data": "Mer 08/04/2026 18.00",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Us Villanovese",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1244",
+          "data": "Dom 12/04/2026 16.30",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Delta Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1244",
+          "data": "Dom 12/04/2026 16.30",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Delta Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1245",
+          "data": "-",
+          "casa": "Club Volley Dorgali",
+          "ospite": "Us Villanovese",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1245",
+          "data": "-",
+          "casa": "Club Volley Dorgali",
+          "ospite": "Us Villanovese",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1246",
+          "data": "Mer 06/05/2026 18.30",
+          "casa": "Us Villanovese",
+          "ospite": "Delta Volley",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1246",
+          "data": "Mer 06/05/2026 18.30",
+          "casa": "Us Villanovese",
+          "ospite": "Delta Volley",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1247",
+          "data": "-",
+          "casa": "Club Volley Dorgali",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1247",
+          "data": "-",
+          "casa": "Club Volley Dorgali",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1248",
+          "data": "-",
+          "casa": "Club Volley Dorgali",
+          "ospite": "Delta Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1248",
+          "data": "-",
+          "casa": "Club Volley Dorgali",
+          "ospite": "Delta Volley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1249",
+          "data": "Mer 29/04/2026 18.30",
+          "casa": "Us Villanovese",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1249",
+          "data": "Mer 29/04/2026 18.30",
+          "casa": "Us Villanovese",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1250",
+          "data": "Lun 04/05/2026 19.00",
+          "casa": "Delta Volley",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1250",
+          "data": "Lun 04/05/2026 19.00",
+          "casa": "Delta Volley",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1251",
+          "data": "-",
+          "casa": "Us Villanovese",
+          "ospite": "Club Volley Dorgali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1251",
+          "data": "-",
+          "casa": "Us Villanovese",
+          "ospite": "Club Volley Dorgali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1252",
+          "data": "Lun 11/05/2026 19.00",
+          "casa": "Delta Volley",
+          "ospite": "Us Villanovese",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1252",
+          "data": "Lun 11/05/2026 19.00",
+          "casa": "Delta Volley",
+          "ospite": "Us Villanovese",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1253",
+          "data": "-",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Club Volley Dorgali",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1253",
+          "data": "-",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Club Volley Dorgali",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2026-2027",
+      "campionato": "Under 14 Femminile",
+      "girone": "Girone FAHR",
+      "id": 61569,
+      "nome": "Under 14 Femminile  - Girone FAHR 1",
+      "url": "https://fipavonline.it/main/gare_girone/61569",
+      "squadre": [
+        "A2o Water Jerzu",
+        "Le Torri Volley Bari Sardo",
+        "Delta Volley",
+        "Asd Pallavolo Cardedu"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1370",
+          "data": "-",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Le Torri Volley Bari Sardo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1370",
+          "data": "-",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Le Torri Volley Bari Sardo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1371",
+          "data": "Ven 17/04/2026 18.30",
+          "casa": "Delta Volley",
+          "ospite": "Asd Pallavolo Cardedu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1371",
+          "data": "Ven 17/04/2026 18.30",
+          "casa": "Delta Volley",
+          "ospite": "Asd Pallavolo Cardedu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1372",
+          "data": "Gio 14/05/2026 18.00",
+          "casa": "Delta Volley",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1372",
+          "data": "Gio 14/05/2026 18.00",
+          "casa": "Delta Volley",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1373",
+          "data": "Sab 09/05/2026 17.00",
+          "casa": "Le Torri Volley Bari Sardo",
+          "ospite": "Asd Pallavolo Cardedu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1373",
+          "data": "Sab 09/05/2026 17.00",
+          "casa": "Le Torri Volley Bari Sardo",
+          "ospite": "Asd Pallavolo Cardedu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1374",
+          "data": "Gio 16/04/2026 17.30",
+          "casa": "Asd Pallavolo Cardedu",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1374",
+          "data": "Gio 16/04/2026 17.30",
+          "casa": "Asd Pallavolo Cardedu",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1375",
+          "data": "Gio 23/04/2026 19.00",
+          "casa": "Le Torri Volley Bari Sardo",
+          "ospite": "Delta Volley",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1375",
+          "data": "Gio 23/04/2026 19.00",
+          "casa": "Le Torri Volley Bari Sardo",
+          "ospite": "Delta Volley",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1376",
+          "data": "Gio 30/04/2026 19.00",
+          "casa": "Le Torri Volley Bari Sardo",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1376",
+          "data": "Gio 30/04/2026 19.00",
+          "casa": "Le Torri Volley Bari Sardo",
+          "ospite": "A2o Water Jerzu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1377",
+          "data": "Lun 27/04/2026 17.30",
+          "casa": "Asd Pallavolo Cardedu",
+          "ospite": "Delta Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1377",
+          "data": "Lun 27/04/2026 17.30",
+          "casa": "Asd Pallavolo Cardedu",
+          "ospite": "Delta Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1378",
+          "data": "Dom 03/05/2026 11.00",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Delta Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1378",
+          "data": "Dom 03/05/2026 11.00",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Delta Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1379",
+          "data": "Lun 11/05/2026 19.00",
+          "casa": "Asd Pallavolo Cardedu",
+          "ospite": "Le Torri Volley Bari Sardo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1379",
+          "data": "Lun 11/05/2026 19.00",
+          "casa": "Asd Pallavolo Cardedu",
+          "ospite": "Le Torri Volley Bari Sardo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1380",
+          "data": "Ven 08/05/2026 18.00",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Asd Pallavolo Cardedu",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1380",
+          "data": "Ven 08/05/2026 18.00",
+          "casa": "A2o Water Jerzu",
+          "ospite": "Asd Pallavolo Cardedu",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1381",
+          "data": "Gio 07/05/2026 18.30",
+          "casa": "Delta Volley",
+          "ospite": "Le Torri Volley Bari Sardo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1381",
+          "data": "Gio 07/05/2026 18.30",
+          "casa": "Delta Volley",
+          "ospite": "Le Torri Volley Bari Sardo",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2026-2027",
+      "campionato": "Under 13 3 vs 3 Maschile",
+      "girone": "Girone B",
+      "id": 61692,
+      "nome": "Under 13 3 vs 3 Maschile  - Girone B",
+      "url": "https://fipavonline.it/main/gare_girone/61692",
+      "squadre": [
+        "Ariete Blu",
+        "Asd Pallavolo Mogoro",
+        "Ariete Rossa",
+        "Ariete Bianca"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1094",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1094",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1095",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1095",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1096",
+          "data": "Gio 02/04/2026 16.00",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1096",
+          "data": "Gio 02/04/2026 16.00",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1097",
+          "data": "Gio 02/04/2026 16.45",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1097",
+          "data": "Gio 02/04/2026 16.45",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1098",
+          "data": "Gio 02/04/2026 17.30",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1098",
+          "data": "Gio 02/04/2026 17.30",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1099",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1099",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1100",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1100",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1101",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1101",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1102",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1102",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1103",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1103",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1104",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1104",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1105",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1105",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1106",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1106",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1107",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1107",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1108",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1108",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1109",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1109",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1110",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1110",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1111",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1111",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1112",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1112",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1113",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1113",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1114",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1114",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1115",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1115",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1116",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1116",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1117",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1117",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1118",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1118",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1119",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1119",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1120",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1120",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1121",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1121",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1122",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1122",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1123",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1123",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1126",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1126",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1124",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1124",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1125",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1125",
+          "data": "-",
+          "casa": "Ariete Rossa",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1127",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1127",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1128",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1128",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1129",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1129",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1130",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1130",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1131",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1131",
+          "data": "-",
+          "casa": "Ariete Bianca",
+          "ospite": "Ariete Rossa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1132",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1132",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Ariete Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1133",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1133",
+          "data": "-",
+          "casa": "Ariete Blu",
+          "ospite": "Ariete Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1134",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "Gara 1134",
+          "data": "-",
+          "casa": "Asd Pallavolo Mogoro",
+          "ospite": "Asd Pallavolo Mogoro",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
     {
       "stagione": "2026-2027",
       "campionato": "Volley S3 Green",

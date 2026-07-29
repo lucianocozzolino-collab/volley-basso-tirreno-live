@@ -420,7 +420,7 @@ const db = firebase.firestore();
 
 /* Metti qui l'UID (o gli UID) degli account che possono approvare le rose.
    Lo trovi in Firebase Console → Authentication → Users, dopo il tuo primo accesso. */
-const ADMIN_UIDS = ["METTI_QUI_IL_TUO_UID"];
+const ADMIN_UIDS = ["GhFFrNWLUkUM80VekriH0T0yfSP2"];
 function isAdmin(){ return !!(state.user && ADMIN_UIDS.includes(state.user.uid)); }
 
 function slug(name){

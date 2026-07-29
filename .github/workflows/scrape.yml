@@ -1,1 +1,40 @@
+# Salva questo file come: .github/workflows/scrape.yml (nel tuo repo volley-basso-tirreno-live)
+name: Aggiorna risultati FIPAV
 
+on:
+  schedule:
+    # Ogni 3 ore. Modifica il cron se vuoi una frequenza diversa.
+    - cron: "0 */3 * * *"
+  workflow_dispatch: {}   # ti permette di lanciarlo a mano dalla tab "Actions" su GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installa dipendenze
+        run: |
+          npm init -y
+          npm install cheerio playwright
+          npx playwright install --with-deps chromium
+
+      - name: Esegui scraper (stagione corrente)
+        run: node scrape-fipav.js 2026-2027
+
+      - name: Committa i dati aggiornati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Aggiornamento automatico risultati $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

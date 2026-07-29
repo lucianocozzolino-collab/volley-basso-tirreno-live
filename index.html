@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volley Basso Tirreno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- ==== GOOGLE ADSENSE ====
+     Sostituisci ca-pub-XXXXXXXXXXXXXXXX con il tuo client ID reale una volta approvato.
+     Gli annunci "vignetta" (schermo intero) si attivano dalla dashboard AdSense, non da qui. -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<!-- ==== FIREBASE (auth + preferiti) ==== -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+
+<style>
+  :root{
+    --navy: #0B1B3A;
+    --navy-2: #122548;
+    --navy-3: #1A3161;
+    --orange: #FF6A3D;
+    --gold: #FFC857;
+    --line: #F5F3EE;
+    --teal: #22A6B3;
+    --slate: #8996B0;
+    --danger: #FF5470;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background: #060E20;
+    font-family:'Inter', sans-serif;
+    color: var(--line);
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  .app{
+    width:100%;
+    max-width:460px;
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 300px at 50% -100px, rgba(255,106,61,0.18), transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, #081227 100%);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    box-shadow: 0 0 60px rgba(0,0,0,0.6);
+  }
+
+  /* ---------- HEADER ---------- */
+  header.top{
+    position:sticky; top:0; z-index:20;
+    background: linear-gradient(180deg, rgba(11,27,58,0.98), rgba(11,27,58,0.9));
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    padding:14px 16px 10px;
+  }
+  .top-row{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .brand{display:flex; align-items:center; gap:9px;}
+  .ball{
+    width:30px; height:30px; border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #fff, var(--orange) 60%);
+    position:relative; flex-shrink:0;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.15) inset;
+  }
+  .ball::before, .ball::after{
+    content:''; position:absolute; border:1.4px solid rgba(11,27,58,0.55); border-radius:50%;
+  }
+  .ball::before{ width:120%; height:60%; top:20%; left:-10%; border-radius:50%; }
+  .ball::after{ width:60%; height:120%; left:20%; top:-10%; }
+  .brand-text{font-family:'Bebas Neue', sans-serif; font-size:20px; letter-spacing:0.5px; line-height:1;}
+  .brand-text small{display:block; font-family:'Inter'; font-weight:600; font-size:10px; letter-spacing:1.5px; color:var(--gold); text-transform:uppercase; margin-top:2px;}
+  .top-actions{display:flex; align-items:center; gap:10px;}
+  .icon-btn{
+    width:34px; height:34px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; color:var(--line); transition:0.15s;
+  }
+  .icon-btn:hover{background:rgba(255,255,255,0.1);}
+  .avatar{
+    width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, var(--teal), var(--navy-3));
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:12px; cursor:pointer;
+    border:1px solid rgba(255,255,255,0.15);
+  }
+
+  /* ---------- SCOREBOARD TICKER ---------- */
+  .ticker-wrap{margin-top:12px; overflow:hidden;}
+  .ticker-label{font-family:'Bebas Neue'; font-size:12px; letter-spacing:2px; color:var(--slate); margin-bottom:6px; display:flex; align-items:center; gap:6px;}
+  .live-dot{width:7px; height:7px; border-radius:50%; background:var(--danger); box-shadow:0 0 0 3px rgba(255,84,112,0.25); animation: pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.4;}}
+  .ticker{display:flex; gap:10px; overflow-x:auto; padding-bottom:4px; scrollbar-width:none;}
+  .ticker::-webkit-scrollbar{display:none;}
+  .score-card{
+    flex:0 0 auto; background: var(--navy-2); border:1px solid rgba(255,255,255,0.08); border-radius:12px;
+    padding:9px 12px; min-width:150px;
+  }
+  .score-card .giro{font-size:10px; color:var(--slate); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;}
+  .score-row{display:flex; align-items:center; justify-content:space-between; font-size:12.5px; font-weight:600;}
+  .score-row + .score-row{margin-top:3px;}
+  .score-num{font-family:'Roboto Mono'; font-weight:700; color:var(--gold);}
+
+  /* ---------- MAIN CONTENT ---------- */
+  main{flex:1; padding:16px 16px 90px;}
+  .section-title{
+    font-family:'Bebas Neue'; font-size:22px; letter-spacing:0.5px; margin: 4px 0 12px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .section-title .tag{font-family:'Inter'; font-size:11px; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:1px;}
+
+  /* News cards */
+  .news-card{
+    background: var(--navy-2); border:1px solid rgba(255,255,255,0.07); border-radius:16px;
+    padding:14px; margin-bottom:12px; cursor:default;
+  }
+  .news-meta{display:flex; gap:8px; align-items:center; margin-bottom:8px;}
+  .badge{font-size:10px; font-weight:800; letter-spacing:0.5px; padding:3px 8px; border-radius:20px; background:rgba(255,106,61,0.15); color:var(--orange); text-transform:uppercase;}
+  .news-time{font-size:11px; color:var(--slate);}
+  .news-title{font-weight:700; font-size:15px; line-height:1.35; margin-bottom:6px;}
+  .news-blurb{font-size:13px; color:var(--slate); line-height:1.5;}
+
+  /* Match list */
+  .match-row{
+    background: var(--navy-2); border:1px solid rgba(255,255,255,0.07); border-radius:14px;
+    padding:12px 14px; margin-bottom:10px; display:flex; align-items:center; gap:10px;
+  }
+  .match-teams{flex:1; display:flex; flex-direction:column; gap:6px;}
+  .match-team{display:flex; align-items:center; justify-content:space-between; font-size:13.5px; font-weight:600;}
+  .match-team .name{display:flex; align-items:center; gap:8px;}
+  .mini-badge{width:22px; height:22px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; flex-shrink:0;}
+  .match-status{font-size:9.5px; font-weight:800; text-transform:uppercase; letter-spacing:1px; padding:4px 8px; border-radius:8px;}
+  .status-played{background:rgba(34,166,179,0.15); color:var(--teal);}
+  .status-live{background:rgba(255,84,112,0.15); color:var(--danger);}
+  .status-upcoming{background:rgba(255,200,87,0.12); color:var(--gold);}
+  .match-date{font-size:10px; color:var(--slate); margin-top:4px;}
+
+  /* Team grid */
+  .team-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .team-card{
+    background: var(--navy-2); border:1px solid rgba(255,255,255,0.07); border-radius:14px;
+    padding:12px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; cursor:pointer;
+    position:relative; transition:0.15s;
+  }
+  .team-card:hover{border-color:rgba(255,255,255,0.2);}
+  .team-badge{width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue'; font-size:16px;}
+  .team-card .tname{font-size:12.5px; font-weight:700; line-height:1.3;}
+  .team-card .tcity{font-size:10.5px; color:var(--slate);}
+  .star-btn{
+    position:absolute; top:8px; right:8px; width:26px; height:26px; border-radius:8px;
+    background:rgba(0,0,0,0.25); border:none; display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .star-btn svg{width:14px; height:14px;}
+
+  /* Team detail */
+  .team-header{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+  .team-header .team-badge{width:60px; height:60px; font-size:20px;}
+  .team-header h2{font-family:'Bebas Neue'; font-size:24px; letter-spacing:0.5px;}
+  .team-header .sub{font-size:12px; color:var(--slate); margin-top:2px;}
+  .back-link{display:flex; align-items:center; gap:6px; color:var(--teal); font-size:13px; font-weight:600; margin-bottom:14px; cursor:pointer;}
+  .tabs{display:flex; gap:18px; border-bottom:1px solid rgba(255,255,255,0.08); margin-bottom:14px; overflow-x:auto;}
+  .tab-item{font-size:13px; font-weight:700; color:var(--slate); padding-bottom:10px; cursor:pointer; white-space:nowrap; border-bottom:2px solid transparent;}
+  .tab-item.active{color:var(--line); border-color:var(--orange);}
+  .player-row{display:flex; align-items:center; gap:12px; padding:10px 4px; border-bottom:1px solid rgba(255,255,255,0.05);}
+  .player-num{width:30px; height:30px; border-radius:8px; background:var(--navy-3); display:flex; align-items:center; justify-content:center; font-family:'Roboto Mono'; font-weight:700; font-size:13px; color:var(--gold); flex-shrink:0;}
+  .player-name{font-weight:600; font-size:13.5px;}
+  .player-role{font-size:11px; color:var(--slate);}
+
+  /* Empty state */
+  .empty{text-align:center; padding:40px 20px; color:var(--slate);}
+  .empty svg{width:44px; height:44px; margin-bottom:12px; opacity:0.5;}
+  .empty p{font-size:13px; line-height:1.5;}
+  .cta-btn{
+    margin-top:14px; background:var(--orange); color:#fff; border:none; padding:10px 18px; border-radius:10px;
+    font-weight:700; font-size:13px; cursor:pointer;
+  }
+
+  /* ---------- BOTTOM NAV ---------- */
+  nav.bottom{
+    position:fixed; bottom:0; left:50%; transform:translateX(-50%);
+    width:100%; max-width:460px; background:rgba(9,18,40,0.97); backdrop-filter:blur(8px);
+    border-top:1px solid rgba(255,255,255,0.08);
+    display:flex; justify-content:space-around; padding:8px 4px 12px; z-index:30;
+  }
+  .nav-item{display:flex; flex-direction:column; align-items:center; gap:4px; cursor:pointer; color:var(--slate); flex:1; padding:4px;}
+  .nav-item svg{width:20px; height:20px;}
+  .nav-item span{font-size:9.5px; font-weight:700; letter-spacing:0.3px;}
+  .nav-item.active{color:var(--orange);}
+
+  /* ---------- LOGIN MODAL ---------- */
+  .overlay{
+    position:fixed; inset:0; background:rgba(4,8,20,0.75); z-index:100;
+    display:flex; align-items:flex-end; justify-content:center;
+  }
+  .overlay.hidden{display:none;}
+  .hidden{display:none !important;}
+  .sheet{
+    width:100%; max-width:460px; background:linear-gradient(180deg, var(--navy-3), var(--navy));
+    border-radius:22px 22px 0 0; padding:26px 22px 30px; max-height:88vh; overflow-y:auto;
+    border:1px solid rgba(255,255,255,0.08); border-bottom:none;
+  }
+  .sheet-close{width:100%; display:flex; justify-content:flex-end; margin-bottom:6px;}
+  .sheet-close button{background:none; border:none; color:var(--slate); cursor:pointer;}
+  .sheet h2{font-family:'Bebas Neue'; font-size:28px; text-align:center; margin-bottom:8px; letter-spacing:0.5px;}
+  .sheet p.desc{text-align:center; font-size:13px; color:var(--slate); margin-bottom:22px; line-height:1.5;}
+  .social-btn{
+    width:100%; padding:13px; border-radius:12px; border:none; font-weight:700; font-size:14px;
+    display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:10px; cursor:pointer;
+  }
+  .social-btn.google{background:#fff; color:#1a1a1a;}
+  .social-btn.facebook{background:#1877F2; color:#fff;}
+  .divider{display:flex; align-items:center; gap:10px; margin:16px 0; color:var(--slate); font-size:12px;}
+  .divider::before, .divider::after{content:''; flex:1; height:1px; background:rgba(255,255,255,0.1);}
+  .field{margin-bottom:12px;}
+  .field input{
+    width:100%; padding:13px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.04); color:var(--line); font-size:14px; font-family:'Inter';
+  }
+  .field input::placeholder{color:var(--slate);}
+  .primary-btn{
+    width:100%; padding:14px; border-radius:12px; border:none; background:var(--orange); color:#fff;
+    font-weight:800; font-size:14px; cursor:pointer; margin-top:4px; letter-spacing:0.3px;
+  }
+  .sheet-links{text-align:center; margin-top:18px; font-size:12.5px; color:var(--teal); display:flex; flex-direction:column; gap:10px;}
+  .sheet-links span{cursor:pointer; text-decoration:underline;}
+  .note{font-size:11px; color:var(--slate); text-align:center; margin-top:14px; line-height:1.5;}
+
+  /* ---------- FULLSCREEN AD ---------- */
+  .ad-overlay{
+    position:fixed; inset:0; background:#000; z-index:200;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+  .ad-overlay.hidden{display:none;}
+  .ad-frame{
+    width:100%; max-width:460px; height:100%; display:flex; flex-direction:column;
+    background: linear-gradient(160deg, #1a1030, #06060f 70%);
+    position:relative; align-items:center; justify-content:center; padding:30px;
+  }
+  .ad-topbar{position:absolute; top:16px; left:16px; right:16px; display:flex; justify-content:space-between; align-items:center;}
+  .ad-timer{font-family:'Roboto Mono'; font-size:12px; color:var(--slate); background:rgba(255,255,255,0.08); padding:5px 10px; border-radius:20px;}
+  .ad-close{width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.1); border:none; color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0.4;}
+  .ad-close.ready{opacity:1;}
+  .ad-body{text-align:center;}
+  .ad-badge{display:inline-block; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--slate); background:rgba(255,255,255,0.06); padding:4px 10px; border-radius:20px; margin-bottom:18px;}
+  .ad-mock-icon{width:74px; height:74px; border-radius:20px; background:linear-gradient(135deg, var(--gold), var(--orange)); margin:0 auto 18px; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue'; font-size:26px; color:#1a1030;}
+  .ad-title{font-family:'Bebas Neue'; font-size:22px; margin-bottom:8px; letter-spacing:0.5px;}
+  .ad-sub{font-size:12.5px; color:var(--slate); max-width:280px; margin:0 auto 24px; line-height:1.5;}
+  .ad-cta{background:var(--gold); color:#1a1030; border:none; padding:12px 28px; border-radius:30px; font-weight:800; font-size:13px; cursor:pointer;}
+
+  .toast{
+    position:fixed; bottom:96px; left:50%; transform:translateX(-50%); background:var(--navy-3); color:var(--line);
+    padding:10px 18px; border-radius:30px; font-size:12.5px; font-weight:600; z-index:150; border:1px solid rgba(255,255,255,0.1);
+    opacity:0; pointer-events:none; transition:opacity 0.25s;
+  }
+  .toast.show{opacity:1;}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <header class="top">
+    <div class="top-row">
+      <div class="brand">
+        <div class="ball"></div>
+        <div class="brand-text">VOLLEY BASSO TIRRENO<small>Risultati &amp; Rose in tempo reale</small></div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" title="Cerca">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div id="profileSlot"></div>
+      </div>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker-label"><span class="live-dot"></span> RISULTATI ULTIMA GIORNATA</div>
+      <div class="ticker" id="tickerRow"></div>
+    </div>
+  </header>
+
+  <main id="mainContent"></main>
+
+  <nav class="bottom" id="bottomNav"></nav>
+</div>
+
+<div class="overlay hidden" id="loginOverlay">
+  <div class="sheet">
+    <div class="sheet-close"><button onclick="closeLogin()">✕ Chiudi</button></div>
+    <div id="authBody"></div>
+  </div>
+</div>
+
+<!-- Banner pubblicitario Google AdSense. Sostituisci client/slot con i tuoi ID reali dopo l'approvazione del sito. -->
+<div style="max-width:460px; margin:0 auto; padding:10px 16px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------------- DATI REALI (caricati da data/<stagione>.json) ----------------
+   Il file viene prodotto dal tuo scraper via GitHub Actions.
+   Finché non è presente (es. repo non ancora collegato), si usano i dati di
+   esempio qui sotto come fallback, così l'app resta sempre navigabile. */
+const STAGIONE_CORRENTE = "2026-2027";
+const PALETTE = ["#22A6B3","#FF6A3D","#FFC857","#3DDC97","#4C8BF5","#C1447E"];
+
+function coloreDa(nome){
+  let h = 0;
+  for (let i=0;i<nome.length;i++) h = nome.charCodeAt(i) + ((h<<5)-h);
+  return PALETTE[Math.abs(h) % PALETTE.length];
+}
+function inizialiDa(nome){
+  return nome.split(/\s+/).filter(w=>w.length>1).map(w=>w[0]).join('').slice(0,3).toUpperCase() || nome.slice(0,3).toUpperCase();
+}
+
+let teams = [];
+let matches = [];
+let usingRealData = false;
+
+async function caricaDatiReali(){
+  try{
+    const res = await fetch(`./data/${STAGIONE_CORRENTE}.json`, {cache:"no-store"});
+    if(!res.ok) throw new Error("no data file");
+    const json = await res.json();
+    const nomiSquadre = new Set();
+    (json.gironi || []).forEach(g => g.squadre.forEach(s => nomiSquadre.add(s)));
+
+    teams = Array.from(nomiSquadre).map((nome, i) => ({
+      id: i+1, name: nome, city: "", colors: "",
+      init: inizialiDa(nome), color: coloreDa(nome),
+      roster: [] // non disponibile da questa fonte, vedi setup-backend-e-ads.md
+    }));
+    const idByName = Object.fromEntries(teams.map(t => [t.name, t.id]));
+
+    let mid = 1;
+    matches = [];
+    (json.gironi || []).forEach(g => {
+      g.calendario.forEach(m => {
+        const homeId = idByName[m.casa], awayId = idByName[m.ospite];
+        if(!homeId || !awayId) return;
+        const giocata = !!m.risultato;
+        matches.push({
+          id: mid++, giornata: m.gara, home: homeId, away: awayId,
+          set: giocata ? m.risultato.replace(/\s/g,'') : null,
+          status: giocata ? 'played' : 'upcoming',
+          date: m.data
+        });
+      });
+    });
+    usingRealData = teams.length > 0 && matches.length > 0;
+  }catch(e){
+    usingRealData = false;
+  }
+  if(!usingRealData){
+    teams = SAMPLE_TEAMS;
+    matches = SAMPLE_MATCHES;
+  }
+}
+
+/* ---------------- DATI DI ESEMPIO (fallback) ---------------- */
+const SAMPLE_TEAMS = [
+  {id:1, name:"Pallavolo Sant'Agnello", city:"Sant'Agnello", colors:"Blu-Bianco", init:"PSA", color:"#22A6B3",
+    roster:[{n:1,name:"L. Esposito",role:"Palleggiatore"},{n:4,name:"F. Coppola",role:"Schiacciatore"},{n:7,name:"M. Russo",role:"Centrale"},{n:9,name:"A. De Simone",role:"Opposto"},{n:11,name:"D. Fiorentino",role:"Libero"},{n:14,name:"G. Amato",role:"Schiacciatore"}]},
+  {id:2, name:"Volley Piano di Sorrento", city:"Piano di Sorrento", colors:"Rosso-Nero", init:"VPS", color:"#FF6A3D",
+    roster:[{n:2,name:"S. Gargiulo",role:"Palleggiatore"},{n:5,name:"R. Cuomo",role:"Centrale"},{n:8,name:"N. Aiello",role:"Schiacciatore"},{n:10,name:"V. Persico",role:"Opposto"},{n:13,name:"C. Attanasio",role:"Libero"},{n:16,name:"P. Sorrentino",role:"Centrale"}]},
+  {id:3, name:"Nuova Pallavolo Vico Equense", city:"Vico Equense", colors:"Giallo-Blu", init:"NPV", color:"#FFC857",
+    roster:[{n:3,name:"E. Mele",role:"Schiacciatore"},{n:6,name:"F. Savarese",role:"Palleggiatore"},{n:9,name:"L. Cacace",role:"Centrale"},{n:12,name:"T. Iaccarino",role:"Libero"},{n:15,name:"G. Astarita",role:"Opposto"},{n:18,name:"M. Fienga",role:"Schiacciatore"}]},
+  {id:4, name:"Pallavolo Meta", city:"Meta", colors:"Verde-Bianco", init:"PMT", color:"#3DDC97",
+    roster:[{n:1,name:"A. Gargiulo",role:"Libero"},{n:4,name:"S. Correale",role:"Centrale"},{n:7,name:"D. Maresca",role:"Palleggiatore"},{n:9,name:"F. Staiano",role:"Schiacciatore"},{n:11,name:"R. Cesarano",role:"Opposto"},{n:14,name:"L. Balestrieri",role:"Centrale"}]},
+  {id:5, name:"Massa Lubrense Volley", city:"Massa Lubrense", colors:"Azzurro-Bianco", init:"MLV", color:"#4C8BF5",
+    roster:[{n:2,name:"C. Argenziano",role:"Schiacciatore"},{n:5,name:"G. Fontanella",role:"Palleggiatore"},{n:8,name:"N. Ruocco",role:"Centrale"},{n:10,name:"M. Improta",role:"Opposto"},{n:13,name:"E. Pane",role:"Libero"},{n:17,name:"V. Cacciapuoti",role:"Schiacciatore"}]},
+  {id:6, name:"Stabia Volley Academy", city:"Castellammare di Stabia", colors:"Bordeaux-Oro", init:"SVA", color:"#C1447E",
+    roster:[{n:3,name:"F. Longobardi",role:"Centrale"},{n:6,name:"A. Vitiello",role:"Opposto"},{n:9,name:"S. Cascone",role:"Palleggiatore"},{n:12,name:"D. Passaro",role:"Schiacciatore"},{n:15,name:"G. Bonavita",role:"Libero"},{n:19,name:"L. Marino",role:"Centrale"}]},
+];
+
+const SAMPLE_MATCHES = [
+  {giornata:8, home:1, away:3, set:"3-1", status:"played", date:"27 lug 2026"},
+  {giornata:8, home:2, away:5, set:"2-3", status:"played", date:"27 lug 2026"},
+  {giornata:8, home:4, away:6, set:"3-0", status:"played", date:"27 lug 2026"},
+  {giornata:9, home:3, away:2, set:null, status:"live", date:"oggi · 19:00"},
+  {giornata:9, home:5, away:1, set:null, status:"upcoming", date:"2 ago 2026 · 18:30"},
+  {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00"},
+];
+
+const news = [
+  {team:"NPV", title:"Vico Equense chiude il mercato con due nuovi schiacciatori", time:"2 ore fa",
+   blurb:"La società ha ufficializzato due innesti in vista della fase decisiva del girone, puntando a rinforzare la banda."},
+  {team:"PSA", title:"Sant'Agnello vince in rimonta e aggancia il secondo posto", time:"5 ore fa",
+   blurb:"Dopo essere andati sotto 0-2, i ragazzi di Sant'Agnello hanno ribaltato il match chiudendo 3-2 al tie-break."},
+  {team:"SVA", title:"Infortunio per il centrale della Stabia Volley Academy", time:"1 giorno fa",
+   blurb:"Da valutare i tempi di recupero: lo staff medico effettuerà accertamenti nei prossimi giorni."},
+  {team:"MLV", title:"Massa Lubrense, il calendario delle prossime tre giornate", time:"1 giorno fa",
+   blurb:"Pubblicato il programma ufficiale: due trasferte e una sfida casalinga contro la capolista."},
+];
+
+/* ---------------- STATO (in memoria, nessun salvataggio persistente) ---------------- */
+let state = {
+  tab: 'home',
+  user: null,
+  favorites: new Set(),
+  currentTeamId: null,
+  teamTab: 'rosa',
+  authMode: 'login'
+};
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+/* Metti qui l'UID (o gli UID) degli account che possono approvare le rose.
+   Lo trovi in Firebase Console → Authentication → Users, dopo il tuo primo accesso. */
+const ADMIN_UIDS = ["METTI_QUI_IL_TUO_UID"];
+function isAdmin(){ return !!(state.user && ADMIN_UIDS.includes(state.user.uid)); }
+
+function slug(name){
+  return name.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+}
+
+let rosterCache = {};      // slug -> [{n,name,role}] approvata
+let myPendingByTeam = {};  // slug -> stato ultima proposta dell'utente corrente
+let pendingSubmissions = []; // solo per admin
+
+const teamById = id => teams.find(t => t.id === id);
+
+/* ---------------- ICONE ---------------- */
+const icons = {
+  home:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>`,
+  matches:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/><path d="M8 2v4M16 2v4"/></svg>`,
+  teams:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h5l1 3-2 2 3 3-2 8H6l1-8-2-2 3-3z"/></svg>`,
+  star:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.1 8.6 22 9.3 17 14.1 18.2 21 12 17.6 5.8 21 7 14.1 2 9.3 8.9 8.6"/></svg>`,
+  starFill:`<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.1 8.6 22 9.3 17 14.1 18.2 21 12 17.6 5.8 21 7 14.1 2 9.3 8.9 8.6"/></svg>`,
+  profile:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>`,
+  google:`<svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.6 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.1 8 3l5.7-5.7C34.3 6.2 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 18.9 13 24 13c3.1 0 5.9 1.1 8 3l5.7-5.7C34.3 6.2 29.4 4 24 4c-7.7 0-14.4 4.4-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.5-5.2l-6.2-5.3C29.3 35.4 26.8 36 24 36c-5.3 0-9.7-3.4-11.3-8.1l-6.5 5C9.5 39.5 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.2 5.5l6.2 5.3C40.9 36 44 30.6 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>`,
+  fb:`<svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>`,
+};
+
+/* ---------------- TOAST ---------------- */
+function toast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'), 2200);
+}
+
+/* ---------------- NAV ---------------- */
+function setTab(tab){
+  state.tab = tab;
+  state.currentTeamId = null;
+  render();
+}
+
+/* ---------------- LOGIN ---------------- */
+function openLogin(mode){
+  state.authMode = mode || 'login';
+  renderAuthBody();
+  document.getElementById('loginOverlay').classList.remove('hidden');
+}
+function closeLogin(){
+  document.getElementById('loginOverlay').classList.add('hidden');
+}
+function renderAuthBody(){
+  const box = document.getElementById('authBody');
+  if(state.authMode === 'login'){
+    box.innerHTML = `
+      <h2>Accedi</h2>
+      <p class="desc">Per poter sfruttare tutte le funzionalità è necessario effettuare l'accesso</p>
+      <button class="social-btn google" onclick="mockLogin('Google')">${icons.google} Accedi con Google</button>
+      <button class="social-btn facebook" onclick="mockLogin('Facebook')">${icons.fb} Accedi con Facebook</button>
+      <div class="divider">Oppure</div>
+      <div class="field"><input id="loginEmail" placeholder="Email o username"></div>
+      <div class="field"><input id="loginPass" type="password" placeholder="Password"></div>
+      <button class="primary-btn" onclick="mockLogin('Email')">Accedi</button>
+      <div class="sheet-links">
+        <span onclick="openLogin('register')">Nuovo utente? Registrati</span>
+        <span onclick="toast('Demo: email di recupero simulata')">Recupera password</span>
+      </div>
+      <p class="note">Prototipo dimostrativo: nessun account reale viene creato o salvato.</p>
+    `;
+  } else {
+    box.innerHTML = `
+      <h2>Registrati</h2>
+      <p class="desc">Crea un account per salvare preferiti e ricevere notifiche sulle tue squadre</p>
+      <div class="field"><input id="regName" placeholder="Nome e cognome"></div>
+      <div class="field"><input id="regEmail" placeholder="Email"></div>
+      <div class="field"><input id="regPass" type="password" placeholder="Password"></div>
+      <button class="primary-btn" onclick="mockRegister()">Crea account</button>
+      <div class="sheet-links">
+        <span onclick="openLogin('login')">Hai già un account? Accedi</span>
+      </div>
+      <p class="note">Prototipo dimostrativo: nessun account reale viene creato o salvato.</p>
+    `;
+  }
+}
+function mockLogin(via){
+  if(via === 'Google'){
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+      .then(()=>{ closeLogin(); toast('Accesso eseguito con Google'); })
+      .catch(err => toast('Errore: ' + err.message));
+    return;
+  }
+  if(via === 'Facebook'){
+    const provider = new firebase.auth.FacebookAuthProvider();
+    auth.signInWithPopup(provider)
+      .then(()=>{ closeLogin(); toast('Accesso eseguito con Facebook'); })
+      .catch(err => toast('Errore: ' + err.message + ' (richiede configurazione Facebook in Firebase)'));
+    return;
+  }
+  const email = document.getElementById('loginEmail').value.trim();
+  const pass = document.getElementById('loginPass').value;
+  if(!email || !pass){ toast('Inserisci email e password'); return; }
+  auth.signInWithEmailAndPassword(email, pass)
+    .then(()=>{ closeLogin(); toast('Accesso eseguito'); })
+    .catch(err => toast('Errore: ' + err.message));
+}
+function mockRegister(){
+  const name = document.getElementById('regName').value.trim() || 'Nuovo utente';
+  const email = document.getElementById('regEmail').value.trim();
+  const pass = document.getElementById('regPass').value;
+  if(!email || !pass){ toast('Inserisci email e password'); return; }
+  auth.createUserWithEmailAndPassword(email, pass)
+    .then(cred => cred.user.updateProfile({displayName: name}))
+    .then(()=>{ closeLogin(); toast('Account creato, benvenuto!'); })
+    .catch(err => toast('Errore: ' + err.message));
+}
+function logout(){
+  auth.signOut().then(()=> toast('Disconnesso'));
+}
+
+/* ---------------- PREFERITI ---------------- */
+function toggleFavorite(id, ev){
+  if(ev) ev.stopPropagation();
+  if(!state.user){
+    openLogin('login');
+    return;
+  }
+  if(state.favorites.has(id)) state.favorites.delete(id);
+  else state.favorites.add(id);
+  render();
+  db.collection('users').doc(state.user.uid).set(
+    { favorites: Array.from(state.favorites) }, { merge: true }
+  ).catch(err => toast('Errore salvataggio preferiti: ' + err.message));
+}
+
+function caricaPreferiti(uid){
+  db.collection('users').doc(uid).get().then(doc => {
+    state.favorites = new Set(doc.exists ? (doc.data().favorites || []) : []);
+    render();
+  }).catch(()=>{});
+}
+
+/* ---------------- RENDER: HEADER PROFILE ---------------- */
+function renderProfileSlot(){
+  const slot = document.getElementById('profileSlot');
+  if(state.user){
+    const initials = state.user.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    slot.innerHTML = `<div class="avatar" onclick="setTab('profile')">${initials}</div>`;
+  } else {
+    slot.innerHTML = `<button class="icon-btn" onclick="openLogin('login')">${icons.profile}</button>`;
+  }
+}
+
+/* ---------------- RENDER: TICKER ---------------- */
+function renderTicker(){
+  const row = document.getElementById('tickerRow');
+  const played = matches.filter(m => m.status === 'played');
+  row.innerHTML = played.map(m => `
+    <div class="score-card">
+      <div class="giro">Giornata ${m.giornata}</div>
+      <div class="score-row"><span>${teamById(m.home).init}</span><span class="score-num">${m.set.split('-')[0]}</span></div>
+      <div class="score-row"><span>${teamById(m.away).init}</span><span class="score-num">${m.set.split('-')[1]}</span></div>
+    </div>
+  `).join('');
+}
+
+/* ---------------- RENDER: BOTTOM NAV ---------------- */
+function renderNav(){
+  const items = [
+    {key:'home', label:'Home', icon:icons.home},
+    {key:'matches', label:'Partite', icon:icons.matches},
+    {key:'teams', label:'Squadre', icon:icons.teams},
+    {key:'favorites', label:'Preferiti', icon:icons.star},
+    {key:'profile', label:'Profilo', icon:icons.profile},
+  ];
+  if(isAdmin()) items.push({key:'admin', label:'Admin', icon:icons.star});
+  document.getElementById('bottomNav').innerHTML = items.map(it => `
+    <div class="nav-item ${state.tab===it.key ? 'active':''}" onclick="setTab('${it.key}')">
+      ${it.icon}<span>${it.label}</span>
+    </div>
+  `).join('');
+}
+
+/* ---------------- RENDER: MAIN ---------------- */
+function render(){
+  renderNav();
+  renderTicker();
+  const main = document.getElementById('mainContent');
+
+  if(state.currentTeamId){
+    main.innerHTML = renderTeamDetail(state.currentTeamId);
+    return;
+  }
+
+  switch(state.tab){
+    case 'home': main.innerHTML = renderHome(); break;
+    case 'matches': main.innerHTML = renderMatches(); break;
+    case 'teams': main.innerHTML = renderTeams(); break;
+    case 'favorites': main.innerHTML = renderFavorites(); break;
+    case 'profile': main.innerHTML = renderProfile(); break;
+    case 'admin': main.innerHTML = renderAdmin(); break;
+  }
+}
+
+function renderHome(){
+  return `
+    <div class="section-title">In evidenza <span class="tag">Toscana · Basso Tirreno</span></div>
+    ${news.map(n => `
+      <div class="news-card">
+        <div class="news-meta"><span class="badge">${n.team}</span><span class="news-time">${n.time}</span></div>
+        <div class="news-title">${n.title}</div>
+        <div class="news-blurb">${n.blurb}</div>
+      </div>
+    `).join('')}
+  `;
+}
+
+function renderMatches(){
+  const giornate = [...new Set(matches.map(m=>m.giornata))].sort((a,b)=>b-a);
+  return `
+    <div class="section-title">Calendario &amp; risultati</div>
+    ${giornate.map(g => `
+      <div class="ticker-label" style="margin:14px 0 8px;">GIORNATA ${g}</div>
+      ${matches.filter(m=>m.giornata===g).map(m => matchRow(m)).join('')}
+    `).join('')}
+  `;
+}
+
+function matchRow(m){
+  const home = teamById(m.home), away = teamById(m.away);
+  let statusHtml = '';
+  if(m.status==='played') statusHtml = `<span class="match-status status-played">Finale</span>`;
+  else if(m.status==='live') statusHtml = `<span class="match-status status-live">Live</span>`;
+  else statusHtml = `<span class="match-status status-upcoming">Da giocare</span>`;
+  return `
+    <div class="match-row">
+      <div class="match-teams">
+        <div class="match-team"><span class="name"><span class="mini-badge" style="background:${home.color}22; color:${home.color};">${home.init}</span>${home.name}</span><span>${m.set ? m.set.split('-')[0] : '-'}</span></div>
+        <div class="match-team"><span class="name"><span class="mini-badge" style="background:${away.color}22; color:${away.color};">${away.init}</span>${away.name}</span><span>${m.set ? m.set.split('-')[1] : '-'}</span></div>
+        <div class="match-date">${m.date}</div>
+      </div>
+      <div>${statusHtml}</div>
+    </div>
+  `;
+}
+
+function renderTeams(){
+  return `
+    <div class="section-title">Squadre del girone</div>
+    <div class="team-grid">
+      ${teams.map(t => teamCard(t)).join('')}
+    </div>
+  `;
+}
+
+function teamCard(t){
+  const fav = state.favorites.has(t.id);
+  return `
+    <div class="team-card" onclick="openTeam(${t.id})">
+      <button class="star-btn" style="color:${fav?'var(--gold)':'var(--slate)'}" onclick="toggleFavorite(${t.id}, event)">
+        ${fav ? icons.starFill : icons.star}
+      </button>
+      <div class="team-badge" style="background:${t.color}22; color:${t.color};">${t.init}</div>
+      <div class="tname">${t.name}</div>
+      <div class="tcity">${t.city}</div>
+    </div>
+  `;
+}
+
+function renderFavorites(){
+  const favTeams = teams.filter(t => state.favorites.has(t.id));
+  if(!state.user){
+    return `
+      <div class="empty">
+        ${icons.star}
+        <p>Accedi per salvare le tue squadre preferite e ricevere aggiornamenti sui loro risultati.</p>
+        <button class="cta-btn" onclick="openLogin('login')">Accedi ora</button>
+      </div>
+    `;
+  }
+  if(favTeams.length === 0){
+    return `
+      <div class="empty">
+        ${icons.star}
+        <p>Non hai ancora squadre preferite. Vai su "Squadre" e tocca la stella per aggiungerle qui.</p>
+        <button class="cta-btn" onclick="setTab('teams')">Sfoglia le squadre</button>
+      </div>
+    `;
+  }
+  return `
+    <div class="section-title">Le tue squadre</div>
+    <div class="team-grid">${favTeams.map(t => teamCard(t)).join('')}</div>
+  `;
+}
+
+function renderProfile(){
+  if(!state.user){
+    return `
+      <div class="empty">
+        ${icons.profile}
+        <p>Non hai ancora effettuato l'accesso.</p>
+        <button class="cta-btn" onclick="openLogin('login')">Accedi o registrati</button>
+      </div>
+    `;
+  }
+  return `
+    <div class="section-title">Il tuo profilo</div>
+    <div class="news-card" style="text-align:center;">
+      <div class="avatar" style="width:56px; height:56px; font-size:18px; border-radius:16px; margin:0 auto 12px;">
+        ${state.user.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()}
+      </div>
+      <div class="news-title" style="margin-bottom:2px;">${state.user.name}</div>
+      <div class="news-time">Accesso tramite ${state.user.via}</div>
+    </div>
+    <div class="news-card">
+      <div class="tname" style="margin-bottom:6px;">Squadre preferite: ${state.favorites.size}</div>
+      <div class="news-blurb">Riceverai notizie e risultati dalle squadre che segui nella sezione Preferiti.</div>
+    </div>
+    <button class="cta-btn" style="width:100%; background:transparent; border:1px solid var(--danger); color:var(--danger);" onclick="logout()">Esci</button>
+  `;
+}
+
+function openTeam(id){
+  state.currentTeamId = id;
+  state.teamTab = 'rosa';
+  const t = teamById(id);
+  if(t) caricaRosterSquadra(t);
+  render();
+  window.scrollTo(0,0);
+}
+function backFromTeam(){
+  state.currentTeamId = null;
+  render();
+}
+function setTeamTab(tab){
+  state.teamTab = tab;
+  render();
+}
+
+/* ---------------- ROSE: caricamento, proposta, approvazione ---------------- */
+function caricaRosterSquadra(t){
+  const s = slug(t.name);
+  db.collection('rosters').doc(s).get().then(doc => {
+    rosterCache[s] = doc.exists ? (doc.data().players || []) : [];
+    if(rosterCache[s].length) t.roster = rosterCache[s];
+    render();
+  }).catch(()=>{});
+
+  if(state.user){
+    db.collection('roster_submissions')
+      .where('uid','==', state.user.uid)
+      .where('teamSlug','==', s)
+      .get().then(snap => {
+        let ultima = null;
+        snap.forEach(d => { const v=d.data(); if(!ultima || v.createdAt > ultima.createdAt) ultima = v; });
+        myPendingByTeam[s] = ultima;
+        render();
+      }).catch(()=>{});
+  }
+}
+
+function toggleRosterForm(){
+  const el = document.getElementById('rosterFormWrap');
+  if(el) el.classList.toggle('hidden');
+}
+
+function inviaPropostaRosa(teamId){
+  const t = teamById(teamId);
+  const s = slug(t.name);
+  if(!state.user){ openLogin('login'); return; }
+
+  const rows = document.querySelectorAll('.roster-form-row');
+  const players = [];
+  rows.forEach(row => {
+    const n = row.querySelector('.rf-num').value.trim();
+    const name = row.querySelector('.rf-name').value.trim();
+    const role = row.querySelector('.rf-role').value;
+    if(name) players.push({n: n || '-', name, role});
+  });
+  if(players.length === 0){ toast('Inserisci almeno un giocatore'); return; }
+
+  db.collection('roster_submissions').add({
+    teamSlug: s,
+    teamName: t.name,
+    uid: state.user.uid,
+    userName: state.user.displayName || state.user.email || 'Utente',
+    players,
+    status: 'pending',
+    createdAt: Date.now()
+  }).then(()=>{
+    toast('Proposta inviata, in attesa di approvazione');
+    caricaRosterSquadra(t);
+  }).catch(err => toast('Errore: ' + err.message));
+}
+
+function renderRosterForm(){
+  let rows = '';
+  for(let i=0;i<10;i++){
+    rows += `
+      <div class="roster-form-row" style="display:flex; gap:6px; margin-bottom:8px;">
+        <input class="rf-num" placeholder="N°" style="width:52px; padding:9px; border-radius:8px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line);">
+        <input class="rf-name" placeholder="Nome giocatore" style="flex:1; padding:9px; border-radius:8px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line);">
+        <select class="rf-role" style="padding:9px; border-radius:8px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:12px;">
+          <option value="Schiacciatore">Schiacciatore</option>
+          <option value="Centrale">Centrale</option>
+          <option value="Palleggiatore">Palleggiatore</option>
+          <option value="Opposto">Opposto</option>
+          <option value="Libero">Libero</option>
+        </select>
+      </div>`;
+  }
+  return rows;
+}
+
+/* ---------------- PANNELLO ADMIN (solo per ADMIN_UIDS) ---------------- */
+function caricaProposteInAttesa(){
+  db.collection('roster_submissions').where('status','==','pending').get().then(snap => {
+    pendingSubmissions = [];
+    snap.forEach(d => pendingSubmissions.push({id: d.id, ...d.data()}));
+    render();
+  }).catch(err => toast('Errore admin: ' + err.message));
+}
+
+function approvaProposta(subId){
+  const sub = pendingSubmissions.find(s => s.id === subId);
+  if(!sub) return;
+  db.collection('rosters').doc(sub.teamSlug).set({
+    players: sub.players, updatedAt: Date.now(), updatedBy: state.user.uid
+  }).then(() => db.collection('roster_submissions').doc(subId).update({status:'approved'}))
+    .then(()=>{ toast('Rosa approvata e pubblicata'); caricaProposteInAttesa(); })
+    .catch(err => toast('Errore: ' + err.message));
+}
+function rifiutaProposta(subId){
+  db.collection('roster_submissions').doc(subId).update({status:'rejected'})
+    .then(()=>{ toast('Proposta rifiutata'); caricaProposteInAttesa(); })
+    .catch(err => toast('Errore: ' + err.message));
+}
+
+function renderAdmin(){
+  if(!isAdmin()) return `<div class="empty"><p>Accesso riservato.</p></div>`;
+  if(pendingSubmissions.length === 0) caricaProposteInAttesa();
+  if(pendingSubmissions.length === 0){
+    return `<div class="section-title">Proposte rose</div><div class="empty"><p>Nessuna proposta in attesa al momento.</p></div>`;
+  }
+  return `
+    <div class="section-title">Proposte in attesa (${pendingSubmissions.length})</div>
+    ${pendingSubmissions.map(s => `
+      <div class="news-card">
+        <div class="news-meta"><span class="badge">${s.teamName}</span><span class="news-time">di ${s.userName}</span></div>
+        ${s.players.map(p => `<div class="player-row" style="padding:6px 0;"><div class="player-num">${p.n}</div><div><div class="player-name">${p.name}</div><div class="player-role">${p.role}</div></div></div>`).join('')}
+        <div style="display:flex; gap:8px; margin-top:10px;">
+          <button class="cta-btn" style="flex:1; margin-top:0;" onclick="approvaProposta('${s.id}')">Approva</button>
+          <button class="cta-btn" style="flex:1; margin-top:0; background:transparent; border:1px solid var(--danger); color:var(--danger);" onclick="rifiutaProposta('${s.id}')">Rifiuta</button>
+        </div>
+      </div>
+    `).join('')}
+  `;
+}
+
+function renderTeamDetail(id){
+  const t = teamById(id);
+  const fav = state.favorites.has(id);
+  const teamMatches = matches.filter(m => m.home===id || m.away===id);
+  const teamNews = news.filter(n => n.team === t.init);
+  let body = '';
+  if(state.teamTab === 'rosa'){
+    const s = slug(t.name);
+    const mine = myPendingByTeam[s];
+    body = (t.roster && t.roster.length) ? t.roster.map(p => `
+      <div class="player-row">
+        <div class="player-num">${p.n}</div>
+        <div><div class="player-name">${p.name}</div><div class="player-role">${p.role}</div></div>
+      </div>
+    `).join('') : `<div class="empty"><p>Rosa non ancora disponibile. Se conosci questa squadra, puoi proporre tu l'elenco giocatori qui sotto — sarà pubblicato dopo l'approvazione.</p></div>`;
+
+    body += `
+      <div style="margin-top:16px; border-top:1px solid rgba(255,255,255,0.08); padding-top:14px;">
+        ${mine ? `<div class="note" style="text-align:left; margin-bottom:10px;">La tua ultima proposta è: <b style="color:${mine.status==='approved'?'var(--teal)':mine.status==='rejected'?'var(--danger)':'var(--gold)'}">${mine.status==='pending'?'in attesa di approvazione':mine.status==='approved'?'approvata':'rifiutata'}</b></div>` : ''}
+        ${state.user ? `
+          <div class="tab-item active" style="display:inline-block; cursor:pointer;" onclick="toggleRosterForm()">+ Proponi/aggiorna la rosa</div>
+          <div id="rosterFormWrap" class="hidden" style="margin-top:12px;">
+            ${renderRosterForm()}
+            <button class="primary-btn" onclick="inviaPropostaRosa(${t.id})">Invia proposta</button>
+            <p class="note">Le proposte vengono verificate da un amministratore prima di essere pubblicate.</p>
+          </div>
+        ` : `<p class="note">Accedi per proporre la rosa di questa squadra.</p>`}
+      </div>
+    `;
+  } else if(state.teamTab === 'partite'){
+    body = teamMatches.length ? teamMatches.map(m => matchRow(m)).join('') : `<div class="empty"><p>Nessuna partita in calendario.</p></div>`;
+  } else {
+    body = teamNews.length ? teamNews.map(n => `
+      <div class="news-card">
+        <div class="news-meta"><span class="badge">${n.team}</span><span class="news-time">${n.time}</span></div>
+        <div class="news-title">${n.title}</div>
+        <div class="news-blurb">${n.blurb}</div>
+      </div>
+    `).join('') : `<div class="empty"><p>Nessuna notizia recente per questa squadra.</p></div>`;
+  }
+
+  return `
+    <div class="back-link" onclick="backFromTeam()">← Torna alle squadre</div>
+    <div class="team-header">
+      <div class="team-badge" style="background:${t.color}22; color:${t.color};">${t.init}</div>
+      <div>
+        <h2>${t.name}</h2>
+        <div class="sub">${[t.city, t.colors ? 'Colori ' + t.colors : ''].filter(Boolean).join(' · ') || 'FIPAV Basso Tirreno'}</div>
+      </div>
+      <button class="star-btn" style="position:static; margin-left:auto; background:rgba(255,255,255,0.06); color:${fav?'var(--gold)':'var(--slate)'}" onclick="toggleFavorite(${t.id}, event)">
+        ${fav ? icons.starFill : icons.star}
+      </button>
+    </div>
+    <div class="tabs">
+      <div class="tab-item ${state.teamTab==='rosa'?'active':''}" onclick="setTeamTab('rosa')">Rosa</div>
+      <div class="tab-item ${state.teamTab==='partite'?'active':''}" onclick="setTeamTab('partite')">Partite</div>
+      <div class="tab-item ${state.teamTab==='notizie'?'active':''}" onclick="setTeamTab('notizie')">Notizie</div>
+    </div>
+    ${body}
+  `;
+}
+
+/* ---------------- INIT ---------------- */
+auth.onAuthStateChanged(user => {
+  state.user = user;
+  if(user) caricaPreferiti(user.uid);
+  else state.favorites = new Set();
+  renderProfileSlot();
+  render();
+});
+
+caricaDatiReali().then(() => {
+  renderProfileSlot();
+  render();
+  if(!usingRealData){
+    toast('Dati di esempio (data/2026-2027.json non ancora disponibile)');
+  }
+});
+</script>
+</body>
+</html>

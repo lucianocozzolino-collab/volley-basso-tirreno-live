@@ -312,10 +312,16 @@
 
 <script>
 /* ---------------- DATI REALI (caricati da data/<stagione>.json) ----------------
-   Il file viene prodotto dal tuo scraper via GitHub Actions.
-   Finché non è presente (es. repo non ancora collegato), si usano i dati di
-   esempio qui sotto come fallback, così l'app resta sempre navigabile. */
-const STAGIONE_CORRENTE = "2026-2027";
+   Il file viene prodotto dal tuo scraper via GitHub Actions, uno per stagione
+   (lancialo con l'anno che vuoi, es. node scrape-fipav.js 2025-2026).
+   Finché il file di una stagione non esiste ancora, si usano i dati di
+   esempio come fallback, così l'app resta sempre navigabile. */
+const STAGIONI_DISPONIBILI = [
+  "2025-2026","2026-2027","2024-2025","2023-2024","2022-2023",
+  "2021-2022","2020-2021","2019-2020","2018-2019","2017-2018",
+  "2016-2017","2015-2016","2014-2015"
+];
+let stagioneSelezionata = STAGIONI_DISPONIBILI[0];
 const PALETTE = ["#22A6B3","#FF6A3D","#FFC857","#3DDC97","#4C8BF5","#C1447E"];
 
 function coloreDa(nome){
@@ -331,9 +337,10 @@ let teams = [];
 let matches = [];
 let usingRealData = false;
 
-async function caricaDatiReali(){
+async function caricaDatiReali(stagione){
+  stagioneSelezionata = stagione || stagioneSelezionata;
   try{
-    const res = await fetch(`./data/${STAGIONE_CORRENTE}.json`, {cache:"no-store"});
+    const res = await fetch(`./data/${stagioneSelezionata}.json`, {cache:"no-store"});
     if(!res.ok) throw new Error("no data file");
     const json = await res.json();
     const nomiSquadre = new Set();
@@ -396,7 +403,7 @@ const SAMPLE_MATCHES = [
   {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00"},
 ];
 
-const news = [
+const SAMPLE_NEWS = [
   {team:"NPV", title:"Vico Equense chiude il mercato con due nuovi schiacciatori", time:"2 ore fa",
    blurb:"La società ha ufficializzato due innesti in vista della fase decisiva del girone, puntando a rinforzare la banda."},
   {team:"PSA", title:"Sant'Agnello vince in rimonta e aggancia il secondo posto", time:"5 ore fa",
@@ -406,6 +413,30 @@ const news = [
   {team:"MLV", title:"Massa Lubrense, il calendario delle prossime tre giornate", time:"1 giorno fa",
    blurb:"Pubblicato il programma ufficiale: due trasferte e una sfida casalinga contro la capolista."},
 ];
+
+let news = [];
+let usingRealNews = false;
+
+async function caricaNewsReali(){
+  try{
+    const res = await fetch('./data/news.json', {cache:"no-store"});
+    if(!res.ok) throw new Error("no news file");
+    const json = await res.json();
+    const lista = json.notizie || [];
+    if(lista.length === 0) throw new Error("empty");
+    news = lista.map(n => ({
+      title: n.titolo,
+      time: n.data || '',
+      url: n.url,
+      team: null
+    }));
+    usingRealNews = true;
+  }catch(e){
+    news = SAMPLE_NEWS;
+    usingRealNews = false;
+  }
+}
+
 
 /* ---------------- STATO (in memoria, nessun salvataggio persistente) ---------------- */
 let state = {
@@ -641,8 +672,15 @@ function render(){
 
 function renderHome(){
   return `
-    <div class="section-title">In evidenza <span class="tag">Toscana · Basso Tirreno</span></div>
-    ${news.map(n => `
+    <div class="section-title">In evidenza <span class="tag">Comitato Basso Tirreno</span></div>
+    ${!usingRealNews ? `<p class="note" style="text-align:left; margin-bottom:12px;">Notizie di esempio: data/news.json non ancora disponibile.</p>` : ''}
+    ${news.map(n => usingRealNews ? `
+      <div class="news-card">
+        <div class="news-meta"><span class="news-time">${n.time || 'Data non disponibile'}</span></div>
+        <div class="news-title">${n.title}</div>
+        <a href="${n.url}" target="_blank" rel="noopener" style="color:var(--teal); font-size:12.5px; font-weight:700; text-decoration:none;">Leggi su bassotirreno.federvolley.it →</a>
+      </div>
+    ` : `
       <div class="news-card">
         <div class="news-meta"><span class="badge">${n.team}</span><span class="news-time">${n.time}</span></div>
         <div class="news-title">${n.title}</div>
@@ -654,13 +692,28 @@ function renderHome(){
 
 function renderMatches(){
   const giornate = [...new Set(matches.map(m=>m.giornata))].sort((a,b)=>b-a);
+  const opzioniStagione = STAGIONI_DISPONIBILI.map(s =>
+    `<option value="${s}" ${s===stagioneSelezionata?'selected':''}>${s.replace('-','/')}</option>`
+  ).join('');
   return `
     <div class="section-title">Calendario &amp; risultati</div>
+    <div class="field" style="margin-bottom:14px;">
+      <select onchange="cambiaStagione(this.value)"
+        style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:14px; font-family:'Inter';">
+        ${opzioniStagione}
+      </select>
+      ${!usingRealData ? `<p class="note" style="text-align:left; margin-top:8px;">Dati di esempio: la stagione ${stagioneSelezionata.replace('-','/')} non è ancora stata scaricata per questo sito.</p>` : ''}
+    </div>
     ${giornate.map(g => `
       <div class="ticker-label" style="margin:14px 0 8px;">GIORNATA ${g}</div>
       ${matches.filter(m=>m.giornata===g).map(m => matchRow(m)).join('')}
     `).join('')}
   `;
+}
+
+async function cambiaStagione(stagione){
+  await caricaDatiReali(stagione);
+  render();
 }
 
 function matchRow(m){
@@ -973,11 +1026,11 @@ auth.onAuthStateChanged(user => {
   render();
 });
 
-caricaDatiReali().then(() => {
+Promise.all([caricaDatiReali(), caricaNewsReali()]).then(() => {
   renderProfileSlot();
   render();
   if(!usingRealData){
-    toast('Dati di esempio (data/2026-2027.json non ancora disponibile)');
+    toast(`Dati di esempio (data/${stagioneSelezionata}.json non ancora disponibile)`);
   }
 });
 </script>

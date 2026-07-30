@@ -1,7 +1,149 @@
 {
-  "aggiornamento": "2026-07-30T03:22:22.718Z",
-  "totale": 1409,
+  "aggiornamento": "2026-07-30T07:12:22.405Z",
+  "totale": 1412,
   "gironi": [
+    {
+      "stagione": "2025-2026",
+      "campionato": "Coppa Terr.1DF -Memorial P. Bosurgi",
+      "girone": "Girone A",
+      "id": 59701,
+      "nome": "Coppa Terr.1DF -Memorial P. Bosurgi-Girone A",
+      "url": "https://fipavonline.it/main/gare_girone/59701/1",
+      "squadre": [
+        "Euro  Hotel Siderno",
+        "Ad Polisportiva 1990",
+        "P3 Cafe' Volley Locri"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 1",
+          "data": "Dom 16/11/2025 17.00",
+          "casa": "Euro  Hotel Siderno",
+          "ospite": "Ad Polisportiva 1990",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 2",
+          "data": "Dom 23/11/2025 17.00",
+          "casa": "P3 Cafe' Volley Locri",
+          "ospite": "Euro  Hotel Siderno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 3",
+          "data": "Dom 30/11/2025 17.00",
+          "casa": "Ad Polisportiva 1990",
+          "ospite": "P3 Cafe' Volley Locri",
+          "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Coppa Terr.1DF -Memorial P. Bosurgi",
+      "girone": "Girone B",
+      "id": 59702,
+      "nome": "Coppa Terr.1DF -Memorial P. Bosurgi-Girone B",
+      "url": "https://fipavonline.it/main/gare_girone/59702/1",
+      "squadre": [
+        "Del Conte Volley",
+        "Asd Pallavolo Palmi",
+        "A.s.d. Team Volley 56"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 4",
+          "data": "Dom 16/11/2025 18.00",
+          "casa": "Del Conte Volley",
+          "ospite": "Asd Pallavolo Palmi",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 5",
+          "data": "Sab 22/11/2025 17.00",
+          "casa": "A.s.d. Team Volley 56",
+          "ospite": "Del Conte Volley",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 6",
+          "data": "Dom 30/11/2025 10.30",
+          "casa": "Asd Pallavolo Palmi",
+          "ospite": "A.s.d. Team Volley 56",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Coppa Terr.1DF -Memorial P. Bosurgi",
+      "girone": "Girone C",
+      "id": 59703,
+      "nome": "Coppa Terr.1DF -Memorial P. Bosurgi-Girone C",
+      "url": "https://fipavonline.it/main/gare_girone/59703/1",
+      "squadre": [
+        "Asd Pgs O. S .evergreen",
+        "L'antico Casale T9",
+        "A.s.d. Del Core Volley Academy",
+        "Volley Frecce Azzurre"
+      ],
+      "calendario": [
+        {
+          "gara": "Gara 7",
+          "data": "Dom 16/11/2025 11.00",
+          "casa": "Asd Pgs O. S .evergreen",
+          "ospite": "L'antico Casale T9",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 8",
+          "data": "Sab 15/11/2025 16.00",
+          "casa": "A.s.d. Del Core Volley Academy",
+          "ospite": "Volley Frecce Azzurre",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 9",
+          "data": "Sab 22/11/2025 16.00",
+          "casa": "A.s.d. Del Core Volley Academy",
+          "ospite": "Asd Pgs O. S .evergreen",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 10",
+          "data": "Sab 22/11/2025 18.30",
+          "casa": "Volley Frecce Azzurre",
+          "ospite": "L'antico Casale T9",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "Gara 11",
+          "data": "Sab 29/11/2025 18.30",
+          "casa": "Volley Frecce Azzurre",
+          "ospite": "Asd Pgs O. S .evergreen",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "Gara 12",
+          "data": "Sab 29/11/2025 18.00",
+          "casa": "L'antico Casale T9",
+          "ospite": "A.s.d. Del Core Volley Academy",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
     {
       "stagione": "2025-2026",
       "campionato": "Coppa Terr.1DF -Memorial P. Bosurgi",

@@ -2,17 +2,33 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
 
-const STAGIONE = process.argv[2] || "2026-2027";
+const STAGIONE = process.argv[2] || "2025-2026";
 
-// Comitato Territoriale Basso Tirreno (Pisa-Livorno-Grosseto), pagina campionati "normali".
-// NON quello con la "M" (10M52), che è la sezione Minivolley e non ha calendari/risultati.
-const COMITATO = "10052";
-
-function stagioneToSeasonId(stagione) {
-  // Verificato dal menu "Cambia stagione" del sito: 2014/2015 -> 9, ... 2026/2027 -> 21
-  const startYear = parseInt(stagione.split("-")[0], 10);
-  return startYear - 2005;
-}
+// Elenco ufficiale dei gironi del Comitato Territoriale Basso Tirreno (Pisa-Livorno-Grosseto)
+// per la stagione 2025-2026, estratto a mano dalla pagina:
+// https://fipavonline.it/main/tutti_i_campionati/10052
+//
+// Il tentativo di scoprire questi ID automaticamente cambiando stagione via URL
+// (cambia_stagione/{id}/tutti_i_campionati) non ha funzionato: il sito gestisce
+// il cambio stagione lato client (JavaScript), non con un link diretto scaricabile.
+// Quando inizia una nuova stagione (2026-2027 e successive), va ripetuta questa
+// procedura: salvare la pagina con la nuova stagione selezionata e rigenerare
+// questa lista (chiedi a Claude di rifarlo, è una cosa da 2 minuti).
+const GIRONI_BASSO_TIRRENO = {
+  "2025-2026": [
+    58773,58797,58798,58799,58913,58961,58962,58963,58964,59002,59144,59145,59147,59148,59149,59150,
+    59151,59152,59243,59262,59545,59546,59547,59548,59549,59557,59591,59594,59609,59612,59613,59617,
+    60010,60011,60270,60693,60756,60757,60758,60759,60760,60761,60787,60788,60789,60790,60817,60885,
+    60886,60887,60888,60889,60890,60891,60892,60893,60894,60895,60896,60904,60905,60906,61045,61114,
+    61139,61155,61163,61164,61165,61166,61208,61233,61243,61400,61401,61402,61403,61404,61405,61406,
+    61407,61408,61480,61481,61482,61483,61484,61485,61486,61503,61515,61516,61517,61518,61519,61520,
+    61793,61941,61942,62230,62231,62232,62233,62270,62274,62275,62276,62277,62284,62285,62303,62418,
+    62594,62653,62654,62655,62791,62818,62819,62820,62821,62822,62887,63093,63116,63117,63118,63119,
+    63120,63161,63163,63165,63170,63171,63172,63173,63174,63175,63176,63177,63178,63179,63180,63181,
+    63182,63183,63184,63185,63186,63187,63188,63324,63325,63326,63328,63404,63414,63434,63435,63436,
+    63437
+  ]
+};
 
 function calcolaStagione(dataGara) {
   const match = dataGara.match(/(\d{2})\/(\d{2})\/(\d{4})/);
@@ -23,40 +39,6 @@ function calcolaStagione(dataGara) {
   return `${anno - 1}-${anno}`;
 }
 
-// Fase 1: trova SOLO gli ID dei gironi che appartengono davvero al Basso Tirreno,
-// per la stagione richiesta, leggendo la pagina ufficiale del comitato.
-async function trovaGironiComitato(stagione, browser) {
-  const page = await browser.newPage();
-  const gironiIds = new Set();
-  try {
-    // Prima visita: imposta il comitato Basso Tirreno nella sessione del sito
-    await page.goto(`https://fipavonline.it/main/tutti_i_campionati/${COMITATO}`, {
-      waitUntil: "domcontentloaded",
-      timeout: 20000
-    });
-
-    // Seconda visita: cambia la stagione mantenendo il comitato in sessione
-    const seasonId = stagioneToSeasonId(stagione);
-    await page.goto(`https://fipavonline.it/main/cambia_stagione/${seasonId}/tutti_i_campionati`, {
-      waitUntil: "domcontentloaded",
-      timeout: 20000
-    });
-
-    const html = await page.content();
-    const $ = cheerio.load(html);
-
-    $('a[href*="gare_girone/"]').each((i, el) => {
-      const href = $(el).attr("href") || "";
-      const match = href.match(/gare_girone\/(\d+)/);
-      if (match) gironiIds.add(parseInt(match[1], 10));
-    });
-  } finally {
-    await page.close();
-  }
-  return Array.from(gironiIds);
-}
-
-// Fase 2: legge il dettaglio (squadre + calendario) di UN girone già identificato come Basso Tirreno.
 async function leggiGirone(id, browser) {
   const page = await browser.newPage();
 
@@ -130,13 +112,17 @@ async function leggiGirone(id, browser) {
 }
 
 (async () => {
+  const ids = GIRONI_BASSO_TIRRENO[STAGIONE];
+
+  if (!ids) {
+    console.error(`Nessun elenco di gironi salvato per la stagione ${STAGIONE}.`);
+    console.error(`Stagioni disponibili: ${Object.keys(GIRONI_BASSO_TIRRENO).join(", ")}`);
+    process.exit(1);
+  }
+
   const browser = await chromium.launch({ headless: true });
 
-  console.log(`Comitato Basso Tirreno (${COMITATO}) — stagione ${STAGIONE}`);
-  console.log("Cerco l'elenco ufficiale dei gironi per questa stagione...");
-
-  const ids = await trovaGironiComitato(STAGIONE, browser);
-  console.log(`Trovati ${ids.length} gironi ufficiali del Basso Tirreno per la stagione ${STAGIONE}.`);
+  console.log(`Comitato Basso Tirreno — stagione ${STAGIONE} — ${ids.length} gironi da leggere`);
 
   const gironi = [];
   for (const id of ids) {

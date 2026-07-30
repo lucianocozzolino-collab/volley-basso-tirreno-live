@@ -356,6 +356,7 @@ async function caricaDatiReali(stagione){
     let mid = 1;
     matches = [];
     (json.gironi || []).forEach(g => {
+      const categoria = [g.campionato, g.girone].filter(Boolean).join(' - ');
       g.calendario.forEach(m => {
         const homeId = idByName[m.casa], awayId = idByName[m.ospite];
         if(!homeId || !awayId) return;
@@ -364,7 +365,8 @@ async function caricaDatiReali(stagione){
           id: mid++, giornata: m.gara, home: homeId, away: awayId,
           set: giocata ? m.risultato.replace(/\s/g,'') : null,
           status: giocata ? 'played' : 'upcoming',
-          date: m.data
+          date: m.data,
+          categoria: categoria || 'Senza categoria'
         });
       });
     });
@@ -395,12 +397,12 @@ const SAMPLE_TEAMS = [
 ];
 
 const SAMPLE_MATCHES = [
-  {giornata:8, home:1, away:3, set:"3-1", status:"played", date:"27 lug 2026"},
-  {giornata:8, home:2, away:5, set:"2-3", status:"played", date:"27 lug 2026"},
-  {giornata:8, home:4, away:6, set:"3-0", status:"played", date:"27 lug 2026"},
-  {giornata:9, home:3, away:2, set:null, status:"live", date:"oggi · 19:00"},
-  {giornata:9, home:5, away:1, set:null, status:"upcoming", date:"2 ago 2026 · 18:30"},
-  {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00"},
+  {giornata:8, home:1, away:3, set:"3-1", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A"},
+  {giornata:8, home:2, away:5, set:"2-3", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A"},
+  {giornata:8, home:4, away:6, set:"3-0", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A"},
+  {giornata:9, home:3, away:2, set:null, status:"live", date:"oggi · 19:00", categoria:"Prima Divisione - Girone A"},
+  {giornata:9, home:5, away:1, set:null, status:"upcoming", date:"2 ago 2026 · 18:30", categoria:"Prima Divisione - Girone A"},
+  {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00", categoria:"Prima Divisione - Girone A"},
 ];
 
 const SAMPLE_NEWS = [
@@ -446,7 +448,9 @@ let state = {
   currentTeamId: null,
   teamTab: 'rosa',
   authMode: 'login',
-  searchQuery: ''
+  searchQuery: '',
+  filtroCategoria: '',
+  filtroGiornata: ''
 };
 
 function openSearch(){
@@ -691,27 +695,71 @@ function renderHome(){
 }
 
 function renderMatches(){
-  const giornate = [...new Set(matches.map(m=>m.giornata))].sort((a,b)=>b-a);
   const opzioniStagione = STAGIONI_DISPONIBILI.map(s =>
     `<option value="${s}" ${s===stagioneSelezionata?'selected':''}>${s.replace('-','/')}</option>`
   ).join('');
+
+  const categorie = [...new Set(matches.map(m=>m.categoria).filter(Boolean))].sort();
+  // Se la categoria selezionata non esiste più (es. cambio stagione), riparti da "tutte"
+  if(state.filtroCategoria && !categorie.includes(state.filtroCategoria)) state.filtroCategoria = '';
+
+  const matchesFiltrateCategoria = state.filtroCategoria
+    ? matches.filter(m => m.categoria === state.filtroCategoria)
+    : matches;
+
+  const giornateDisponibili = [...new Set(matchesFiltrateCategoria.map(m=>m.giornata))]
+    .sort((a,b)=> String(a).localeCompare(String(b), undefined, {numeric:true}));
+  if(state.filtroGiornata && !giornateDisponibili.includes(state.filtroGiornata)) state.filtroGiornata = '';
+
+  const matchesFiltrate = state.filtroGiornata
+    ? matchesFiltrateCategoria.filter(m => m.giornata === state.filtroGiornata)
+    : matchesFiltrateCategoria;
+
+  const giornateMostrate = [...new Set(matchesFiltrate.map(m=>m.giornata))]
+    .sort((a,b)=> String(b).localeCompare(String(a), undefined, {numeric:true}));
+
+  const selectStyle = "width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:14px; font-family:'Inter';";
+
   return `
     <div class="section-title">Calendario &amp; risultati</div>
-    <div class="field" style="margin-bottom:14px;">
-      <select onchange="cambiaStagione(this.value)"
-        style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:14px; font-family:'Inter';">
+    <div class="field" style="margin-bottom:10px;">
+      <select onchange="cambiaStagione(this.value)" style="${selectStyle}">
         ${opzioniStagione}
       </select>
       ${!usingRealData ? `<p class="note" style="text-align:left; margin-top:8px;">Dati di esempio: la stagione ${stagioneSelezionata.replace('-','/')} non è ancora stata scaricata per questo sito.</p>` : ''}
     </div>
-    ${giornate.map(g => `
+    <div class="field" style="margin-bottom:10px;">
+      <select onchange="filtraCategoria(this.value)" style="${selectStyle}">
+        <option value="">Tutte le categorie</option>
+        ${categorie.map(c => `<option value="${c.replace(/"/g,'&quot;')}" ${c===state.filtroCategoria?'selected':''}>${c}</option>`).join('')}
+      </select>
+    </div>
+    <div class="field" style="margin-bottom:14px;">
+      <select onchange="filtraGiornata(this.value)" style="${selectStyle}">
+        <option value="">Tutte le giornate</option>
+        ${giornateDisponibili.map(g => `<option value="${g}" ${g===state.filtroGiornata?'selected':''}>Giornata ${g}</option>`).join('')}
+      </select>
+    </div>
+    ${matchesFiltrate.length === 0 ? `<div class="empty"><p>Nessuna partita trovata con questi filtri.</p></div>` : giornateMostrate.map(g => `
       <div class="ticker-label" style="margin:14px 0 8px;">GIORNATA ${g}</div>
-      ${matches.filter(m=>m.giornata===g).map(m => matchRow(m)).join('')}
+      ${matchesFiltrate.filter(m=>m.giornata===g).map(m => matchRow(m)).join('')}
     `).join('')}
   `;
 }
 
+function filtraCategoria(v){
+  state.filtroCategoria = v;
+  state.filtroGiornata = ''; // la giornata dipende dalla categoria, si resetta al cambio
+  render();
+}
+function filtraGiornata(v){
+  state.filtroGiornata = v;
+  render();
+}
+
 async function cambiaStagione(stagione){
+  state.filtroCategoria = '';
+  state.filtroGiornata = '';
   await caricaDatiReali(stagione);
   render();
 }

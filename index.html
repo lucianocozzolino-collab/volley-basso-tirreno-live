@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Volley Basso Tirreno</title>
+<link rel="manifest" href="/volley-basso-tirreno-live/manifest.json">
+<meta name="theme-color" content="#0B1B3A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
 
 <!-- ==== GOOGLE ADSENSE ====
-     Sostituisci ca-pub-XXXXXXXXXXXXXXXX con il tuo client ID reale una volta approvato.
-     Gli annunci "vignetta" (schermo intero) si attivano dalla dashboard AdSense, non da qui. -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+     Client ID reale già inserito. Manca ancora lo slot ID: lo ottieni creando
+     un blocco annuncio display dalla dashboard AdSense, dopo l'approvazione del sito. -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2291926072406507" crossorigin="anonymous"></script>
 
 <!-- ==== FIREBASE (auth + preferiti) ==== -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -271,7 +273,7 @@
         <div class="brand-text">VOLLEY BASSO TIRRENO<small>Risultati &amp; Rose in tempo reale</small></div>
       </div>
       <div class="top-actions">
-        <button class="icon-btn" title="Cerca">
+        <button class="icon-btn" title="Cerca" onclick="openSearch()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </button>
         <div id="profileSlot"></div>
@@ -299,7 +301,7 @@
 <div style="max-width:460px; margin:0 auto; padding:10px 16px;">
   <ins class="adsbygoogle"
        style="display:block"
-       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-client="ca-pub-2291926072406507"
        data-ad-slot="XXXXXXXXXX"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
@@ -412,8 +414,21 @@ let state = {
   favorites: new Set(),
   currentTeamId: null,
   teamTab: 'rosa',
-  authMode: 'login'
+  authMode: 'login',
+  searchQuery: ''
 };
+
+function openSearch(){
+  state.tab = 'teams';
+  state.currentTeamId = null;
+  render();
+  setTimeout(()=>{ const el = document.getElementById('teamSearchInput'); if(el) el.focus(); }, 50);
+}
+function updateSearch(v){
+  state.searchQuery = v;
+  render();
+  setTimeout(()=>{ const el = document.getElementById('teamSearchInput'); if(el){ el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }, 0);
+}
 
 const auth = firebase.auth();
 const db = firebase.firestore();
@@ -667,11 +682,19 @@ function matchRow(m){
 }
 
 function renderTeams(){
+  const q = state.searchQuery.trim().toLowerCase();
+  const filtered = q ? teams.filter(t => t.name.toLowerCase().includes(q)) : teams;
   return `
     <div class="section-title">Squadre del girone</div>
-    <div class="team-grid">
-      ${teams.map(t => teamCard(t)).join('')}
+    <div class="field" style="margin-bottom:14px;">
+      <input id="teamSearchInput" placeholder="Cerca una squadra..." value="${state.searchQuery.replace(/"/g,'&quot;')}"
+        oninput="updateSearch(this.value)"
+        style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:14px; font-family:'Inter';">
     </div>
+    ${filtered.length === 0 ? `<div class="empty"><p>Nessuna squadra trovata per "${state.searchQuery}".</p></div>` : `
+    <div class="team-grid">
+      ${filtered.map(t => teamCard(t)).join('')}
+    </div>`}
   `;
 }
 

@@ -4,20 +4,15 @@ const { chromium } = require("playwright");
 
 const STAGIONE = process.argv[2] || "2026-2027";
 
-const RANGE = {
-  ALL: { min: 59700, max: 61600 },
-  "2026-2027": { min: 59700, max: 61600 },
-  "2025-2026": { min: 59700, max: 61600 },
-  "2024-2025": { min: 59700, max: 61600 }
-};
+// Comitato Territoriale Basso Tirreno (Pisa-Livorno-Grosseto), pagina campionati "normali".
+// NON quello con la "M" (10M52), che è la sezione Minivolley e non ha calendari/risultati.
+const COMITATO = "10052";
 
-if (!RANGE[STAGIONE]) {
-  console.error(`Stagione non supportata: ${STAGIONE}`);
-  process.exit(1);
+function stagioneToSeasonId(stagione) {
+  // Verificato dal menu "Cambia stagione" del sito: 2014/2015 -> 9, ... 2026/2027 -> 21
+  const startYear = parseInt(stagione.split("-")[0], 10);
+  return startYear - 2005;
 }
-
-const ID_MIN = RANGE[STAGIONE].min;
-const ID_MAX = RANGE[STAGIONE].max;
 
 function calcolaStagione(dataGara) {
   const match = dataGara.match(/(\d{2})\/(\d{2})\/(\d{4})/);
@@ -28,8 +23,43 @@ function calcolaStagione(dataGara) {
   return `${anno - 1}-${anno}`;
 }
 
+// Fase 1: trova SOLO gli ID dei gironi che appartengono davvero al Basso Tirreno,
+// per la stagione richiesta, leggendo la pagina ufficiale del comitato.
+async function trovaGironiComitato(stagione, browser) {
+  const page = await browser.newPage();
+  const gironiIds = new Set();
+  try {
+    // Prima visita: imposta il comitato Basso Tirreno nella sessione del sito
+    await page.goto(`https://fipavonline.it/main/tutti_i_campionati/${COMITATO}`, {
+      waitUntil: "domcontentloaded",
+      timeout: 20000
+    });
+
+    // Seconda visita: cambia la stagione mantenendo il comitato in sessione
+    const seasonId = stagioneToSeasonId(stagione);
+    await page.goto(`https://fipavonline.it/main/cambia_stagione/${seasonId}/tutti_i_campionati`, {
+      waitUntil: "domcontentloaded",
+      timeout: 20000
+    });
+
+    const html = await page.content();
+    const $ = cheerio.load(html);
+
+    $('a[href*="gare_girone/"]').each((i, el) => {
+      const href = $(el).attr("href") || "";
+      const match = href.match(/gare_girone\/(\d+)/);
+      if (match) gironiIds.add(parseInt(match[1], 10));
+    });
+  } finally {
+    await page.close();
+  }
+  return Array.from(gironiIds);
+}
+
+// Fase 2: legge il dettaglio (squadre + calendario) di UN girone già identificato come Basso Tirreno.
 async function leggiGirone(id, browser) {
   const page = await browser.newPage();
+
   try {
     const url = `https://fipavonline.it/main/gare_girone/${id}/1`;
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 10000 });
@@ -41,8 +71,8 @@ async function leggiGirone(id, browser) {
 
     const nomeGirone = titoloCompleto.split("/").shift().trim();
     const campionato = nomeGirone.replace(/\s*-\s*Girone\s+[A-Z0-9]+.*/i, "").trim();
-    const match = nomeGirone.match(/Girone\s+[A-Z0-9]+/i);
-    const girone = match ? match[0] : "";
+    const matchGirone = nomeGirone.match(/Girone\s+[A-Z0-9]+/i);
+    const girone = matchGirone ? matchGirone[0] : "";
 
     const squadreSet = new Set();
     $(".sq-nLong").each((i, el) => {
@@ -101,23 +131,22 @@ async function leggiGirone(id, browser) {
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
+
+  console.log(`Comitato Basso Tirreno (${COMITATO}) — stagione ${STAGIONE}`);
+  console.log("Cerco l'elenco ufficiale dei gironi per questa stagione...");
+
+  const ids = await trovaGironiComitato(STAGIONE, browser);
+  console.log(`Trovati ${ids.length} gironi ufficiali del Basso Tirreno per la stagione ${STAGIONE}.`);
+
   const gironi = [];
-
-  console.log(`Range ID ${ID_MIN}-${ID_MAX}`);
-
-  for (let id = ID_MIN; id <= ID_MAX; id++) {
-    if (id % 50 === 0) console.log(`Analizzo ID ${id}`);
+  for (const id of ids) {
     const dati = await leggiGirone(id, browser);
     if (dati && dati.nome && dati.campionato) {
       gironi.push(dati);
-      console.log(`Trovato ${id} - ${dati.nome}`);
+      console.log(`OK ${id} - ${dati.nome}`);
+    } else {
+      console.log(`Vuoto/non valido: ${id}`);
     }
-  }
-
-  const idsTrovati = gironi.map(g => g.id);
-  if (idsTrovati.length > 0) {
-    console.log(`MIN ID TROVATO: ${Math.min(...idsTrovati)}`);
-    console.log(`MAX ID TROVATO: ${Math.max(...idsTrovati)}`);
   }
 
   await browser.close();
@@ -129,5 +158,5 @@ async function leggiGirone(id, browser) {
     "utf8"
   );
 
-  console.log(`Salvati ${gironi.length} gironi`);
+  console.log(`Salvati ${gironi.length} gironi in data/${STAGIONE}.json`);
 })();

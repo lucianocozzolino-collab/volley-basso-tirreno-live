@@ -65,27 +65,33 @@ async function leggiGirone(id, browser) {
     if (!campionato || squadreSet.size === 0) return null;
 
     const calendario = [];
-    $(".risultati").each((i, gara) => {
-      const numero = $(gara).find(".info-gara-giornata").first().text().trim();
-      if (!numero) return;
-      const squadre = $(gara).find(".sq-nLong");
-      if (squadre.length < 2) return;
-      const risultato = $(gara).find(".s-scoreText").first().text().trim();
-      const setParziali = $(gara).find(".s-scoreDett").first().text().trim();
+    $(".gare-wrap").each((gi, blocco) => {
+      const titoloBlocco = $(blocco).find("h3").first().text().trim();
+      const giornataMatch = titoloBlocco.match(/Giornata\s+(\d+)/i);
+      const giornata = giornataMatch ? giornataMatch[1] : String(gi + 1);
 
-      calendario.push({
-        gara: numero,
-        data: $(gara).find(".info-gara-data").first().text().trim(),
-        casa: $(squadre[0]).text().trim(),
-        ospite: $(squadre[1]).text().trim(),
-        risultato,
-        set: setParziali || ""
+      $(blocco).find(".risultati").each((i, gara) => {
+        const codiceGara = $(gara).find(".info-gara-giornata").first().text().trim();
+        const squadre = $(gara).find(".sq-nLong");
+        if (squadre.length < 2) return;
+        const risultato = $(gara).find(".s-scoreText").first().text().trim();
+        const setParziali = $(gara).find(".s-scoreDett").first().text().trim();
+
+        calendario.push({
+          gara: giornata,
+          codiceGara,
+          data: $(gara).find(".info-gara-data").first().text().trim(),
+          casa: $(squadre[0]).text().trim(),
+          ospite: $(squadre[1]).text().trim(),
+          risultato,
+          set: setParziali || ""
+        });
       });
     });
 
     const viste = new Set();
     const calendarioPulito = calendario.filter(g => {
-      const chiave = [g.gara, g.data, g.casa, g.ospite].join("|");
+      const chiave = g.codiceGara || [g.gara, g.data, g.casa, g.ospite].join("|");
       if (viste.has(chiave)) return false;
       viste.add(chiave);
       return true;

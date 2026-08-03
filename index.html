@@ -60,6 +60,16 @@
     position:relative;
     box-shadow: 0 0 60px rgba(0,0,0,0.6);
   }
+  @media (min-width: 860px){
+    .app{ max-width: 900px; }
+    main{ padding-left:32px; padding-right:32px; }
+    .team-grid{ grid-template-columns: repeat(3, 1fr); }
+    .news-card, .match-row{ max-width: 100%; }
+  }
+  @media (min-width: 1200px){
+    .app{ max-width: 1140px; }
+    .team-grid{ grid-template-columns: repeat(4, 1fr); }
+  }
 
   /* ---------- HEADER ---------- */
   header.top{
@@ -194,6 +204,8 @@
     border-top:1px solid rgba(255,255,255,0.08);
     display:flex; justify-content:space-around; padding:8px 4px 12px; z-index:30;
   }
+  @media (min-width: 860px){ nav.bottom{ max-width: 900px; } }
+  @media (min-width: 1200px){ nav.bottom{ max-width: 1140px; } }
   .nav-item{display:flex; flex-direction:column; align-items:center; gap:4px; cursor:pointer; color:var(--slate); flex:1; padding:4px;}
   .nav-item svg{width:20px; height:20px;}
   .nav-item span{font-size:9.5px; font-weight:700; letter-spacing:0.3px;}
@@ -452,7 +464,10 @@ let state = {
   filtroCategoria: '',
   filtroGiornata: '',
   teamFiltroCategoria: '',
-  mostraClassifica: false
+  mostraClassifica: false,
+  rosterCategoriaSelezionata: '',
+  mostraClassificaSquadra: false,
+  adminTab: 'rose'
 };
 
 function openSearch(){
@@ -618,7 +633,8 @@ function caricaPreferiti(uid){
 function renderProfileSlot(){
   const slot = document.getElementById('profileSlot');
   if(state.user){
-    const initials = state.user.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    const displayName = state.user.displayName || state.user.email || 'Utente';
+    const initials = displayName.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
     slot.innerHTML = `<div class="avatar" onclick="setTab('profile')">${initials}</div>`;
   } else {
     slot.innerHTML = `<button class="icon-btn" onclick="openLogin('login')">${icons.profile}</button>`;
@@ -678,13 +694,13 @@ function render(){
     case 'teams': main.innerHTML = renderTeams(); break;
     case 'favorites': main.innerHTML = renderFavorites(); break;
     case 'profile': main.innerHTML = renderProfile(); break;
+    case 'sponsor': main.innerHTML = renderSponsor(); break;
     case 'admin': main.innerHTML = renderAdmin(); break;
   }
 }
 
 function renderHome(){
   return `
-    ${renderTickerHtml()}
     <div class="section-title">In evidenza <span class="tag">Comitato Basso Tirreno</span></div>
     ${!usingRealNews ? `<p class="note" style="text-align:left; margin-bottom:12px;">Notizie di esempio: data/news.json non ancora disponibile.</p>` : ''}
     ${news.map(n => usingRealNews ? `
@@ -935,18 +951,23 @@ function renderProfile(){
       </div>
     `;
   }
+  const displayName = state.user.displayName || state.user.email || 'Utente';
   return `
     <div class="section-title">Il tuo profilo</div>
     <div class="news-card" style="text-align:center;">
       <div class="avatar" style="width:56px; height:56px; font-size:18px; border-radius:16px; margin:0 auto 12px;">
-        ${state.user.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()}
+        ${displayName.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()}
       </div>
-      <div class="news-title" style="margin-bottom:2px;">${state.user.name}</div>
-      <div class="news-time">Accesso tramite ${state.user.via}</div>
+      <div class="news-title" style="margin-bottom:2px;">${displayName}</div>
+      <div class="news-time">${state.user.email || ''}</div>
     </div>
     <div class="news-card">
       <div class="tname" style="margin-bottom:6px;">Squadre preferite: ${state.favorites.size}</div>
       <div class="news-blurb">Riceverai notizie e risultati dalle squadre che segui nella sezione Preferiti.</div>
+    </div>
+    <div class="news-card" style="cursor:pointer;" onclick="setTab('sponsor')">
+      <div class="tname" style="margin-bottom:6px;">📣 Sponsor &amp; Contatti</div>
+      <div class="news-blurb">Vuoi sponsorizzare una squadra o scrivere all'amministratore? Tocca qui.</div>
     </div>
     <button class="cta-btn" style="width:100%; background:transparent; border:1px solid var(--danger); color:var(--danger);" onclick="logout()">Esci</button>
   `;
@@ -955,8 +976,13 @@ function renderProfile(){
 function openTeam(id){
   state.currentTeamId = id;
   state.teamTab = 'rosa';
+  state.mostraClassificaSquadra = false;
   const t = teamById(id);
-  if(t) caricaRosterSquadra(t);
+  if(t){
+    const cats = categorieDiSquadra(t);
+    state.rosterCategoriaSelezionata = cats[0] || '';
+    caricaRosterSquadra(t, state.rosterCategoriaSelezionata);
+  }
   render();
   window.scrollTo(0,0);
 }
@@ -970,25 +996,40 @@ function setTeamTab(tab){
 }
 
 /* ---------------- ROSE: caricamento, proposta, approvazione ---------------- */
-function caricaRosterSquadra(t){
-  const s = slug(t.name);
-  db.collection('rosters').doc(s).get().then(doc => {
-    rosterCache[s] = doc.exists ? (doc.data().players || []) : [];
-    if(rosterCache[s].length) t.roster = rosterCache[s];
+function categorieDiSquadra(t){
+  return [...new Set(matches.filter(m => m.home===t.id || m.away===t.id).map(m=>m.categoria).filter(Boolean))].sort();
+}
+
+function rosterKeyFor(t, categoria){
+  return categoria ? `${slug(t.name)}__${slug(categoria)}` : slug(t.name);
+}
+
+function caricaRosterSquadra(t, categoria){
+  const key = rosterKeyFor(t, categoria);
+  db.collection('rosters').doc(key).get().then(doc => {
+    rosterCache[key] = doc.exists ? (doc.data().players || []) : [];
+    t.roster = rosterCache[key];
     render();
   }).catch(()=>{});
 
   if(state.user){
     db.collection('roster_submissions')
       .where('uid','==', state.user.uid)
-      .where('teamSlug','==', s)
+      .where('teamSlug','==', key)
       .get().then(snap => {
         let ultima = null;
         snap.forEach(d => { const v=d.data(); if(!ultima || v.createdAt > ultima.createdAt) ultima = v; });
-        myPendingByTeam[s] = ultima;
+        myPendingByTeam[key] = ultima;
         render();
       }).catch(()=>{});
   }
+}
+
+function cambiaCategoriaRosa(v){
+  state.rosterCategoriaSelezionata = v;
+  const t = teamById(state.currentTeamId);
+  if(t) caricaRosterSquadra(t, v);
+  render();
 }
 
 function toggleRosterForm(){
@@ -998,7 +1039,8 @@ function toggleRosterForm(){
 
 function inviaPropostaRosa(teamId){
   const t = teamById(teamId);
-  const s = slug(t.name);
+  const categoria = state.rosterCategoriaSelezionata || '';
+  const key = rosterKeyFor(t, categoria);
   if(!state.user){ openLogin('login'); return; }
 
   const rows = document.querySelectorAll('.roster-form-row');
@@ -1012,8 +1054,9 @@ function inviaPropostaRosa(teamId){
   if(players.length === 0){ toast('Inserisci almeno un giocatore'); return; }
 
   db.collection('roster_submissions').add({
-    teamSlug: s,
+    teamSlug: key,
     teamName: t.name,
+    categoria: categoria || '(nessuna categoria specifica)',
     uid: state.user.uid,
     userName: state.user.displayName || state.user.email || 'Utente',
     players,
@@ -1021,7 +1064,7 @@ function inviaPropostaRosa(teamId){
     createdAt: Date.now()
   }).then(()=>{
     toast('Proposta inviata, in attesa di approvazione');
-    caricaRosterSquadra(t);
+    caricaRosterSquadra(t, categoria);
   }).catch(err => toast('Errore: ' + err.message));
 }
 
@@ -1043,6 +1086,7 @@ function renderRosterForm(){
   }
   return rows;
 }
+
 
 /* ---------------- PANNELLO ADMIN (solo per ADMIN_UIDS) ---------------- */
 function caricaProposteInAttesa(){
@@ -1068,17 +1112,139 @@ function rifiutaProposta(subId){
     .catch(err => toast('Errore: ' + err.message));
 }
 
+/* ---------------- SPONSOR & CONTATTI ---------------- */
+let mieiMessaggi = [];
+
+function caricaMieiMessaggi(){
+  if(!state.user) return;
+  db.collection('messaggi').where('uid','==', state.user.uid).get().then(snap => {
+    mieiMessaggi = [];
+    snap.forEach(d => mieiMessaggi.push({id: d.id, ...d.data()}));
+    mieiMessaggi.sort((a,b) => b.createdAt - a.createdAt);
+    render();
+  }).catch(()=>{});
+}
+
+function inviaMessaggio(){
+  if(!state.user){ openLogin('login'); return; }
+  const nome = document.getElementById('msgNome').value.trim() || (state.user.displayName || state.user.email);
+  const email = document.getElementById('msgEmail').value.trim() || state.user.email || '';
+  const tipo = document.getElementById('msgTipo').value;
+  const testo = document.getElementById('msgTesto').value.trim();
+  if(!testo){ toast('Scrivi un messaggio prima di inviare'); return; }
+
+  db.collection('messaggi').add({
+    uid: state.user.uid,
+    nome, email, tipo, testo,
+    status: 'nuovo',
+    risposta: '',
+    createdAt: Date.now()
+  }).then(()=>{
+    toast('Messaggio inviato');
+    document.getElementById('msgTesto').value = '';
+    caricaMieiMessaggi();
+  }).catch(err => toast('Errore: ' + err.message));
+}
+
+function renderSponsor(){
+  if(!state.user){
+    return `
+      <div class="empty">
+        ${icons.profile}
+        <p>Accedi per contattare l'amministratore o proporre una sponsorizzazione.</p>
+        <button class="cta-btn" onclick="openLogin('login')">Accedi</button>
+      </div>
+    `;
+  }
+  if(mieiMessaggi.length === 0) caricaMieiMessaggi();
+  const inputStyle = "width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:14px; font-family:'Inter'; margin-bottom:10px;";
+  return `
+    <div class="section-title">Sponsor &amp; Contatti</div>
+    <div class="news-card">
+      <select id="msgTipo" style="${inputStyle}">
+        <option value="sponsor">Voglio sponsorizzare una squadra</option>
+        <option value="contatto">Contatto generale con l'amministratore</option>
+      </select>
+      <input id="msgNome" placeholder="Nome (opzionale)" style="${inputStyle}" value="${state.user.displayName || ''}">
+      <input id="msgEmail" placeholder="Email di risposta" style="${inputStyle}" value="${state.user.email || ''}">
+      <textarea id="msgTesto" placeholder="Scrivi il tuo messaggio..." rows="4" style="${inputStyle} resize:vertical;"></textarea>
+      <button class="primary-btn" onclick="inviaMessaggio()">Invia messaggio</button>
+    </div>
+    ${mieiMessaggi.length ? `
+      <div class="section-title" style="font-size:16px; margin-top:20px;">I tuoi messaggi</div>
+      ${mieiMessaggi.map(m => `
+        <div class="news-card">
+          <div class="news-meta"><span class="badge">${m.tipo === 'sponsor' ? 'Sponsor' : 'Contatto'}</span><span class="news-time">${m.status === 'risposto' ? 'Risposto' : 'In attesa'}</span></div>
+          <div class="news-blurb" style="margin-bottom:8px;">${m.testo}</div>
+          ${m.risposta ? `<div class="note" style="text-align:left; background:rgba(34,166,179,0.08); padding:10px; border-radius:8px;"><b style="color:var(--teal);">Risposta:</b> ${m.risposta}</div>` : ''}
+        </div>
+      `).join('')}
+    ` : ''}
+  `;
+}
+
+/* ---------------- ADMIN: proposte rose + messaggi ---------------- */
+let messaggiAdmin = [];
+
+function caricaMessaggiAdmin(){
+  db.collection('messaggi').orderBy('createdAt','desc').get().then(snap => {
+    messaggiAdmin = [];
+    snap.forEach(d => messaggiAdmin.push({id: d.id, ...d.data()}));
+    render();
+  }).catch(err => toast('Errore admin: ' + err.message));
+}
+
+function rispondiMessaggio(id){
+  const testo = document.getElementById('risp_' + id).value.trim();
+  if(!testo){ toast('Scrivi una risposta prima di inviare'); return; }
+  db.collection('messaggi').doc(id).update({
+    risposta: testo, status: 'risposto', rispostoAt: Date.now()
+  }).then(()=>{
+    toast('Risposta salvata');
+    caricaMessaggiAdmin();
+  }).catch(err => toast('Errore: ' + err.message));
+}
+
+function setAdminTab(tab){
+  state.adminTab = tab;
+  render();
+}
+
 function renderAdmin(){
   if(!isAdmin()) return `<div class="empty"><p>Accesso riservato.</p></div>`;
+  const tab = state.adminTab || 'rose';
+
+  const tabsHtml = `
+    <div class="tabs">
+      <div class="tab-item ${tab==='rose'?'active':''}" onclick="setAdminTab('rose')">Proposte rose</div>
+      <div class="tab-item ${tab==='messaggi'?'active':''}" onclick="setAdminTab('messaggi')">Messaggi</div>
+    </div>
+  `;
+
+  if(tab === 'messaggi'){
+    if(messaggiAdmin.length === 0) caricaMessaggiAdmin();
+    return tabsHtml + (messaggiAdmin.length === 0 ? `<div class="empty"><p>Nessun messaggio ricevuto.</p></div>` : messaggiAdmin.map(m => `
+      <div class="news-card">
+        <div class="news-meta">
+          <span class="badge">${m.tipo === 'sponsor' ? 'Sponsor' : 'Contatto'}</span>
+          <span class="news-time">${m.nome || 'Anonimo'} · ${m.email || 'senza email'}</span>
+        </div>
+        <div class="news-blurb" style="margin-bottom:10px;">${m.testo}</div>
+        ${m.risposta ? `<div class="note" style="text-align:left; background:rgba(34,166,179,0.08); padding:10px; border-radius:8px; margin-bottom:10px;"><b style="color:var(--teal);">Tua risposta:</b> ${m.risposta}</div>` : ''}
+        <textarea id="risp_${m.id}" placeholder="Scrivi una risposta..." rows="2" style="width:100%; padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-family:'Inter'; margin-bottom:8px; resize:vertical;">${m.risposta || ''}</textarea>
+        <button class="cta-btn" style="width:100%; margin-top:0;" onclick="rispondiMessaggio('${m.id}')">${m.risposta ? 'Aggiorna risposta' : 'Invia risposta'}</button>
+      </div>
+    `).join(''));
+  }
+
   if(pendingSubmissions.length === 0) caricaProposteInAttesa();
   if(pendingSubmissions.length === 0){
-    return `<div class="section-title">Proposte rose</div><div class="empty"><p>Nessuna proposta in attesa al momento.</p></div>`;
+    return tabsHtml + `<div class="empty"><p>Nessuna proposta in attesa al momento.</p></div>`;
   }
-  return `
-    <div class="section-title">Proposte in attesa (${pendingSubmissions.length})</div>
+  return tabsHtml + `
     ${pendingSubmissions.map(s => `
       <div class="news-card">
-        <div class="news-meta"><span class="badge">${s.teamName}</span><span class="news-time">di ${s.userName}</span></div>
+        <div class="news-meta"><span class="badge">${s.teamName}</span><span class="news-time">${s.categoria ? s.categoria + ' · ' : ''}di ${s.userName}</span></div>
         ${s.players.map(p => `<div class="player-row" style="padding:6px 0;"><div class="player-num">${p.n}</div><div><div class="player-name">${p.name}</div><div class="player-role">${p.role}</div></div></div>`).join('')}
         <div style="display:flex; gap:8px; margin-top:10px;">
           <button class="cta-btn" style="flex:1; margin-top:0;" onclick="approvaProposta('${s.id}')">Approva</button>
@@ -1100,14 +1266,25 @@ function renderTeamDetail(id){
   const teamNews = news.filter(n => n.team === t.init);
   let body = '';
   if(state.teamTab === 'rosa'){
-    const s = slug(t.name);
-    const mine = myPendingByTeam[s];
-    body = (t.roster && t.roster.length) ? t.roster.map(p => `
+    const categorieTeam = categorieDiSquadra(t);
+    const key = rosterKeyFor(t, state.rosterCategoriaSelezionata);
+    const mine = myPendingByTeam[key];
+    const selectStyleR = "width:100%; padding:11px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:13.5px; font-family:'Inter';";
+
+    body = categorieTeam.length > 1 ? `
+      <div class="field" style="margin-bottom:14px;">
+        <select onchange="cambiaCategoriaRosa(this.value)" style="${selectStyleR}">
+          ${categorieTeam.map(c => `<option value="${c.replace(/"/g,'&quot;')}" ${c===state.rosterCategoriaSelezionata?'selected':''}>${c}</option>`).join('')}
+        </select>
+      </div>
+    ` : (categorieTeam.length === 1 ? `<p class="note" style="text-align:left; margin-bottom:12px;">Categoria: ${categorieTeam[0]}</p>` : '');
+
+    body += (t.roster && t.roster.length) ? t.roster.map(p => `
       <div class="player-row">
         <div class="player-num">${p.n}</div>
         <div><div class="player-name">${p.name}</div><div class="player-role">${p.role}</div></div>
       </div>
-    `).join('') : `<div class="empty"><p>Rosa non ancora disponibile. Se conosci questa squadra, puoi proporre tu l'elenco giocatori qui sotto — sarà pubblicato dopo l'approvazione.</p></div>`;
+    `).join('') : `<div class="empty"><p>Rosa non ancora disponibile${categorieTeam.length>1 ? ' per questa categoria' : ''}. Se conosci questa squadra, puoi proporre tu l'elenco giocatori qui sotto — sarà pubblicato dopo l'approvazione.</p></div>`;
 
     body += `
       <div style="margin-top:16px; border-top:1px solid rgba(255,255,255,0.08); padding-top:14px;">
@@ -1139,12 +1316,18 @@ function renderTeamDetail(id){
       </div>
       ${categorieTeam.length > 1 ? `
       <div class="field" style="margin-bottom:14px;">
-        <select onchange="state.teamFiltroCategoria=this.value; render();" style="${selectStyle}">
+        <select onchange="state.teamFiltroCategoria=this.value; state.mostraClassificaSquadra=false; render();" style="${selectStyle}">
           <option value="">Tutte le categorie</option>
           ${categorieTeam.map(c => `<option value="${c.replace(/"/g,'&quot;')}" ${c===state.teamFiltroCategoria?'selected':''}>${c}</option>`).join('')}
         </select>
       </div>` : ''}
-      ${teamMatchesFiltrate.length ? teamMatchesFiltrate.map(m => matchRow(m)).join('') : `<div class="empty"><p>Nessuna partita per questa combinazione di stagione/categoria.</p></div>`}
+      ${state.teamFiltroCategoria ? `
+      <div style="display:flex; gap:8px; margin-bottom:14px;">
+        <button class="cta-btn" style="flex:1; margin-top:0; ${!state.mostraClassificaSquadra ? '' : 'background:transparent; border:1px solid var(--orange);'}" onclick="state.mostraClassificaSquadra=false; render();">Calendario</button>
+        <button class="cta-btn" style="flex:1; margin-top:0; ${state.mostraClassificaSquadra ? '' : 'background:transparent; border:1px solid var(--orange);'}" onclick="state.mostraClassificaSquadra=true; render();">Classifica</button>
+      </div>` : ''}
+      ${state.teamFiltroCategoria && state.mostraClassificaSquadra ? renderClassifica(state.teamFiltroCategoria) :
+        (teamMatchesFiltrate.length ? teamMatchesFiltrate.map(m => matchRow(m)).join('') : `<div class="empty"><p>Nessuna partita per questa combinazione di stagione/categoria.</p></div>`)}
     `;
   } else {
     body = teamNews.length ? teamNews.map(n => `

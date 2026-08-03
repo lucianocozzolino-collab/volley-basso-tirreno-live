@@ -345,52 +345,103 @@ function inizialiDa(nome){
   return nome.split(/\s+/).filter(w=>w.length>1).map(w=>w[0]).join('').slice(0,3).toUpperCase() || nome.slice(0,3).toUpperCase();
 }
 
-let teams = [];
-let matches = [];
+let teamsRegistry = {};     // slug -> {slug, name, init, color, roster, seasons: {stagione: Set(categoria)}}
+let datiPerStagione = {};   // stagione -> {matches: [...], reale: bool}   (cache, una fetch sola a stagione)
+let teams = [];              // per la scheda Squadre: SEMPRE tutte le squadre note, di ogni stagione
+let matches = [];            // partite della SOLA stagione scelta nella schermata Partite
 let usingRealData = false;
+
+function registraSquadra(nome){
+  const s = slug(nome);
+  if(!teamsRegistry[s]){
+    teamsRegistry[s] = { slug:s, name: nome, city:"", colors:"", init: inizialiDa(nome), color: coloreDa(nome), roster: [], seasons: {} };
+  }
+  return teamsRegistry[s];
+}
+
+function parseStagioneJson(json){
+  const nomiSquadre = new Set();
+  (json.gironi || []).forEach(g => g.squadre.forEach(s => nomiSquadre.add(s)));
+  nomiSquadre.forEach(nome => registraSquadra(nome));
+
+  const localMatches = [];
+  let mid = 1;
+  (json.gironi || []).forEach(g => {
+    const categoria = [g.campionato, g.girone].filter(Boolean).join(' - ') || 'Senza categoria';
+    g.calendario.forEach(m => {
+      const homeSlug = slug(m.casa), awaySlug = slug(m.ospite);
+      if(!teamsRegistry[homeSlug] || !teamsRegistry[awaySlug]) return;
+      const giocata = !!m.risultato;
+      localMatches.push({
+        id: mid++, giornata: m.gara, home: homeSlug, away: awaySlug,
+        set: giocata ? m.risultato.replace(/\s/g,'') : null,
+        status: giocata ? 'played' : 'upcoming',
+        date: m.data, categoria
+      });
+    });
+  });
+  return localMatches;
+}
+
+function registraStagionePerSquadre(stagione, localMatches){
+  localMatches.forEach(m => {
+    [m.home, m.away].forEach(s => {
+      const t = teamsRegistry[s];
+      if(!t) return;
+      if(!t.seasons[stagione]) t.seasons[stagione] = new Set();
+      t.seasons[stagione].add(m.categoria);
+    });
+  });
+}
+
+// Scarica (una volta sola, con cache) i dati di una stagione. Non tocca "matches"/"teams"
+// correnti: serve per costruire il registro squadre e per guardare stagioni passate
+// dalla scheda di una squadra, senza cambiare cosa vede la schermata Partite principale.
+async function fetchStagione(stagione){
+  if(datiPerStagione[stagione]) return datiPerStagione[stagione];
+  try{
+    const res = await fetch(`./data/${stagione}.json`, {cache:"no-store"});
+    if(!res.ok) throw new Error("no data file");
+    const json = await res.json();
+    const localMatches = parseStagioneJson(json);
+    if(localMatches.length === 0) throw new Error("empty");
+    registraStagionePerSquadre(stagione, localMatches);
+    datiPerStagione[stagione] = { matches: localMatches, reale: true };
+  }catch(e){
+    datiPerStagione[stagione] = { matches: [], reale: false };
+  }
+  return datiPerStagione[stagione];
+}
+
+function aggiornaElencoSquadreGlobale(){
+  teams = Object.values(teamsRegistry).sort((a,b) => a.name.localeCompare(b.name));
+}
+
+// Scarica tutte le stagioni elencate (in background, una volta sola) così il registro
+// squadre e la ricerca sono sempre completi, indipendentemente da quale stagione stai
+// guardando nella schermata Partite.
+async function precaricaRegistroSquadre(){
+  await Promise.all(STAGIONI_DISPONIBILI.map(s => fetchStagione(s)));
+  aggiornaElencoSquadreGlobale();
+}
+
+function teamById(s){
+  return teamsRegistry[s];
+}
 
 async function caricaDatiReali(stagione){
   stagioneSelezionata = stagione || stagioneSelezionata;
-  try{
-    const res = await fetch(`./data/${stagioneSelezionata}.json`, {cache:"no-store"});
-    if(!res.ok) throw new Error("no data file");
-    const json = await res.json();
-    const nomiSquadre = new Set();
-    (json.gironi || []).forEach(g => g.squadre.forEach(s => nomiSquadre.add(s)));
-
-    teams = Array.from(nomiSquadre).map((nome, i) => ({
-      id: i+1, name: nome, city: "", colors: "",
-      init: inizialiDa(nome), color: coloreDa(nome),
-      roster: [] // non disponibile da questa fonte, vedi setup-backend-e-ads.md
-    }));
-    const idByName = Object.fromEntries(teams.map(t => [t.name, t.id]));
-
-    let mid = 1;
-    matches = [];
-    (json.gironi || []).forEach(g => {
-      const categoria = [g.campionato, g.girone].filter(Boolean).join(' - ');
-      g.calendario.forEach(m => {
-        const homeId = idByName[m.casa], awayId = idByName[m.ospite];
-        if(!homeId || !awayId) return;
-        const giocata = !!m.risultato;
-        matches.push({
-          id: mid++, giornata: m.gara, home: homeId, away: awayId,
-          set: giocata ? m.risultato.replace(/\s/g,'') : null,
-          status: giocata ? 'played' : 'upcoming',
-          date: m.data,
-          categoria: categoria || 'Senza categoria'
-        });
-      });
-    });
-    usingRealData = teams.length > 0 && matches.length > 0;
-  }catch(e){
-    usingRealData = false;
-  }
-  if(!usingRealData){
-    teams = SAMPLE_TEAMS;
+  const dati = await fetchStagione(stagioneSelezionata);
+  usingRealData = dati.reale;
+  if(usingRealData){
+    matches = dati.matches;
+  } else {
+    SAMPLE_TEAMS.forEach(t => { if(!teamsRegistry[t.slug]) teamsRegistry[t.slug] = {...t, seasons:{}}; });
     matches = SAMPLE_MATCHES;
   }
+  aggiornaElencoSquadreGlobale();
 }
+
 
 /* ---------------- DATI DI ESEMPIO (fallback) ---------------- */
 const SAMPLE_TEAMS = [
@@ -416,6 +467,15 @@ const SAMPLE_MATCHES = [
   {giornata:9, home:5, away:1, set:null, status:"upcoming", date:"2 ago 2026 · 18:30", categoria:"Prima Divisione - Girone A"},
   {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00", categoria:"Prima Divisione - Girone A"},
 ];
+
+// I dati di esempio sopra usano id numerici comodi da scrivere a mano; qui li converto
+// nello stesso formato a slug usato dai dati reali, così tutto il resto del codice
+// (preferiti, ricerca, dettaglio squadra...) funziona identico sia con dati veri che finti.
+(function normalizzaDatiEsempio(){
+  const mappaId = {};
+  SAMPLE_TEAMS.forEach(t => { const s = slug(t.name); mappaId[t.id] = s; t.slug = s; });
+  SAMPLE_MATCHES.forEach(m => { m.home = mappaId[m.home]; m.away = mappaId[m.away]; });
+})();
 
 const SAMPLE_NEWS = [
   {team:"NPV", title:"Vico Equense chiude il mercato con due nuovi schiacciatori", time:"2 ore fa",
@@ -499,8 +559,6 @@ function slug(name){
 let rosterCache = {};      // slug -> [{n,name,role}] approvata
 let myPendingByTeam = {};  // slug -> stato ultima proposta dell'utente corrente
 let pendingSubmissions = []; // solo per admin
-
-const teamById = id => teams.find(t => t.id === id);
 
 /* ---------------- ICONE ---------------- */
 const icons = {
@@ -719,9 +777,9 @@ function renderHome(){
   `;
 }
 
-function calcolaClassifica(categoria){
+function calcolaClassifica(categoria, datasetPartite){
   const righe = {};
-  matches
+  (datasetPartite || matches)
     .filter(m => m.categoria === categoria && m.status === 'played' && m.set)
     .forEach(m => {
       const parti = m.set.split('-').map(Number);
@@ -749,8 +807,8 @@ function calcolaClassifica(categoria){
   );
 }
 
-function renderClassifica(categoria){
-  const tabella = calcolaClassifica(categoria);
+function renderClassifica(categoria, datasetPartite){
+  const tabella = calcolaClassifica(categoria, datasetPartite);
   if(tabella.length === 0){
     return `<div class="empty"><p>Nessuna partita giocata ancora in questa categoria: la classifica non è calcolabile.</p></div>`;
   }
@@ -888,7 +946,7 @@ function renderTeams(){
   const q = state.searchQuery.trim().toLowerCase();
   const filtered = q ? teams.filter(t => t.name.toLowerCase().includes(q)) : teams;
   return `
-    <div class="section-title">Squadre del girone</div>
+    <div class="section-title">Tutte le squadre</div>
     <div class="field" style="margin-bottom:14px;">
       <input id="teamSearchInput" placeholder="Cerca una squadra..." value="${state.searchQuery.replace(/"/g,'&quot;')}"
         oninput="updateSearch(this.value)"
@@ -902,10 +960,10 @@ function renderTeams(){
 }
 
 function teamCard(t){
-  const fav = state.favorites.has(t.id);
+  const fav = state.favorites.has(t.slug);
   return `
-    <div class="team-card" onclick="openTeam(${t.id})">
-      <button class="star-btn" style="color:${fav?'var(--gold)':'var(--slate)'}" onclick="toggleFavorite(${t.id}, event)">
+    <div class="team-card" onclick="openTeam('${t.slug}')">
+      <button class="star-btn" style="color:${fav?'var(--gold)':'var(--slate)'}" onclick="toggleFavorite('${t.slug}', event)">
         ${fav ? icons.starFill : icons.star}
       </button>
       <div class="team-badge" style="background:${t.color}22; color:${t.color};">${t.init}</div>
@@ -916,7 +974,7 @@ function teamCard(t){
 }
 
 function renderFavorites(){
-  const favTeams = teams.filter(t => state.favorites.has(t.id));
+  const favTeams = teams.filter(t => state.favorites.has(t.slug));
   if(!state.user){
     return `
       <div class="empty">
@@ -973,14 +1031,17 @@ function renderProfile(){
   `;
 }
 
-function openTeam(id){
-  state.currentTeamId = id;
+function openTeam(s){
+  state.currentTeamId = s;
   state.teamTab = 'rosa';
   state.mostraClassificaSquadra = false;
-  const t = teamById(id);
+  const t = teamById(s);
   if(t){
-    const cats = categorieDiSquadra(t);
+    const stagioni = stagioniDiSquadra(t);
+    state.teamStagioneSelezionata = stagioni[0] || stagioneSelezionata;
+    const cats = categorieDiSquadraStagione(t, state.teamStagioneSelezionata);
     state.rosterCategoriaSelezionata = cats[0] || '';
+    state.teamFiltroCategoria = '';
     caricaRosterSquadra(t, state.rosterCategoriaSelezionata);
   }
   render();
@@ -996,8 +1057,34 @@ function setTeamTab(tab){
 }
 
 /* ---------------- ROSE: caricamento, proposta, approvazione ---------------- */
-function categorieDiSquadra(t){
-  return [...new Set(matches.filter(m => m.home===t.id || m.away===t.id).map(m=>m.categoria).filter(Boolean))].sort();
+// Le partite e le categorie di una squadra si leggono per stagione dal registro
+// (t.seasons), NON dalla stagione attualmente scelta nella schermata Partite:
+// così sfogliare una squadra è sempre svincolato da quel filtro.
+function stagioniDiSquadra(t){
+  return STAGIONI_DISPONIBILI.filter(s => t.seasons[s] && t.seasons[s].size > 0);
+}
+function categorieDiSquadraStagione(t, stagione){
+  return t.seasons[stagione] ? Array.from(t.seasons[stagione]).sort() : [];
+}
+function matchesDiStagione(stagione){
+  const d = datiPerStagione[stagione];
+  if(d && d.reale) return d.matches;
+  // Se è la stagione "principale" e non ci sono dati reali, mostriamo comunque
+  // l'esempio così la scheda squadra resta navigabile anche in demo.
+  if(stagione === stagioneSelezionata && !usingRealData) return SAMPLE_MATCHES;
+  return [];
+}
+
+async function cambiaStagioneSquadra(v){
+  state.teamStagioneSelezionata = v;
+  state.teamFiltroCategoria = '';
+  state.mostraClassificaSquadra = false;
+  await fetchStagione(v); // assicura che sia in cache (di solito lo è già dal preload)
+  const t = teamById(state.currentTeamId);
+  const cats = t ? categorieDiSquadraStagione(t, v) : [];
+  state.rosterCategoriaSelezionata = cats[0] || '';
+  if(t) caricaRosterSquadra(t, state.rosterCategoriaSelezionata);
+  render();
 }
 
 function rosterKeyFor(t, categoria){
@@ -1259,21 +1346,32 @@ function renderTeamDetail(id){
   const t = teamById(id);
   if(!t){
     state.currentTeamId = null;
-    return `<div class="empty"><p>Squadra non trovata in questa stagione.</p></div>`;
+    return `<div class="empty"><p>Squadra non trovata.</p></div>`;
   }
   const fav = state.favorites.has(id);
-  const teamMatches = matches.filter(m => m.home===id || m.away===id);
+  const stagioniTeam = stagioniDiSquadra(t);
+  const stagioneTeam = state.teamStagioneSelezionata || stagioniTeam[0] || stagioneSelezionata;
+  const teamMatches = matchesDiStagione(stagioneTeam).filter(m => m.home===id || m.away===id);
   const teamNews = news.filter(n => n.team === t.init);
+  const selectStyle = "width:100%; padding:11px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:13.5px; font-family:'Inter';";
   let body = '';
+
   if(state.teamTab === 'rosa'){
-    const categorieTeam = categorieDiSquadra(t);
+    const categorieTeam = categorieDiSquadraStagione(t, stagioneTeam);
     const key = rosterKeyFor(t, state.rosterCategoriaSelezionata);
     const mine = myPendingByTeam[key];
-    const selectStyleR = "width:100%; padding:11px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:13.5px; font-family:'Inter';";
 
-    body = categorieTeam.length > 1 ? `
+    body = stagioniTeam.length > 1 ? `
+      <div class="field" style="margin-bottom:10px;">
+        <select onchange="cambiaStagioneSquadra(this.value)" style="${selectStyle}">
+          ${stagioniTeam.map(s => `<option value="${s}" ${s===stagioneTeam?'selected':''}>${s.replace('-','/')}</option>`).join('')}
+        </select>
+      </div>
+    ` : '';
+
+    body += categorieTeam.length > 1 ? `
       <div class="field" style="margin-bottom:14px;">
-        <select onchange="cambiaCategoriaRosa(this.value)" style="${selectStyleR}">
+        <select onchange="cambiaCategoriaRosa(this.value)" style="${selectStyle}">
           ${categorieTeam.map(c => `<option value="${c.replace(/"/g,'&quot;')}" ${c===state.rosterCategoriaSelezionata?'selected':''}>${c}</option>`).join('')}
         </select>
       </div>
@@ -1293,7 +1391,7 @@ function renderTeamDetail(id){
           <div class="tab-item active" style="display:inline-block; cursor:pointer;" onclick="toggleRosterForm()">+ Proponi/aggiorna la rosa</div>
           <div id="rosterFormWrap" class="hidden" style="margin-top:12px;">
             ${renderRosterForm()}
-            <button class="primary-btn" onclick="inviaPropostaRosa(${t.id})">Invia proposta</button>
+            <button class="primary-btn" onclick="inviaPropostaRosa('${t.slug}')">Invia proposta</button>
             <p class="note">Le proposte vengono verificate da un amministratore prima di essere pubblicate.</p>
           </div>
         ` : `<p class="note">Accedi per proporre la rosa di questa squadra.</p>`}
@@ -1305,14 +1403,12 @@ function renderTeamDetail(id){
     const teamMatchesFiltrate = state.teamFiltroCategoria
       ? teamMatches.filter(m => m.categoria === state.teamFiltroCategoria)
       : teamMatches;
-    const selectStyle = "width:100%; padding:11px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--line); font-size:13.5px; font-family:'Inter';";
-    const opzioniStagioneTeam = STAGIONI_DISPONIBILI.map(s =>
-      `<option value="${s}" ${s===stagioneSelezionata?'selected':''}>${s.replace('-','/')}</option>`
-    ).join('');
 
     body = `
       <div class="field" style="margin-bottom:10px;">
-        <select onchange="cambiaStagione(this.value)" style="${selectStyle}">${opzioniStagioneTeam}</select>
+        <select onchange="cambiaStagioneSquadra(this.value)" style="${selectStyle}">
+          ${STAGIONI_DISPONIBILI.map(s => `<option value="${s}" ${s===stagioneTeam?'selected':''}>${s.replace('-','/')}${!stagioniTeam.includes(s) ? ' (nessun dato)' : ''}</option>`).join('')}
+        </select>
       </div>
       ${categorieTeam.length > 1 ? `
       <div class="field" style="margin-bottom:14px;">
@@ -1326,7 +1422,7 @@ function renderTeamDetail(id){
         <button class="cta-btn" style="flex:1; margin-top:0; ${!state.mostraClassificaSquadra ? '' : 'background:transparent; border:1px solid var(--orange);'}" onclick="state.mostraClassificaSquadra=false; render();">Calendario</button>
         <button class="cta-btn" style="flex:1; margin-top:0; ${state.mostraClassificaSquadra ? '' : 'background:transparent; border:1px solid var(--orange);'}" onclick="state.mostraClassificaSquadra=true; render();">Classifica</button>
       </div>` : ''}
-      ${state.teamFiltroCategoria && state.mostraClassificaSquadra ? renderClassifica(state.teamFiltroCategoria) :
+      ${state.teamFiltroCategoria && state.mostraClassificaSquadra ? renderClassifica(state.teamFiltroCategoria, matchesDiStagione(stagioneTeam)) :
         (teamMatchesFiltrate.length ? teamMatchesFiltrate.map(m => matchRow(m)).join('') : `<div class="empty"><p>Nessuna partita per questa combinazione di stagione/categoria.</p></div>`)}
     `;
   } else {
@@ -1347,7 +1443,7 @@ function renderTeamDetail(id){
         <h2>${t.name}</h2>
         <div class="sub">${[t.city, t.colors ? 'Colori ' + t.colors : ''].filter(Boolean).join(' · ') || 'FIPAV Basso Tirreno'}</div>
       </div>
-      <button class="star-btn" style="position:static; margin-left:auto; background:rgba(255,255,255,0.06); color:${fav?'var(--gold)':'var(--slate)'}" onclick="toggleFavorite(${t.id}, event)">
+      <button class="star-btn" style="position:static; margin-left:auto; background:rgba(255,255,255,0.06); color:${fav?'var(--gold)':'var(--slate)'}" onclick="toggleFavorite('${t.slug}', event)">
         ${fav ? icons.starFill : icons.star}
       </button>
     </div>
@@ -1369,7 +1465,7 @@ auth.onAuthStateChanged(user => {
   render();
 });
 
-Promise.all([caricaDatiReali(), caricaNewsReali()]).then(() => {
+Promise.all([caricaDatiReali("2025-2026"), caricaNewsReali(), precaricaRegistroSquadre()]).then(() => {
   renderProfileSlot();
   render();
   if(!usingRealData){

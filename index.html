@@ -359,7 +359,8 @@ function registraSquadra(nome){
   return teamsRegistry[s];
 }
 
-function parseStagioneJson(json){
+function parseStagioneJson(json, tipo){
+  tipo = tipo || 'campionato';
   const nomiSquadre = new Set();
   (json.gironi || []).forEach(g => g.squadre.forEach(s => nomiSquadre.add(s)));
   nomiSquadre.forEach(nome => registraSquadra(nome));
@@ -376,7 +377,7 @@ function parseStagioneJson(json){
         id: mid++, giornata: m.gara, home: homeSlug, away: awaySlug,
         set: giocata ? m.risultato.replace(/\s/g,'') : null,
         status: giocata ? 'played' : 'upcoming',
-        date: m.data, categoria
+        date: m.data, categoria, tipo
       });
     });
   });
@@ -399,17 +400,29 @@ function registraStagionePerSquadre(stagione, localMatches){
 // dalla scheda di una squadra, senza cambiare cosa vede la schermata Partite principale.
 async function fetchStagione(stagione){
   if(datiPerStagione[stagione]) return datiPerStagione[stagione];
+  let localMatches = [];
+  let reale = false;
+
   try{
     const res = await fetch(`./data/${stagione}.json`, {cache:"no-store"});
-    if(!res.ok) throw new Error("no data file");
-    const json = await res.json();
-    const localMatches = parseStagioneJson(json);
-    if(localMatches.length === 0) throw new Error("empty");
-    registraStagionePerSquadre(stagione, localMatches);
-    datiPerStagione[stagione] = { matches: localMatches, reale: true };
-  }catch(e){
-    datiPerStagione[stagione] = { matches: [], reale: false };
-  }
+    if(res.ok){
+      const json = await res.json();
+      const m = parseStagioneJson(json, 'campionato');
+      if(m.length > 0){ localMatches = localMatches.concat(m); reale = true; }
+    }
+  }catch(e){ /* stagione non ancora scaricata, va bene così */ }
+
+  try{
+    const resS3 = await fetch(`./data/s3-${stagione}.json`, {cache:"no-store"});
+    if(resS3.ok){
+      const jsonS3 = await resS3.json();
+      const m3 = parseStagioneJson(jsonS3, 's3');
+      if(m3.length > 0){ localMatches = localMatches.concat(m3); reale = true; }
+    }
+  }catch(e){ /* S3 non ancora scaricato per questa stagione, va bene così */ }
+
+  if(reale) registraStagionePerSquadre(stagione, localMatches);
+  datiPerStagione[stagione] = { matches: localMatches, reale };
   return datiPerStagione[stagione];
 }
 
@@ -460,12 +473,12 @@ const SAMPLE_TEAMS = [
 ];
 
 const SAMPLE_MATCHES = [
-  {giornata:8, home:1, away:3, set:"3-1", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A"},
-  {giornata:8, home:2, away:5, set:"2-3", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A"},
-  {giornata:8, home:4, away:6, set:"3-0", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A"},
-  {giornata:9, home:3, away:2, set:null, status:"live", date:"oggi · 19:00", categoria:"Prima Divisione - Girone A"},
-  {giornata:9, home:5, away:1, set:null, status:"upcoming", date:"2 ago 2026 · 18:30", categoria:"Prima Divisione - Girone A"},
-  {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00", categoria:"Prima Divisione - Girone A"},
+  {giornata:8, home:1, away:3, set:"3-1", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A", tipo:"campionato"},
+  {giornata:8, home:2, away:5, set:"2-3", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A", tipo:"campionato"},
+  {giornata:8, home:4, away:6, set:"3-0", status:"played", date:"27 lug 2026", categoria:"Prima Divisione - Girone A", tipo:"campionato"},
+  {giornata:9, home:3, away:2, set:null, status:"live", date:"oggi · 19:00", categoria:"Prima Divisione - Girone A", tipo:"campionato"},
+  {giornata:9, home:5, away:1, set:null, status:"upcoming", date:"2 ago 2026 · 18:30", categoria:"Prima Divisione - Girone A", tipo:"campionato"},
+  {giornata:9, home:6, away:4, set:null, status:"upcoming", date:"2 ago 2026 · 20:00", categoria:"Prima Divisione - Girone A", tipo:"campionato"},
 ];
 
 // I dati di esempio sopra usano id numerici comodi da scrivere a mano; qui li converto
@@ -527,7 +540,8 @@ let state = {
   mostraClassifica: false,
   rosterCategoriaSelezionata: '',
   mostraClassificaSquadra: false,
-  adminTab: 'rose'
+  adminTab: 'rose',
+  sezione: 'campionato'
 };
 
 function openSearch(){
@@ -847,13 +861,17 @@ function renderMatches(){
     `<option value="${s}" ${s===stagioneSelezionata?'selected':''}>${s.replace('-','/')}</option>`
   ).join('');
 
-  const categorie = [...new Set(matches.map(m=>m.categoria).filter(Boolean))].sort();
-  // Se la categoria selezionata non esiste più (es. cambio stagione), riparti da "tutte"
+  const sezione = state.sezione || 'campionato';
+  const matchesSezione = matches.filter(m => (m.tipo || 'campionato') === sezione);
+  const haS3 = matches.some(m => m.tipo === 's3');
+
+  const categorie = [...new Set(matchesSezione.map(m=>m.categoria).filter(Boolean))].sort();
+  // Se la categoria selezionata non esiste più (es. cambio stagione/sezione), riparti da "tutte"
   if(state.filtroCategoria && !categorie.includes(state.filtroCategoria)) state.filtroCategoria = '';
 
   const matchesFiltrateCategoria = state.filtroCategoria
-    ? matches.filter(m => m.categoria === state.filtroCategoria)
-    : matches;
+    ? matchesSezione.filter(m => m.categoria === state.filtroCategoria)
+    : matchesSezione;
 
   const giornateDisponibili = [...new Set(matchesFiltrateCategoria.map(m=>m.giornata))]
     .sort((a,b)=> String(a).localeCompare(String(b), undefined, {numeric:true}));
@@ -870,12 +888,17 @@ function renderMatches(){
 
   return `
     <div class="section-title">Calendario &amp; risultati</div>
+    <div style="display:flex; gap:8px; margin-bottom:14px;">
+      <button class="cta-btn" style="flex:1; margin-top:0; ${sezione==='campionato' ? '' : 'background:transparent; border:1px solid var(--orange);'}" onclick="cambiaSezione('campionato')">Campionati</button>
+      <button class="cta-btn" style="flex:1; margin-top:0; ${sezione==='s3' ? '' : 'background:transparent; border:1px solid var(--orange);'}" onclick="cambiaSezione('s3')">Minivolley S3</button>
+    </div>
     <div class="field" style="margin-bottom:10px;">
       <select onchange="cambiaStagione(this.value)" style="${selectStyle}">
         ${opzioniStagione}
       </select>
       ${!usingRealData ? `<p class="note" style="text-align:left; margin-top:8px;">Dati di esempio: la stagione ${stagioneSelezionata.replace('-','/')} non è ancora stata scaricata per questo sito.</p>` : ''}
     </div>
+    ${sezione==='s3' && !haS3 ? `<p class="note" style="text-align:left; margin-bottom:14px;">Nessun dato Minivolley/S3 ancora scaricato per la stagione ${stagioneSelezionata.replace('-','/')}.</p>` : ''}
     <div class="field" style="margin-bottom:10px;">
       <select onchange="filtraCategoria(this.value)" style="${selectStyle}">
         <option value="">Tutte le categorie</option>
@@ -902,6 +925,13 @@ function renderMatches(){
   `;
 }
 
+function cambiaSezione(v){
+  state.sezione = v;
+  state.filtroCategoria = '';
+  state.filtroGiornata = '';
+  state.mostraClassifica = false;
+  render();
+}
 function filtraCategoria(v){
   state.filtroCategoria = v;
   state.filtroGiornata = ''; // la giornata dipende dalla categoria, si resetta al cambio
@@ -1020,7 +1050,7 @@ function renderProfile(){
       <div class="news-time">${state.user.email || ''}</div>
     </div>
     <div class="news-card">
-      <div class="tname" style="margin-bottom:6px;">Squadre preferite: ${state.favorites.size}</div>
+      <div class="tname" style="margin-bottom:6px;">Squadre preferite: ${teams.filter(t=>state.favorites.has(t.id)).length}</div>
       <div class="news-blurb">Riceverai notizie e risultati dalle squadre che segui nella sezione Preferiti.</div>
     </div>
     <div class="news-card" style="cursor:pointer;" onclick="setTab('sponsor')">

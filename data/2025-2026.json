@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-05T14:12:01.705Z",
-  "totale": 160,
+  "aggiornamento": "2026-08-05T16:50:54.528Z",
+  "totale": 161,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -31224,6 +31224,168 @@
           "casa": "Ies Mv Tomei Livorno",
           "ospite": "Volley Cecina Rossa",
           "risultato": "3-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U13F Coppa San Lorenzo  - Tab. 1°-4° pos.",
+      "girone": "",
+      "id": 63116,
+      "nome": "U13F Coppa San Lorenzo  - Tab. 1°-4° pos.",
+      "url": "https://fipavonline.it/main/gare_girone/63116/1",
+      "squadre": [
+        "Polisportiva Vicarello",
+        "Volley Sei Rose U13",
+        "Dream Volley Pisa",
+        "Volley Peccioli",
+        "Boscoverde Migliarino",
+        "Asd Perignano",
+        "Brvlab",
+        "Deep Chic Grosseto",
+        "Perlavolley U13f",
+        "Multirent Italia V.c.c.",
+        "Lupi Santa Croce Volleyball Asd U13f",
+        "New Volley 2019",
+        "U13 Unionvolley",
+        "Volley Cecina Blu",
+        "Volley Cecina Rossa"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13418",
+          "data": "Dom 24/05/2026 11.00",
+          "casa": "Polisportiva Vicarello",
+          "ospite": "Volley Sei Rose U13",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13419",
+          "data": "Dom 24/05/2026 10.00",
+          "casa": "Dream Volley Pisa",
+          "ospite": "Volley Peccioli",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13420",
+          "data": "Dom 24/05/2026 09.30",
+          "casa": "Boscoverde Migliarino",
+          "ospite": "Asd Perignano",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13421",
+          "data": "Dom 24/05/2026 09.30",
+          "casa": "Brvlab",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13422",
+          "data": "Dom 24/05/2026 09.30",
+          "casa": "Perlavolley U13f",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13423",
+          "data": "Dom 24/05/2026 09.30",
+          "casa": "Lupi Santa Croce Volleyball Asd U13f",
+          "ospite": "New Volley 2019",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13424",
+          "data": "Lun 25/05/2026 18.00",
+          "casa": "U13 Unionvolley",
+          "ospite": "Volley Cecina Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13425",
+          "data": "Ven 29/05/2026 18.15",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Polisportiva Vicarello",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13426",
+          "data": "Sab 30/05/2026 10.30",
+          "casa": "Boscoverde Migliarino",
+          "ospite": "Dream Volley Pisa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13427",
+          "data": "Dom 31/05/2026 09.30",
+          "casa": "Brvlab",
+          "ospite": "Perlavolley U13f",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13428",
+          "data": "Ven 29/05/2026 19.00",
+          "casa": "U13 Unionvolley",
+          "ospite": "New Volley 2019",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13429",
+          "data": "Mer 03/06/2026 19.00",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Boscoverde Migliarino",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13430",
+          "data": "Mer 03/06/2026 19.00",
+          "casa": "Perlavolley U13f",
+          "ospite": "New Volley 2019",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13431",
+          "data": "Dom 07/06/2026 10.00",
+          "casa": "Boscoverde Migliarino",
+          "ospite": "Perlavolley U13f",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13432",
+          "data": "Dom 07/06/2026 11.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "New Volley 2019",
+          "risultato": "3-0",
           "set": ""
         }
       ]

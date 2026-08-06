@@ -36,6 +36,9 @@ jobs:
       - name: Esegui scraper risultati (Basso Tirreno)
         run: node scrape-fipav.js ${{ github.event.inputs.stagione || '2025-2026' }}
 
+      - name: Esegui scraper Volley S3 / Minivolley (Basso Tirreno)
+        run: node scrape-s3.js ${{ github.event.inputs.stagione || '2025-2026' }}
+
       - name: Esegui scraper news (Basso Tirreno)
         run: node scrape-news.js
 

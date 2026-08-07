@@ -61,10 +61,11 @@ jobs:
           fi
 
       - name: Costruisci l'app con Bubblewrap
+        env:
+          KS_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.KEY_PASSWORD }}
         run: |
-          printf 'n\nn\nn\nn\nn\n' | bubblewrap build --skipPwaValidation \
-            --password="${{ secrets.KEYSTORE_PASSWORD }}" \
-            --keyPassword="${{ secrets.KEY_PASSWORD }}"
+          printf 'n\nn\nn\nn\nn\n%s\n%s\n' "$KS_PASS" "$KEY_PASS" | bubblewrap build --skipPwaValidation
 
       - name: Committa il keystore se è stato appena creato
         if: env.NUOVO_KEYSTORE == 'true'

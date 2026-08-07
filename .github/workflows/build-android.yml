@@ -17,6 +17,9 @@ jobs:
           distribution: temurin
           java-version: "17"
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -24,6 +27,18 @@ jobs:
 
       - name: Installa Bubblewrap
         run: npm install -g @bubblewrap/cli
+
+      - name: Configura Bubblewrap senza domande interattive
+        run: |
+          mkdir -p ~/.bubblewrap
+          cat > ~/.bubblewrap/config.json << CFG
+          {
+            "jdkPath": "${JAVA_HOME}",
+            "androidSdkPath": "${ANDROID_HOME}"
+          }
+          CFG
+          echo "Config scritta:"
+          cat ~/.bubblewrap/config.json
 
       - name: Genera il keystore (solo la prima volta)
         run: |

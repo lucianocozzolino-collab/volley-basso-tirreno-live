@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -19,6 +20,9 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+
+      - name: Accetta le licenze Android SDK
+        run: yes | sdkmanager --licenses || true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -58,7 +62,7 @@ jobs:
 
       - name: Costruisci l'app con Bubblewrap
         run: |
-          yes n | bubblewrap build --skipPwaValidation \
+          printf 'n\nn\nn\nn\nn\n' | bubblewrap build --skipPwaValidation \
             --password="${{ secrets.KEYSTORE_PASSWORD }}" \
             --keyPassword="${{ secrets.KEY_PASSWORD }}"
 

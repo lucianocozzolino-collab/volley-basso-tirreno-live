@@ -58,7 +58,7 @@ jobs:
 
       - name: Costruisci l'app con Bubblewrap
         run: |
-          bubblewrap build --skipPwaValidation \
+          yes n | bubblewrap build --skipPwaValidation \
             --password="${{ secrets.KEYSTORE_PASSWORD }}" \
             --keyPassword="${{ secrets.KEY_PASSWORD }}"
 

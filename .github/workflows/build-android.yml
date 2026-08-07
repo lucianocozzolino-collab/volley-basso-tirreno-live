@@ -1,0 +1,67 @@
+# Salva questo file come: .github/workflows/build-android.yml
+name: Crea app Android (TWA)
+
+on:
+  workflow_dispatch: {}   # si lancia solo a mano, dalla tab Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installa Bubblewrap
+        run: npm install -g @bubblewrap/cli
+
+      - name: Genera il keystore (solo la prima volta)
+        run: |
+          mkdir -p android-keystore
+          if [ ! -f android-keystore/release.keystore ]; then
+            keytool -genkeypair -v \
+              -keystore android-keystore/release.keystore \
+              -alias release \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "${{ secrets.KEYSTORE_PASSWORD }}" \
+              -keypass "${{ secrets.KEY_PASSWORD }}" \
+              -dname "CN=Volley Basso Tirreno, OU=Volley, O=Volley Basso Tirreno, L=Pisa, S=Toscana, C=IT"
+            echo "NUOVO_KEYSTORE=true" >> $GITHUB_ENV
+          else
+            echo "NUOVO_KEYSTORE=false" >> $GITHUB_ENV
+          fi
+
+      - name: Costruisci l'app con Bubblewrap
+        run: |
+          bubblewrap build --skipPwaValidation \
+            --password="${{ secrets.KEYSTORE_PASSWORD }}" \
+            --keyPassword="${{ secrets.KEY_PASSWORD }}"
+
+      - name: Committa il keystore se è stato appena creato
+        if: env.NUOVO_KEYSTORE == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add android-keystore/release.keystore
+          git commit -m "Aggiunta keystore Android (generata automaticamente, non toccare)"
+          git pull --rebase origin main
+          git push origin main
+
+      - name: Carica il risultato (APK + AAB)
+        uses: actions/upload-artifact@v4
+        with:
+          name: volley-basso-tirreno-android
+          path: |
+            *.apk
+            *.aab
+          if-no-files-found: warn

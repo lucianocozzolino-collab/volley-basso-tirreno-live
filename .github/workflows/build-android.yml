@@ -65,7 +65,31 @@ jobs:
           KS_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_PASS: ${{ secrets.KEY_PASSWORD }}
         run: |
-          printf 'n\nn\nn\nn\nn\n%s\n%s\n' "$KS_PASS" "$KEY_PASS" | bubblewrap build --skipPwaValidation
+          sudo apt-get update -qq && sudo apt-get install -y -qq expect
+
+          cat > build.exp << 'EOF'
+          set timeout 900
+          spawn bubblewrap build --skipPwaValidation
+          expect {
+            -re "\\(Y/n\\)" {
+              send "n\r"
+              exp_continue
+            }
+            -re "Password for the Key ?Store" {
+              send "$env(KS_PASS)\r"
+              exp_continue
+            }
+            -re "Password for the Key:" {
+              send "$env(KEY_PASS)\r"
+              exp_continue
+            }
+            eof
+          }
+          catch wait result
+          exit [lindex $result 3]
+          EOF
+
+          expect build.exp
 
       - name: Committa il keystore se è stato appena creato
         if: env.NUOVO_KEYSTORE == 'true'

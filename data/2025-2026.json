@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-09T21:36:00.221Z",
-  "totale": 160,
+  "aggiornamento": "2026-08-10T01:34:45.958Z",
+  "totale": 161,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -28916,6 +28916,158 @@
           "casa": "Cus Pisa Asd",
           "ospite": "Sdp Cascina",
           "risultato": "1-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U13F Coppa San Lorenzo",
+      "girone": "Girone A",
+      "id": 62270,
+      "nome": "U13F Coppa San Lorenzo  - Girone A",
+      "url": "https://fipavonline.it/main/gare_girone/62270/1",
+      "squadre": [
+        "U13 Unionvolley",
+        "Elba Volley Under 13",
+        "Donoratico Sport",
+        "New Volley 2019",
+        "Deep Chic Grosseto"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13342",
+          "data": "Sab 11/04/2026 16.00",
+          "casa": "U13 Unionvolley",
+          "ospite": "Elba Volley Under 13",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13343",
+          "data": "Dom 12/04/2026 11.30",
+          "casa": "Donoratico Sport",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13344",
+          "data": "Dom 12/04/2026 11.30",
+          "casa": "New Volley 2019",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13345",
+          "data": "Sab 02/05/2026 11.00",
+          "casa": "Elba Volley Under 13",
+          "ospite": "New Volley 2019",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13346",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Riposa",
+          "ospite": "U13 Unionvolley",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13347",
+          "data": "Mar 14/04/2026 19.00",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "Donoratico Sport",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13348",
+          "data": "Dom 26/04/2026 18.00",
+          "casa": "U13 Unionvolley",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13349",
+          "data": "Mar 21/04/2026 19.00",
+          "casa": "New Volley 2019",
+          "ospite": "Donoratico Sport",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13350",
+          "data": "Dom 26/04/2026 09.30",
+          "casa": "Riposa",
+          "ospite": "Elba Volley Under 13",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13351",
+          "data": "Gio 30/04/2026 17.45",
+          "casa": "Donoratico Sport",
+          "ospite": "U13 Unionvolley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13352",
+          "data": "Dom 03/05/2026 11.30",
+          "casa": "New Volley 2019",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13353",
+          "data": "Sab 25/04/2026 11.00",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "Elba Volley Under 13",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13354",
+          "data": "Dom 10/05/2026 11.30",
+          "casa": "U13 Unionvolley",
+          "ospite": "New Volley 2019",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13355",
+          "data": "Dom 10/05/2026 11.30",
+          "casa": "Elba Volley Under 13",
+          "ospite": "Donoratico Sport",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13356",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Riposa",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "-",
           "set": ""
         }
       ]

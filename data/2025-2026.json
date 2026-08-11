@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-11T13:06:42.259Z",
-  "totale": 161,
+  "aggiornamento": "2026-08-11T16:08:06.491Z",
+  "totale": 154,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -29736,98 +29736,6 @@
     },
     {
       "stagione": "2025-2026",
-      "campionato": "Under 13 Maschile  - Tab. 5°-8° posizionamento",
-      "girone": "",
-      "id": 62285,
-      "nome": "Under 13 Maschile  - Tab. 5°-8° posizionamento",
-      "url": "https://fipavonline.it/main/gare_girone/62285/1",
-      "squadre": [
-        "Torretta Volley Livorno",
-        "Pallavolo Massa Carrara Asd",
-        "Avis Volley Pistoia",
-        "Toscana Garden Arno Volley Livorno",
-        "Katinka Travel V.c.c.",
-        "Libertas Ponte A Moriano",
-        "Asd Migliarino Volley",
-        "New Volley 2019"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 13564",
-          "data": "Dom 12/04/2026 15.30",
-          "casa": "Torretta Volley Livorno",
-          "ospite": "Pallavolo Massa Carrara Asd",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 13565",
-          "data": "Dom 12/04/2026 11.30",
-          "casa": "Avis Volley Pistoia",
-          "ospite": "Toscana Garden Arno Volley Livorno",
-          "risultato": "1-2",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 13566",
-          "data": "Dom 12/04/2026 09.00",
-          "casa": "Katinka Travel V.c.c.",
-          "ospite": "Libertas Ponte A Moriano",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 13567",
-          "data": "Dom 12/04/2026 18.30",
-          "casa": "Asd Migliarino Volley",
-          "ospite": "New Volley 2019",
-          "risultato": "2-1",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 13568",
-          "data": "Lun 20/04/2026 19.00",
-          "casa": "Torretta Volley Livorno",
-          "ospite": "Toscana Garden Arno Volley Livorno",
-          "risultato": "2-1",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 13569",
-          "data": "Dom 19/04/2026 15.30",
-          "casa": "Asd Migliarino Volley",
-          "ospite": "Katinka Travel V.c.c.",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 13570",
-          "data": "Dom 26/04/2026 11.00",
-          "casa": "Torretta Volley Livorno",
-          "ospite": "Katinka Travel V.c.c.",
-          "risultato": "2-1",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 13571",
-          "data": "Dom 26/04/2026 18.30",
-          "casa": "Asd Migliarino Volley",
-          "ospite": "Toscana Garden Arno Volley Livorno",
-          "risultato": "1-2",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
       "campionato": "Coppa Territoriale 3DF",
       "girone": "Girone Unico",
       "id": 62303,
@@ -31518,48 +31426,6 @@
     },
     {
       "stagione": "2025-2026",
-      "campionato": "U13F Coppa San Lorenzo",
-      "girone": "Girone 25",
-      "id": 63120,
-      "nome": "U13F Coppa San Lorenzo  - Girone 25°-27° pos.",
-      "url": "https://fipavonline.it/main/gare_girone/63120/1",
-      "squadre": [
-        "Turris Pisa",
-        "Polisportiva Monteserra",
-        "Ies Mv Tomei Livorno L Bianca"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 13442",
-          "data": "Dom 24/05/2026 09.30",
-          "casa": "Turris Pisa",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "1-2",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 13443",
-          "data": "Dom 31/05/2026 09.30",
-          "casa": "Ies Mv Tomei Livorno L Bianca",
-          "ospite": "Turris Pisa",
-          "risultato": "1-2",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 13444",
-          "data": "Dom 07/06/2026 09.30",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Ies Mv Tomei Livorno L Bianca",
-          "risultato": "3-0",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
       "campionato": "U14F Coppa San Ranieri  - Tab. 1°-4° pos.",
       "girone": "",
       "id": 63161,
@@ -31929,48 +31795,6 @@
     {
       "stagione": "2025-2026",
       "campionato": "U14F Coppa San Ranieri",
-      "girone": "Girone 16",
-      "id": 63170,
-      "nome": "U14F Coppa San Ranieri  - Girone 16°-18°",
-      "url": "https://fipavonline.it/main/gare_girone/63170/1",
-      "squadre": [
-        "Psb Capannoli Verde",
-        "Dream Volley Pisa",
-        "Volley Project Livorno U13"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 14692",
-          "data": "Sab 23/05/2026 16.00",
-          "casa": "Psb Capannoli Verde",
-          "ospite": "Dream Volley Pisa",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 14693",
-          "data": "Sab 30/05/2026 15.30",
-          "casa": "Volley Project Livorno U13",
-          "ospite": "Psb Capannoli Verde",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 14694",
-          "data": "Sab 06/06/2026 15.30",
-          "casa": "Dream Volley Pisa",
-          "ospite": "Volley Project Livorno U13",
-          "risultato": "0-3",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "U14F Coppa San Ranieri",
       "girone": "Girone 19",
       "id": 63171,
       "nome": "U14F Coppa San Ranieri  - Girone 19°-21°",
@@ -32139,48 +31963,6 @@
     {
       "stagione": "2025-2026",
       "campionato": "U14F Coppa San Ranieri",
-      "girone": "Girone 31",
-      "id": 63175,
-      "nome": "U14F Coppa San Ranieri  - Girone 31°-33°",
-      "url": "https://fipavonline.it/main/gare_girone/63175/1",
-      "squadre": [
-        "Volley Livorno",
-        "Pallavolo Castelfranco Giovanile",
-        "Pall.elba 97"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 14707",
-          "data": "Sab 23/05/2026 15.30",
-          "casa": "Volley Livorno",
-          "ospite": "Pallavolo Castelfranco Giovanile",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 14708",
-          "data": "Sab 30/05/2026 14.30",
-          "casa": "Pall.elba 97",
-          "ospite": "Volley Livorno",
-          "risultato": "3-1",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 14709",
-          "data": "Sab 06/06/2026 15.00",
-          "casa": "Pallavolo Castelfranco Giovanile",
-          "ospite": "Pall.elba 97",
-          "risultato": "3-1",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "U14F Coppa San Ranieri",
       "girone": "Girone 34",
       "id": 63176,
       "nome": "U14F Coppa San Ranieri  - Girone 34°-36°",
@@ -32258,48 +32040,6 @@
           "casa": "Polisportiva Casarosa",
           "ospite": "Polisportiva Vicarello Blu",
           "risultato": "3-1",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "U16F Coppa Lavorenti - Gir. 19°-21°pos.",
-      "girone": "",
-      "id": 63178,
-      "nome": "U16F Coppa Lavorenti - Gir. 19°-21°pos.",
-      "url": "https://fipavonline.it/main/gare_girone/63178/1",
-      "squadre": [
-        "Pediatuss Pall. Casciavola",
-        "Pallavolo Cascina Red",
-        "Polisportiva Casarosa"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 17245",
-          "data": "Dom 24/05/2026 11.30",
-          "casa": "Pediatuss Pall. Casciavola",
-          "ospite": "Pallavolo Cascina Red",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 17246",
-          "data": "Gio 28/05/2026 16.30",
-          "casa": "Polisportiva Casarosa",
-          "ospite": "Pediatuss Pall. Casciavola",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 17247",
-          "data": "Dom 07/06/2026 09.30",
-          "casa": "Pallavolo Cascina Red",
-          "ospite": "Polisportiva Casarosa",
-          "risultato": "3-0",
           "set": ""
         }
       ]
@@ -33145,101 +32885,6 @@
           "casa": "Polisportiva Monteserra",
           "ospite": "Elba Volley Under 14",
           "risultato": "3-0",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "U16F Coppa Lavorenti Roberto - Tab. 5°-8° pos.",
-      "girone": "",
-      "id": 63435,
-      "nome": "U16F Coppa Lavorenti Roberto - Tab. 5°-8° pos.",
-      "url": "https://fipavonline.it/main/gare_girone/63435/1",
-      "squadre": [
-        "Bellaria Cappuccini Volley U16 Verde",
-        "Conad - Migliarino Volley",
-        "Lupi Santa Croce Volleyball U16frossa",
-        "Farmacia Della Salute"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 17291",
-          "data": "Mer 03/06/2026 20.30",
-          "casa": "Bellaria Cappuccini Volley U16 Verde",
-          "ospite": "Conad - Migliarino Volley",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 17292",
-          "data": "Mer 03/06/2026 20.30",
-          "casa": "Lupi Santa Croce Volleyball U16frossa",
-          "ospite": "Farmacia Della Salute",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 17293",
-          "data": "Dom 07/06/2026 11.30",
-          "casa": "Bellaria Cappuccini Volley U16 Verde",
-          "ospite": "Farmacia Della Salute",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 17294",
-          "data": "Dom 07/06/2026 11.30",
-          "casa": "Lupi Santa Croce Volleyball U16frossa",
-          "ospite": "Conad - Migliarino Volley",
-          "risultato": "2-3",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "U13F Coppa San Lorenzo  - Tab. 13°-15° pos.",
-      "girone": "",
-      "id": 63436,
-      "nome": "U13F Coppa San Lorenzo  - Tab. 13°-15° pos.",
-      "url": "https://fipavonline.it/main/gare_girone/63436/1",
-      "squadre": [
-        "Multirent Italia V.c.c.",
-        "Volley Cecina Blu",
-        "Asd Perignano",
-        "Passa Il Turno"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 13454",
-          "data": "Mer 03/06/2026 19.00",
-          "casa": "Multirent Italia V.c.c.",
-          "ospite": "Volley Cecina Blu",
-          "risultato": "2-1",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 13455",
-          "data": "Ven 12/06/2026 20.00",
-          "casa": "Multirent Italia V.c.c.",
-          "ospite": "Asd Perignano",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 13456",
-          "data": "Dom 07/06/2026 09.30",
-          "casa": "Passa Il Turno",
-          "ospite": "Volley Cecina Blu",
-          "risultato": "-",
           "set": ""
         }
       ]

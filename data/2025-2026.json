@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-16T03:52:26.494Z",
-  "totale": 158,
+  "aggiornamento": "2026-08-16T06:41:45.778Z",
+  "totale": 161,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -29372,6 +29372,364 @@
           "casa": "Olimpia Volley Livorno",
           "ospite": "Riposa",
           "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U13F Coppa San Lorenzo",
+      "girone": "Girone D",
+      "id": 62276,
+      "nome": "U13F Coppa San Lorenzo  - Girone D",
+      "url": "https://fipavonline.it/main/gare_girone/62276/1",
+      "squadre": [
+        "Pallavolo Cascina",
+        "Boscoverde Migliarino",
+        "Volley Peccioli",
+        "Turris Pisa",
+        "Elsavolley",
+        "Perlavolley U13f"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13387",
+          "data": "Mar 21/04/2026 19.00",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Boscoverde Migliarino",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13388",
+          "data": "Dom 12/04/2026 10.00",
+          "casa": "Volley Peccioli",
+          "ospite": "Turris Pisa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13389",
+          "data": "Dom 12/04/2026 10.30",
+          "casa": "Elsavolley",
+          "ospite": "Perlavolley U13f",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13390",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Boscoverde Migliarino",
+          "ospite": "Elsavolley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13391",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Turris Pisa",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13392",
+          "data": "Dom 19/04/2026 11.30",
+          "casa": "Perlavolley U13f",
+          "ospite": "Volley Peccioli",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13393",
+          "data": "Mar 28/04/2026 19.00",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Perlavolley U13f",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13394",
+          "data": "Dom 26/04/2026 10.30",
+          "casa": "Elsavolley",
+          "ospite": "Volley Peccioli",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13395",
+          "data": "Dom 26/04/2026 09.30",
+          "casa": "Turris Pisa",
+          "ospite": "Boscoverde Migliarino",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13396",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Volley Peccioli",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13397",
+          "data": "Dom 03/05/2026 10.00",
+          "casa": "Elsavolley",
+          "ospite": "Turris Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13398",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Perlavolley U13f",
+          "ospite": "Boscoverde Migliarino",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13399",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Elsavolley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13400",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Boscoverde Migliarino",
+          "ospite": "Volley Peccioli",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13401",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Turris Pisa",
+          "ospite": "Perlavolley U13f",
+          "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U13F Coppa San Lorenzo",
+      "girone": "Girone E",
+      "id": 62277,
+      "nome": "U13F Coppa San Lorenzo  - Girone E",
+      "url": "https://fipavonline.it/main/gare_girone/62277/1",
+      "squadre": [
+        "Dream Volley Pisa",
+        "Multirent Italia V.c.c.",
+        "Polisportiva Monteserra",
+        "Bellaria Cappuccini Volley U13",
+        "Lupi Santa Croce Volleyball Asd U13f",
+        "Ospedalieri Volley"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13402",
+          "data": "Dom 12/04/2026 09.30",
+          "casa": "Dream Volley Pisa",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13403",
+          "data": "Dom 12/04/2026 09.30",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Bellaria Cappuccini Volley U13",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13404",
+          "data": "Mar 14/04/2026 17.30",
+          "casa": "Lupi Santa Croce Volleyball Asd U13f",
+          "ospite": "Ospedalieri Volley",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13405",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Lupi Santa Croce Volleyball Asd U13f",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13406",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Bellaria Cappuccini Volley U13",
+          "ospite": "Dream Volley Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13407",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Ospedalieri Volley",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13408",
+          "data": "Dom 26/04/2026 09.30",
+          "casa": "Dream Volley Pisa",
+          "ospite": "Ospedalieri Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13409",
+          "data": "Gio 30/04/2026 19.00",
+          "casa": "Lupi Santa Croce Volleyball Asd U13f",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 13410",
+          "data": "Dom 26/04/2026 09.30",
+          "casa": "Bellaria Cappuccini Volley U13",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13411",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Dream Volley Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13412",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Lupi Santa Croce Volleyball Asd U13f",
+          "ospite": "Bellaria Cappuccini Volley U13",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 13413",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Ospedalieri Volley",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13414",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Dream Volley Pisa",
+          "ospite": "Lupi Santa Croce Volleyball Asd U13f",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13415",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 13416",
+          "data": "Dom 10/05/2026 09.30",
+          "casa": "Bellaria Cappuccini Volley U13",
+          "ospite": "Ospedalieri Volley",
+          "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Under 13 Maschile  - Tab. 1°-4° posizionamento",
+      "girone": "",
+      "id": 62284,
+      "nome": "Under 13 Maschile  - Tab. 1°-4° posizionamento",
+      "url": "https://fipavonline.it/main/gare_girone/62284/1",
+      "squadre": [
+        "Invicta Volleyball",
+        "Upc Volley",
+        "Lupi Santa Croce",
+        "Podere Del Pari Vbc Calci"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13560",
+          "data": "Dom 12/04/2026 11.00",
+          "casa": "Invicta Volleyball",
+          "ospite": "Upc Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 13561",
+          "data": "Dom 12/04/2026 11.00",
+          "casa": "Lupi Santa Croce",
+          "ospite": "Podere Del Pari Vbc Calci",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13562",
+          "data": "Dom 12/04/2026 17.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Podere Del Pari Vbc Calci",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 13563",
+          "data": "Dom 12/04/2026 15.30",
+          "casa": "Lupi Santa Croce",
+          "ospite": "Upc Volley",
+          "risultato": "3-0",
           "set": ""
         }
       ]

@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-23T12:41:31.383Z",
-  "totale": 158,
+  "aggiornamento": "2026-08-23T15:28:16.642Z",
+  "totale": 161,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -32258,6 +32258,132 @@
           "casa": "Polisportiva Casarosa",
           "ospite": "Polisportiva Vicarello Blu",
           "risultato": "3-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F Coppa Lavorenti - Gir. 19°-21°pos.",
+      "girone": "",
+      "id": 63178,
+      "nome": "U16F Coppa Lavorenti - Gir. 19°-21°pos.",
+      "url": "https://fipavonline.it/main/gare_girone/63178/1",
+      "squadre": [
+        "Pediatuss Pall. Casciavola",
+        "Pallavolo Cascina Red",
+        "Polisportiva Casarosa"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 17245",
+          "data": "Dom 24/05/2026 11.30",
+          "casa": "Pediatuss Pall. Casciavola",
+          "ospite": "Pallavolo Cascina Red",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 17246",
+          "data": "Gio 28/05/2026 16.30",
+          "casa": "Polisportiva Casarosa",
+          "ospite": "Pediatuss Pall. Casciavola",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 17247",
+          "data": "Dom 07/06/2026 09.30",
+          "casa": "Pallavolo Cascina Red",
+          "ospite": "Polisportiva Casarosa",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F Coppa Lavorenti - Gir. 22°-24°pos.",
+      "girone": "",
+      "id": 63179,
+      "nome": "U16F Coppa Lavorenti - Gir. 22°-24°pos.",
+      "url": "https://fipavonline.it/main/gare_girone/63179/1",
+      "squadre": [
+        "Ies Mv Tomei Livorno Fel",
+        "Eurometal Grosseto",
+        "Volley Sei Rose U16 Gialla"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 17248",
+          "data": "Dom 24/05/2026 11.30",
+          "casa": "Ies Mv Tomei Livorno Fel",
+          "ospite": "Eurometal Grosseto",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 17249",
+          "data": "Ven 29/05/2026 20.00",
+          "casa": "Volley Sei Rose U16 Gialla",
+          "ospite": "Ies Mv Tomei Livorno Fel",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 17250",
+          "data": "Dom 07/06/2026 11.30",
+          "casa": "Eurometal Grosseto",
+          "ospite": "Volley Sei Rose U16 Gialla",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F Coppa Lavorenti - Gir. 25°-27°pos.",
+      "girone": "",
+      "id": 63180,
+      "nome": "U16F Coppa Lavorenti - Gir. 25°-27°pos.",
+      "url": "https://fipavonline.it/main/gare_girone/63180/1",
+      "squadre": [
+        "Folgore San Miniato",
+        "Volley Ponsacco",
+        "Under 16 Piombino"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 17251",
+          "data": "Dom 24/05/2026 11.00",
+          "casa": "Folgore San Miniato",
+          "ospite": "Volley Ponsacco",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 17252",
+          "data": "Dom 31/05/2026 11.30",
+          "casa": "Under 16 Piombino",
+          "ospite": "Volley Ponsacco",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 17253",
+          "data": "Mer 03/06/2026 20.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Under 16 Piombino",
+          "risultato": "3-0",
           "set": ""
         }
       ]

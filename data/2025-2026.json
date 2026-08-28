@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-28T00:20:37.751Z",
-  "totale": 160,
+  "aggiornamento": "2026-08-28T14:59:31.285Z",
+  "totale": 161,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -28486,6 +28486,159 @@
           "casa": "Bellaria Cappuccini Volley Blu",
           "ospite": "Polisportiva Vicarello",
           "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "Seconda Divisione Femminile",
+      "girone": "Girone PLAYOFF",
+      "id": 62231,
+      "nome": "Seconda Divisione Femminile  - Girone PLAYOFF",
+      "url": "https://fipavonline.it/main/gare_girone/62231/1",
+      "squadre": [
+        "Cascina U18",
+        "Volley Cecina",
+        "Torretta Volley Livorno",
+        "Ambra Cavallini Volley 2d",
+        "Elsavolley",
+        "Bellaria Casarosa"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 2180",
+          "data": "Ven 10/04/2026 21.15",
+          "casa": "Cascina U18",
+          "ospite": "Volley Cecina",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 2181",
+          "data": "Ven 10/04/2026 21.00",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Ambra Cavallini Volley 2d",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 2182",
+          "data": "Ven 10/04/2026 21.30",
+          "casa": "Elsavolley",
+          "ospite": "Bellaria Casarosa",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 2183",
+          "data": "Ven 17/04/2026 19.30",
+          "casa": "Volley Cecina",
+          "ospite": "Elsavolley",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 2184",
+          "data": "Gio 16/04/2026 21.15",
+          "casa": "Ambra Cavallini Volley 2d",
+          "ospite": "Cascina U18",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 2185",
+          "data": "Mar 21/04/2026 21.00",
+          "casa": "Bellaria Casarosa",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 2186",
+          "data": "Ven 24/04/2026 21.15",
+          "casa": "Cascina U18",
+          "ospite": "Bellaria Casarosa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 2187",
+          "data": "Ven 24/04/2026 21.15",
+          "casa": "Elsavolley",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 2188",
+          "data": "Gio 23/04/2026 21.15",
+          "casa": "Ambra Cavallini Volley 2d",
+          "ospite": "Volley Cecina",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 2189",
+          "data": "Ven 08/05/2026 21.00",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Cascina U18",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 2190",
+          "data": "Ven 08/05/2026 21.15",
+          "casa": "Elsavolley",
+          "ospite": "Ambra Cavallini Volley 2d",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 2191",
+          "data": "Gio 07/05/2026 21.00",
+          "casa": "Bellaria Casarosa",
+          "ospite": "Volley Cecina",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 2192",
+          "data": "Ven 15/05/2026 21.15",
+          "casa": "Cascina U18",
+          "ospite": "Elsavolley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 2193",
+          "data": "Ven 15/05/2026 20.00",
+          "casa": "Volley Cecina",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 2194",
+          "data": "Gio 14/05/2026 21.15",
+          "casa": "Ambra Cavallini Volley 2d",
+          "ospite": "Bellaria Casarosa",
+          "risultato": "1-3",
           "set": ""
         }
       ]

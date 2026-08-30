@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-08-30T11:20:54.628Z",
-  "totale": 161,
+  "aggiornamento": "2026-08-30T16:07:27.308Z",
+  "totale": 160,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -28792,130 +28792,6 @@
           "casa": "Otticamente Volley Livorno",
           "ospite": "Lupi Santa Croce Volleyball Asd 2df",
           "risultato": "3-1",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "2DF - 2° RAGGRUPPAMENTO PLAYOUT",
-      "girone": "",
-      "id": 62233,
-      "nome": "2DF - 2° RAGGRUPPAMENTO PLAYOUT",
-      "url": "https://fipavonline.it/main/gare_girone/62233/1",
-      "squadre": [
-        "Psb Capannoli",
-        "Sdp Cascina",
-        "Cus Pisa Asd",
-        "La Barrocciaia - Brv"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 2210",
-          "data": "Ven 10/04/2026 21.00",
-          "casa": "Psb Capannoli",
-          "ospite": "Sdp Cascina",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 2211",
-          "data": "Ven 10/04/2026 21.00",
-          "casa": "Cus Pisa Asd",
-          "ospite": "La Barrocciaia - Brv",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 2212",
-          "data": "Ven 17/04/2026 20.00",
-          "casa": "Cus Pisa Asd",
-          "ospite": "Psb Capannoli",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 2213",
-          "data": "Ven 17/04/2026 21.15",
-          "casa": "Sdp Cascina",
-          "ospite": "La Barrocciaia - Brv",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 2214",
-          "data": "Gio 23/04/2026 21.00",
-          "casa": "La Barrocciaia - Brv",
-          "ospite": "Psb Capannoli",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 2215",
-          "data": "Lun 20/04/2026 21.15",
-          "casa": "Sdp Cascina",
-          "ospite": "Cus Pisa Asd",
-          "risultato": "2-3",
-          "set": ""
-        },
-        {
-          "gara": "4",
-          "codiceGara": "Gara 2216",
-          "data": "Ven 08/05/2026 21.15",
-          "casa": "Sdp Cascina",
-          "ospite": "Psb Capannoli",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "4",
-          "codiceGara": "Gara 2217",
-          "data": "Gio 07/05/2026 21.00",
-          "casa": "La Barrocciaia - Brv",
-          "ospite": "Cus Pisa Asd",
-          "risultato": "3-1",
-          "set": ""
-        },
-        {
-          "gara": "5",
-          "codiceGara": "Gara 2218",
-          "data": "Ven 15/05/2026 21.00",
-          "casa": "Psb Capannoli",
-          "ospite": "Cus Pisa Asd",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "5",
-          "codiceGara": "Gara 2219",
-          "data": "Gio 14/05/2026 21.00",
-          "casa": "La Barrocciaia - Brv",
-          "ospite": "Sdp Cascina",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "6",
-          "codiceGara": "Gara 2220",
-          "data": "Gio 21/05/2026 21.00",
-          "casa": "Psb Capannoli",
-          "ospite": "La Barrocciaia - Brv",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "6",
-          "codiceGara": "Gara 2221",
-          "data": "Ven 22/05/2026 20.00",
-          "casa": "Cus Pisa Asd",
-          "ospite": "Sdp Cascina",
-          "risultato": "1-3",
           "set": ""
         }
       ]

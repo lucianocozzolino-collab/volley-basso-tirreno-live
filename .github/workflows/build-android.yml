@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 55
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -68,19 +68,27 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq expect
 
           cat > build.exp << 'EOF'
-          set timeout 900
+          set timeout 1200
           spawn bubblewrap build --skipPwaValidation
+          set sentKS 0
+          set sentKEY 0
           expect {
             -re "\\(Y/n\\)" {
               send "n\r"
               exp_continue
             }
             -re "Password for the Key ?Store" {
-              send "$env(KS_PASS)\r"
+              if {$sentKS == 0} {
+                send "$env(KS_PASS)\r"
+                set sentKS 1
+              }
               exp_continue
             }
             -re "Password for the Key:" {
-              send "$env(KEY_PASS)\r"
+              if {$sentKEY == 0} {
+                send "$env(KEY_PASS)\r"
+                set sentKEY 1
+              }
               exp_continue
             }
             eof

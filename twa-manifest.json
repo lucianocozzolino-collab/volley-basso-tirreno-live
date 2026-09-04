@@ -10,8 +10,8 @@
   "backgroundColor": "#0B1B3A",
   "enableNotifications": false,
   "startUrl": "/volley-basso-tirreno-live/",
-  "iconUrl": "https://lucianocozzolino-collab.github.io/volley-basso-tirreno-live/assets/icon-512x512.png",
-  "maskableIconUrl": "https://lucianocozzolino-collab.github.io/volley-basso-tirreno-live/assets/icon-512x512.png",
+  "iconUrl": "https://lucianocozzolino-collab.github.io/volley-basso-tirreno-live/assets/icon-192x192.png",
+  "maskableIconUrl": "https://lucianocozzolino-collab.github.io/volley-basso-tirreno-live/assets/icon-192x192.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "./android-keystore/release.keystore",

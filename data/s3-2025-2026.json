@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-09-12T23:04:38.148Z",
-  "totale": 23,
+  "aggiornamento": "2026-09-13T03:19:39.286Z",
+  "totale": 32,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -3936,6 +3936,294 @@
     },
     {
       "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F  - finale 1°- 6°",
+      "girone": "",
+      "id": 61465,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - finale 1°- 6°",
+      "url": "https://fipavonline.it/main/gare_girone/61465/1",
+      "squadre": [
+        "Torretta Volley Livorno",
+        "Invicta Volleyball",
+        "Lupi Santa Croce Volleyball Bianca",
+        "Fuoco Del Vesuvio Volley Livorno",
+        "Turris Pisa",
+        "Multirent Italia V.c.c."
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6410",
+          "data": "Sab 14/03/2026 11.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Invicta Volleyball",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6411",
+          "data": "Dom 15/03/2026 15.00",
+          "casa": "Lupi Santa Croce Volleyball Bianca",
+          "ospite": "Fuoco Del Vesuvio Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6412",
+          "data": "Dom 15/03/2026 15.30",
+          "casa": "Turris Pisa",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6413",
+          "data": "Dom 22/03/2026 15.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Turris Pisa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6414",
+          "data": "Dom 24/05/2026 15.30",
+          "casa": "Fuoco Del Vesuvio Volley Livorno",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6415",
+          "data": "Dom 22/03/2026 18.30",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Lupi Santa Croce Volleyball Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6416",
+          "data": "Sab 28/03/2026 10.00",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6417",
+          "data": "Dom 29/03/2026 15.30",
+          "casa": "Turris Pisa",
+          "ospite": "Lupi Santa Croce Volleyball Bianca",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6418",
+          "data": "Sab 28/03/2026 15.00",
+          "casa": "Fuoco Del Vesuvio Volley Livorno",
+          "ospite": "Invicta Volleyball",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6419",
+          "data": "Dom 12/04/2026 16.00",
+          "casa": "Lupi Santa Croce Volleyball Bianca",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6420",
+          "data": "Dom 12/04/2026 15.30",
+          "casa": "Turris Pisa",
+          "ospite": "Fuoco Del Vesuvio Volley Livorno",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6421",
+          "data": "Dom 26/04/2026 15.30",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Invicta Volleyball",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6422",
+          "data": "Sab 18/04/2026 18.00",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Turris Pisa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6423",
+          "data": "Dom 19/04/2026 15.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Lupi Santa Croce Volleyball Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6424",
+          "data": "Sab 23/05/2026 17.30",
+          "casa": "Fuoco Del Vesuvio Volley Livorno",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6425",
+          "data": "Mer 06/05/2026 18.00",
+          "casa": "Invicta Volleyball",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6426",
+          "data": "Sab 02/05/2026 15.00",
+          "casa": "Fuoco Del Vesuvio Volley Livorno",
+          "ospite": "Lupi Santa Croce Volleyball Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6427",
+          "data": "Mar 05/05/2026 19.00",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Turris Pisa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6428",
+          "data": "Dom 10/05/2026 15.30",
+          "casa": "Turris Pisa",
+          "ospite": "Invicta Volleyball",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6429",
+          "data": "Dom 24/05/2026 17.00",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Fuoco Del Vesuvio Volley Livorno",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6430",
+          "data": "Mer 13/05/2026 17.00",
+          "casa": "Lupi Santa Croce Volleyball Bianca",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6431",
+          "data": "Dom 17/05/2026 19.00",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6432",
+          "data": "Gio 16/04/2026 19.00",
+          "casa": "Lupi Santa Croce Volleyball Bianca",
+          "ospite": "Turris Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6433",
+          "data": "Dom 17/05/2026 15.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Fuoco Del Vesuvio Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6434",
+          "data": "Gio 21/05/2026 17.15",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Lupi Santa Croce Volleyball Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6435",
+          "data": "Sab 23/05/2026 15.00",
+          "casa": "Fuoco Del Vesuvio Volley Livorno",
+          "ospite": "Turris Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6436",
+          "data": "Dom 24/05/2026 16.00",
+          "casa": "Invicta Volleyball",
+          "ospite": "Multirent Italia V.c.c.",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6437",
+          "data": "Dom 31/05/2026 15.30",
+          "casa": "Turris Pisa",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6438",
+          "data": "Sab 30/05/2026 17.30",
+          "casa": "Lupi Santa Croce Volleyball Bianca",
+          "ospite": "Invicta Volleyball",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6439",
+          "data": "Sab 30/05/2026 15.00",
+          "casa": "Multirent Italia V.c.c.",
+          "ospite": "Fuoco Del Vesuvio Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
       "campionato": "VOLLEY S3 Under 12 6x6F  - finale 7°-12°",
       "girone": "",
       "id": 61466,
@@ -4224,6 +4512,1855 @@
     },
     {
       "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone I",
+      "id": 61467,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone I",
+      "url": "https://fipavonline.it/main/gare_girone/61467/1",
+      "squadre": [
+        "Volley Cecina Rossa",
+        "Pallavolo Etruschi Livorno - U11 Gialla",
+        "Brvlab Nera",
+        "Volley Cecina Blu",
+        "Volley Livorno Rosa",
+        "Donoratico Sport U12 4x4"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6470",
+          "data": "Sab 14/03/2026 14.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6471",
+          "data": "Dom 15/03/2026 16.00",
+          "casa": "Brvlab Nera",
+          "ospite": "Volley Cecina Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6472",
+          "data": "Dom 15/03/2026 15.00",
+          "casa": "Volley Livorno Rosa",
+          "ospite": "Donoratico Sport U12 4x4",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6473",
+          "data": "Sab 21/03/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "ospite": "Volley Livorno Rosa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6474",
+          "data": "Sab 21/03/2026 17.00",
+          "casa": "Volley Cecina Blu",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6475",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Donoratico Sport U12 4x4",
+          "ospite": "Brvlab Nera",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6476",
+          "data": "Sab 28/03/2026 16.00",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Donoratico Sport U12 4x4",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6477",
+          "data": "Mer 25/03/2026 17.30",
+          "casa": "Volley Livorno Rosa",
+          "ospite": "Brvlab Nera",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6478",
+          "data": "Sab 28/03/2026 15.00",
+          "casa": "Volley Cecina Blu",
+          "ospite": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6479",
+          "data": "Sab 11/04/2026 17.00",
+          "casa": "Brvlab Nera",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6480",
+          "data": "Dom 12/04/2026 15.00",
+          "casa": "Volley Livorno Rosa",
+          "ospite": "Volley Cecina Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6481",
+          "data": "Gio 09/04/2026 18.00",
+          "casa": "Donoratico Sport U12 4x4",
+          "ospite": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6482",
+          "data": "Ven 24/04/2026 18.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Volley Livorno Rosa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6483",
+          "data": "Sab 18/04/2026 15.00",
+          "casa": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "ospite": "Brvlab Nera",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6484",
+          "data": "Sab 18/04/2026 17.00",
+          "casa": "Volley Cecina Blu",
+          "ospite": "Donoratico Sport U12 4x4",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6485",
+          "data": "Sab 02/05/2026 17.30",
+          "casa": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6486",
+          "data": "Sab 02/05/2026 17.00",
+          "casa": "Volley Cecina Blu",
+          "ospite": "Brvlab Nera",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6487",
+          "data": "Dom 29/03/2026 11.00",
+          "casa": "Donoratico Sport U12 4x4",
+          "ospite": "Volley Livorno Rosa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6488",
+          "data": "Mer 06/05/2026 17.30",
+          "casa": "Volley Livorno Rosa",
+          "ospite": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6489",
+          "data": "Ven 08/05/2026 19.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Volley Cecina Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6490",
+          "data": "Sab 09/05/2026 16.00",
+          "casa": "Brvlab Nera",
+          "ospite": "Donoratico Sport U12 4x4",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6491",
+          "data": "Gio 14/05/2026 18.00",
+          "casa": "Donoratico Sport U12 4x4",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6492",
+          "data": "Lun 18/05/2026 17.00",
+          "casa": "Brvlab Nera",
+          "ospite": "Volley Livorno Rosa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6493",
+          "data": "Sab 30/05/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "ospite": "Volley Cecina Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6494",
+          "data": "Sab 23/05/2026 17.00",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Brvlab Nera",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6495",
+          "data": "Sab 23/05/2026 17.00",
+          "casa": "Volley Cecina Blu",
+          "ospite": "Volley Livorno Rosa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6496",
+          "data": "Sab 23/05/2026 15.30",
+          "casa": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "ospite": "Donoratico Sport U12 4x4",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6497",
+          "data": "Ven 22/05/2026 19.00",
+          "casa": "Volley Livorno Rosa",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6498",
+          "data": "Dom 17/05/2026 16.00",
+          "casa": "Brvlab Nera",
+          "ospite": "Pallavolo Etruschi Livorno - U11 Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6499",
+          "data": "Gio 28/05/2026 18.00",
+          "casa": "Donoratico Sport U12 4x4",
+          "ospite": "Volley Cecina Blu",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone L",
+      "id": 61468,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone L",
+      "url": "https://fipavonline.it/main/gare_girone/61468/1",
+      "squadre": [
+        "Elba Volley Under 12",
+        "Pall Grosseto 2",
+        "Pallavolo Follonica Blu",
+        "New Volley 2019",
+        "Deep Chic Grosseto"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6500",
+          "data": "Dom 26/04/2026 13.00",
+          "casa": "Elba Volley Under 12",
+          "ospite": "Pall Grosseto 2",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6501",
+          "data": "Dom 15/03/2026 10.00",
+          "casa": "Pallavolo Follonica Blu",
+          "ospite": "New Volley 2019",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6502",
+          "data": "Sab 14/03/2026 00.00",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6503",
+          "data": "Sab 21/03/2026 18.30",
+          "casa": "Pall Grosseto 2",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6504",
+          "data": "Sab 21/03/2026 16.00",
+          "casa": "New Volley 2019",
+          "ospite": "Elba Volley Under 12",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6505",
+          "data": "Dom 22/03/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Pallavolo Follonica Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6506",
+          "data": "Dom 29/03/2026 00.00",
+          "casa": "Elba Volley Under 12",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6507",
+          "data": "Sab 06/06/2026 18.00",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "Pallavolo Follonica Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6508",
+          "data": "Sab 28/03/2026 15.30",
+          "casa": "New Volley 2019",
+          "ospite": "Pall Grosseto 2",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6509",
+          "data": "Dom 12/04/2026 10.00",
+          "casa": "Pallavolo Follonica Blu",
+          "ospite": "Elba Volley Under 12",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6510",
+          "data": "Sab 11/04/2026 15.30",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "New Volley 2019",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6511",
+          "data": "Dom 12/04/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Pall Grosseto 2",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6512",
+          "data": "Dom 19/04/2026 11.30",
+          "casa": "Elba Volley Under 12",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6513",
+          "data": "Sab 18/04/2026 15.00",
+          "casa": "Pall Grosseto 2",
+          "ospite": "Pallavolo Follonica Blu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6514",
+          "data": "Sab 18/04/2026 00.00",
+          "casa": "New Volley 2019",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6515",
+          "data": "Sab 30/05/2026 13.00",
+          "casa": "Pall Grosseto 2",
+          "ospite": "Elba Volley Under 12",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6516",
+          "data": "Sab 02/05/2026 15.30",
+          "casa": "New Volley 2019",
+          "ospite": "Pallavolo Follonica Blu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6517",
+          "data": "Dom 03/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6518",
+          "data": "Sab 09/05/2026 15.30",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "Pall Grosseto 2",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6519",
+          "data": "Sab 09/05/2026 15.00",
+          "casa": "Elba Volley Under 12",
+          "ospite": "New Volley 2019",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6520",
+          "data": "Dom 10/05/2026 00.00",
+          "casa": "Pallavolo Follonica Blu",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6521",
+          "data": "Dom 17/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Elba Volley Under 12",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6522",
+          "data": "Sab 16/05/2026 18.00",
+          "casa": "Pallavolo Follonica Blu",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6523",
+          "data": "Sab 16/05/2026 18.00",
+          "casa": "Pall Grosseto 2",
+          "ospite": "New Volley 2019",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6524",
+          "data": "Dom 24/05/2026 13.00",
+          "casa": "Elba Volley Under 12",
+          "ospite": "Pallavolo Follonica Blu",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6525",
+          "data": "Mer 27/05/2026 17.30",
+          "casa": "New Volley 2019",
+          "ospite": "Deep Chic Grosseto",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6526",
+          "data": "Sab 23/05/2026 00.00",
+          "casa": "Pall Grosseto 2",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6527",
+          "data": "Sab 30/05/2026 15.30",
+          "casa": "Deep Chic Grosseto",
+          "ospite": "Elba Volley Under 12",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6528",
+          "data": "Ven 29/05/2026 20.00",
+          "casa": "Pallavolo Follonica Blu",
+          "ospite": "Pall Grosseto 2",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6529",
+          "data": "Dom 31/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "New Volley 2019",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone M",
+      "id": 61469,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone M",
+      "url": "https://fipavonline.it/main/gare_girone/61469/1",
+      "squadre": [
+        "Pallavolo Etruschi Livorno - Nera",
+        "Ospedalieri Volley Pisa",
+        "Volley Livorno Gialla",
+        "Pallavolo Cascina",
+        "Volley Livorno Blu",
+        "Ies Mv Tomei Livorno 6x6 Ant"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6530",
+          "data": "Dom 15/03/2026 15.00",
+          "casa": "Pallavolo Etruschi Livorno - Nera",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6531",
+          "data": "Sab 14/03/2026 11.30",
+          "casa": "Volley Livorno Gialla",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6532",
+          "data": "Ven 13/03/2026 19.00",
+          "casa": "Volley Livorno Blu",
+          "ospite": "Ies Mv Tomei Livorno 6x6 Ant",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6533",
+          "data": "Sab 28/03/2026 17.00",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Volley Livorno Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6534",
+          "data": "Dom 22/03/2026 18.00",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Pallavolo Etruschi Livorno - Nera",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6535",
+          "data": "Gio 26/03/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno 6x6 Ant",
+          "ospite": "Volley Livorno Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6536",
+          "data": "Dom 29/03/2026 10.00",
+          "casa": "Pallavolo Etruschi Livorno - Nera",
+          "ospite": "Ies Mv Tomei Livorno 6x6 Ant",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6537",
+          "data": "Ven 27/03/2026 19.00",
+          "casa": "Volley Livorno Blu",
+          "ospite": "Volley Livorno Gialla",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6538",
+          "data": "Dom 29/03/2026 15.30",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6539",
+          "data": "Sab 11/04/2026 11.30",
+          "casa": "Volley Livorno Gialla",
+          "ospite": "Pallavolo Etruschi Livorno - Nera",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6540",
+          "data": "Ven 10/04/2026 19.00",
+          "casa": "Volley Livorno Blu",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6541",
+          "data": "Dom 12/04/2026 15.00",
+          "casa": "Ies Mv Tomei Livorno 6x6 Ant",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6542",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Pallavolo Etruschi Livorno - Nera",
+          "ospite": "Volley Livorno Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6543",
+          "data": "Dom 19/04/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Volley Livorno Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6544",
+          "data": "Dom 19/04/2026 15.30",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Ies Mv Tomei Livorno 6x6 Ant",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6545",
+          "data": "Dom 03/05/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Pallavolo Etruschi Livorno - Nera",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6546",
+          "data": "Dom 03/05/2026 11.30",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Volley Livorno Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6547",
+          "data": "Gio 07/05/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno 6x6 Ant",
+          "ospite": "Volley Livorno Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6548",
+          "data": "Ven 08/05/2026 19.00",
+          "casa": "Volley Livorno Blu",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6549",
+          "data": "Sab 16/05/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno - Nera",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6550",
+          "data": "Sab 09/05/2026 11.30",
+          "casa": "Volley Livorno Gialla",
+          "ospite": "Ies Mv Tomei Livorno 6x6 Ant",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6551",
+          "data": "Gio 28/05/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno 6x6 Ant",
+          "ospite": "Pallavolo Etruschi Livorno - Nera",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6552",
+          "data": "Sab 16/05/2026 11.30",
+          "casa": "Volley Livorno Gialla",
+          "ospite": "Volley Livorno Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6553",
+          "data": "Dom 17/05/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6554",
+          "data": "Ven 29/05/2026 19.00",
+          "casa": "Pallavolo Etruschi Livorno - Nera",
+          "ospite": "Volley Livorno Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6555",
+          "data": "Dom 24/05/2026 11.30",
+          "casa": "Pallavolo Cascina",
+          "ospite": "Volley Livorno Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6556",
+          "data": "Dom 24/05/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Ies Mv Tomei Livorno 6x6 Ant",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6557",
+          "data": "Mer 27/05/2026 17.30",
+          "casa": "Volley Livorno Blu",
+          "ospite": "Pallavolo Etruschi Livorno - Nera",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6558",
+          "data": "Sab 30/05/2026 11.30",
+          "casa": "Volley Livorno Gialla",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6559",
+          "data": "Dom 31/05/2026 15.00",
+          "casa": "Ies Mv Tomei Livorno 6x6 Ant",
+          "ospite": "Pallavolo Cascina",
+          "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone N",
+      "id": 61470,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone N",
+      "url": "https://fipavonline.it/main/gare_girone/61470/1",
+      "squadre": [
+        "Polisportiva Monteserra",
+        "Conad - Migliarino Volley",
+        "Dream Volley Pisa  Gialla",
+        "Psb Capannoli"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6560",
+          "data": "Dom 15/03/2026 09.30",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Conad - Migliarino Volley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6561",
+          "data": "Mar 14/04/2026 18.00",
+          "casa": "Dream Volley Pisa  Gialla",
+          "ospite": "Psb Capannoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6562",
+          "data": "Mar 21/04/2026 18.30",
+          "casa": "Dream Volley Pisa  Gialla",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6563",
+          "data": "Lun 18/05/2026 17.45",
+          "casa": "Conad - Migliarino Volley",
+          "ospite": "Psb Capannoli",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6564",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Psb Capannoli",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6565",
+          "data": "Lun 11/05/2026 17.30",
+          "casa": "Conad - Migliarino Volley",
+          "ospite": "Dream Volley Pisa  Gialla",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6566",
+          "data": "Sab 11/04/2026 15.30",
+          "casa": "Conad - Migliarino Volley",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6567",
+          "data": "Dom 15/03/2026 09.30",
+          "casa": "Psb Capannoli",
+          "ospite": "Dream Volley Pisa  Gialla",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6568",
+          "data": "Dom 22/03/2026 11.30",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Dream Volley Pisa  Gialla",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6569",
+          "data": "Dom 19/04/2026 11.45",
+          "casa": "Psb Capannoli",
+          "ospite": "Conad - Migliarino Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6570",
+          "data": "Dom 29/03/2026 09.30",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Psb Capannoli",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6571",
+          "data": "Lun 04/05/2026 17.45",
+          "casa": "Dream Volley Pisa  Gialla",
+          "ospite": "Conad - Migliarino Volley",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone O",
+      "id": 61471,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone O",
+      "url": "https://fipavonline.it/main/gare_girone/61471/1",
+      "squadre": [
+        "Folgore San Miniato Giallo",
+        "Bellaria Cappuccini Volley U12 4x4 Blu",
+        "Perla Volley U12",
+        "Polisportiva  Casarosa",
+        "Vbc Calci Azzurra"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6590",
+          "data": "Sab 21/03/2026 15.30",
+          "casa": "Folgore San Miniato Giallo",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6591",
+          "data": "Sab 14/03/2026 15.00",
+          "casa": "Perla Volley U12",
+          "ospite": "Polisportiva  Casarosa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6592",
+          "data": "Sab 14/03/2026 00.00",
+          "casa": "Vbc Calci Azzurra",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6593",
+          "data": "Dom 22/03/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Vbc Calci Azzurra",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6594",
+          "data": "Dom 22/03/2026 18.00",
+          "casa": "Polisportiva  Casarosa",
+          "ospite": "Folgore San Miniato Giallo",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6595",
+          "data": "Dom 22/03/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Perla Volley U12",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6596",
+          "data": "Dom 29/03/2026 00.00",
+          "casa": "Folgore San Miniato Giallo",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6597",
+          "data": "Sab 28/03/2026 15.30",
+          "casa": "Vbc Calci Azzurra",
+          "ospite": "Perla Volley U12",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6598",
+          "data": "Dom 29/03/2026 18.00",
+          "casa": "Polisportiva  Casarosa",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6599",
+          "data": "Dom 12/04/2026 09.30",
+          "casa": "Perla Volley U12",
+          "ospite": "Folgore San Miniato Giallo",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6600",
+          "data": "Sab 11/04/2026 17.00",
+          "casa": "Vbc Calci Azzurra",
+          "ospite": "Polisportiva  Casarosa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6601",
+          "data": "Dom 12/04/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6602",
+          "data": "Dom 19/04/2026 15.00",
+          "casa": "Folgore San Miniato Giallo",
+          "ospite": "Vbc Calci Azzurra",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6603",
+          "data": "Dom 19/04/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Perla Volley U12",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6604",
+          "data": "Dom 19/04/2026 00.00",
+          "casa": "Polisportiva  Casarosa",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6605",
+          "data": "Dom 03/05/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Folgore San Miniato Giallo",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6606",
+          "data": "Dom 03/05/2026 18.00",
+          "casa": "Polisportiva  Casarosa",
+          "ospite": "Perla Volley U12",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6607",
+          "data": "Dom 03/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Vbc Calci Azzurra",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6608",
+          "data": "Sab 09/05/2026 15.30",
+          "casa": "Vbc Calci Azzurra",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6609",
+          "data": "Dom 10/05/2026 15.00",
+          "casa": "Folgore San Miniato Giallo",
+          "ospite": "Polisportiva  Casarosa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6610",
+          "data": "Dom 10/05/2026 00.00",
+          "casa": "Perla Volley U12",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6611",
+          "data": "Dom 17/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Folgore San Miniato Giallo",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6612",
+          "data": "Mar 19/05/2026 18.30",
+          "casa": "Perla Volley U12",
+          "ospite": "Vbc Calci Azzurra",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6613",
+          "data": "Sab 16/05/2026 18.30",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Polisportiva  Casarosa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6614",
+          "data": "Dom 24/05/2026 15.00",
+          "casa": "Folgore San Miniato Giallo",
+          "ospite": "Perla Volley U12",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6615",
+          "data": "Sab 23/05/2026 18.15",
+          "casa": "Polisportiva  Casarosa",
+          "ospite": "Vbc Calci Azzurra",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6616",
+          "data": "Dom 24/05/2026 00.00",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6617",
+          "data": "Sab 30/05/2026 17.00",
+          "casa": "Vbc Calci Azzurra",
+          "ospite": "Folgore San Miniato Giallo",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6618",
+          "data": "Dom 31/05/2026 09.30",
+          "casa": "Perla Volley U12",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6619",
+          "data": "Dom 31/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Polisportiva  Casarosa",
+          "risultato": "-",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 6x6 F",
+      "girone": "Girone P",
+      "id": 61472,
+      "nome": "VOLLEY S3 Under 12 6x6 F  - Girone P",
+      "url": "https://fipavonline.it/main/gare_girone/61472/1",
+      "squadre": [
+        "Elsavolley",
+        "Asd Etrusca Volley",
+        "Bellaria Cappuccini Volley U12 6x6 Gialla",
+        "Folgore San Miniato",
+        "Lupi Santa Croce Volleyball Rossa",
+        "Ambra Cavallini Volley U12 6x6"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6620",
+          "data": "Sab 14/03/2026 16.00",
+          "casa": "Elsavolley",
+          "ospite": "Asd Etrusca Volley",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6621",
+          "data": "Dom 15/03/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "ospite": "Folgore San Miniato",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6622",
+          "data": "Dom 15/03/2026 11.30",
+          "casa": "Lupi Santa Croce Volleyball Rossa",
+          "ospite": "Ambra Cavallini Volley U12 6x6",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6623",
+          "data": "Dom 22/03/2026 09.30",
+          "casa": "Asd Etrusca Volley",
+          "ospite": "Lupi Santa Croce Volleyball Rossa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6624",
+          "data": "Sab 21/03/2026 18.00",
+          "casa": "Folgore San Miniato",
+          "ospite": "Elsavolley",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6625",
+          "data": "Ven 20/03/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 6x6",
+          "ospite": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6626",
+          "data": "Sab 28/03/2026 16.00",
+          "casa": "Elsavolley",
+          "ospite": "Ambra Cavallini Volley U12 6x6",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6627",
+          "data": "Sab 28/03/2026 15.30",
+          "casa": "Lupi Santa Croce Volleyball Rossa",
+          "ospite": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6628",
+          "data": "Dom 29/03/2026 09.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Asd Etrusca Volley",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6629",
+          "data": "Dom 12/04/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "ospite": "Elsavolley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6630",
+          "data": "Dom 12/04/2026 11.30",
+          "casa": "Lupi Santa Croce Volleyball Rossa",
+          "ospite": "Folgore San Miniato",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6631",
+          "data": "Mer 15/04/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 6x6",
+          "ospite": "Asd Etrusca Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6632",
+          "data": "Sab 18/04/2026 16.00",
+          "casa": "Elsavolley",
+          "ospite": "Lupi Santa Croce Volleyball Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6633",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Asd Etrusca Volley",
+          "ospite": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6634",
+          "data": "Dom 19/04/2026 09.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Ambra Cavallini Volley U12 6x6",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6635",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Asd Etrusca Volley",
+          "ospite": "Elsavolley",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6636",
+          "data": "Dom 03/05/2026 09.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6637",
+          "data": "Ven 08/05/2026 18.30",
+          "casa": "Ambra Cavallini Volley U12 6x6",
+          "ospite": "Lupi Santa Croce Volleyball Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6638",
+          "data": "Lun 11/05/2026 18.00",
+          "casa": "Lupi Santa Croce Volleyball Rossa",
+          "ospite": "Asd Etrusca Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6639",
+          "data": "Sab 09/05/2026 16.00",
+          "casa": "Elsavolley",
+          "ospite": "Folgore San Miniato",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6640",
+          "data": "Sab 09/05/2026 15.30",
+          "casa": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "ospite": "Ambra Cavallini Volley U12 6x6",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6641",
+          "data": "Mer 13/05/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 6x6",
+          "ospite": "Elsavolley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6642",
+          "data": "Dom 17/05/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "ospite": "Lupi Santa Croce Volleyball Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6643",
+          "data": "Dom 17/05/2026 10.30",
+          "casa": "Asd Etrusca Volley",
+          "ospite": "Folgore San Miniato",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6644",
+          "data": "Sab 23/05/2026 16.00",
+          "casa": "Elsavolley",
+          "ospite": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6645",
+          "data": "Dom 24/05/2026 09.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Lupi Santa Croce Volleyball Rossa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6646",
+          "data": "Ven 05/06/2026 19.00",
+          "casa": "Asd Etrusca Volley",
+          "ospite": "Ambra Cavallini Volley U12 6x6",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6647",
+          "data": "Ven 29/05/2026 19.00",
+          "casa": "Lupi Santa Croce Volleyball Rossa",
+          "ospite": "Elsavolley",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6648",
+          "data": "Dom 31/05/2026 18.15",
+          "casa": "Bellaria Cappuccini Volley U12 6x6 Gialla",
+          "ospite": "Asd Etrusca Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6649",
+          "data": "Ven 22/05/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 6x6",
+          "ospite": "Folgore San Miniato",
+          "risultato": "2-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 4x4F  - finali 1° - 5°",
+      "girone": "",
+      "id": 61474,
+      "nome": "VOLLEY S3 Under 12 4x4F  - finali 1° - 5°",
+      "url": "https://fipavonline.it/main/gare_girone/61474/1",
+      "squadre": [
+        "Psb Capannoli Verde",
+        "Torretta Volley Livorno",
+        "Vbc Calci",
+        "Pallavolo Etruschi Livorno - Bianca",
+        "Bellaria Cappuccini Volley U12 4x4 Blu"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6670",
+          "data": "Dom 15/03/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Psb Capannoli Verde",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6671",
+          "data": "Gio 28/05/2026 17.15",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Vbc Calci",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6672",
+          "data": "Dom 15/03/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno - Bianca",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6673",
+          "data": "Dom 22/03/2026 09.30",
+          "casa": "Psb Capannoli Verde",
+          "ospite": "Pallavolo Etruschi Livorno - Bianca",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6674",
+          "data": "Sab 21/03/2026 00.00",
+          "casa": "Vbc Calci",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6675",
+          "data": "Dom 22/03/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6676",
+          "data": "Dom 29/03/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6677",
+          "data": "Dom 29/03/2026 11.00",
+          "casa": "Pallavolo Etruschi Livorno - Bianca",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6678",
+          "data": "Sab 16/05/2026 17.00",
+          "casa": "Vbc Calci",
+          "ospite": "Psb Capannoli Verde",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6679",
+          "data": "Dom 12/04/2026 00.00",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6680",
+          "data": "Dom 12/04/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno - Bianca",
+          "ospite": "Vbc Calci",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6681",
+          "data": "Dom 12/04/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Psb Capannoli Verde",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6682",
+          "data": "Dom 19/04/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Pallavolo Etruschi Livorno - Bianca",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6683",
+          "data": "Dom 19/04/2026 09.00",
+          "casa": "Psb Capannoli Verde",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6684",
+          "data": "Sab 18/04/2026 15.30",
+          "casa": "Vbc Calci",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6685",
+          "data": "Dom 03/05/2026 00.00",
+          "casa": "Psb Capannoli Verde",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6686",
+          "data": "-",
+          "casa": "Vbc Calci",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6687",
+          "data": "Dom 03/05/2026 11.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Pallavolo Etruschi Livorno - Bianca",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6688",
+          "data": "Dom 10/05/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno - Bianca",
+          "ospite": "Psb Capannoli Verde",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6689",
+          "data": "Dom 10/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Vbc Calci",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6690",
+          "data": "Dom 10/05/2026 15.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6691",
+          "data": "Dom 17/05/2026 00.00",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6692",
+          "data": "Gio 14/05/2026 17.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Pallavolo Etruschi Livorno - Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6693",
+          "data": "Dom 26/04/2026 10.30",
+          "casa": "Psb Capannoli Verde",
+          "ospite": "Vbc Calci",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6694",
+          "data": "Dom 24/05/2026 00.00",
+          "casa": "Riposa",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6695",
+          "data": "Sab 23/05/2026 15.30",
+          "casa": "Vbc Calci",
+          "ospite": "Pallavolo Etruschi Livorno - Bianca",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6696",
+          "data": "Dom 24/05/2026 09.30",
+          "casa": "Psb Capannoli Verde",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6697",
+          "data": "Dom 31/05/2026 00.00",
+          "casa": "Pallavolo Etruschi Livorno - Bianca",
+          "ospite": "Riposa",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6698",
+          "data": "Sab 30/05/2026 17.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Psb Capannoli Verde",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6699",
+          "data": "Dom 31/05/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Blu",
+          "ospite": "Vbc Calci",
+          "risultato": "2-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
       "campionato": "VOLLEY S3 Under 12 4x4 F",
       "girone": "Girone H",
       "id": 61476,
@@ -4342,6 +6479,294 @@
           "casa": "Ies Mv Tomei Livorno Mar",
           "ospite": "Pallavolo Etruschi Livorno - Gialla",
           "risultato": "1-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "VOLLEY S3 Under 12 4x4 F",
+      "girone": "Girone L",
+      "id": 61478,
+      "nome": "VOLLEY S3 Under 12 4x4 F  - Girone L",
+      "url": "https://fipavonline.it/main/gare_girone/61478/1",
+      "squadre": [
+        "Bellaria Cappuccini Volley U12 4x4 Rosa",
+        "Ambra Cavallini Volley U12 4x4",
+        "Bellaria Cappuccini Volley U12 4x4 Bianca",
+        "Cus Pisa Giovanile",
+        "Ospedalieri Volley Pisa",
+        "Vbc Calci Celeste"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6750",
+          "data": "Sab 14/03/2026 18.30",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "ospite": "Ambra Cavallini Volley U12 4x4",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6751",
+          "data": "Dom 15/03/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "ospite": "Cus Pisa Giovanile",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 6752",
+          "data": "Dom 26/04/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Vbc Calci Celeste",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6753",
+          "data": "Mer 25/03/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 4x4",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6754",
+          "data": "Dom 22/03/2026 16.00",
+          "casa": "Cus Pisa Giovanile",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 6755",
+          "data": "Sab 21/03/2026 15.30",
+          "casa": "Vbc Calci Celeste",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6756",
+          "data": "Dom 29/03/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "ospite": "Vbc Calci Celeste",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6757",
+          "data": "Dom 29/03/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 6758",
+          "data": "Dom 29/03/2026 11.00",
+          "casa": "Cus Pisa Giovanile",
+          "ospite": "Ambra Cavallini Volley U12 4x4",
+          "risultato": "-",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6759",
+          "data": "Dom 12/04/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6760",
+          "data": "Dom 12/04/2026 15.15",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Cus Pisa Giovanile",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 6761",
+          "data": "Sab 11/04/2026 15.30",
+          "casa": "Vbc Calci Celeste",
+          "ospite": "Ambra Cavallini Volley U12 4x4",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6762",
+          "data": "Dom 19/04/2026 15.00",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6763",
+          "data": "Mer 22/04/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 4x4",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 6764",
+          "data": "Sab 18/04/2026 16.00",
+          "casa": "Cus Pisa Giovanile",
+          "ospite": "Vbc Calci Celeste",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6765",
+          "data": "Mer 06/05/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 4x4",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6766",
+          "data": "Dom 03/05/2026 16.00",
+          "casa": "Cus Pisa Giovanile",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 6767",
+          "data": "Dom 03/05/2026 10.00",
+          "casa": "Vbc Calci Celeste",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6768",
+          "data": "Dom 10/05/2026 16.30",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Ambra Cavallini Volley U12 4x4",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6769",
+          "data": "Dom 10/05/2026 15.00",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "ospite": "Cus Pisa Giovanile",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 6770",
+          "data": "Dom 10/05/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "ospite": "Vbc Calci Celeste",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6771",
+          "data": "Sab 16/05/2026 15.30",
+          "casa": "Vbc Calci Celeste",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6772",
+          "data": "Dom 17/05/2026 15.15",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 6773",
+          "data": "Mer 20/05/2026 18.00",
+          "casa": "Ambra Cavallini Volley U12 4x4",
+          "ospite": "Cus Pisa Giovanile",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6774",
+          "data": "Dom 24/05/2026 15.00",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6775",
+          "data": "Dom 24/05/2026 16.00",
+          "casa": "Cus Pisa Giovanile",
+          "ospite": "Ospedalieri Volley Pisa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 6776",
+          "data": "Mer 27/05/2026 18.30",
+          "casa": "Ambra Cavallini Volley U12 4x4",
+          "ospite": "Vbc Calci Celeste",
+          "risultato": "1-2",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6777",
+          "data": "Sab 30/05/2026 18.00",
+          "casa": "Ospedalieri Volley Pisa",
+          "ospite": "Bellaria Cappuccini Volley U12 4x4 Rosa",
+          "risultato": "2-1",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6778",
+          "data": "Sab 30/05/2026 15.30",
+          "casa": "Bellaria Cappuccini Volley U12 4x4 Bianca",
+          "ospite": "Ambra Cavallini Volley U12 4x4",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 6779",
+          "data": "Sab 30/05/2026 15.30",
+          "casa": "Vbc Calci Celeste",
+          "ospite": "Cus Pisa Giovanile",
+          "risultato": "3-0",
           "set": ""
         }
       ]

@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-09-22T11:08:58.704Z",
-  "totale": 137,
+  "aggiornamento": "2026-09-22T16:22:50.682Z",
+  "totale": 140,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -14754,6 +14754,76 @@
     },
     {
       "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 27°-30° fascia B",
+      "girone": "",
+      "id": 60892,
+      "nome": "U16F - Pos. 27°-30° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60892/1",
+      "squadre": [
+        "Pallavolo Cascina Blu",
+        "Polisportiva Casarosa Bianca",
+        "Ies Mv Tomei Livorno  Ball",
+        "Volley Ponsacco"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16676",
+          "data": "Dom 08/02/2026 09.30",
+          "casa": "Pallavolo Cascina Blu",
+          "ospite": "Polisportiva Casarosa Bianca",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16677",
+          "data": "Dom 08/02/2026 18.00",
+          "casa": "Ies Mv Tomei Livorno  Ball",
+          "ospite": "Volley Ponsacco",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16678",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Ies Mv Tomei Livorno  Ball",
+          "ospite": "Pallavolo Cascina Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16679",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Polisportiva Casarosa Bianca",
+          "ospite": "Volley Ponsacco",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16680",
+          "data": "Dom 22/02/2026 09.30",
+          "casa": "Volley Ponsacco",
+          "ospite": "Pallavolo Cascina Blu",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16681",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Polisportiva Casarosa Bianca",
+          "ospite": "Ies Mv Tomei Livorno  Ball",
+          "risultato": "3-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
       "campionato": "U16F - Pos. 14°-16° fascia C",
       "girone": "",
       "id": 60893,
@@ -15008,6 +15078,400 @@
           "casa": "Subway Vbc Calci",
           "ospite": "Bellaria Cappuccini Volley U16 Verde",
           "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U19M Coppa Basso Tirreno",
+      "girone": "Girone Unico",
+      "id": 61139,
+      "nome": "U19M Coppa Basso Tirreno  - Girone Unico",
+      "url": "https://fipavonline.it/main/gare_girone/61139/1",
+      "squadre": [
+        "Era Volley Junior",
+        "Comp. As. Ascensori Migliarino Volley",
+        "Sacma Group Rawlplug Volley Cecina",
+        "A.s.d. Pallavolo Rosignano",
+        "Honda Di Carelli E Bussola Vbc Calci"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 19057",
+          "data": "Mer 06/05/2026 21.00",
+          "casa": "Era Volley Junior",
+          "ospite": "Comp. As. Ascensori Migliarino Volley",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 19059",
+          "data": "Mar 24/02/2026 19.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "A.s.d. Pallavolo Rosignano",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 19062",
+          "data": "Mer 04/03/2026 21.00",
+          "casa": "Honda Di Carelli E Bussola Vbc Calci",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 19066",
+          "data": "Mer 11/03/2026 21.00",
+          "casa": "Era Volley Junior",
+          "ospite": "A.s.d. Pallavolo Rosignano",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 19070",
+          "data": "Mer 18/03/2026 21.00",
+          "casa": "Comp. As. Ascensori Migliarino Volley",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 19074",
+          "data": "Lun 13/04/2026 21.00",
+          "casa": "Comp. As. Ascensori Migliarino Volley",
+          "ospite": "Honda Di Carelli E Bussola Vbc Calci",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 19075",
+          "data": "Mer 25/03/2026 21.00",
+          "casa": "Era Volley Junior",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 19078",
+          "data": "Mer 01/04/2026 20.30",
+          "casa": "A.s.d. Pallavolo Rosignano",
+          "ospite": "Comp. As. Ascensori Migliarino Volley",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 19079",
+          "data": "Mar 31/03/2026 19.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Honda Di Carelli E Bussola Vbc Calci",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 19083",
+          "data": "Mer 08/04/2026 21.00",
+          "casa": "Honda Di Carelli E Bussola Vbc Calci",
+          "ospite": "A.s.d. Pallavolo Rosignano",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 19085",
+          "data": "Mer 15/04/2026 21.00",
+          "casa": "Comp. As. Ascensori Migliarino Volley",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 19087",
+          "data": "Mer 15/04/2026 20.30",
+          "casa": "A.s.d. Pallavolo Rosignano",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 19090",
+          "data": "Mer 22/04/2026 21.00",
+          "casa": "Era Volley Junior",
+          "ospite": "Honda Di Carelli E Bussola Vbc Calci",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 19094",
+          "data": "Mer 29/04/2026 20.30",
+          "casa": "A.s.d. Pallavolo Rosignano",
+          "ospite": "Era Volley Junior",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "11",
+          "codiceGara": "Gara 19098",
+          "data": "Mar 05/05/2026 19.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Comp. As. Ascensori Migliarino Volley",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "12",
+          "codiceGara": "Gara 19102",
+          "data": "Lun 11/05/2026 21.00",
+          "casa": "Honda Di Carelli E Bussola Vbc Calci",
+          "ospite": "Comp. As. Ascensori Migliarino Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "12",
+          "codiceGara": "Gara 19103",
+          "data": "Mar 12/05/2026 19.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Era Volley Junior",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "13",
+          "codiceGara": "Gara 19106",
+          "data": "Mer 20/05/2026 21.00",
+          "casa": "Comp. As. Ascensori Migliarino Volley",
+          "ospite": "A.s.d. Pallavolo Rosignano",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "13",
+          "codiceGara": "Gara 19107",
+          "data": "Mer 20/05/2026 21.00",
+          "casa": "Honda Di Carelli E Bussola Vbc Calci",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "14",
+          "codiceGara": "Gara 19111",
+          "data": "Mer 27/05/2026 20.30",
+          "casa": "A.s.d. Pallavolo Rosignano",
+          "ospite": "Honda Di Carelli E Bussola Vbc Calci",
+          "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U18F Coppa Basso Tirreno",
+      "girone": "Girone A",
+      "id": 61155,
+      "nome": "U18F Coppa Basso Tirreno  - Girone A",
+      "url": "https://fipavonline.it/main/gare_girone/61155/1",
+      "squadre": [
+        "Giorgio Peri Grosseto",
+        "New Volley 2019",
+        "Pallavolo Follonica",
+        "Autoleader Volley Riotorto",
+        "Volley Cecina Rossa"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 18269",
+          "data": "Mer 25/02/2026 21.00",
+          "casa": "Giorgio Peri Grosseto",
+          "ospite": "New Volley 2019",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 18271",
+          "data": "Mer 25/02/2026 19.30",
+          "casa": "Pallavolo Follonica",
+          "ospite": "Autoleader Volley Riotorto",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 18272",
+          "data": "Mer 04/03/2026 19.30",
+          "casa": "New Volley 2019",
+          "ospite": "Pallavolo Follonica",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 18274",
+          "data": "Lun 09/03/2026 20.00",
+          "casa": "Autoleader Volley Riotorto",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 18275",
+          "data": "Dom 15/03/2026 11.30",
+          "casa": "Giorgio Peri Grosseto",
+          "ospite": "Autoleader Volley Riotorto",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 18276",
+          "data": "Mer 11/03/2026 19.30",
+          "casa": "Pallavolo Follonica",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 18278",
+          "data": "Mar 17/03/2026 19.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Giorgio Peri Grosseto",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 18280",
+          "data": "Mer 18/03/2026 20.30",
+          "casa": "Autoleader Volley Riotorto",
+          "ospite": "New Volley 2019",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 18281",
+          "data": "Mer 25/03/2026 21.00",
+          "casa": "Giorgio Peri Grosseto",
+          "ospite": "Pallavolo Follonica",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 18282",
+          "data": "Mer 25/03/2026 19.00",
+          "casa": "New Volley 2019",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 18284",
+          "data": "Mer 01/04/2026 19.00",
+          "casa": "New Volley 2019",
+          "ospite": "Giorgio Peri Grosseto",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 18286",
+          "data": "Mer 01/04/2026 20.30",
+          "casa": "Autoleader Volley Riotorto",
+          "ospite": "Pallavolo Follonica",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 18287",
+          "data": "Mer 08/04/2026 19.30",
+          "casa": "Pallavolo Follonica",
+          "ospite": "New Volley 2019",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 18289",
+          "data": "Mar 07/04/2026 19.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Autoleader Volley Riotorto",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 18290",
+          "data": "Mer 15/04/2026 20.30",
+          "casa": "Autoleader Volley Riotorto",
+          "ospite": "Giorgio Peri Grosseto",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 18291",
+          "data": "Mar 14/04/2026 19.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "Pallavolo Follonica",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 18293",
+          "data": "Mer 22/04/2026 21.00",
+          "casa": "Giorgio Peri Grosseto",
+          "ospite": "Volley Cecina Rossa",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 18295",
+          "data": "Mer 22/04/2026 19.00",
+          "casa": "New Volley 2019",
+          "ospite": "Autoleader Volley Riotorto",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 18296",
+          "data": "Mar 28/04/2026 18.00",
+          "casa": "Pallavolo Follonica",
+          "ospite": "Giorgio Peri Grosseto",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 18297",
+          "data": "Mar 28/04/2026 19.30",
+          "casa": "Volley Cecina Rossa",
+          "ospite": "New Volley 2019",
+          "risultato": "3-1",
           "set": ""
         }
       ]
@@ -16121,6 +16585,403 @@
           "casa": "Baia Del Marinaio Volley Cecina Rossa",
           "ospite": "Invicta Volleyball",
           "risultato": "3-0",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U17M Coppa Santa Giulia",
+      "girone": "Girone Unico",
+      "id": 61233,
+      "nome": "U17M Coppa Santa Giulia  - Girone Unico",
+      "url": "https://fipavonline.it/main/gare_girone/61233/1",
+      "squadre": [
+        "Ies Mv Tomei Livorno",
+        "Torretta Volley Livorno",
+        "Toscana Garden Arno Volley Livorno",
+        "Sacma Group Rawlplug Volley Cecina",
+        "Era Volley Junior",
+        "Invicta Volleyball",
+        "Folgore San Miniato"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 17189",
+          "data": "Sab 28/02/2026 15.00",
+          "casa": "Ies Mv Tomei Livorno",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 17190",
+          "data": "Dom 01/03/2026 15.30",
+          "casa": "Toscana Garden Arno Volley Livorno",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 17192",
+          "data": "Dom 01/03/2026 18.30",
+          "casa": "Era Volley Junior",
+          "ospite": "Invicta Volleyball",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 17193",
+          "data": "Dom 08/03/2026 18.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Ies Mv Tomei Livorno",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 17194",
+          "data": "Dom 08/03/2026 18.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 17195",
+          "data": "Dom 08/03/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Toscana Garden Arno Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 17197",
+          "data": "Dom 10/05/2026 15.00",
+          "casa": "Ies Mv Tomei Livorno",
+          "ospite": "Folgore San Miniato",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 17198",
+          "data": "Dom 15/03/2026 18.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 17199",
+          "data": "Sab 14/03/2026 18.30",
+          "casa": "Toscana Garden Arno Volley Livorno",
+          "ospite": "Invicta Volleyball",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 17201",
+          "data": "Dom 22/03/2026 18.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Ies Mv Tomei Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 17202",
+          "data": "Dom 22/03/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 17203",
+          "data": "Dom 22/03/2026 18.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Era Volley Junior",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 17206",
+          "data": "Dom 29/03/2026 18.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Invicta Volleyball",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 17207",
+          "data": "Dom 29/03/2026 18.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Folgore San Miniato",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 17208",
+          "data": "Dom 29/03/2026 17.30",
+          "casa": "Toscana Garden Arno Volley Livorno",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 17209",
+          "data": "Dom 12/04/2026 15.30",
+          "casa": "Toscana Garden Arno Volley Livorno",
+          "ospite": "Ies Mv Tomei Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 17211",
+          "data": "Dom 12/04/2026 15.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "6",
+          "codiceGara": "Gara 17212",
+          "data": "Dom 12/04/2026 18.30",
+          "casa": "Era Volley Junior",
+          "ospite": "Folgore San Miniato",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 17213",
+          "data": "Dom 19/04/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 17214",
+          "data": "Dom 19/04/2026 15.30",
+          "casa": "Toscana Garden Arno Volley Livorno",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "7",
+          "codiceGara": "Gara 17216",
+          "data": "Dom 19/04/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Invicta Volleyball",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 17217",
+          "data": "Dom 26/04/2026 18.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Ies Mv Tomei Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 17218",
+          "data": "Dom 26/04/2026 18.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Toscana Garden Arno Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "8",
+          "codiceGara": "Gara 17220",
+          "data": "Sab 25/04/2026 18.00",
+          "casa": "Invicta Volleyball",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 17221",
+          "data": "Dom 03/05/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 17222",
+          "data": "Dom 03/05/2026 18.30",
+          "casa": "Era Volley Junior",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "9",
+          "codiceGara": "Gara 17223",
+          "data": "Dom 03/05/2026 11.30",
+          "casa": "Toscana Garden Arno Volley Livorno",
+          "ospite": "Folgore San Miniato",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 17225",
+          "data": "Mer 11/03/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Ies Mv Tomei Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 17226",
+          "data": "Dom 10/05/2026 18.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "10",
+          "codiceGara": "Gara 17227",
+          "data": "Dom 10/05/2026 15.00",
+          "casa": "Invicta Volleyball",
+          "ospite": "Toscana Garden Arno Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "11",
+          "codiceGara": "Gara 17229",
+          "data": "Dom 17/05/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno",
+          "ospite": "Invicta Volleyball",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "11",
+          "codiceGara": "Gara 17230",
+          "data": "Mer 13/05/2026 20.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Folgore San Miniato",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "11",
+          "codiceGara": "Gara 17231",
+          "data": "Dom 17/05/2026 18.30",
+          "casa": "Era Volley Junior",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "12",
+          "codiceGara": "Gara 17234",
+          "data": "Dom 24/05/2026 18.30",
+          "casa": "Invicta Volleyball",
+          "ospite": "Torretta Volley Livorno",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "12",
+          "codiceGara": "Gara 17235",
+          "data": "Dom 24/05/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Sacma Group Rawlplug Volley Cecina",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "12",
+          "codiceGara": "Gara 17236",
+          "data": "Dom 24/05/2026 18.30",
+          "casa": "Era Volley Junior",
+          "ospite": "Toscana Garden Arno Volley Livorno",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "13",
+          "codiceGara": "Gara 17237",
+          "data": "Dom 31/05/2026 18.30",
+          "casa": "Ies Mv Tomei Livorno",
+          "ospite": "Toscana Garden Arno Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "13",
+          "codiceGara": "Gara 17239",
+          "data": "Dom 31/05/2026 18.30",
+          "casa": "Sacma Group Rawlplug Volley Cecina",
+          "ospite": "Invicta Volleyball",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "13",
+          "codiceGara": "Gara 17240",
+          "data": "Dom 31/05/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Era Volley Junior",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "14",
+          "codiceGara": "Gara 17241",
+          "data": "Dom 07/06/2026 18.30",
+          "casa": "Era Volley Junior",
+          "ospite": "Ies Mv Tomei Livorno",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "14",
+          "codiceGara": "Gara 17242",
+          "data": "Dom 07/06/2026 18.30",
+          "casa": "Torretta Volley Livorno",
+          "ospite": "Toscana Garden Arno Volley Livorno",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "14",
+          "codiceGara": "Gara 17244",
+          "data": "Sab 06/06/2026 18.00",
+          "casa": "Invicta Volleyball",
+          "ospite": "Folgore San Miniato",
+          "risultato": "1-3",
           "set": ""
         }
       ]
@@ -23648,159 +24509,6 @@
           "casa": "Conad Volley Project U18",
           "ospite": "Lupi Santa Croce Volleyball Asd 1df",
           "risultato": "3-1",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "1DF - PLAYOUT 1° Rag.",
-      "girone": "",
-      "id": 62654,
-      "nome": "1DF - PLAYOUT 1° Rag.",
-      "url": "https://fipavonline.it/main/gare_girone/62654/1",
-      "squadre": [
-        "New Volley 2019",
-        "Folgore San Miniato",
-        "Borgo Rosso Volley",
-        "Polisportiva Monteserra",
-        "Turris Pisa",
-        "Volley Peccioli"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 280",
-          "data": "Sab 02/05/2026 21.00",
-          "casa": "New Volley 2019",
-          "ospite": "Folgore San Miniato",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 281",
-          "data": "Sab 02/05/2026 21.00",
-          "casa": "Borgo Rosso Volley",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 282",
-          "data": "Sab 02/05/2026 18.30",
-          "casa": "Turris Pisa",
-          "ospite": "Volley Peccioli",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 283",
-          "data": "Sab 09/05/2026 18.30",
-          "casa": "Folgore San Miniato",
-          "ospite": "Turris Pisa",
-          "risultato": "3-1",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 284",
-          "data": "Gio 14/05/2026 21.00",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "New Volley 2019",
-          "risultato": "3-1",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 285",
-          "data": "Sab 09/05/2026 21.00",
-          "casa": "Volley Peccioli",
-          "ospite": "Borgo Rosso Volley",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 286",
-          "data": "Gio 21/05/2026 21.00",
-          "casa": "New Volley 2019",
-          "ospite": "Volley Peccioli",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 287",
-          "data": "Sab 16/05/2026 18.30",
-          "casa": "Turris Pisa",
-          "ospite": "Borgo Rosso Volley",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 288",
-          "data": "Lun 18/05/2026 21.00",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Folgore San Miniato",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "4",
-          "codiceGara": "Gara 289",
-          "data": "Sab 23/05/2026 21.00",
-          "casa": "Borgo Rosso Volley",
-          "ospite": "New Volley 2019",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "4",
-          "codiceGara": "Gara 290",
-          "data": "Sab 23/05/2026 18.30",
-          "casa": "Turris Pisa",
-          "ospite": "Polisportiva Monteserra",
-          "risultato": "2-3",
-          "set": ""
-        },
-        {
-          "gara": "4",
-          "codiceGara": "Gara 291",
-          "data": "Sab 23/05/2026 21.00",
-          "casa": "Volley Peccioli",
-          "ospite": "Folgore San Miniato",
-          "risultato": "3-2",
-          "set": ""
-        },
-        {
-          "gara": "5",
-          "codiceGara": "Gara 292",
-          "data": "Gio 28/05/2026 21.00",
-          "casa": "New Volley 2019",
-          "ospite": "Turris Pisa",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "5",
-          "codiceGara": "Gara 293",
-          "data": "Sab 30/05/2026 18.30",
-          "casa": "Folgore San Miniato",
-          "ospite": "Borgo Rosso Volley",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "5",
-          "codiceGara": "Gara 294",
-          "data": "Sab 30/05/2026 21.00",
-          "casa": "Polisportiva Monteserra",
-          "ospite": "Volley Peccioli",
-          "risultato": "3-0",
           "set": ""
         }
       ]

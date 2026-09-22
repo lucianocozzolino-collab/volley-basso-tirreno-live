@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-09-22T16:22:50.682Z",
-  "totale": 140,
+  "aggiornamento": "2026-09-22T21:02:52.115Z",
+  "totale": 141,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -24509,6 +24509,159 @@
           "casa": "Conad Volley Project U18",
           "ospite": "Lupi Santa Croce Volleyball Asd 1df",
           "risultato": "3-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "1DF - PLAYOUT 1° Rag.",
+      "girone": "",
+      "id": 62654,
+      "nome": "1DF - PLAYOUT 1° Rag.",
+      "url": "https://fipavonline.it/main/gare_girone/62654/1",
+      "squadre": [
+        "New Volley 2019",
+        "Folgore San Miniato",
+        "Borgo Rosso Volley",
+        "Polisportiva Monteserra",
+        "Turris Pisa",
+        "Volley Peccioli"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 280",
+          "data": "Sab 02/05/2026 21.00",
+          "casa": "New Volley 2019",
+          "ospite": "Folgore San Miniato",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 281",
+          "data": "Sab 02/05/2026 21.00",
+          "casa": "Borgo Rosso Volley",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 282",
+          "data": "Sab 02/05/2026 18.30",
+          "casa": "Turris Pisa",
+          "ospite": "Volley Peccioli",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 283",
+          "data": "Sab 09/05/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Turris Pisa",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 284",
+          "data": "Gio 14/05/2026 21.00",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "New Volley 2019",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 285",
+          "data": "Sab 09/05/2026 21.00",
+          "casa": "Volley Peccioli",
+          "ospite": "Borgo Rosso Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 286",
+          "data": "Gio 21/05/2026 21.00",
+          "casa": "New Volley 2019",
+          "ospite": "Volley Peccioli",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 287",
+          "data": "Sab 16/05/2026 18.30",
+          "casa": "Turris Pisa",
+          "ospite": "Borgo Rosso Volley",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 288",
+          "data": "Lun 18/05/2026 21.00",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Folgore San Miniato",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 289",
+          "data": "Sab 23/05/2026 21.00",
+          "casa": "Borgo Rosso Volley",
+          "ospite": "New Volley 2019",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 290",
+          "data": "Sab 23/05/2026 18.30",
+          "casa": "Turris Pisa",
+          "ospite": "Polisportiva Monteserra",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "4",
+          "codiceGara": "Gara 291",
+          "data": "Sab 23/05/2026 21.00",
+          "casa": "Volley Peccioli",
+          "ospite": "Folgore San Miniato",
+          "risultato": "3-2",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 292",
+          "data": "Gio 28/05/2026 21.00",
+          "casa": "New Volley 2019",
+          "ospite": "Turris Pisa",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 293",
+          "data": "Sab 30/05/2026 18.30",
+          "casa": "Folgore San Miniato",
+          "ospite": "Borgo Rosso Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "5",
+          "codiceGara": "Gara 294",
+          "data": "Sab 30/05/2026 21.00",
+          "casa": "Polisportiva Monteserra",
+          "ospite": "Volley Peccioli",
+          "risultato": "3-0",
           "set": ""
         }
       ]

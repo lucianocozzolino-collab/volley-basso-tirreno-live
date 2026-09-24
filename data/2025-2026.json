@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-09-24T16:38:54.024Z",
-  "totale": 132,
+  "aggiornamento": "2026-09-24T21:17:00.041Z",
+  "totale": 141,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -14502,6 +14502,174 @@
     },
     {
       "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 9°-11° fascia B",
+      "girone": "",
+      "id": 60886,
+      "nome": "U16F - Pos. 9°-11° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60886/1",
+      "squadre": [
+        "Polisportiva Casarosa Azzurra",
+        "Center Service Europe - Migliarino Volley",
+        "Pallavolo Castelfranco Giovanile Blu"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16658",
+          "data": "Dom 08/02/2026 11.30",
+          "casa": "Polisportiva Casarosa Azzurra",
+          "ospite": "Center Service Europe - Migliarino Volley",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16659",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Pallavolo Castelfranco Giovanile Blu",
+          "ospite": "Polisportiva Casarosa Azzurra",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16660",
+          "data": "Ven 27/02/2026 19.35",
+          "casa": "Center Service Europe - Migliarino Volley",
+          "ospite": "Pallavolo Castelfranco Giovanile Blu",
+          "risultato": "3-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 12°-14° fascia B",
+      "girone": "",
+      "id": 60887,
+      "nome": "U16F - Pos. 12°-14° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60887/1",
+      "squadre": [
+        "Yodigito Ospedalieri Volley Pisa",
+        "Brvlab Nera",
+        "Pallavolo Etruschi Livorno"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16661",
+          "data": "Dom 08/02/2026 11.30",
+          "casa": "Yodigito Ospedalieri Volley Pisa",
+          "ospite": "Brvlab Nera",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16662",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Pallavolo Etruschi Livorno",
+          "ospite": "Yodigito Ospedalieri Volley Pisa",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16663",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Brvlab Nera",
+          "ospite": "Pallavolo Etruschi Livorno",
+          "risultato": "3-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 15°-17° fascia B",
+      "girone": "",
+      "id": 60888,
+      "nome": "U16F - Pos. 15°-17° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60888/1",
+      "squadre": [
+        "Pediatuss Pall. Casciavola",
+        "Polisportiva Asd Virtus Orentano",
+        "Bellaria Cappuccini Volley U16 Blu"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16664",
+          "data": "Dom 08/02/2026 11.30",
+          "casa": "Pediatuss Pall. Casciavola",
+          "ospite": "Polisportiva Asd Virtus Orentano",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16665",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Bellaria Cappuccini Volley U16 Blu",
+          "ospite": "Pediatuss Pall. Casciavola",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16666",
+          "data": "Dom 22/02/2026 09.30",
+          "casa": "Polisportiva Asd Virtus Orentano",
+          "ospite": "Bellaria Cappuccini Volley U16 Blu",
+          "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 18°-20° fascia B",
+      "girone": "",
+      "id": 60889,
+      "nome": "U16F - Pos. 18°-20° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60889/1",
+      "squadre": [
+        "Lunigronde Vbc Calci",
+        "Volley Livorno Blu",
+        "Lube Store Volley Cecina Blu"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16667",
+          "data": "Dom 08/02/2026 11.30",
+          "casa": "Lunigronde Vbc Calci",
+          "ospite": "Volley Livorno Blu",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16668",
+          "data": "Dom 15/02/2026 09.30",
+          "casa": "Lube Store Volley Cecina Blu",
+          "ospite": "Lunigronde Vbc Calci",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16669",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Volley Livorno Blu",
+          "ospite": "Lube Store Volley Cecina Blu",
+          "risultato": "3-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
       "campionato": "U16F - Pos. 21°-23° fascia B",
       "girone": "",
       "id": 60890,
@@ -14544,6 +14712,202 @@
     },
     {
       "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 24°-26° fascia B",
+      "girone": "",
+      "id": 60891,
+      "nome": "U16F - Pos. 24°-26° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60891/1",
+      "squadre": [
+        "Polisportiva Vicarello",
+        "Ies Mv Tomei Livorno Fel",
+        "Baia Del Marinaio Volley Cecina Gialla"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16673",
+          "data": "Dom 08/02/2026 11.30",
+          "casa": "Polisportiva Vicarello",
+          "ospite": "Ies Mv Tomei Livorno Fel",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16674",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Baia Del Marinaio Volley Cecina Gialla",
+          "ospite": "Polisportiva Vicarello",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16675",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Ies Mv Tomei Livorno Fel",
+          "ospite": "Baia Del Marinaio Volley Cecina Gialla",
+          "risultato": "3-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 27°-30° fascia B",
+      "girone": "",
+      "id": 60892,
+      "nome": "U16F - Pos. 27°-30° fascia B",
+      "url": "https://fipavonline.it/main/gare_girone/60892/1",
+      "squadre": [
+        "Pallavolo Cascina Blu",
+        "Polisportiva Casarosa Bianca",
+        "Ies Mv Tomei Livorno  Ball",
+        "Volley Ponsacco"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16676",
+          "data": "Dom 08/02/2026 09.30",
+          "casa": "Pallavolo Cascina Blu",
+          "ospite": "Polisportiva Casarosa Bianca",
+          "risultato": "2-3",
+          "set": ""
+        },
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16677",
+          "data": "Dom 08/02/2026 18.00",
+          "casa": "Ies Mv Tomei Livorno  Ball",
+          "ospite": "Volley Ponsacco",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16678",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Ies Mv Tomei Livorno  Ball",
+          "ospite": "Pallavolo Cascina Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16679",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Polisportiva Casarosa Bianca",
+          "ospite": "Volley Ponsacco",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16680",
+          "data": "Dom 22/02/2026 09.30",
+          "casa": "Volley Ponsacco",
+          "ospite": "Pallavolo Cascina Blu",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16681",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Polisportiva Casarosa Bianca",
+          "ospite": "Ies Mv Tomei Livorno  Ball",
+          "risultato": "3-2",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 14°-16° fascia C",
+      "girone": "",
+      "id": 60893,
+      "nome": "U16F - Pos. 14°-16° fascia C",
+      "url": "https://fipavonline.it/main/gare_girone/60893/1",
+      "squadre": [
+        "Ambra Cavallini Volley U16 Blu",
+        "Lavanderia Arizona Volley Cecina Verde",
+        "Brvlab Bianca"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16691",
+          "data": "Dom 08/02/2026 11.30",
+          "casa": "Ambra Cavallini Volley U16 Blu",
+          "ospite": "Lavanderia Arizona Volley Cecina Verde",
+          "risultato": "3-1",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16692",
+          "data": "Dom 15/02/2026 11.30",
+          "casa": "Brvlab Bianca",
+          "ospite": "Ambra Cavallini Volley U16 Blu",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16693",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Lavanderia Arizona Volley Cecina Verde",
+          "ospite": "Brvlab Bianca",
+          "risultato": "0-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 11°-13° fascia C",
+      "girone": "",
+      "id": 60894,
+      "nome": "U16F - Pos. 11°-13° fascia C",
+      "url": "https://fipavonline.it/main/gare_girone/60894/1",
+      "squadre": [
+        "Polisportiva Fauglia",
+        "Volley Livorno Rosa",
+        "Elba Volley Under 16"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16688",
+          "data": "Dom 08/02/2026 12.00",
+          "casa": "Polisportiva Fauglia",
+          "ospite": "Volley Livorno Rosa",
+          "risultato": "1-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16689",
+          "data": "Dom 15/02/2026 14.30",
+          "casa": "Elba Volley Under 16",
+          "ospite": "Polisportiva Fauglia",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16690",
+          "data": "Dom 22/02/2026 14.00",
+          "casa": "Volley Livorno Rosa",
+          "ospite": "Elba Volley Under 16",
+          "risultato": "3-1",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
       "campionato": "U16F - Pos. 8°-10° fascia C",
       "girone": "",
       "id": 60895,
@@ -14580,6 +14944,48 @@
           "casa": "Pallavolo Castelfranco Giovanile Rosso",
           "ospite": "Ospedalieri Volley Pisa",
           "risultato": "1-3",
+          "set": ""
+        }
+      ]
+    },
+    {
+      "stagione": "2025-2026",
+      "campionato": "U16F - Pos. 5°-7° fascia C",
+      "girone": "",
+      "id": 60896,
+      "nome": "U16F - Pos. 5°-7° fascia C",
+      "url": "https://fipavonline.it/main/gare_girone/60896/1",
+      "squadre": [
+        "Asd Perignano",
+        "Asd Etrusca Volley",
+        "Volley Sei Rose U16 Blu"
+      ],
+      "calendario": [
+        {
+          "gara": "1",
+          "codiceGara": "Gara 16682",
+          "data": "Dom 08/02/2026 17.00",
+          "casa": "Asd Perignano",
+          "ospite": "Asd Etrusca Volley",
+          "risultato": "0-3",
+          "set": ""
+        },
+        {
+          "gara": "2",
+          "codiceGara": "Gara 16683",
+          "data": "Sab 14/02/2026 15.30",
+          "casa": "Volley Sei Rose U16 Blu",
+          "ospite": "Asd Perignano",
+          "risultato": "3-0",
+          "set": ""
+        },
+        {
+          "gara": "3",
+          "codiceGara": "Gara 16684",
+          "data": "Dom 22/02/2026 11.30",
+          "casa": "Asd Etrusca Volley",
+          "ospite": "Volley Sei Rose U16 Blu",
+          "risultato": "3-1",
           "set": ""
         }
       ]

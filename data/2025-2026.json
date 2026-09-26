@@ -1,6 +1,6 @@
 {
-  "aggiornamento": "2026-09-26T20:42:10.949Z",
-  "totale": 141,
+  "aggiornamento": "2026-09-26T23:26:27.720Z",
+  "totale": 140,
   "gironi": [
     {
       "stagione": "2025-2026",
@@ -14262,76 +14262,6 @@
           "casa": "Torretta Volley Livorno",
           "ospite": "Turris Pisa",
           "risultato": "1-3",
-          "set": ""
-        }
-      ]
-    },
-    {
-      "stagione": "2025-2026",
-      "campionato": "U18F",
-      "girone": "Girone 21",
-      "id": 60759,
-      "nome": "U18F - Girone 21°-24° posizionamento",
-      "url": "https://fipavonline.it/main/gare_girone/60759/1",
-      "squadre": [
-        "Elsavolley",
-        "Volley Massa Marittima",
-        "Yodigito Ospedalieri Volley Pisa",
-        "Ies Mv Tomei Livorno"
-      ],
-      "calendario": [
-        {
-          "gara": "1",
-          "codiceGara": "Gara 18250",
-          "data": "Lun 02/02/2026 19.30",
-          "casa": "Elsavolley",
-          "ospite": "Volley Massa Marittima",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "1",
-          "codiceGara": "Gara 18251",
-          "data": "Mer 04/02/2026 21.00",
-          "casa": "Yodigito Ospedalieri Volley Pisa",
-          "ospite": "Ies Mv Tomei Livorno",
-          "risultato": "0-3",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 18252",
-          "data": "Mer 11/02/2026 21.00",
-          "casa": "Yodigito Ospedalieri Volley Pisa",
-          "ospite": "Elsavolley",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "2",
-          "codiceGara": "Gara 18253",
-          "data": "Mer 11/02/2026 21.00",
-          "casa": "Volley Massa Marittima",
-          "ospite": "Ies Mv Tomei Livorno",
-          "risultato": "1-3",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 18254",
-          "data": "Mer 18/02/2026 21.15",
-          "casa": "Ies Mv Tomei Livorno",
-          "ospite": "Elsavolley",
-          "risultato": "3-0",
-          "set": ""
-        },
-        {
-          "gara": "3",
-          "codiceGara": "Gara 18255",
-          "data": "Dom 15/02/2026 18.00",
-          "casa": "Volley Massa Marittima",
-          "ospite": "Yodigito Ospedalieri Volley Pisa",
-          "risultato": "3-2",
           "set": ""
         }
       ]
